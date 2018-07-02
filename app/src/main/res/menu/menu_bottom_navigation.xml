@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_payloads"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_payloads"
+        android:title="@string/navigation_payloads"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/navigation_instructions"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_instructions"
+        android:title="@string/navigation_instructions"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/navigation_logs"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_logs"
+        android:title="@string/navigation_logs"
+        app:showAsAction="ifRoom" />
+</menu>

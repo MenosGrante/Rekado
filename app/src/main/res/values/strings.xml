@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name" translatable="false">Rekado</string>
+    <string name="app_version" translatable="false">1.0.0</string>
+
+    <!-- Strings for Navigation -->
+    <string name="navigation_payloads">Payloads</string>
+    <string name="navigation_instructions">Instructions</string>
+    <string name="navigation_logs">Logs</string>
+
+    <!-- Strings for Instructions -->
+    <string name="instructions_category_cable">Cable</string>
+    <string name="instructions_category_cable_description">First you need to find a cable to connect your device to the Nintendo Switch. For proper work, this should be a cable that is designed for data transmission, not just for charging.\n\nIt is advisable to use an A-to-C cable and an USB OTG adapter.</string>
+    <string name="instructions_category_payload">Payload</string>
+    <string name="instructions_category_payload_description">In the \u0022Payloads\u0022 category, click the \u0022+\u0022 button to select preloaded payload from your device\'s storage. Or simply transfer your payload to the Rekado folder in the device\'s memory.\n\nOr you can use the default payload (Hekate)</string>
+    <string name="instructions_category_rcm" translatable="false">RCM</string>
+    <string name="instructions_category_rcm_description">Enter your Nintendo Switch into RCM mode in any convenient way. \n\nYour Nintendo Switch will power on by itself when plugged in, be sure to hold VOLUME +.</string>
+    <string name="instructions_category_final">Final</string>
+    <string name="instructions_category_final_description">Connect the device to the Nintendo Switch and allow permission for the USB access if necessary. Wait until the program prompts you to select payload and choose the one you need.</string>
+
+    <!-- Strings for Logs -->
+    <string name="logs_actions_list">List of actions</string>
+
+    <!-- Strings for Permissions -->
+    <string name="permission_storage_dialog_title">Storage permission</string>
+    <string name="permission_storage_dialog_description">Rekado need this permission to get payload files from your device\'s storage.</string>
+    <string name="permission_storage_button">Request</string>
+    <string name="permission_storage_error">Could not access the repository. Try to get permission again.</string>
+</resources>
