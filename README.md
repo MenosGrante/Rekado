@@ -1,9 +1,9 @@
 # Rekado
-Fusee launcher writtern in Kotlin and based on [NXLoader](https://github.com/DavidBuchanan314/NXLoader) injector codebase. 
+Fusee launcher written in Kotlin and based on [NXLoader](https://github.com/DavidBuchanan314/NXLoader) injector codebase. 
 
 **Application doesn't require Root on your device.**
 
-[SX OS (1.2)](https://sx.xecuter.com/) payload bundled as default.
+[SX Loader](https://sx.xecuter.com/) payload bundled as default.
 
 ## Usage
 * Launch application
