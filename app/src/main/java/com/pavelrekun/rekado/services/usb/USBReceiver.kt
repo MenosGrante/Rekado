@@ -55,8 +55,6 @@ class USBReceiver : BaseActivity() {
 
     @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
     fun onEvent(event: Events.PayloadNotSelected) {
-        Logger.log(0, "Payload was not selected! Try to reconnect device and choose again!")
-
         finish()
     }
 

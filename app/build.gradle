@@ -56,7 +56,7 @@ dependencies {
     implementation "com.android.support:customtabs:$androidSupportVersion"
 
     // Tools
-    implementation "com.orhanobut:hawk:$hawkVersion"
+    implementation "io.paperdb:paperdb:$paperVersion"
     implementation "org.greenrobot:eventbus:$eventBusVersion"
     implementation "commons-io:commons-io:$commonsIOVersion"
     implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"

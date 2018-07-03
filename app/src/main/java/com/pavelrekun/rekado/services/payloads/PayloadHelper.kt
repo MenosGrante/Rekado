@@ -1,9 +1,9 @@
 package com.pavelrekun.rekado.services.payloads
 
 import android.os.Environment
-import com.orhanobut.hawk.Hawk
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.eventbus.Events
+import io.paperdb.Paper
 import org.greenrobot.eventbus.EventBus
 import java.io.File
 
@@ -60,15 +60,15 @@ object PayloadHelper {
     }
 
     fun putChosenPayload(payload: Payload) {
-        Hawk.put(CHOSEN_PAYLOAD, payload)
+        Paper.book().write(CHOSEN_PAYLOAD, payload)
         EventBus.getDefault().postSticky(Events.PayloadSelected())
     }
 
     fun getChosenPaylaod(): Payload {
-        return Hawk.get(CHOSEN_PAYLOAD)
+        return Paper.book().read(CHOSEN_PAYLOAD)
     }
 
     fun removeChosenPayload() {
-        Hawk.delete(CHOSEN_PAYLOAD)
+        Paper.book().delete(CHOSEN_PAYLOAD)
     }
 }

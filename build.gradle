@@ -27,7 +27,7 @@ ext {
 
     androidSupportVersion = '27.1.1'
 
-    hawkVersion = '2.0.1'
+    paperVersion = '2.6'
     eventBusVersion = '3.1.1'
     commonsIOVersion = '2.6'
     materialDialogsVersion = '0.9.6.0'

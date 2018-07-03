@@ -1,7 +1,7 @@
 package com.pavelrekun.rekado.services.logs
 
-import com.orhanobut.hawk.Hawk
 import com.pavelrekun.rekado.data.Log
+import io.paperdb.Paper
 
 object Logger {
 
@@ -21,10 +21,10 @@ object Logger {
     }
 
     fun getLogs(): MutableList<Log> {
-        return Hawk.get(LOGS_LIST_KEY)
+        return Paper.book().read(LOGS_LIST_KEY)
     }
 
     private fun saveLogs() {
-        Hawk.put(LOGS_LIST_KEY, logsList)
+        Paper.book().write(LOGS_LIST_KEY, logsList)
     }
 }

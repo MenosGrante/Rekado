@@ -20,8 +20,9 @@ object Dialogs {
                 .contentColorAttr(android.R.attr.textColorSecondaryInverse)
                 .titleColorRes(R.color.colorAccent)
                 .items(PayloadHelper.getPayloadTitles())
-                .itemsCallback { _, _, _, name ->
+                .itemsCallback { dialog, _, _, name ->
                     PayloadHelper.putChosenPayload(PayloadHelper.findPayload(name.toString()) as Payload)
+                    dialog.hide()
                 }
                 .dismissListener {
                     EventBus.getDefault().postSticky(Events.PayloadNotSelected())

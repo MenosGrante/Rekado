@@ -2,9 +2,9 @@ package com.pavelrekun.rekado
 
 import android.annotation.SuppressLint
 import android.app.Application
-import com.orhanobut.hawk.Hawk
 import com.pavelrekun.rekado.services.logs.Logger
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
+import io.paperdb.Paper
 
 @SuppressLint("StaticFieldLeak")
 class RekadoApplication : Application() {
@@ -18,7 +18,7 @@ class RekadoApplication : Application() {
 
         instance = this
 
-        Hawk.init(this).build()
+        Paper.init(this)
 
         Logger.init()
         PayloadHelper.init()
