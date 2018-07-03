@@ -58,7 +58,8 @@ dependencies {
     // Tools
     implementation "com.orhanobut:hawk:$hawkVersion"
     implementation "org.greenrobot:eventbus:$eventBusVersion"
-    implementation "commons-io:commons-io:$commonsIO"
+    implementation "commons-io:commons-io:$commonsIOVersion"
+    implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"

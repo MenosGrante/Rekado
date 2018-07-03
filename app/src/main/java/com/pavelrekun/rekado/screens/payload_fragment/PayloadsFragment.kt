@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
-import com.pavelrekun.rekado.screens.payload_fragment.adapters.Events
+import com.pavelrekun.rekado.services.eventbus.Events
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode

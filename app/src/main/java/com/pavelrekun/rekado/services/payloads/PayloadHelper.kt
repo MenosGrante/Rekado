@@ -3,6 +3,8 @@ package com.pavelrekun.rekado.services.payloads
 import android.os.Environment
 import com.orhanobut.hawk.Hawk
 import com.pavelrekun.rekado.data.Payload
+import com.pavelrekun.rekado.services.eventbus.Events
+import org.greenrobot.eventbus.EventBus
 import java.io.File
 
 
@@ -22,8 +24,18 @@ object PayloadHelper {
 
         File(FOLDER_PATH).listFiles().forEach {
             if (it.extension == "bin") {
-                payloads.add(Payload(getName(it.path), getPath(it.path)))
+                payloads.add(Payload(getName(it.path), it.path))
             }
+        }
+
+        return payloads
+    }
+
+    fun getPayloadTitles(): MutableList<String> {
+        val payloads: MutableList<String> = ArrayList()
+
+        for (payload in getPayloads()) {
+            payloads.add(payload.name)
         }
 
         return payloads
@@ -37,8 +49,19 @@ object PayloadHelper {
         return "$FOLDER_PATH/$name"
     }
 
+    fun findPayload(name: String): Payload? {
+        for (payload in getPayloads()) {
+            if (payload.name == name) {
+                return payload
+            }
+        }
+
+        return null
+    }
+
     fun putChosenPayload(payload: Payload) {
         Hawk.put(CHOSEN_PAYLOAD, payload)
+        EventBus.getDefault().postSticky(Events.PayloadSelected())
     }
 
     fun getChosenPaylaod(): Payload {

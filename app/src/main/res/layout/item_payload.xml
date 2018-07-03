@@ -13,6 +13,6 @@
         android:paddingTop="8dp"
         android:textColor="?android:attr/textColorPrimaryInverse"
         android:textSize="16sp"
-        tools:text="Hekate" />
+        tools:text="SX OS" />
 
 </LinearLayout>

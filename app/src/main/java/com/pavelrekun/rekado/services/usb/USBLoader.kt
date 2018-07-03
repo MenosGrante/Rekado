@@ -15,12 +15,12 @@ import java.nio.ByteOrder
 
 class USBLoader : USBHandler {
 
-    private val RCM_PAYLOAD_ADDR = 0x40010000
-    private val INTERMEZZO_LOCATION = 0x4001F000
-    private val PAYLOAD_LOAD_BLOCK = 0x40020000
-    private val MAX_LENGTH = 0x30298
-
     companion object {
+        private const val RCM_PAYLOAD_ADDR = 0x40010000
+        private const val INTERMEZZO_LOCATION = 0x4001F000
+        private const val PAYLOAD_LOAD_BLOCK = 0x40020000
+        private const val MAX_LENGTH = 0x30298
+
         init {
             System.loadLibrary("native-lib")
         }
@@ -138,5 +138,5 @@ class USBLoader : USBHandler {
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    external fun nativeTriggerExploit(fd: Int, length: Int): Int
+    private external fun nativeTriggerExploit(fd: Int, length: Int): Int
 }

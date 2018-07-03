@@ -27,11 +27,11 @@
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/payloadsList"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
             tools:listitem="@layout/item_payload" />
 
     </LinearLayout>

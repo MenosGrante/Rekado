@@ -10,7 +10,7 @@ import com.pavelrekun.rekado.screens.instructions_fragment.InstructionsFragment
 import com.pavelrekun.rekado.screens.logs_fragment.LogsFragment
 import com.pavelrekun.rekado.screens.payload_fragment.PayloadsFragment
 import com.pavelrekun.rekado.screens.payload_fragment.PayloadsView
-import com.pavelrekun.rekado.screens.payload_fragment.adapters.Events
+import com.pavelrekun.rekado.services.eventbus.Events
 import com.pavelrekun.rekado.services.logs.Logger
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.FilesHelper
