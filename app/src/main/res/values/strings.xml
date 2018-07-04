@@ -38,5 +38,5 @@
     <string name="loader_dialog_title">Choose payload</string>
 
     <!-- Strings for Helper -->
-    <string name="helper_error_file_wrong">Selected file is not the payload!</string>
+    <string name="helper_error_file_wrong">Are you sure this is correct payload file?</string>
 </resources>

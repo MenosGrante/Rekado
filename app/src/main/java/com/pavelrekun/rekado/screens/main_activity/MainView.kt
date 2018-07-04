@@ -17,7 +17,6 @@ import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.FilesHelper
 import kotlinx.android.synthetic.main.activity_main.*
 import org.greenrobot.eventbus.EventBus
-import java.io.File
 import java.io.IOException
 
 
@@ -67,9 +66,8 @@ class MainView(private val activity: BaseActivity) : MainContract.View {
 
             val payload = Payload(PayloadHelper.getName(resultData.data.path), PayloadHelper.getPath(PayloadHelper.getName(resultData.data.path)))
 
-            if (File(payload.path).extension != "bin") {
+            if (!payload.name.contains("bin")) {
                 Toast.makeText(activity, activity.getString(R.string.helper_error_file_wrong), Toast.LENGTH_SHORT).show()
-                return
             }
 
             try {
@@ -82,8 +80,6 @@ class MainView(private val activity: BaseActivity) : MainContract.View {
                 e.printStackTrace()
                 Logger.log(0, "Failed to add payload: ${payload.name}")
             }
-
-
         }
     }
 }

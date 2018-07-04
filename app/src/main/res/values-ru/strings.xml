@@ -33,5 +33,5 @@
     <string name="loader_dialog_title">Выбор загрузчика</string>
 
     <!-- Strings for Helper -->
-    <string name="helper_error_file_wrong">Выбранный файл не является загрузчиком!</string>
+    <string name="helper_error_file_wrong">Вы уверены, что это правильный файл загрузчика?</string>
 </resources>
