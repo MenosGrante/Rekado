@@ -2,9 +2,11 @@ package com.pavelrekun.rekado.screens.main_activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
-import org.greenrobot.eventbus.EventBus
+import com.pavelrekun.rekado.screens.about_activity.AboutActivity
 
 
 class MainActivity : BaseActivity() {
@@ -20,5 +22,21 @@ class MainActivity : BaseActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         mvpView.onActivityResult(requestCode, resultCode, resultData)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.navigation_about -> {
+                startActivity(Intent(this, AboutActivity::class.java))
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

@@ -24,6 +24,10 @@
         </activity>
 
         <activity
+            android:name=".screens.about_activity.AboutActivity"
+            android:launchMode="singleTop" />
+
+        <activity
             android:name=".services.usb.USBReceiver"
             android:excludeFromRecents="true"
             android:exported="false"

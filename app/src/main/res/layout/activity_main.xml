@@ -37,8 +37,8 @@
         android:background="@color/colorBackgroundSecondary"
         android:elevation="5dp"
         app:elevation="5dp"
-        app:itemIconTint="@drawable/drawable_icon_drawer"
-        app:itemTextColor="@drawable/drawable_icon_drawer"
+        app:itemIconTint="@drawable/state_navigation_item"
+        app:itemTextColor="@drawable/state_navigation_item"
         app:menu="@menu/menu_bottom_navigation" />
 
 </RelativeLayout>

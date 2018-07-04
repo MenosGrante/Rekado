@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:lineSpacingMultiplier="1.1"
         android:padding="16dp"
-        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:textColor="?android:attr/textColorPrimary"
         tools:text="Log" />
 
 </LinearLayout>

@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Strings for Navigation -->
+    <string name="navigation_payloads">Загрузчики</string>
+    <string name="navigation_instructions">Инструкция</string>
+    <string name="navigation_logs">Логи</string>
+    <string name="navigation_about">О программе</string>
+
+    <!-- Strings for About -->
+    <string name="about_category_information">Информация</string>
+    <string name="about_category_developer">Разработчик</string>
+    <string name="about_information_description">Приложение написано на Kotlin и C++ и использует код для иньекции загрузчиков на ваш Nintendo Switch из приложения NXLoader</string>
+
+    <!-- Strings for Instructions -->
+    <string name="instructions_category_cable">Кабель</string>
+    <string name="instructions_category_cable_description">Сначала вам нужно подобрать кабель для подключения вашего устройства к Nintendo Switch. Для правильной работы это должен быть кабель, разработанный для передачи данных. \n\nРекомендуется использовать A-to-C кабель и USB OTG адаптер.</string>
+    <string name="instructions_category_payload">Загрузчик</string>
+    <string name="instructions_category_payload_description">В категории \u0022Загрузчики\u0022 нажмите на кнопку \u0022+\u0022, чтобы выбрать интересующий вас загрузчик из памяти устройства. Так же вы можете вручную перенести загрузчик в папку Rekado в памяти вашего устройства. \n\nИли вы можете использовать загрузчик по умолчанию (SX Loader)</string>
+    <string name="instructions_category_rcm_description">Введите свой Nintendo Switch в режим RCM любым удобным вам способом. \n\nВаш Nintendo Switch включиться автоматически, не забудье удерживать кнопку ЗВУК + при этом.</string>
+    <string name="instructions_category_final">Финал</string>
+    <string name="instructions_category_final_description">Подключите ваше устройство к Nintendo Switch и дайте разрешение на подключение по USB, если будет необходимо. Подождите, пока программа предложить вам необходимый загрузчик и ожидайте конца установки.</string>
+
+    <!-- Strings for Logs -->
+    <string name="logs_actions_list">Список событий</string>
+
+    <!-- Strings for Permissions -->
+    <string name="permission_storage_dialog_title">Разрешение для хранилища</string>
+    <string name="permission_storage_dialog_description">Rekado нужно это разрешение для добавления загрузчиков из памяти устройства</string>
+    <string name="permission_storage_button">Запросить</string>
+    <string name="permission_storage_error">Не удалось получить доступ к хранилищу. Повторите попытку позже.</string>
+
+    <!-- Strings for Loader -->
+    <string name="loader_dialog_title">Выбор загрузчика</string>
+</resources>

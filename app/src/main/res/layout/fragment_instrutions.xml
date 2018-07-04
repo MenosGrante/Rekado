@@ -32,7 +32,7 @@
             android:layout_marginStart="16dp"
             android:lineSpacingMultiplier="1.1"
             android:text="@string/instructions_category_cable_description"
-            android:textColor="?android:attr/textColorPrimaryInverse" />
+            android:textColor="?android:attr/textColorPrimary" />
 
     </LinearLayout>
 
@@ -61,7 +61,7 @@
             android:layout_marginStart="16dp"
             android:lineSpacingMultiplier="1.1"
             android:text="@string/instructions_category_payload_description"
-            android:textColor="?android:attr/textColorPrimaryInverse" />
+            android:textColor="?android:attr/textColorPrimary" />
 
     </LinearLayout>
 
@@ -109,7 +109,7 @@
             android:layout_marginStart="16dp"
             android:lineSpacingMultiplier="1.1"
             android:text="@string/instructions_category_rcm_description"
-            android:textColor="?android:attr/textColorPrimaryInverse" />
+            android:textColor="?android:attr/textColorPrimary" />
 
     </LinearLayout>
 
@@ -141,7 +141,7 @@
             android:layout_marginStart="16dp"
             android:lineSpacingMultiplier="1.1"
             android:text="@string/instructions_category_final_description"
-            android:textColor="?android:attr/textColorPrimaryInverse" />
+            android:textColor="?android:attr/textColorPrimary" />
 
     </LinearLayout>
 
