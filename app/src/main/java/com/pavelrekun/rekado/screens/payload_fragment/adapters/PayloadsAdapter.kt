@@ -14,6 +14,12 @@ class PayloadsAdapter(var data: MutableList<Payload>) : RecyclerView.Adapter<Pay
 
     override fun getItemCount() = data.size
 
+    fun updateList(data: MutableList<Payload>) {
+        this.data = data
+
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(data[position])
     }

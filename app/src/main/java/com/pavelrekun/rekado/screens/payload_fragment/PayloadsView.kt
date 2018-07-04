@@ -49,7 +49,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     override fun updateList() {
-        adapter.notifyDataSetChanged()
+        adapter.updateList(PayloadHelper.getPayloads())
     }
 
     override fun initClickListeners() {
@@ -80,7 +80,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     private fun getPayloadFromStorage() {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
         intent.addCategory(Intent.CATEGORY_OPENABLE)
-        intent.type = "*/.bin*"
+        intent.type = "*/*"
         activity.startActivityForResult(intent, READ_REQUEST_CODE)
     }
 }
