@@ -32,7 +32,7 @@
     <string name="permission_storage_dialog_title">Storage permission</string>
     <string name="permission_storage_dialog_description">Rekado need this permission to get payload files from your device\'s storage.</string>
     <string name="permission_storage_button">Request</string>
-    <string name="permission_storage_error">Could not access the repository. Try to get permission again.</string>
+    <string name="permission_storage_error">Could not access device\'s storage. Try to get permission again.</string>
 
     <!-- Strings for Loader -->
     <string name="loader_dialog_title">Choose payload</string>

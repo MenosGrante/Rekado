@@ -48,7 +48,6 @@ class USBLoader : USBHandler {
             return
         }
 
-        Toast.makeText(context, Utils.bytesToHex(deviceID), Toast.LENGTH_SHORT).show()
 
         Logger.log(1, "Device ID: ${Utils.bytesToHex(deviceID)}")
 

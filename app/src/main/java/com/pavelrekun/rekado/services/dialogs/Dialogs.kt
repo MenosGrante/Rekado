@@ -17,7 +17,7 @@ object Dialogs {
         val dialog = MaterialDialog.Builder(activity)
                 .title(R.string.loader_dialog_title)
                 .backgroundColorRes(R.color.colorPrimary)
-                .contentColorAttr(android.R.attr.textColorSecondaryInverse)
+                .contentColorAttr(android.R.attr.textColorSecondary)
                 .titleColorRes(R.color.colorAccent)
                 .items(PayloadHelper.getPayloadTitles())
                 .itemsCallback { dialog, _, _, name ->

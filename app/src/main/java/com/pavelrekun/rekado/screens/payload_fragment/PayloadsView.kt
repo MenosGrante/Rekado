@@ -26,11 +26,21 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     override fun initViews() {
         activity.setTitle(R.string.navigation_payloads)
 
-        initList()
+        prepareList()
         initClickListeners()
     }
 
+    override fun prepareList() {
+        if (!PermissionsUtils.checkPermissionGranted(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            PermissionsUtils.showPermissionDialog(activity, fragment, PermissionsUtils.PERMISSIONS_READ_REQUEST_CODE)
+        } else {
+            initList()
+        }
+    }
+
     override fun initList() {
+        FilesHelper.copyAsset()
+
         adapter = PayloadsAdapter(PayloadHelper.getPayloads())
 
         activity.payloadsList.setHasFixedSize(true)
@@ -47,8 +57,8 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     override fun addPayload() {
-        if (!PermissionsUtils.checkPermissionGranted(activity, Manifest.permission.READ_EXTERNAL_STORAGE)) {
-            PermissionsUtils.showPermissionDialog(activity, fragment)
+        if (!PermissionsUtils.checkPermissionGranted(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            PermissionsUtils.showPermissionDialog(activity, fragment, PermissionsUtils.PERMISSIONS_WRITE_REQUEST_CODE)
         } else {
             getPayloadFromStorage()
         }
@@ -56,9 +66,11 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         when (requestCode) {
-            PermissionsUtils.PERMISSIONS_REQUEST_CODE -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            PermissionsUtils.PERMISSIONS_READ_REQUEST_CODE -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                initList()
+            }
+            PermissionsUtils.PERMISSIONS_WRITE_REQUEST_CODE -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 getPayloadFromStorage()
-                FilesHelper.copyAsset()
             } else {
                 Toast.makeText(activity, R.string.permission_storage_error, Toast.LENGTH_SHORT).show()
             }

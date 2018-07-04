@@ -6,6 +6,8 @@ interface PayloadsContract {
 
         fun initViews()
 
+        fun prepareList()
+
         fun initList()
 
         fun updateList()
