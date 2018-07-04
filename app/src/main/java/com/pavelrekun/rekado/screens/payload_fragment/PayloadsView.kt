@@ -49,7 +49,9 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     override fun updateList() {
-        adapter.updateList(PayloadHelper.getPayloads())
+        if(this::adapter.isInitialized){
+            adapter.updateList(PayloadHelper.getPayloads())
+        }
     }
 
     override fun initClickListeners() {
