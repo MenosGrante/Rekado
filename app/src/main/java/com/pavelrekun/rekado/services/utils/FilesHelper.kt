@@ -5,6 +5,7 @@ import com.pavelrekun.rekado.services.eventbus.Events
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import org.greenrobot.eventbus.EventBus
 import java.io.*
+import java.nio.file.Path
 
 
 object FilesHelper {
@@ -29,6 +30,10 @@ object FilesHelper {
                 input.copyTo(output)
             }
         }
+    }
+
+    fun removeFile(path: String) {
+        File(path).delete()
     }
 
 }

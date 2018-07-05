@@ -96,7 +96,7 @@
                     android:padding="16dp"
                     android:text="@string/about_information_description"
                     android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
