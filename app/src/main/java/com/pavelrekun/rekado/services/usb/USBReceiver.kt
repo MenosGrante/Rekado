@@ -7,6 +7,7 @@ import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.eventbus.Events
 import com.pavelrekun.rekado.services.dialogs.Dialogs
 import com.pavelrekun.rekado.services.logs.Logger
+import com.pavelrekun.rekado.services.payloads.PayloadLoader
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -43,7 +44,7 @@ class USBReceiver : BaseActivity() {
     @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
     fun onEvent(event: Events.PayloadSelected) {
         if (vid == APX_VID && pid == APX_PID) {
-            usbHandler = USBLoader()
+            usbHandler = PayloadLoader()
         }
 
         usbHandler?.handleDevice(device)

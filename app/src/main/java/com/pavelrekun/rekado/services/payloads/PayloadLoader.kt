@@ -1,19 +1,18 @@
-package com.pavelrekun.rekado.services.usb
+package com.pavelrekun.rekado.services.payloads
 
 import android.content.Context
 import android.hardware.usb.UsbDevice
 import android.hardware.usb.UsbManager
-import android.widget.Toast
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.services.logs.Logger
-import com.pavelrekun.rekado.services.payloads.PayloadHelper
+import com.pavelrekun.rekado.services.usb.USBHandler
 import com.pavelrekun.rekado.services.utils.Utils
 import java.io.FileInputStream
 import java.io.IOException
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 
-class USBLoader : USBHandler {
+class PayloadLoader : USBHandler {
 
     companion object {
         private const val RCM_PAYLOAD_ADDR = 0x40010000

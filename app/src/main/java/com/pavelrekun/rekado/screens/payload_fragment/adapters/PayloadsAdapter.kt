@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.eventbus.Events
+import com.pavelrekun.rekado.services.logs.Logger
 import com.pavelrekun.rekado.services.utils.FilesHelper
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_payload.*
@@ -41,6 +42,7 @@ class PayloadsAdapter(var data: MutableList<Payload>) : RecyclerView.Adapter<Pay
             itemPayloadRemove.setOnClickListener {
                 FilesHelper.removeFile(payload.path)
                 EventBus.getDefault().postSticky(Events.UpdateListEvent())
+                Logger.log(1, "Payload ${payload.name} deleted!")
             }
         }
 
