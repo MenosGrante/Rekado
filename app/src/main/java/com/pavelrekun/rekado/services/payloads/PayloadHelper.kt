@@ -23,7 +23,7 @@ object PayloadHelper {
         val payloads: MutableList<Payload> = ArrayList()
 
         File(FOLDER_PATH).listFiles().forEach {
-            if (it.extension == "bin") {
+            if (it.path.contains("bin")) {
                 payloads.add(Payload(getName(it.path), it.path))
             }
         }
