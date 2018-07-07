@@ -31,4 +31,5 @@ ext {
     eventBusVersion = '3.1.1'
     commonsIOVersion = '2.6'
     materialDialogsVersion = '0.9.6.0'
+    fileChooserVersion = '1.1.10'
 }

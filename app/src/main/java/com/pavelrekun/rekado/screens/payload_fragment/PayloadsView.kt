@@ -1,24 +1,31 @@
 package com.pavelrekun.rekado.screens.payload_fragment
 
 import android.Manifest
-import android.content.Intent
 import android.content.pm.PackageManager
+import android.os.Environment
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
+import com.obsez.android.lib.filechooser.ChooserDialog
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
+import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.screens.payload_fragment.adapters.PayloadsAdapter
+import com.pavelrekun.rekado.services.eventbus.Events
+import com.pavelrekun.rekado.services.logs.Logger
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.FilesHelper
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
+import com.pavelrekun.rekado.services.utils.toFile
 import kotlinx.android.synthetic.main.fragment_payloads.*
+import org.greenrobot.eventbus.EventBus
+import java.io.IOException
 
 
 class PayloadsView(private val activity: BaseActivity, private val fragment: Fragment) : PayloadsContract.View {
 
     companion object {
-        const val READ_REQUEST_CODE = 42
+        const val READ_REQUEST_CODE = 50
     }
 
     private lateinit var adapter: PayloadsAdapter
@@ -49,7 +56,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     override fun updateList() {
-        if(this::adapter.isInitialized){
+        if (this::adapter.isInitialized) {
             adapter.updateList(PayloadHelper.getPayloads())
         }
     }
@@ -80,9 +87,29 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     private fun getPayloadFromStorage() {
-        val intent = Intent(Intent.ACTION_GET_CONTENT)
-        intent.addCategory(Intent.CATEGORY_OPENABLE)
-        intent.type = "*/*"
-        activity.startActivityForResult(intent, READ_REQUEST_CODE)
+        ChooserDialog().with(activity)
+                .withFilter(false, false, "bin")
+                .withStartFile(Environment.getExternalStorageDirectory().path)
+                .withRowLayoutView(R.layout.item_dialog_chooser)
+                .withChosenListener { path, pathFile ->
+
+                    val payload = Payload(PayloadHelper.getName(path), PayloadHelper.getPath(PayloadHelper.getName(path)))
+
+                    if (!payload.name.contains("bin")) {
+                        Toast.makeText(activity, activity.getString(R.string.helper_error_file_wrong), Toast.LENGTH_SHORT).show()
+                    }
+
+                    try {
+                        pathFile.toFile(PayloadHelper.FOLDER_PATH + "/" + payload.name)
+
+                        EventBus.getDefault().postSticky(Events.UpdateListEvent())
+                        Logger.log(1, "Added new payload: ${payload.name}")
+                    } catch (e: IOException) {
+                        e.printStackTrace()
+                        Logger.log(0, "Failed to add payload: ${payload.name}")
+                    }
+                }
+                .build()
+                .show()
     }
 }

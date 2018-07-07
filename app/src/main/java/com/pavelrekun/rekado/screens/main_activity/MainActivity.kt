@@ -20,10 +20,6 @@ class MainActivity : BaseActivity() {
         mvpView = MainView(this)
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
-        mvpView.onActivityResult(requestCode, resultCode, resultData)
-    }
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
