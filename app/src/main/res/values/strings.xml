@@ -36,6 +36,8 @@
 
     <!-- Strings for Loader -->
     <string name="loader_dialog_title">Choose payload</string>
+    <string name="loader_dialog_ok" translatable="false">OK</string>
+    <string name="loader_dialog_cancel">Cancel</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_wrong">Are you sure this is correct payload file?</string>

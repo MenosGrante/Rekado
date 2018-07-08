@@ -12,7 +12,6 @@ import org.greenrobot.eventbus.EventBus
 object Dialogs {
 
     fun showPayloadsDialog(activity: BaseActivity) {
-        PayloadHelper.removeChosenPayload()
 
         val dialog = MaterialDialog.Builder(activity)
                 .title(R.string.loader_dialog_title)

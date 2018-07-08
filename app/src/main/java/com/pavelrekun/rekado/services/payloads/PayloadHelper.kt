@@ -64,7 +64,7 @@ object PayloadHelper {
         EventBus.getDefault().postSticky(Events.PayloadSelected())
     }
 
-    fun getChosenPaylaod(): Payload {
+    fun getChosenPayload(): Payload {
         return Paper.book().read(CHOSEN_PAYLOAD)
     }
 

@@ -7,6 +7,7 @@ import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.eventbus.Events
 import com.pavelrekun.rekado.services.dialogs.Dialogs
 import com.pavelrekun.rekado.services.logs.Logger
+import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.payloads.PayloadLoader
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -50,6 +51,8 @@ class USBReceiver : BaseActivity() {
         usbHandler?.handleDevice(device)
 
         Logger.log(1, "Payload loading finished for device: " + device.deviceName)
+
+        PayloadHelper.removeChosenPayload()
 
         finish()
     }

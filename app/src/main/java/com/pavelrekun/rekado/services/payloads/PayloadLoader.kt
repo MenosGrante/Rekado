@@ -119,7 +119,7 @@ class PayloadLoader : USBHandler {
     }
 
     private fun getPayload(): ByteArray {
-        val chosenPayload = PayloadHelper.getChosenPaylaod()
+        val chosenPayload = PayloadHelper.getChosenPayload()
         val chosenPayloadFile = FileInputStream(chosenPayload.path)
 
         Logger.log(1, "Opening chosen payload: ${chosenPayload.name}")

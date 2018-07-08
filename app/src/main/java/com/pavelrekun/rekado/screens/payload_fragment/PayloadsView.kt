@@ -83,12 +83,11 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
         }
     }
 
-
-    // TODO: Localize all title, buttons and other UI from this Dialog
     private fun getPayloadFromStorage() {
         ChooserDialog().with(activity)
                 .withFilter(false, false, "bin")
                 .withStartFile(Environment.getExternalStorageDirectory().path)
+                .withResources(R.string.loader_dialog_title, R.string.loader_dialog_ok, R.string.loader_dialog_cancel)
                 .withRowLayoutView(R.layout.item_dialog_chooser)
                 .withChosenListener { path, pathFile -> onChosenFileListener(path, pathFile) }
                 .build()
