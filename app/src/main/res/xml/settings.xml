@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.preference.PreferenceCategory android:title="@string/settings_category_auto_injector" />
+
+    <android.support.v7.preference.CheckBoxPreference
+        android:key="auto_injector_enable"
+        android:title="@string/settings_auto_injector_disabled" />
+
+    <android.support.v7.preference.PreferenceCategory android:title="@string/settings_category_payloads" />
+
+    <android.support.v7.preference.Preference
+        android:key="payloads_reset"
+        android:summary="@string/settings_payloads_reset_summary"
+        android:title="@string/settings_payloads_reset_title" />
+
+</android.support.v7.preference.PreferenceScreen>

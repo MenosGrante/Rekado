@@ -9,8 +9,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 11
-        versionName "1.1.1"
+        versionCode 12
+        versionName "1.2"
 
         externalNativeBuild {
             cmake {
@@ -57,6 +57,7 @@ dependencies {
     implementation "com.android.support:design:$androidSupportVersion"
     implementation "com.android.support:recyclerview-v7:$androidSupportVersion"
     implementation "com.android.support:customtabs:$androidSupportVersion"
+    implementation "com.android.support:preference-v7:$androidSupportVersion"
 
     // Tools
     implementation "io.paperdb:paperdb:$paperVersion"

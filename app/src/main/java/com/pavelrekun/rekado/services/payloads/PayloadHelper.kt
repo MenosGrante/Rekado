@@ -31,6 +31,14 @@ object PayloadHelper {
         return payloads
     }
 
+    fun deletePayloads() {
+        File(FOLDER_PATH).listFiles().forEach {
+            if (it.nameWithoutExtension != "sx_loader") {
+                it.delete()
+            }
+        }
+    }
+
     fun getPayloadTitles(): MutableList<String> {
         val payloads: MutableList<String> = ArrayList()
 

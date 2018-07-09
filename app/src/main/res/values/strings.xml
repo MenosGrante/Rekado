@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name" translatable="false">Rekado</string>
-    <string name="app_version" translatable="false">1.1.1</string>
+    <string name="app_version" translatable="false">1.2</string>
 
     <!-- Strings for Navigation -->
     <string name="navigation_payloads">Payloads</string>
     <string name="navigation_instructions">Instructions</string>
     <string name="navigation_logs">Logs</string>
     <string name="navigation_about">About</string>
+    <string name="navigation_settings">Settings</string>
 
     <!-- Strings for About -->
     <string name="about_category_information">Information</string>
@@ -28,16 +29,26 @@
     <!-- Strings for Logs -->
     <string name="logs_actions_list">List of actions</string>
 
+    <!-- Strings for Settings -->
+    <string name="settings_category_auto_injector">Auto injector</string>
+    <string name="settings_auto_injector_disabled">Enable "Auto injector"</string>
+    <string name="settings_auto_injector_enabled">Disable "Auto injector"</string>
+    <string name="settings_category_payloads">Payloads</string>
+    <string name="settings_payloads_reset_title">Reset</string>
+    <string name="settings_payloads_reset_summary">Remove all selected payloads (except primary SX Loader)</string>
+
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Storage permission</string>
     <string name="permission_storage_dialog_description">Rekado need this permission to get payload files from your device\'s storage.</string>
     <string name="permission_storage_button">Request</string>
     <string name="permission_storage_error">Could not access device\'s storage. Try to get permission again.</string>
 
-    <!-- Strings for Loader -->
-    <string name="loader_dialog_title">Choose payload</string>
-    <string name="loader_dialog_ok" translatable="false">OK</string>
-    <string name="loader_dialog_cancel">Cancel</string>
+    <!-- Strings for Dialogs -->
+    <string name="dialog_loader_title">Choose payload</string>
+    <string name="dialog_reset_payloads_title">Reset</string>
+    <string name="dialog_reset_payloads_summary">Are you sure you want to delete payloads?</string>
+    <string name="dialog_positive" translatable="false">OK</string>
+    <string name="dialog_negative">Cancel</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_wrong">Are you sure this is correct payload file?</string>

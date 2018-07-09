@@ -30,8 +30,8 @@
     <string name="permission_storage_error">Не удалось получить доступ к хранилищу. Повторите попытку позже.</string>
 
     <!-- Strings for Loader -->
-    <string name="loader_dialog_title">Выбор загрузчика</string>
-    <string name="loader_dialog_cancel">Отмена</string>
+    <string name="dialog_loader_title">Выбор загрузчика</string>
+    <string name="dialog_negative">Отмена</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_wrong">Вы уверены, что это правильный файл загрузчика?</string>

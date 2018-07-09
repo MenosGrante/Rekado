@@ -1,16 +1,10 @@
 package com.pavelrekun.rekado.services.utils
 
-import android.database.Cursor
-import android.net.Uri
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.services.eventbus.Events
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import org.greenrobot.eventbus.EventBus
 import java.io.*
-import java.nio.file.Path
-import android.provider.MediaStore
-import java.lang.Exception
-
 
 object FilesHelper {
 

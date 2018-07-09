@@ -87,7 +87,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
         ChooserDialog().with(activity)
                 .withFilter(false, false, "bin")
                 .withStartFile(Environment.getExternalStorageDirectory().path)
-                .withResources(R.string.loader_dialog_title, R.string.loader_dialog_ok, R.string.loader_dialog_cancel)
+                .withResources(R.string.dialog_loader_title, R.string.dialog_positive, R.string.dialog_negative)
                 .withRowLayoutView(R.layout.item_dialog_chooser)
                 .withChosenListener { path, pathFile -> onChosenFileListener(path, pathFile) }
                 .build()
