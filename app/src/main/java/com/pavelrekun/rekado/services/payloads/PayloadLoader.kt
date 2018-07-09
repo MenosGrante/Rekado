@@ -15,14 +15,14 @@ import java.nio.ByteOrder
 class PayloadLoader : USBHandler {
 
     companion object {
+        init {
+            System.loadLibrary("native-lib")
+        }
+
         private const val RCM_PAYLOAD_ADDR = 0x40010000
         private const val INTERMEZZO_LOCATION = 0x4001F000
         private const val PAYLOAD_LOAD_BLOCK = 0x40020000
         private const val MAX_LENGTH = 0x30298
-
-        init {
-            System.loadLibrary("native-lib")
-        }
     }
 
     override fun handleDevice(device: UsbDevice) {
@@ -77,6 +77,7 @@ class PayloadLoader : USBHandler {
         }
 
         payload.put(intermezzo)
+
         payload.put(ByteArray(PAYLOAD_LOAD_BLOCK - INTERMEZZO_LOCATION - intermezzo.size))
 
         try {
@@ -136,5 +137,5 @@ class PayloadLoader : USBHandler {
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    private external fun nativeTriggerExploit(fd: Int, length: Int): Int
+    external fun nativeTriggerExploit(fd: Int, length: Int): Int
 }

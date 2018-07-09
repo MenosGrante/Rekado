@@ -9,8 +9,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 10
-        versionName "1.1"
+        versionCode 11
+        versionName "1.1.1"
 
         externalNativeBuild {
             cmake {
@@ -43,9 +43,8 @@ android {
     }
 
     lintOptions {
-        checkReleaseBuilds false
+        abortOnError false
     }
-
 }
 
 kotlin {
