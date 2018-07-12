@@ -12,7 +12,7 @@ import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.screens.payload_fragment.adapters.PayloadsAdapter
 import com.pavelrekun.rekado.services.eventbus.Events
-import com.pavelrekun.rekado.services.logs.Logger
+import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.FilesHelper
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
@@ -45,7 +45,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     override fun initList() {
         FilesHelper.copyAsset()
 
-        adapter = PayloadsAdapter(PayloadHelper.getPayloads())
+        adapter = PayloadsAdapter(PayloadHelper.getAll())
 
         activity.payloadsList.setHasFixedSize(true)
         activity.payloadsList.layoutManager = LinearLayoutManager(activity)
@@ -54,7 +54,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
 
     override fun updateList() {
         if (this::adapter.isInitialized) {
-            adapter.updateList(PayloadHelper.getPayloads())
+            adapter.updateList()
         }
     }
 
@@ -105,10 +105,10 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
             pathFile.toFile(PayloadHelper.FOLDER_PATH + "/" + payload.name)
 
             EventBus.getDefault().postSticky(Events.UpdateListEvent())
-            Logger.log(1, "Added new payload: ${payload.name}")
+            LogHelper.log(1, "Added new payload: ${payload.name}")
         } catch (e: IOException) {
             e.printStackTrace()
-            Logger.log(0, "Failed to add payload: ${payload.name}")
+            LogHelper.log(0, "Failed to add payload: ${payload.name}")
         }
     }
 }

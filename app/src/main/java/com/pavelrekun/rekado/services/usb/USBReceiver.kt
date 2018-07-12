@@ -3,12 +3,14 @@ package com.pavelrekun.rekado.services.usb
 import android.hardware.usb.UsbDevice
 import android.hardware.usb.UsbManager
 import android.os.Bundle
+import android.os.Process
 import com.pavelrekun.rekado.base.BaseActivity
-import com.pavelrekun.rekado.services.eventbus.Events
 import com.pavelrekun.rekado.services.dialogs.Dialogs
-import com.pavelrekun.rekado.services.logs.Logger
+import com.pavelrekun.rekado.services.eventbus.Events
+import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.payloads.PayloadLoader
+import com.pavelrekun.rekado.services.utils.SettingsUtils
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -36,30 +38,38 @@ class USBReceiver : BaseActivity() {
             vid = device.vendorId
             pid = device.productId
 
-            Logger.log(1, "USB device connected: ${device.deviceName}")
+            LogHelper.log(1, "USB device connected: ${device.deviceName}")
 
-            Dialogs.showPayloadsDialog(this)
+            if (SettingsUtils.checkAutoInjectorEnabled()) {
+                PayloadHelper.putChosen(PayloadHelper.find(SettingsUtils.getAutoInjectorPayload())!!)
+                injectPayload()
+            } else {
+                Dialogs.showPayloadsDialog(this)
+            }
+
         }
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
-    fun onEvent(event: Events.PayloadSelected) {
+    private fun injectPayload() {
         if (vid == APX_VID && pid == APX_PID) {
             usbHandler = PayloadLoader()
         }
 
         usbHandler?.handleDevice(device)
 
-        Logger.log(1, "Payload loading finished for device: " + device.deviceName)
+        LogHelper.log(1, "Payload loading finished for device: " + device.deviceName)
 
-        PayloadHelper.removeChosenPayload()
+        finishReceiver()
+    }
 
-        finish()
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    fun onEvent(event: Events.PayloadSelected) {
+        injectPayload()
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
     fun onEvent(event: Events.PayloadNotSelected) {
-        finish()
+        finishReceiver()
     }
 
     override fun onStart() {
@@ -70,5 +80,9 @@ class USBReceiver : BaseActivity() {
     override fun onStop() {
         super.onStop()
         EventBus.getDefault().unregister(this)
+    }
+
+    private fun finishReceiver() {
+        Process.killProcess(Process.myPid())
     }
 }

@@ -31,11 +31,12 @@
 
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Auto injector</string>
-    <string name="settings_auto_injector_disabled">Enable "Auto injector"</string>
-    <string name="settings_auto_injector_enabled">Disable "Auto injector"</string>
+    <string name="settings_auto_injector_status_title_disabled">Enable \u0022Auto injector\u0022</string>
+    <string name="settings_auto_injector_status_title_enabled">Disable \u0022Auto injector\u0022</string>
+    <string name="settings_auto_injector_payload_title">Payload</string>
     <string name="settings_category_payloads">Payloads</string>
-    <string name="settings_payloads_reset_title">Reset</string>
-    <string name="settings_payloads_reset_summary">Remove all selected payloads (except primary SX Loader)</string>
+    <string name="settings_payloads_reset_title">Clear</string>
+    <string name="settings_payloads_reset_summary">Remove all added payloads (except primary SX Loader)</string>
 
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Storage permission</string>
@@ -45,7 +46,7 @@
 
     <!-- Strings for Dialogs -->
     <string name="dialog_loader_title">Choose payload</string>
-    <string name="dialog_reset_payloads_title">Reset</string>
+    <string name="dialog_reset_payloads_title">Clear</string>
     <string name="dialog_reset_payloads_summary">Are you sure you want to delete payloads?</string>
     <string name="dialog_positive" translatable="false">OK</string>
     <string name="dialog_negative">Cancel</string>

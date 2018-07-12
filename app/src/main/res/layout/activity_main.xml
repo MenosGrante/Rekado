@@ -15,19 +15,12 @@
         app:title="Rekado"
         app:titleTextColor="@color/colorWhite" />
 
-    <ScrollView
+    <FrameLayout
+        android:id="@+id/main_content_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/mainNavigationBar"
-        android:layout_below="@+id/mainToolbar"
-        android:fillViewport="true">
-
-        <FrameLayout
-            android:id="@+id/main_content_frame"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </ScrollView>
+        android:layout_below="@+id/mainToolbar" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/mainNavigationBar"

@@ -8,6 +8,8 @@ interface LogsContract {
 
         fun initList()
 
+        fun initClickListeners()
+
     }
 
 }

@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.eventbus.Events
-import com.pavelrekun.rekado.services.logs.Logger
+import com.pavelrekun.rekado.services.logs.LogHelper
+import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.FilesHelper
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_payload.*
@@ -17,8 +18,8 @@ class PayloadsAdapter(var data: MutableList<Payload>) : RecyclerView.Adapter<Pay
 
     override fun getItemCount() = data.size
 
-    fun updateList(data: MutableList<Payload>) {
-        this.data = data
+    fun updateList() {
+        this.data = PayloadHelper.getAll()
 
         notifyDataSetChanged()
     }
@@ -37,12 +38,12 @@ class PayloadsAdapter(var data: MutableList<Payload>) : RecyclerView.Adapter<Pay
         fun bind(payload: Payload) {
             itemPayloadName.text = payload.name
 
-            itemPayloadRemove.visibility = if (payload.name == "sx_loader.bin") View.GONE else View.VISIBLE
+            itemPayloadRemove.visibility = if (payload.name == PayloadHelper.BASIC_PAYLOAD_NAME) View.GONE else View.VISIBLE
 
             itemPayloadRemove.setOnClickListener {
                 FilesHelper.removeFile(payload.path)
                 EventBus.getDefault().postSticky(Events.UpdateListEvent())
-                Logger.log(1, "Payload ${payload.name} deleted!")
+                LogHelper.log(1, "Payload ${payload.name} deleted!")
             }
         }
 

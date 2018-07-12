@@ -11,6 +11,7 @@ import java.io.File
 object PayloadHelper {
 
     val FOLDER_PATH = "${Environment.getExternalStorageDirectory()}/Rekado/"
+    const val BASIC_PAYLOAD_NAME = "sx_loader.bin"
 
     private const val CHOSEN_PAYLOAD = "CHOSEN_PAYLOAD"
 
@@ -19,7 +20,7 @@ object PayloadHelper {
         if (!folderFile.exists()) folderFile.mkdir()
     }
 
-    fun getPayloads(): MutableList<Payload> {
+    fun getAll(): MutableList<Payload> {
         val payloads: MutableList<Payload> = ArrayList()
 
         File(FOLDER_PATH).listFiles().forEach {
@@ -31,18 +32,18 @@ object PayloadHelper {
         return payloads
     }
 
-    fun deletePayloads() {
+    fun clearFolder() {
         File(FOLDER_PATH).listFiles().forEach {
-            if (it.nameWithoutExtension != "sx_loader") {
+            if (it.name != BASIC_PAYLOAD_NAME) {
                 it.delete()
             }
         }
     }
 
-    fun getPayloadTitles(): MutableList<String> {
+    fun getNames(): MutableList<String> {
         val payloads: MutableList<String> = ArrayList()
 
-        for (payload in getPayloads()) {
+        for (payload in getAll()) {
             payloads.add(payload.name)
         }
 
@@ -57,8 +58,8 @@ object PayloadHelper {
         return "$FOLDER_PATH/$name"
     }
 
-    fun findPayload(name: String): Payload? {
-        for (payload in getPayloads()) {
+    fun find(name: String): Payload? {
+        for (payload in getAll()) {
             if (payload.name == name) {
                 return payload
             }
@@ -67,16 +68,16 @@ object PayloadHelper {
         return null
     }
 
-    fun putChosenPayload(payload: Payload) {
+    fun putChosen(payload: Payload) {
         Paper.book().write(CHOSEN_PAYLOAD, payload)
         EventBus.getDefault().postSticky(Events.PayloadSelected())
     }
 
-    fun getChosenPayload(): Payload {
+    fun getChosen(): Payload {
         return Paper.book().read(CHOSEN_PAYLOAD)
     }
 
-    fun removeChosenPayload() {
+    fun removeChosen() {
         Paper.book().delete(CHOSEN_PAYLOAD)
     }
 }

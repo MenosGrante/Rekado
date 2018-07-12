@@ -14,9 +14,9 @@ object FilesHelper {
 
     fun copyAsset() {
         val assetManager = RekadoApplication.instance.applicationContext.assets
-        val sxPayloadFile = assetManager.open("sx_loader.bin")
+        val sxPayloadFile = assetManager.open(PayloadHelper.BASIC_PAYLOAD_NAME)
 
-        copyFile(sxPayloadFile, FileOutputStream("${PayloadHelper.FOLDER_PATH}/sx_loader.bin"))
+        copyFile(sxPayloadFile, FileOutputStream("${PayloadHelper.FOLDER_PATH}/${PayloadHelper.BASIC_PAYLOAD_NAME}"))
 
         EventBus.getDefault().post(Events.UpdateListEvent())
     }

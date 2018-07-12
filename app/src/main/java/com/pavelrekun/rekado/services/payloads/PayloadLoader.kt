@@ -4,7 +4,7 @@ import android.content.Context
 import android.hardware.usb.UsbDevice
 import android.hardware.usb.UsbManager
 import com.pavelrekun.rekado.RekadoApplication
-import com.pavelrekun.rekado.services.logs.Logger
+import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.usb.USBHandler
 import com.pavelrekun.rekado.services.utils.Utils
 import java.io.FileInputStream
@@ -26,7 +26,7 @@ class PayloadLoader : USBHandler {
     }
 
     override fun handleDevice(device: UsbDevice) {
-        Logger.log(1, "Starting selected payload!")
+        LogHelper.log(1, "Starting selected payload!")
 
         val context = RekadoApplication.instance.applicationContext
 
@@ -43,12 +43,12 @@ class PayloadLoader : USBHandler {
 
         val deviceID = ByteArray(16)
         if (usbConnection.bulkTransfer(startEndpoint, deviceID, deviceID.size, 999) != deviceID.size) {
-            Logger.log(0, "Failed to get Device ID!")
+            LogHelper.log(0, "Failed to get Device ID!")
             return
         }
 
 
-        Logger.log(1, "Device ID: ${Utils.bytesToHex(deviceID)}")
+        LogHelper.log(1, "Device ID: ${Utils.bytesToHex(deviceID)}")
 
         /* [2] - Building payload */
 
@@ -72,7 +72,7 @@ class PayloadLoader : USBHandler {
             intermezzoStream.read(intermezzo)
             intermezzoStream.close()
         } catch (e: IOException) {
-            Logger.log(0, "Failed to read intermezzo: $e")
+            LogHelper.log(0, "Failed to read intermezzo: $e")
             return
         }
 
@@ -83,7 +83,7 @@ class PayloadLoader : USBHandler {
         try {
             payload.put(getPayload())
         } catch (e: IOException) {
-            Logger.log(0, "Failed to read payload: $e")
+            LogHelper.log(0, "Failed to read payload: $e")
             return
         }
 
@@ -97,22 +97,22 @@ class PayloadLoader : USBHandler {
         while (bytesSent < unPaddedLength || lowBuffer) {
             payload.get(chunk)
             if (usbConnection.bulkTransfer(endEndpoint, chunk, chunk.size, 999) != chunk.size) {
-                Logger.log(0, "Sending payload failed at offset $bytesSent")
+                LogHelper.log(0, "Sending payload failed at offset $bytesSent")
                 return
             }
             lowBuffer = lowBuffer xor true
             bytesSent += 0x1000
         }
 
-        Logger.log(1, "Sent $bytesSent bytes")
+        LogHelper.log(1, "Sent $bytesSent bytes")
 
         // 0x7000 = STACK_END = high DMA buffer address
         when (nativeTriggerExploit(usbConnection.fileDescriptor, 0x7000)) {
-            0 -> Logger.log(1, "Exploit triggered!")
-            -1 -> Logger.log(0, "SUBMITURB failed!")
-            -2 -> Logger.log(0, "DISCARDURB failed!")
-            -3 -> Logger.log(0, "REAPURB failed!")
-            -4 -> Logger.log(0, "Wrong URB reaped!  Maybe that doesn't matter?")
+            0 -> LogHelper.log(1, "Exploit triggered!")
+            -1 -> LogHelper.log(0, "SUBMITURB failed!")
+            -2 -> LogHelper.log(0, "DISCARDURB failed!")
+            -3 -> LogHelper.log(0, "REAPURB failed!")
+            -4 -> LogHelper.log(0, "Wrong URB reaped!  Maybe that doesn't matter?")
         }
 
         usbConnection.releaseInterface(usbInterface)
@@ -120,13 +120,13 @@ class PayloadLoader : USBHandler {
     }
 
     private fun getPayload(): ByteArray {
-        val chosenPayload = PayloadHelper.getChosenPayload()
+        val chosenPayload = PayloadHelper.getChosen()
         val chosenPayloadFile = FileInputStream(chosenPayload.path)
 
-        Logger.log(1, "Opening chosen payload: ${chosenPayload.name}")
+        LogHelper.log(1, "Opening chosen payload: ${chosenPayload.name}")
 
         val chosenPayloadData = ByteArray(chosenPayloadFile.available())
-        Logger.log(1, "Read ${Integer.toString(chosenPayloadFile.read(chosenPayloadData))} bytes from payload file!")
+        LogHelper.log(1, "Read ${Integer.toString(chosenPayloadFile.read(chosenPayloadData))} bytes from payload file!")
 
         chosenPayloadFile.close()
         return chosenPayloadData

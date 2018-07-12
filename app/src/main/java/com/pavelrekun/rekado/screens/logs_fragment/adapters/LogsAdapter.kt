@@ -8,12 +8,19 @@ import android.view.ViewGroup
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.data.Log
+import com.pavelrekun.rekado.services.logs.LogHelper
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_log.*
 
 class LogsAdapter(var data: MutableList<Log>) : RecyclerView.Adapter<LogsAdapter.ViewHolder>() {
 
     override fun getItemCount() = data.size
+
+    fun updateList() {
+        this.data = LogHelper.getLogs()
+
+        notifyDataSetChanged()
+    }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(data[position])
@@ -23,7 +30,6 @@ class LogsAdapter(var data: MutableList<Log>) : RecyclerView.Adapter<LogsAdapter
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_log, parent, false)
         return ViewHolder(itemView)
     }
-
 
     class ViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
 

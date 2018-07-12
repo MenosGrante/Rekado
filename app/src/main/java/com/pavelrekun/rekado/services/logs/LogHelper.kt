@@ -3,7 +3,7 @@ package com.pavelrekun.rekado.services.logs
 import com.pavelrekun.rekado.data.Log
 import io.paperdb.Paper
 
-object Logger {
+object LogHelper {
 
     private const val LOGS_LIST_KEY = "LOGS_LIST_KEY"
 
@@ -26,5 +26,11 @@ object Logger {
 
     private fun saveLogs() {
         Paper.book().write(LOGS_LIST_KEY, logsList)
+    }
+
+    fun clearLogs() {
+        logsList.clear()
+
+        init()
     }
 }

@@ -15,7 +15,8 @@
         android:paddingTop="8dp"
         android:textColor="?android:attr/textColorPrimary"
         android:textSize="16sp"
-        tools:text="SX OS" />
+        tools:text="SX OS"
+        tools:textColor="?android:attr/textColorPrimaryInverse" />
 
     <ImageView
         android:id="@+id/itemPayloadRemove"

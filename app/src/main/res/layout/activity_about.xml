@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -41,7 +42,8 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/app_name"
                 android:textColor="?android:attr/textColorPrimary"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:textColor="?android:attr/textColorPrimaryInverse" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -50,7 +52,8 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/app_version"
                 android:textColor="?android:attr/textColorSecondary"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:textColor="?android:attr/textColorPrimaryInverse" />
 
             <TextView
                 android:id="@+id/aboutLinkGitHubProject"
@@ -96,7 +99,8 @@
                     android:padding="16dp"
                     android:text="@string/about_information_description"
                     android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="14sp" />
+                    android:textSize="16sp"
+                    tools:textColor="?android:attr/textColorPrimaryInverse" />
 
             </LinearLayout>
 
@@ -137,7 +141,8 @@
                     android:padding="16dp"
                     android:text="@string/about_developer_github"
                     android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:textColor="?android:attr/textColorPrimaryInverse" />
 
                 <View
                     android:layout_width="match_parent"
@@ -157,7 +162,8 @@
                     android:padding="16dp"
                     android:text="@string/about_developer_twitter"
                     android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:textColor="?android:attr/textColorPrimaryInverse" />
 
             </LinearLayout>
         </LinearLayout>

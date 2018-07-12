@@ -19,9 +19,9 @@ object Dialogs {
                 .backgroundColorRes(R.color.colorPrimary)
                 .contentColorAttr(android.R.attr.textColorSecondary)
                 .titleColorRes(R.color.colorAccent)
-                .items(PayloadHelper.getPayloadTitles())
+                .items(PayloadHelper.getNames())
                 .itemsCallback { dialog, _, _, name ->
-                    PayloadHelper.putChosenPayload(PayloadHelper.findPayload(name.toString()) as Payload)
+                    PayloadHelper.putChosen(PayloadHelper.find(name.toString()) as Payload)
                     dialog.hide()
                 }
                 .dismissListener {
