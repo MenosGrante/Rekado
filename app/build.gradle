@@ -9,8 +9,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 12
-        versionName "1.2"
+        versionCode 13
+        versionName "1.2.1"
 
         externalNativeBuild {
             cmake {
@@ -65,6 +65,7 @@ dependencies {
     implementation "commons-io:commons-io:$commonsIOVersion"
     implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
     implementation "com.obsez.android.lib.filechooser:filechooser:$fileChooserVersion"
+    implementation "com.github.javiersantos:AppUpdater:$appUpdaterVersion"
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"

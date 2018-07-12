@@ -10,6 +10,10 @@ interface MainContract {
 
         fun initNavigationClickListener()
 
+        fun onStart()
+
+        fun onStop()
+
     }
 
 }

@@ -1,10 +1,8 @@
 {
-  "latestVersion": "1.2.5",
-  "latestVersionCode": 15,
+  "latestVersion": "1.2.1",
+  "latestVersionCode": 13,
   "url": "https://github.com/MenosGrante/Rekado/releases",
   "releaseNotes": [
-    "- Test",
-    "- Test",
-    "- Test"
+    "- Added self updater to check for application updates"
   ]
 }

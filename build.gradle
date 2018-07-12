@@ -16,6 +16,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+
+        maven { url "https://jitpack.io" }
     }
 }
 
@@ -32,4 +34,5 @@ ext {
     commonsIOVersion = '2.6'
     materialDialogsVersion = '0.9.6.0'
     fileChooserVersion = '1.1.10'
+    appUpdaterVersion = '2.7'
 }

@@ -41,4 +41,14 @@ class MainActivity : BaseActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    override fun onStart() {
+        super.onStart()
+        mvpView.onStart()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        mvpView.onStop()
+    }
 }
