@@ -65,6 +65,10 @@ class MainView(private val activity: BaseActivity) : MainContract.View {
         }
     }
 
+    override fun showUpdaterDialog() {
+        appUpdater.showAppUpdated(true)
+    }
+
     override fun onStart() {
         appUpdater.start()
     }

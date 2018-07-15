@@ -10,6 +10,8 @@ interface MainContract {
 
         fun initNavigationClickListener()
 
+        fun showUpdaterDialog()
+
         fun onStart()
 
         fun onStop()

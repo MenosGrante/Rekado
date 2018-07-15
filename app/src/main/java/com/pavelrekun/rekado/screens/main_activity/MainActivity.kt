@@ -38,6 +38,11 @@ class MainActivity : BaseActivity() {
                 true
             }
 
+            R.id.navigation_check_updates -> {
+                mvpView.showUpdaterDialog()
+                true
+            }
+
             else -> super.onOptionsItemSelected(item)
         }
     }

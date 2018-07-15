@@ -4,6 +4,7 @@
     <string name="navigation_payloads">Загрузчики</string>
     <string name="navigation_instructions">Инструкция</string>
     <string name="navigation_logs">Логи</string>
+    <string name="navigation_check_updates">Проверить обновления</string>
     <string name="navigation_about">О программе</string>
     <string name="navigation_settings">Настройки</string>
 

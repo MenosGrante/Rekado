@@ -6,6 +6,11 @@
         android:title="@string/navigation_settings" />
 
     <item
+        android:id="@+id/navigation_check_updates"
+        android:enabled="false"
+        android:title="@string/navigation_check_updates" />
+
+    <item
         android:id="@+id/navigation_about"
         android:title="@string/navigation_about" />
 

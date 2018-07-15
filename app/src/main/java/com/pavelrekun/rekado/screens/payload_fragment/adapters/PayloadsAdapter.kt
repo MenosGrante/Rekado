@@ -9,7 +9,7 @@ import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.eventbus.Events
 import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
-import com.pavelrekun.rekado.services.utils.FilesHelper
+import com.pavelrekun.rekado.services.utils.MemoryUtils
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_payload.*
 import org.greenrobot.eventbus.EventBus
@@ -41,7 +41,7 @@ class PayloadsAdapter(var data: MutableList<Payload>) : RecyclerView.Adapter<Pay
             itemPayloadRemove.visibility = if (payload.name == PayloadHelper.BASIC_PAYLOAD_NAME) View.GONE else View.VISIBLE
 
             itemPayloadRemove.setOnClickListener {
-                FilesHelper.removeFile(payload.path)
+                MemoryUtils.removeFile(payload.path)
                 EventBus.getDefault().postSticky(Events.UpdateListEvent())
                 LogHelper.log(1, "Payload ${payload.name} deleted!")
             }

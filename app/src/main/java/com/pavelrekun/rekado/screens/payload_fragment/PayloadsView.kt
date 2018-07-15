@@ -14,7 +14,7 @@ import com.pavelrekun.rekado.screens.payload_fragment.adapters.PayloadsAdapter
 import com.pavelrekun.rekado.services.eventbus.Events
 import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
-import com.pavelrekun.rekado.services.utils.FilesHelper
+import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
 import com.pavelrekun.rekado.services.utils.toFile
 import kotlinx.android.synthetic.main.fragment_payloads.*
@@ -43,7 +43,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     override fun initList() {
-        FilesHelper.copyAsset()
+        MemoryUtils.copyAsset()
 
         adapter = PayloadsAdapter(PayloadHelper.getAll())
 
@@ -89,6 +89,9 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
                 .withStartFile(Environment.getExternalStorageDirectory().path)
                 .withResources(R.string.dialog_loader_title, R.string.dialog_positive, R.string.dialog_negative)
                 .withRowLayoutView(R.layout.item_dialog_chooser)
+                .withNavigateUpTo{
+                    it.absolutePath != "/"
+                }
                 .withChosenListener { path, pathFile -> onChosenFileListener(path, pathFile) }
                 .build()
                 .show()
