@@ -62,9 +62,7 @@ dependencies {
     // Tools
     implementation "io.paperdb:paperdb:$paperVersion"
     implementation "org.greenrobot:eventbus:$eventBusVersion"
-    implementation "commons-io:commons-io:$commonsIOVersion"
     implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
-    implementation "com.obsez.android.lib.filechooser:filechooser:$fileChooserVersion"
     implementation "com.github.javiersantos:AppUpdater:$appUpdaterVersion"
 
     implementation project(":konae")
