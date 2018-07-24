@@ -1,12 +1,12 @@
 package com.pavelrekun.rekado.screens.payload_fragment
 
 import android.Manifest
+import android.content.DialogInterface
 import android.content.pm.PackageManager
-import android.os.Environment
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
-import com.obsez.android.lib.filechooser.ChooserDialog
+import com.pavelrekun.konae.Konae
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
@@ -26,6 +26,8 @@ import java.io.IOException
 class PayloadsView(private val activity: BaseActivity, private val fragment: Fragment) : PayloadsContract.View {
 
     private lateinit var adapter: PayloadsAdapter
+
+    private var chooserStorageInternal = true
 
     override fun initViews() {
         activity.setTitle(R.string.navigation_payloads)
@@ -84,21 +86,18 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     private fun getPayloadFromStorage() {
-        ChooserDialog().with(activity)
-                .withFilter(false, false, "bin")
-                .withStartFile(Environment.getExternalStorageDirectory().path)
-                .withResources(R.string.dialog_loader_title, R.string.dialog_positive, R.string.dialog_negative)
-                .withRowLayoutView(R.layout.item_dialog_chooser)
-                .withNavigateUpTo{
-                    it.absolutePath != "/"
-                }
-                .withChosenListener { path, pathFile -> onChosenFileListener(path, pathFile) }
+        Konae().with(activity)
+                .withChosenListener(object : Konae.Result {
+                    override fun onChoosePath(dirFile: File) {
+                        onChosenFileListener(dirFile)
+                    }
+                })
                 .build()
                 .show()
     }
 
-    private fun onChosenFileListener(path: String, pathFile: File) {
-        val payload = Payload(PayloadHelper.getName(path), PayloadHelper.getPath(PayloadHelper.getName(path)))
+    private fun onChosenFileListener(pathFile: File) {
+        val payload = Payload(PayloadHelper.getName(pathFile.absolutePath), PayloadHelper.getPath(PayloadHelper.getName(pathFile.absolutePath)))
 
         if (!payload.name.contains("bin")) {
             Toast.makeText(activity, activity.getString(R.string.helper_error_file_wrong), Toast.LENGTH_SHORT).show()

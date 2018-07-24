@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name" translatable="false">Rekado</string>
-    <string name="app_version" translatable="false">1.2.5</string>
+    <string name="app_version" translatable="false">1.3</string>
 
     <!-- Strings for Navigation -->
     <string name="navigation_payloads">Payloads</string>
     <string name="navigation_instructions">Instructions</string>
     <string name="navigation_logs">Logs</string>
-    <string name="navigation_check_updates">Check updates</string>
     <string name="navigation_about">About</string>
     <string name="navigation_settings">Settings</string>
 
