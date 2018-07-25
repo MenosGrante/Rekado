@@ -4,6 +4,7 @@
 
     <!-- Strings for Navigation -->
     <string name="navigation_payloads">Payloads</string>
+    <string name="navigation_lakka" translatable="false">Lakka</string>
     <string name="navigation_instructions">Instructions</string>
     <string name="navigation_logs">Logs</string>
     <string name="navigation_about">About</string>
@@ -28,6 +29,13 @@
 
     <!-- Strings for Logs -->
     <string name="logs_actions_list">List of actions</string>
+
+    <!-- Strings for Lakka -->
+    <string name="lakka_category_cbfs" translatable="false">CBFS</string>
+    <string name="lakka_category_coreboot" translatable="false">Coreboot</string>
+    <string name="lakka_tools_ready">Ready</string>
+    <string name="lakka_tools_not_ready">Not ready</string>
+    <string name="lakka_last_update">Last update: %1$s</string>
 
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Auto injector</string>

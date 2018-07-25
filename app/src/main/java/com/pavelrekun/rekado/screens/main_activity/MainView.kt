@@ -7,6 +7,7 @@ import com.github.javiersantos.appupdater.enums.UpdateFrom
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.screens.instructions_fragment.InstructionsFragment
+import com.pavelrekun.rekado.screens.lakka_fragment.LakkaFragment
 import com.pavelrekun.rekado.screens.logs_fragment.LogsFragment
 import com.pavelrekun.rekado.screens.payload_fragment.PayloadsFragment
 import com.pavelrekun.rekado.services.Constants
@@ -54,6 +55,7 @@ class MainView(private val activity: BaseActivity) : MainContract.View {
 
         when (id) {
             R.id.navigation_payloads -> fragment = PayloadsFragment()
+            R.id.navigation_lakka -> fragment = LakkaFragment()
             R.id.navigation_instructions -> fragment = InstructionsFragment()
             R.id.navigation_logs -> fragment = LogsFragment()
         }

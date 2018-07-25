@@ -25,8 +25,6 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
 
     private lateinit var adapter: PayloadsAdapter
 
-    private var chooserStorageInternal = true
-
     override fun initViews() {
         activity.setTitle(R.string.navigation_payloads)
 
