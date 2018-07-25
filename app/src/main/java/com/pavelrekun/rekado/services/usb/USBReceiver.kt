@@ -7,10 +7,12 @@ import android.os.Process
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.dialogs.Dialogs
 import com.pavelrekun.rekado.services.eventbus.Events
+import com.pavelrekun.rekado.services.lakka.LakkaLoader
 import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.payloads.PayloadLoader
 import com.pavelrekun.rekado.services.utils.SettingsUtils
+import com.pavelrekun.rekado.services.utils.SwitchUtils
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -58,6 +60,24 @@ class USBReceiver : BaseActivity() {
         usbHandler?.handleDevice(device)
 
         LogHelper.log(1, "Payload loading finished for device: " + device.deviceName)
+
+        finishReceiver()
+    }
+
+    private fun injectLakka() {
+        var lakkaLoader: LakkaLoader? = null
+
+        try {
+            if (SwitchUtils.isCompatible(device)) {
+                lakkaLoader = LakkaLoader()
+                lakkaLoader.claimInterface()
+                lakkaLoader.handleDevice(device)
+            }
+        } catch (t: Throwable) {
+            LogHelper.log(0, "Lakka injection failed!")
+        }
+
+        lakkaLoader?.releaseInterface()
 
         finishReceiver()
     }
