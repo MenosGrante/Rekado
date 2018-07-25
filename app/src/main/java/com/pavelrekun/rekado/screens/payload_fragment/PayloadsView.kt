@@ -1,7 +1,6 @@
 package com.pavelrekun.rekado.screens.payload_fragment
 
 import android.Manifest
-import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -16,7 +15,6 @@ import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
-import com.pavelrekun.rekado.services.utils.toFile
 import kotlinx.android.synthetic.main.fragment_payloads.*
 import org.greenrobot.eventbus.EventBus
 import java.io.File
@@ -104,7 +102,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
         }
 
         try {
-            pathFile.toFile(PayloadHelper.FOLDER_PATH + "/" + payload.name)
+            MemoryUtils.toFile(pathFile, (PayloadHelper.FOLDER_PATH + "/" + payload.name))
 
             EventBus.getDefault().postSticky(Events.UpdateListEvent())
             LogHelper.log(1, "Added new payload: ${payload.name}")
