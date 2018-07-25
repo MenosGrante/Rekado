@@ -58,6 +58,9 @@
     <string name="dialog_reset_payloads_summary">Are you sure you want to delete payloads?</string>
     <string name="dialog_positive" translatable="false">OK</string>
     <string name="dialog_negative">Cancel</string>
+    <string name="dialog_injector_chooser_title">Select injector</string>
+    <string name="dialog_injector_chooser_payload">Boot (Payload)</string>
+    <string name="dialog_injector_chooser_lakka">Boot (Lakka)</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_wrong">Are you sure this is correct payload file?</string>

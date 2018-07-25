@@ -8,4 +8,10 @@ class Events {
 
     class PayloadNotSelected
 
+    class InjectorMethodPayloadSelected
+
+    class InjectorMethodLakkaSelected
+
+    class InjectorMethodNotSelected
+
 }

@@ -1,6 +1,8 @@
 package com.pavelrekun.rekado.services.dialogs
 
 import android.support.v7.app.AlertDialog
+import android.view.LayoutInflater
+import android.widget.TextView
 import com.afollestad.materialdialogs.MaterialDialog
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
@@ -11,6 +13,34 @@ import org.greenrobot.eventbus.EventBus
 
 
 object Dialogs {
+
+    fun showInjectorSelectorDialog(activity: BaseActivity) {
+        val builder = AlertDialog.Builder(activity)
+        val view = LayoutInflater.from(activity).inflate(R.layout.dialog_injector_selector, null)
+        builder.setView(view)
+        builder.setTitle(R.string.dialog_injector_chooser_title)
+
+        val bootPayload = view.findViewById<TextView>(R.id.dialog_injector_selector_payload)
+        val bootLakka = view.findViewById<TextView>(R.id.dialog_injector_selector_lakka)
+
+        val dialog = builder.create()
+        dialog.show()
+
+        dialog.setOnDismissListener {
+            EventBus.getDefault().postSticky(Events.InjectorMethodNotSelected())
+            dialog.hide()
+        }
+
+        bootPayload.setOnClickListener {
+            EventBus.getDefault().postSticky(Events.InjectorMethodPayloadSelected())
+            dialog.hide()
+        }
+
+        bootLakka.setOnClickListener {
+            EventBus.getDefault().postSticky(Events.InjectorMethodLakkaSelected())
+            dialog.hide()
+        }
+    }
 
     fun showPayloadsDialog(activity: BaseActivity) {
 

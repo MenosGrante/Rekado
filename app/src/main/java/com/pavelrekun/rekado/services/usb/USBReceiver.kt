@@ -42,13 +42,7 @@ class USBReceiver : BaseActivity() {
 
             LogHelper.log(1, "USB device connected: ${device.deviceName}")
 
-            if (SettingsUtils.checkAutoInjectorEnabled()) {
-                PayloadHelper.putChosen(PayloadHelper.find(SettingsUtils.getAutoInjectorPayload())!!)
-                injectPayload()
-            } else {
-                Dialogs.showPayloadsDialog(this)
-            }
-
+            Dialogs.showInjectorSelectorDialog(this)
         }
     }
 
@@ -90,6 +84,26 @@ class USBReceiver : BaseActivity() {
     @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
     fun onEvent(event: Events.PayloadNotSelected) {
         finishReceiver()
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    fun onEvent(event: Events.InjectorMethodNotSelected) {
+        finishReceiver()
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    fun onEvent(event: Events.InjectorMethodPayloadSelected) {
+        if (SettingsUtils.checkAutoInjectorEnabled()) {
+            PayloadHelper.putChosen(PayloadHelper.find(SettingsUtils.getAutoInjectorPayload())!!)
+            injectPayload()
+        } else {
+            Dialogs.showPayloadsDialog(this)
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    fun onEvent(event: Events.InjectorMethodLakkaSelected) {
+        injectLakka()
     }
 
     override fun onStart() {
