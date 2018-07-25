@@ -3,7 +3,6 @@ package com.pavelrekun.rekado.screens.lakka_fragment
 import android.support.v4.content.ContextCompat
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
-import com.pavelrekun.rekado.services.dialogs.Dialogs
 import com.pavelrekun.rekado.services.lakka.LakkaHelper
 import kotlinx.android.synthetic.main.fragment_lakka.*
 

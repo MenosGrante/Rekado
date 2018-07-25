@@ -19,10 +19,15 @@
     <string name="instructions_category_payload_description">В категории \u0022Загрузчики\u0022 нажмите на кнопку \u0022+\u0022, чтобы выбрать интересующий вас загрузчик из памяти устройства. Так же вы можете вручную перенести загрузчик в папку Rekado в памяти вашего устройства. \n\nИли вы можете использовать загрузчик по умолчанию (SX Loader)</string>
     <string name="instructions_category_rcm_description">Введите свой Nintendo Switch в режим RCM любым удобным вам способом. \n\nВаш Nintendo Switch включиться автоматически, не забудье удерживать кнопку ЗВУК + при этом.</string>
     <string name="instructions_category_final">Финал</string>
-    <string name="instructions_category_final_description">Подключите ваше устройство к Nintendo Switch и дайте разрешение на подключение по USB, если будет необходимо. Подождите, пока программа предложить вам необходимый загрузчик и ожидайте конца установки.</string>
+    <string name="instructions_category_final_description">Подключите ваше устройство к Nintendo Switch и дайте разрешение на подключение по USB, если будет необходимо. Подождите, пока программа предложит вам выбрать, что именно вы хотите запустить, загрузчик или Lakka.\n\nЕсли вы выбирете загрузчик, вам необходимо выбрать необходимый загрузчик и ожидайть конца загрузки.\n\nЕсли вы выбирете Lakka, просто дождитесь конца загрузки.</string>
 
     <!-- Strings for Logs -->
     <string name="logs_actions_list">Список событий</string>
+
+    <!-- Strings for Lakka -->
+    <string name="lakka_tools_ready">Готово</string>
+    <string name="lakka_tools_not_ready">Не готово</string>
+    <string name="lakka_last_update">Обновлено: %1$s</string>
 
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Автоинжектор</string>
@@ -44,6 +49,9 @@
     <string name="dialog_reset_payloads_title">Очистить</string>
     <string name="dialog_reset_payloads_summary">Вы действительно хотите удалить загрузчики?</string>
     <string name="dialog_negative">Отмена</string>
+    <string name="dialog_injector_chooser_title">Выбрать инжектор</string>
+    <string name="dialog_injector_chooser_payload">Загрузка (Загрузчик)</string>
+    <string name="dialog_injector_chooser_lakka">Загрузка (Lakka)</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_wrong">Вы уверены, что это правильный файл загрузчика?</string>

@@ -25,7 +25,7 @@
     <string name="instructions_category_rcm" translatable="false">RCM</string>
     <string name="instructions_category_rcm_description">Enter your Nintendo Switch into RCM mode in any convenient way. \n\nYour Nintendo Switch will power on by itself when plugged in, be sure to hold VOLUME +.</string>
     <string name="instructions_category_final">Final</string>
-    <string name="instructions_category_final_description">Connect the device to the Nintendo Switch and allow permission for the USB access if necessary. Wait until the program prompts you to select payload and choose the one you need.</string>
+    <string name="instructions_category_final_description">Connect the device to the Nintendo Switch and allow permission for the USB access if necessary. Wait until the program prompts you to select what do you want to inject, payload or Lakka.\n\nIf you will select payload, than you will have to choose the one you need.\n\nIf you will choose Lakka, you should simply wait for it to load.</string>
 
     <!-- Strings for Logs -->
     <string name="logs_actions_list">List of actions</string>
