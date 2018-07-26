@@ -41,7 +41,6 @@
             android:exported="false"
             android:label="@string/app_name"
             android:noHistory="true"
-            android:process=":UsbEventReceiverActivityProcess"
             android:taskAffinity="com.example.taskAffinityUsbEventReceiver"
             android:theme="@style/RekadoInvisibleTheme">
             <intent-filter>

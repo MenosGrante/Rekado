@@ -7,17 +7,19 @@ object LogHelper {
 
     private const val LOGS_LIST_KEY = "LOGS_LIST_KEY"
 
+    const val INFO = 1
+    const val ERROR = 0
+
     private lateinit var logsList: MutableList<Log>
 
     fun init() {
         logsList = ArrayList()
-        log(1, "Application started!")
+        log(INFO, "Application started!")
         saveLogs()
     }
 
     fun log(type: Int, message: String) {
         logsList.add(Log(message, type))
-        android.util.Log.i("Rekado", "!!! $type $message")
         saveLogs()
     }
 

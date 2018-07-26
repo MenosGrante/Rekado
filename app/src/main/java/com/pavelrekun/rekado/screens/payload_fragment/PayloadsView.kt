@@ -102,11 +102,11 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
         try {
             MemoryUtils.toFile(pathFile, (PayloadHelper.FOLDER_PATH + "/" + payload.name))
 
-            EventBus.getDefault().postSticky(Events.UpdateListEvent())
-            LogHelper.log(1, "Added new payload: ${payload.name}")
+            EventBus.getDefault().post(Events.UpdateListEvent())
+            LogHelper.log(LogHelper.INFO, "Added new payload: ${payload.name}")
         } catch (e: IOException) {
             e.printStackTrace()
-            LogHelper.log(0, "Failed to add payload: ${payload.name}")
+            LogHelper.log(LogHelper.ERROR, "Failed to add payload: ${payload.name}")
         }
     }
 }

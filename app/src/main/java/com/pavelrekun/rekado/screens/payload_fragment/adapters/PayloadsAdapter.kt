@@ -42,8 +42,8 @@ class PayloadsAdapter(var data: MutableList<Payload>) : RecyclerView.Adapter<Pay
 
             itemPayloadRemove.setOnClickListener {
                 MemoryUtils.removeFile(payload.path)
-                EventBus.getDefault().postSticky(Events.UpdateListEvent())
-                LogHelper.log(1, "Payload ${payload.name} deleted!")
+                EventBus.getDefault().post(Events.UpdateListEvent())
+                LogHelper.log(LogHelper.INFO, "Payload ${payload.name} deleted!")
             }
         }
 

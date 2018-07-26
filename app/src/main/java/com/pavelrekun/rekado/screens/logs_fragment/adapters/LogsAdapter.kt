@@ -9,6 +9,7 @@ import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.data.Log
 import com.pavelrekun.rekado.services.logs.LogHelper
+import com.pavelrekun.rekado.services.logs.LogHelper.ERROR
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_log.*
 
@@ -36,7 +37,7 @@ class LogsAdapter(var data: MutableList<Log>) : RecyclerView.Adapter<LogsAdapter
         fun bind(log: Log) {
             itemLogName.text = log.message
 
-            itemLogType.setBackgroundColor(if(log.type == 0) ContextCompat.getColor(RekadoApplication.instance.applicationContext, R.color.colorRed)
+            itemLogType.setBackgroundColor(if(log.type == ERROR) ContextCompat.getColor(RekadoApplication.instance.applicationContext, R.color.colorRed)
             else ContextCompat.getColor(RekadoApplication.instance.applicationContext, R.color.colorGreen))
         }
 

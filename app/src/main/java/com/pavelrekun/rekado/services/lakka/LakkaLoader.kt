@@ -4,6 +4,8 @@ import android.content.Context
 import android.hardware.usb.*
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.services.logs.LogHelper
+import com.pavelrekun.rekado.services.logs.LogHelper.ERROR
+import com.pavelrekun.rekado.services.logs.LogHelper.INFO
 import com.pavelrekun.rekado.services.usb.USBHandler
 import com.pavelrekun.rekado.services.utils.BinaryUtils
 import com.pavelrekun.rekado.services.utils.Utils
@@ -73,12 +75,12 @@ class LakkaLoader : USBHandler {
         try {
             sanityCheck(SOURCE_BASE, DESTINATION_BASE)
         } catch (e: RuntimeException) {
-            LogHelper.log(1, "Adding more data!")
+            LogHelper.log(INFO, "Adding more data!")
             val data = ByteArray(xferLength)
             write(data, 0, data.size)
         }
 
-        LogHelper.log(1, "Triggering Lakka!")
+        LogHelper.log(INFO, "Triggering Lakka!")
 
         nativeControlReadUnbounded(usbConnection.fileDescriptor, OVERRIDE_LENGTH)
 
@@ -91,12 +93,10 @@ class LakkaLoader : USBHandler {
             }
 
             val cmd = String(tempBuffer, 0, length).trim()
-            LogHelper.log(1, "In $cmd")
+            LogHelper.log(INFO, "Entering $cmd")
 
             if (cmd == "CBFS") {
                 cbfs()
-                LogHelper.log(1, "Exploit triggering finished!")
-                releaseInterface()
                 break
             }
 
@@ -107,7 +107,7 @@ class LakkaLoader : USBHandler {
         usbConnection.claimInterface(usbInterface, true)
     }
 
-    private fun releaseInterface() {
+    override fun releaseDevice() {
         usbConnection.releaseInterface(usbInterface)
     }
 
@@ -120,7 +120,7 @@ class LakkaLoader : USBHandler {
     private fun write(data: ByteArray, offset: Int, length: Int) {
         val ret = usbConnection.bulkTransfer(endEndpoint, data, offset, length, 0)
         if (ret < length) {
-            LogHelper.log(0, "Write failed (ret = $ret, expected = $length)!")
+            LogHelper.log(ERROR, "Write failed (ret = $ret, expected = $length)!")
         }
     }
 
@@ -129,9 +129,9 @@ class LakkaLoader : USBHandler {
         val length = usbConnection.bulkTransfer(startEndpoint, data, data.size, 20)
 
         if (length >= 0) {
-            LogHelper.log(1, "Device ID: ${Utils.bytesToHex(data)}")
+            LogHelper.log(INFO, "Device ID: ${Utils.bytesToHex(data)}")
         } else {
-            LogHelper.log(0, "Device ID not found!")
+            LogHelper.log(ERROR, "Failed to get Device ID!")
         }
     }
 
@@ -140,7 +140,7 @@ class LakkaLoader : USBHandler {
         val length = usbConnection.controlTransfer(0x82, 0, 0, 0, buffer, buffer.size, 0)
 
         if (length != 0x1000) {
-            LogHelper.log(0, "Failed to read length: $length!")
+            LogHelper.log(ERROR, "Failed to read length: $length!")
         }
 
         val currentSource = BinaryUtils.readInt32(buffer, 0xc)
@@ -159,7 +159,7 @@ class LakkaLoader : USBHandler {
         val data = dataStream.toByteArray()
 
         if (data.size < 20 * 1024) {
-            LogHelper.log(0, "Invalid coreboot.rom!")
+            LogHelper.log(ERROR, "Invalid coreboot.rom!")
         }
 
         val inBuffer = ByteArray(8)
@@ -167,7 +167,7 @@ class LakkaLoader : USBHandler {
         while (true) {
             val inLength = usbConnection.bulkTransfer(startEndpoint, inBuffer, 8, 0)
             if (inLength < 8) {
-                LogHelper.log(0, "Failed to read coreboot.rom!")
+                LogHelper.log(ERROR, "Failed to read coreboot.rom!")
             }
 
             var offset = BinaryUtils.readInt32BE(inBuffer, 0)
@@ -177,7 +177,7 @@ class LakkaLoader : USBHandler {
                 return
             }
 
-            LogHelper.log(1, "Sent 0x${length.toString(16)} bytes")
+            LogHelper.log(INFO, "Sent 0x${length.toString(16)} bytes")
 
             while (length > 0) {
                 var tempLength = length
@@ -189,7 +189,7 @@ class LakkaLoader : USBHandler {
                 val ret = usbConnection.bulkTransfer(endEndpoint, data, offset, tempLength, 0)
 
                 if (ret < 0) {
-                    LogHelper.log(0, "Failed to transfer $ret!")
+                    LogHelper.log(ERROR, "Failed to transfer $ret!")
                 }
 
                 offset += ret
