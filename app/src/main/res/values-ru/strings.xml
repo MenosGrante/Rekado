@@ -10,7 +10,7 @@
     <!-- Strings for About -->
     <string name="about_category_information">Информация</string>
     <string name="about_category_developer">Разработчик</string>
-    <string name="about_information_description">Приложение написано на Kotlin и C++ и использует код для иньекции загрузчиков на ваш Nintendo Switch из приложения NXLoader</string>
+    <string name="about_information_description">Приложение написано на Kotlin и C++ и используется для иньекции загрузчиков или запуска Lakka на вашем Nintendo Switch.</string>
 
     <!-- Strings for Instructions -->
     <string name="instructions_category_cable">Кабель</string>

@@ -32,7 +32,12 @@ class USBReceiver : BaseActivity() {
 
             LogHelper.log(1, "USB device connected: ${device.deviceName}")
 
-            Dialogs.showInjectorSelectorDialog(this)
+            if (SettingsUtils.checkAutoInjectorEnabled()) {
+                PayloadHelper.putChosen(PayloadHelper.find(SettingsUtils.getAutoInjectorPayload())!!)
+                injectPayload()
+            } else {
+                Dialogs.showInjectorSelectorDialog(this)
+            }
         }
     }
 
@@ -55,7 +60,7 @@ class USBReceiver : BaseActivity() {
                 usbHandler?.handleDevice(device)
             }
         } catch (t: Throwable) {
-            LogHelper.log(0, "Lakka injection failed!")
+            LogHelper.log(0, "Failed to inject Lakka!")
         }
 
         finishReceiver()
@@ -78,12 +83,7 @@ class USBReceiver : BaseActivity() {
 
     @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
     fun onEvent(event: Events.InjectorMethodPayloadSelected) {
-        if (SettingsUtils.checkAutoInjectorEnabled()) {
-            PayloadHelper.putChosen(PayloadHelper.find(SettingsUtils.getAutoInjectorPayload())!!)
-            injectPayload()
-        } else {
-            Dialogs.showPayloadsDialog(this)
-        }
+        Dialogs.showPayloadsDialog(this)
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
