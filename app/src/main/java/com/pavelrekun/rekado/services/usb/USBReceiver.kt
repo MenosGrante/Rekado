@@ -20,15 +20,8 @@ import org.greenrobot.eventbus.ThreadMode
 
 class USBReceiver : BaseActivity() {
 
-    companion object {
-        private const val APX_VID = 0x0955
-        private const val APX_PID = 0x7321
-    }
-
-    private var vid: Int = 0
-    private var pid: Int = 0
-
     private lateinit var device: UsbDevice
+
     private var usbHandler: USBHandler? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,9 +30,6 @@ class USBReceiver : BaseActivity() {
         if (intent.action == UsbManager.ACTION_USB_DEVICE_ATTACHED) {
             device = intent.getParcelableExtra(UsbManager.EXTRA_DEVICE)
 
-            vid = device.vendorId
-            pid = device.productId
-
             LogHelper.log(1, "USB device connected: ${device.deviceName}")
 
             Dialogs.showInjectorSelectorDialog(this)
@@ -47,7 +37,7 @@ class USBReceiver : BaseActivity() {
     }
 
     private fun injectPayload() {
-        if (vid == APX_VID && pid == APX_PID) {
+        if (SwitchUtils.isRCM(device)) {
             usbHandler = PayloadLoader()
         }
 
@@ -59,19 +49,14 @@ class USBReceiver : BaseActivity() {
     }
 
     private fun injectLakka() {
-        var lakkaLoader: LakkaLoader? = null
-
         try {
-            if (SwitchUtils.isCompatible(device)) {
-                lakkaLoader = LakkaLoader()
-                lakkaLoader.claimInterface()
-                lakkaLoader.handleDevice(device)
+            if (SwitchUtils.isRCM(device)) {
+                usbHandler = LakkaLoader()
+                usbHandler?.handleDevice(device)
             }
         } catch (t: Throwable) {
             LogHelper.log(0, "Lakka injection failed!")
         }
-
-        lakkaLoader?.releaseInterface()
 
         finishReceiver()
     }

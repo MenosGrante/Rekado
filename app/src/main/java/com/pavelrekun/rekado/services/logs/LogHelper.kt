@@ -17,6 +17,7 @@ object LogHelper {
 
     fun log(type: Int, message: String) {
         logsList.add(Log(message, type))
+        android.util.Log.i("Rekado", "!!! $type $message")
         saveLogs()
     }
 

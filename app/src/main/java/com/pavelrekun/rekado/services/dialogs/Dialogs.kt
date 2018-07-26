@@ -8,6 +8,7 @@ import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.eventbus.Events
+import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import org.greenrobot.eventbus.EventBus
 
@@ -37,6 +38,7 @@ object Dialogs {
         }
 
         bootLakka.setOnClickListener {
+            LogHelper.log(1, "Boot Lakka selected!")
             EventBus.getDefault().postSticky(Events.InjectorMethodLakkaSelected())
             dialog.hide()
         }

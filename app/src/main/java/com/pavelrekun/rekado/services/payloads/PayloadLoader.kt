@@ -16,7 +16,7 @@ class PayloadLoader : USBHandler {
 
     companion object {
         init {
-            System.loadLibrary("native-lib")
+            System.loadLibrary("payload_launcher")
         }
 
         private const val RCM_PAYLOAD_ADDR = 0x40010000
@@ -26,7 +26,7 @@ class PayloadLoader : USBHandler {
     }
 
     override fun handleDevice(device: UsbDevice) {
-        LogHelper.log(1, "Starting selected payload!")
+        LogHelper.log(1, "Triggering selected payload!")
 
         val context = RekadoApplication.instance.applicationContext
 
@@ -134,8 +134,8 @@ class PayloadLoader : USBHandler {
 
 
     /**
-     * A native method that is implemented by the 'native-lib' native library,
+     * A native method that is implemented by the 'payload_launcher' native library,
      * which is packaged with this application.
      */
-    external fun nativeTriggerExploit(fd: Int, length: Int): Int
+    private external fun nativeTriggerExploit(fd: Int, length: Int): Int
 }

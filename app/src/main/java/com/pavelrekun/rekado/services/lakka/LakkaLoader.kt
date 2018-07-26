@@ -5,15 +5,24 @@ import android.hardware.usb.*
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.usb.USBHandler
+import com.pavelrekun.rekado.services.utils.BinaryUtils
 import com.pavelrekun.rekado.services.utils.Utils
-import java.io.*
+import java.io.ByteArrayOutputStream
+import java.io.IOException
+import java.io.OutputStream
 
 class LakkaLoader : USBHandler {
 
     companion object {
         init {
-            System.loadLibrary("switchlauncher")
+            System.loadLibrary("lakka_launcher")
         }
+
+        private const val SOURCE_BASE = 0x4000fc84
+        private const val TARGET = SOURCE_BASE - 0xc - 2 * 4 - 2 * 4
+        private const val DESTINATION_BASE = 0x40009000
+        private const val OVERRIDE_LENGTH = TARGET - DESTINATION_BASE
+        private const val PAYLOAD_BASE = 0x40010000
     }
 
     private val context = RekadoApplication.instance.applicationContext
@@ -25,12 +34,6 @@ class LakkaLoader : USBHandler {
     private lateinit var usbManager: UsbManager
 
     override fun handleDevice(device: UsbDevice) {
-        val sourceBase = 0x4000fc84
-        val target = sourceBase - 0xc - 2 * 4 - 2 * 4
-        val destinationBase = 0x40009000
-        val overrideLength = target - destinationBase
-        val payloadBase = 0x40010000
-
         usbManager = context.getSystemService(Context.USB_SERVICE) as UsbManager
         usbInterface = device.getInterface(0)
 
@@ -39,12 +42,14 @@ class LakkaLoader : USBHandler {
 
         usbConnection = usbManager.openDevice(device)
 
+        claimInterface()
+
         readInitMessage()
 
-        sanityCheck(sourceBase, destinationBase)
+        sanityCheck(SOURCE_BASE, DESTINATION_BASE)
 
         val header = ByteArray(4 + 0x2a4)
-        Utils.writeInt32(header, 0, 0x30008)
+        BinaryUtils.writeInt32(header, 0, 0x30008)
         write(header, 0, header.size)
 
         val xferLength = 0x1000
@@ -52,9 +57,9 @@ class LakkaLoader : USBHandler {
         val payload = ByteArrayOutputStream()
         val buffer = ByteArray(0x1a3a * 4)
         payload.write(buffer)
-        var entry = payloadBase + payload.size() + 4
+        var entry = PAYLOAD_BASE + payload.size() + 4
         entry = entry or 1
-        Utils.writeInt32(buffer, 0, entry)
+        BinaryUtils.writeInt32(buffer, 0, entry)
         payload.write(buffer, 0, 4)
         readAdditionalFile(LakkaHelper.PAYLOAD_FILENAME, payload)
         val payloadData = payload.toByteArray()
@@ -66,16 +71,16 @@ class LakkaLoader : USBHandler {
         }
 
         try {
-            sanityCheck(sourceBase, destinationBase)
+            sanityCheck(SOURCE_BASE, DESTINATION_BASE)
         } catch (e: RuntimeException) {
-            LogHelper.log(0, "Throwing more data!")
+            LogHelper.log(1, "Adding more data!")
             val data = ByteArray(xferLength)
             write(data, 0, data.size)
         }
 
-        LogHelper.log(1, "Performing HAX!")
+        LogHelper.log(1, "Triggering Lakka!")
 
-        nativeControlReadUnbounded(usbConnection.fileDescriptor, overrideLength)
+        nativeControlReadUnbounded(usbConnection.fileDescriptor, OVERRIDE_LENGTH)
 
         val tempBuffer = ByteArray(4096)
         while (true) {
@@ -90,18 +95,19 @@ class LakkaLoader : USBHandler {
 
             if (cmd == "CBFS") {
                 cbfs()
-                LogHelper.log(1, "You have been served!")
+                LogHelper.log(1, "Exploit triggering finished!")
+                releaseInterface()
                 break
             }
 
         }
     }
 
-    fun claimInterface() {
+    private fun claimInterface() {
         usbConnection.claimInterface(usbInterface, true)
     }
 
-    fun releaseInterface() {
+    private fun releaseInterface() {
         usbConnection.releaseInterface(usbInterface)
     }
 
@@ -114,7 +120,7 @@ class LakkaLoader : USBHandler {
     private fun write(data: ByteArray, offset: Int, length: Int) {
         val ret = usbConnection.bulkTransfer(endEndpoint, data, offset, length, 0)
         if (ret < length) {
-            LogHelper.log(0, "Write failed (ret = $ret, expected = $length)")
+            LogHelper.log(0, "Write failed (ret = $ret, expected = $length)!")
         }
     }
 
@@ -123,9 +129,9 @@ class LakkaLoader : USBHandler {
         val length = usbConnection.bulkTransfer(startEndpoint, data, data.size, 20)
 
         if (length >= 0) {
-            LogHelper.log(1, "Init message ${Utils.bytesToHex(data)}")
+            LogHelper.log(1, "Device ID: ${Utils.bytesToHex(data)}")
         } else {
-            LogHelper.log(0, "No init message!")
+            LogHelper.log(0, "Device ID not found!")
         }
     }
 
@@ -134,15 +140,14 @@ class LakkaLoader : USBHandler {
         val length = usbConnection.controlTransfer(0x82, 0, 0, 0, buffer, buffer.size, 0)
 
         if (length != 0x1000) {
-            LogHelper.log(0, "Reading error!")
+            LogHelper.log(0, "Failed to read length: $length!")
         }
 
-        val currentSource = Utils.readInt32(buffer, 0xc)
-        val currentDestination = Utils.readInt32(buffer, 0x14)
+        val currentSource = BinaryUtils.readInt32(buffer, 0xc)
+        val currentDestination = BinaryUtils.readInt32(buffer, 0x14)
 
         if (currentSource != sourceBase || currentDestination != destinationBase) {
-            LogHelper.log(0, "Sanity check failed (current source = $currentSource, current destination = $currentDestination")
-            throw RuntimeException("Sanity check failed (current source = $currentSource, current destination = $currentDestination")
+            throw RuntimeException("Sanity check failed (current source = $currentSource, current destination = $currentDestination)!")
         }
     }
 
@@ -154,7 +159,7 @@ class LakkaLoader : USBHandler {
         val data = dataStream.toByteArray()
 
         if (data.size < 20 * 1024) {
-            LogHelper.log(0, "Invalid coreboot.rom")
+            LogHelper.log(0, "Invalid coreboot.rom!")
         }
 
         val inBuffer = ByteArray(8)
@@ -162,17 +167,17 @@ class LakkaLoader : USBHandler {
         while (true) {
             val inLength = usbConnection.bulkTransfer(startEndpoint, inBuffer, 8, 0)
             if (inLength < 8) {
-                LogHelper.log(0, "Reading error!")
+                LogHelper.log(0, "Failed to read coreboot.rom!")
             }
 
-            var offset = Utils.readInt32BE(inBuffer, 0)
-            var length = Utils.readInt32BE(inBuffer, 4)
+            var offset = BinaryUtils.readInt32BE(inBuffer, 0)
+            var length = BinaryUtils.readInt32BE(inBuffer, 4)
 
             if (offset + length == 0) {
                 return
             }
 
-            LogHelper.log(1, "Sending 0x${length.toString(16)} bytes @0x${offset.toString(16)}")
+            LogHelper.log(1, "Sent 0x${length.toString(16)} bytes")
 
             while (length > 0) {
                 var tempLength = length
@@ -184,7 +189,7 @@ class LakkaLoader : USBHandler {
                 val ret = usbConnection.bulkTransfer(endEndpoint, data, offset, tempLength, 0)
 
                 if (ret < 0) {
-                    LogHelper.log(0, "Transfer error = $ret")
+                    LogHelper.log(0, "Failed to transfer $ret!")
                 }
 
                 offset += ret

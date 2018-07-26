@@ -18,7 +18,6 @@ object Utils {
         customTabsIntent.launchUrl(RekadoApplication.instance.applicationContext, Uri.parse(url))
     }
 
-    // TODO: Compare results to Java equivalent with Lakka
     fun bytesToHex(bytes: ByteArray): String {
         val result = StringBuffer()
 
@@ -31,30 +30,6 @@ object Utils {
         }
 
         return result.toString()
-    }
-
-    // TODO: Compare results with Java equivalent
-    fun readInt32(buffer: ByteArray, offset: Int): Int {
-        return ((buffer[offset] and 0xff.toByte()).toInt() or
-                ((buffer[offset + 1] and 0xff.toByte()).toInt() shl 8) or
-                ((buffer[offset + 2] and 0xff.toByte()).toInt() shl 16) or
-                ((buffer[offset + 3] and 0xff.toByte()).toInt() shl 24))
-    }
-
-    // TODO: Compare results with Java equivalent
-    fun readInt32BE(buffer: ByteArray, offset: Int): Int {
-        return ((buffer[offset + 3] and 0xff.toByte()).toInt() or
-                (buffer[offset + 2] and 0xff.toByte()).toInt() shl 8 or
-                (buffer[offset + 1] and 0xff.toByte()).toInt() shl 16 or
-                (buffer[offset] and 0xff.toByte()).toInt() shl 24)
-    }
-
-    // TODO: Compare results with Java equivalent
-    fun writeInt32(buffer: ByteArray, offset: Int, i: Int) {
-        buffer[offset] = (i and 0xff).toByte()
-        buffer[offset + 1] = (i shr 8 and 0xff).toByte()
-        buffer[offset + 2] = (i shr 16 and 0xff).toByte()
-        buffer[offset + 3] = (i shr 24 and 0xff).toByte()
     }
 
 }

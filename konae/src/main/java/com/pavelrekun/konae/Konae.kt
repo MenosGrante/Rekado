@@ -105,10 +105,14 @@ class Konae : AdapterView.OnItemClickListener {
         val files = currentDir.listFiles(fileFilter)
 
 
-        // Add the ".." entry
-        if (currentDir.parent != null && currentDir != Environment.getExternalStorageDirectory()) {
-            if (StorageUtils.checkExternalStoragePresent(context) && currentDir != File(StorageUtils.getExternalMemoryPaths(context)?.get(0)))
+        if (!StorageUtils.checkExternalStoragePresent(context)) {
+            if (currentDir.parent != null && currentDir != Environment.getExternalStorageDirectory()) {
                 fileList.add(File(".."))
+            }
+        } else {
+            if (currentDir != File(StorageUtils.getExternalMemoryPaths(context)?.get(0))) {
+                fileList.add(File(".."))
+            }
         }
 
         if (files != null) {
