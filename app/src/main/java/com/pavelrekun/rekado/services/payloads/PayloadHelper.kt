@@ -70,7 +70,6 @@ object PayloadHelper {
 
     fun putChosen(payload: Payload) {
         Paper.book().write(CHOSEN_PAYLOAD, payload)
-        EventBus.getDefault().postSticky(Events.PayloadSelected())
     }
 
     fun getChosen(): Payload {

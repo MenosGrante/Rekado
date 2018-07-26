@@ -10,6 +10,13 @@
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/navigation_lakka"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_lakka"
+        android:title="@string/navigation_lakka"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/navigation_instructions"
         android:enabled="true"
         android:icon="@drawable/ic_navigation_instructions"

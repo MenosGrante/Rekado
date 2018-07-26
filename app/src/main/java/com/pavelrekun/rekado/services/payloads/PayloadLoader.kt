@@ -1,10 +1,15 @@
 package com.pavelrekun.rekado.services.payloads
 
 import android.content.Context
+import android.content.ServiceConnection
 import android.hardware.usb.UsbDevice
+import android.hardware.usb.UsbDeviceConnection
+import android.hardware.usb.UsbInterface
 import android.hardware.usb.UsbManager
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.services.logs.LogHelper
+import com.pavelrekun.rekado.services.logs.LogHelper.ERROR
+import com.pavelrekun.rekado.services.logs.LogHelper.INFO
 import com.pavelrekun.rekado.services.usb.USBHandler
 import com.pavelrekun.rekado.services.utils.Utils
 import java.io.FileInputStream
@@ -16,7 +21,7 @@ class PayloadLoader : USBHandler {
 
     companion object {
         init {
-            System.loadLibrary("native-lib")
+            System.loadLibrary("payload_launcher")
         }
 
         private const val RCM_PAYLOAD_ADDR = 0x40010000
@@ -25,30 +30,33 @@ class PayloadLoader : USBHandler {
         private const val MAX_LENGTH = 0x30298
     }
 
+    private lateinit var usbConnection: UsbDeviceConnection
+    private lateinit var usbInterface: UsbInterface
+
     override fun handleDevice(device: UsbDevice) {
-        LogHelper.log(1, "Starting selected payload!")
+        LogHelper.log(INFO, "Triggering selected payload!")
 
         val context = RekadoApplication.instance.applicationContext
 
         val usbManager = context.getSystemService(Context.USB_SERVICE) as UsbManager
-        val usbInterface = device.getInterface(0)
+        usbInterface = device.getInterface(0)
 
         val startEndpoint = usbInterface.getEndpoint(0)
         val endEndpoint = usbInterface.getEndpoint(1)
 
-        val usbConnection = usbManager.openDevice(device)
+        usbConnection = usbManager.openDevice(device)
         usbConnection.claimInterface(usbInterface, true)
 
         /* [1] - Read device ID */
 
         val deviceID = ByteArray(16)
         if (usbConnection.bulkTransfer(startEndpoint, deviceID, deviceID.size, 999) != deviceID.size) {
-            LogHelper.log(0, "Failed to get Device ID!")
+            LogHelper.log(ERROR, "Failed to get Device ID!")
             return
         }
 
 
-        LogHelper.log(1, "Device ID: ${Utils.bytesToHex(deviceID)}")
+        LogHelper.log(INFO, "Device ID: ${Utils.bytesToHex(deviceID)}")
 
         /* [2] - Building payload */
 
@@ -83,7 +91,7 @@ class PayloadLoader : USBHandler {
         try {
             payload.put(getPayload())
         } catch (e: IOException) {
-            LogHelper.log(0, "Failed to read payload: $e")
+            LogHelper.log(ERROR, "Failed to read payload: $e")
             return
         }
 
@@ -97,36 +105,37 @@ class PayloadLoader : USBHandler {
         while (bytesSent < unPaddedLength || lowBuffer) {
             payload.get(chunk)
             if (usbConnection.bulkTransfer(endEndpoint, chunk, chunk.size, 999) != chunk.size) {
-                LogHelper.log(0, "Sending payload failed at offset $bytesSent")
+                LogHelper.log(ERROR, "Sending payload failed at offset $bytesSent")
                 return
             }
             lowBuffer = lowBuffer xor true
             bytesSent += 0x1000
         }
 
-        LogHelper.log(1, "Sent $bytesSent bytes")
+        LogHelper.log(INFO, "Sent $bytesSent bytes")
 
         // 0x7000 = STACK_END = high DMA buffer address
         when (nativeTriggerExploit(usbConnection.fileDescriptor, 0x7000)) {
-            0 -> LogHelper.log(1, "Exploit triggered!")
-            -1 -> LogHelper.log(0, "SUBMITURB failed!")
-            -2 -> LogHelper.log(0, "DISCARDURB failed!")
-            -3 -> LogHelper.log(0, "REAPURB failed!")
-            -4 -> LogHelper.log(0, "Wrong URB reaped!  Maybe that doesn't matter?")
+            0 -> LogHelper.log(INFO, "Exploit triggered!")
+            -1 -> LogHelper.log(ERROR, "SUBMITURB failed!")
+            -2 -> LogHelper.log(ERROR, "DISCARDURB failed!")
+            -3 -> LogHelper.log(ERROR, "REAPURB failed!")
+            -4 -> LogHelper.log(ERROR, "Wrong URB reaped!  Maybe that doesn't matter?")
         }
+    }
 
+    override fun releaseDevice() {
         usbConnection.releaseInterface(usbInterface)
-        usbConnection.close()
     }
 
     private fun getPayload(): ByteArray {
         val chosenPayload = PayloadHelper.getChosen()
         val chosenPayloadFile = FileInputStream(chosenPayload.path)
 
-        LogHelper.log(1, "Opening chosen payload: ${chosenPayload.name}")
+        LogHelper.log(INFO, "Opening chosen payload: ${chosenPayload.name}")
 
         val chosenPayloadData = ByteArray(chosenPayloadFile.available())
-        LogHelper.log(1, "Read ${Integer.toString(chosenPayloadFile.read(chosenPayloadData))} bytes from payload file!")
+        LogHelper.log(INFO, "Read ${Integer.toString(chosenPayloadFile.read(chosenPayloadData))} bytes from payload file!")
 
         chosenPayloadFile.close()
         return chosenPayloadData
@@ -134,8 +143,8 @@ class PayloadLoader : USBHandler {
 
 
     /**
-     * A native method that is implemented by the 'native-lib' native library,
+     * A native method that is implemented by the 'payload_launcher' native library,
      * which is packaged with this application.
      */
-    external fun nativeTriggerExploit(fd: Int, length: Int): Int
+    private external fun nativeTriggerExploit(fd: Int, length: Int): Int
 }

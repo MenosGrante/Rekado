@@ -18,7 +18,7 @@ object Utils {
         customTabsIntent.launchUrl(RekadoApplication.instance.applicationContext, Uri.parse(url))
     }
 
-    fun bytesToHex(bytes: ByteArray) : String{
+    fun bytesToHex(bytes: ByteArray): String {
         val result = StringBuffer()
 
         bytes.forEach {

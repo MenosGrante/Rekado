@@ -6,4 +6,6 @@ interface USBHandler {
 
     fun handleDevice(device: UsbDevice)
 
+    fun releaseDevice()
+
 }

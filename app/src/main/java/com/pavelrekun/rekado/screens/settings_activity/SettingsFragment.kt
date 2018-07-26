@@ -37,10 +37,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
             autoInjectorPayload.isEnabled = newValue as Boolean
 
             if (newValue) {
-                LogHelper.log(1, "\"Auto injector\" enabled!")
+                LogHelper.log(LogHelper.INFO, "\"Auto injector\" enabled!")
                 autoInjectorEnable.setTitle(R.string.settings_auto_injector_status_title_enabled)
             } else {
-                LogHelper.log(1, "\"Auto injector\" disabled!")
+                LogHelper.log(LogHelper.INFO, "\"Auto injector\" disabled!")
                 autoInjectorEnable.setTitle(R.string.settings_auto_injector_status_title_disabled)
             }
 
@@ -60,7 +60,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 PayloadHelper.clearFolder()
                 dialog.dismiss()
 
-                LogHelper.log(1, "Payloads database cleaned!")
+                LogHelper.log(LogHelper.INFO, "Payloads database cleaned!")
             }
             true
         }

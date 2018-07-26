@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name" translatable="false">Rekado</string>
-    <string name="app_version" translatable="false">1.3</string>
+    <string name="app_version" translatable="false">2.0</string>
 
     <!-- Strings for Navigation -->
     <string name="navigation_payloads">Payloads</string>
+    <string name="navigation_lakka" translatable="false">Lakka</string>
     <string name="navigation_instructions">Instructions</string>
     <string name="navigation_logs">Logs</string>
     <string name="navigation_about">About</string>
@@ -12,7 +13,7 @@
     <!-- Strings for About -->
     <string name="about_category_information">Information</string>
     <string name="about_category_developer">Developer</string>
-    <string name="about_information_description">Application written in Kotlin and C++ and uses injector codebase from the NXLoader application. It is used to install payloads on the Nintendo Switch</string>
+    <string name="about_information_description">Application written in Kotlin and C++. It is used to inject payloads or start Lakka on the Nintendo Switch</string>
     <string name="about_developer_github" translatable="false">GitHub</string>
     <string name="about_developer_twitter" translatable="false">Twitter</string>
 
@@ -24,10 +25,17 @@
     <string name="instructions_category_rcm" translatable="false">RCM</string>
     <string name="instructions_category_rcm_description">Enter your Nintendo Switch into RCM mode in any convenient way. \n\nYour Nintendo Switch will power on by itself when plugged in, be sure to hold VOLUME +.</string>
     <string name="instructions_category_final">Final</string>
-    <string name="instructions_category_final_description">Connect the device to the Nintendo Switch and allow permission for the USB access if necessary. Wait until the program prompts you to select payload and choose the one you need.</string>
+    <string name="instructions_category_final_description">Connect the device to the Nintendo Switch and allow permission for the USB access if necessary. Wait until the program prompts you to select what do you want to inject, payload or Lakka.\n\nIf you will select payload, than you will have to choose the one you need.\n\nIf you will choose Lakka, you should simply wait for it to load.</string>
 
     <!-- Strings for Logs -->
     <string name="logs_actions_list">List of actions</string>
+
+    <!-- Strings for Lakka -->
+    <string name="lakka_category_cbfs" translatable="false">CBFS</string>
+    <string name="lakka_category_coreboot" translatable="false">Coreboot</string>
+    <string name="lakka_tools_ready">Ready</string>
+    <string name="lakka_tools_not_ready">Not ready</string>
+    <string name="lakka_last_update">Last update: %1$s</string>
 
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Auto injector</string>
@@ -50,6 +58,9 @@
     <string name="dialog_reset_payloads_summary">Are you sure you want to delete payloads?</string>
     <string name="dialog_positive" translatable="false">OK</string>
     <string name="dialog_negative">Cancel</string>
+    <string name="dialog_injector_chooser_title">Select injector</string>
+    <string name="dialog_injector_chooser_payload">Boot (Payload)</string>
+    <string name="dialog_injector_chooser_lakka">Boot (Lakka)</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_wrong">Are you sure this is correct payload file?</string>
