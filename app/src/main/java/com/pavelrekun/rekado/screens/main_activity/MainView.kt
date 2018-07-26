@@ -27,7 +27,7 @@ class MainView(private val activity: BaseActivity) : MainContract.View {
     private fun initUpdater(): AppUpdater {
         return AppUpdater(activity)
                 .setDisplay(Display.DIALOG)
-                .setUpdateFrom(UpdateFrom.JSON)
+                .setUpdateFrom(UpdateFrom.XML)
                 .setUpdateJSON(Constants.UPDATE_CONFIG_LINK)
     }
 

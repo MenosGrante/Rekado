@@ -2,7 +2,7 @@ package com.pavelrekun.rekado.services
 
 object Constants {
 
-    const val UPDATE_CONFIG_LINK = "https://raw.githubusercontent.com/MenosGrante/Rekado/master/updater/update.json"
+    const val UPDATE_CONFIG_LINK = "https://raw.githubusercontent.com/MenosGrante/Rekado/master/updater/update.xml"
 
     const val HELP_RCM = "https://gbatemp.net/threads/the-ultimate-list-of-mods-to-enter-rcm.502145/"
 
