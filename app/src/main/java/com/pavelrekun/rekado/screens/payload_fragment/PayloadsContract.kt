@@ -10,6 +10,8 @@ interface PayloadsContract {
 
         fun initList()
 
+        fun initDesign()
+
         fun updateList()
 
         fun initClickListeners()

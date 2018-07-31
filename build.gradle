@@ -17,6 +17,8 @@ allprojects {
         google()
         jcenter()
 
+        flatDir { dirs 'libs' }
+
         maven { url "https://jitpack.io" }
     }
 }
@@ -25,7 +27,7 @@ ext {
     currentSDKVersion = 27
     minimumSDKVersion = 21
     kotlinVersion = '1.2.51'
-    kotlinCoroutines = '0.23.4'
+    kotlinCoroutines = '0.24.0'
 
     androidSupportVersion = '27.1.1'
 

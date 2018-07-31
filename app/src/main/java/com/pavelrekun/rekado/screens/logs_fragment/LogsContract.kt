@@ -10,6 +10,8 @@ interface LogsContract {
 
         fun initClickListeners()
 
+        fun initDesign()
+
     }
 
 }

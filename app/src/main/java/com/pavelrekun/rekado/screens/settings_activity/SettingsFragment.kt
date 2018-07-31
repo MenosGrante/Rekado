@@ -26,6 +26,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
         val autoInjectorEnable = findPreference("auto_injector_enable") as CheckBoxPreference
         val autoInjectorPayload = findPreference("auto_injector_payload") as ListPreference
 
+        val appearanceNightMode = findPreference("appearance_night_mode") as ListPreference
+        val appearanceAccentColor = findPreference("appearance_accent_color")
+
         autoInjectorEnable.setTitle(if (autoInjectorEnable.isChecked) R.string.settings_auto_injector_status_title_enabled else R.string.settings_auto_injector_status_title_disabled)
 
         autoInjectorPayload.entryValues = PayloadHelper.getNames().toTypedArray()
@@ -62,6 +65,16 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
                 LogHelper.log(LogHelper.INFO, "Payloads database cleaned!")
             }
+            true
+        }
+
+        appearanceNightMode.setOnPreferenceChangeListener { _, _ ->
+            Dialogs.openRestartDialog(activity as BaseActivity)
+            true
+        }
+
+        appearanceAccentColor.setOnPreferenceChangeListener { _, _ ->
+            activity?.recreate()
             true
         }
     }

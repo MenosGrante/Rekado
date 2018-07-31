@@ -2,6 +2,7 @@ package com.pavelrekun.rekado.screens.logs_fragment
 
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import com.pavelrekun.rang.utils.ColorsHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.screens.logs_fragment.adapters.LogsAdapter
@@ -17,6 +18,7 @@ class LogsView(private val activity: BaseActivity) : LogsContract.View {
 
         initList()
         initClickListeners()
+        initDesign()
     }
 
     override fun initList() {
@@ -42,5 +44,9 @@ class LogsView(private val activity: BaseActivity) : LogsContract.View {
                 adapter.updateList()
             }
         }
+    }
+
+    override fun initDesign() {
+        activity.logsClearButton.setColorFilter(ColorsHelper.getContrastColor(activity, ColorsHelper.resolveAccentColor(activity)))
     }
 }

@@ -104,6 +104,7 @@ class PayloadLoader : USBHandler {
 
         while (bytesSent < unPaddedLength || lowBuffer) {
             payload.get(chunk)
+
             if (usbConnection.bulkTransfer(endEndpoint, chunk, chunk.size, 999) != chunk.size) {
                 LogHelper.log(ERROR, "Sending payload failed at offset $bytesSent")
                 return

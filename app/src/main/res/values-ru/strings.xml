@@ -37,6 +37,14 @@
     <string name="settings_category_payloads">Загрузчики</string>
     <string name="settings_payloads_reset_title">Очистить</string>
     <string name="settings_payloads_reset_summary">Удалить все добавленные загрузчики (кроме основного SX Loader)</string>
+    <string name="settings_category_appearance">Внешний вид</string>
+    <string name="settings_appearance_night_mode_title">Ночной режим</string>
+    <string name="settings_appearance_accent_color_title">Основной цвет</string>
+    <string name="settings_appearance_accent_color_summary">Цвет, который используется для тонирования элементов интерфейса</string>
+    <string name="settings_restart_title">Настройки изменены</string>
+    <string name="settings_restart_message">Настройки были изменены. Пожалуйста, перезагрузите приложение, чтобы они вступили в силу.\n\nПерезагрузить приложение сейчас?</string>
+    <string name="settings_restart_ok">Перезагрузить</string>
+    <string name="settings_restart_cancel">Отмена</string>
 
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Разрешение для хранилища</string>

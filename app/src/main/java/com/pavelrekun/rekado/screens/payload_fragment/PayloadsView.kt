@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
 import com.pavelrekun.konae.Konae
+import com.pavelrekun.rang.utils.ColorsHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
@@ -30,6 +31,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
 
         prepareList()
         initClickListeners()
+        initDesign()
     }
 
     override fun prepareList() {
@@ -48,6 +50,10 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
         activity.payloadsList.setHasFixedSize(true)
         activity.payloadsList.layoutManager = LinearLayoutManager(activity)
         activity.payloadsList.adapter = adapter
+    }
+
+    override fun initDesign() {
+        activity.payloadsAdd.setColorFilter(ColorsHelper.getContrastColor(activity, ColorsHelper.resolveAccentColor(activity)))
     }
 
     override fun updateList() {

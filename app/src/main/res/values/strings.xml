@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">Rekado</string>
-    <string name="app_version" translatable="false">2.0</string>
+    <string name="app_version" translatable="false">2.1</string>
 
     <!-- Strings for Navigation -->
     <string name="navigation_payloads">Payloads</string>
@@ -45,6 +45,14 @@
     <string name="settings_category_payloads">Payloads</string>
     <string name="settings_payloads_reset_title">Clear</string>
     <string name="settings_payloads_reset_summary">Remove all added payloads (except primary SX Loader)</string>
+    <string name="settings_category_appearance">Appearance</string>
+    <string name="settings_appearance_night_mode_title">Night mode</string>
+    <string name="settings_appearance_accent_color_title">Accent color</string>
+    <string name="settings_appearance_accent_color_summary">Color used to tint UI elements</string>
+    <string name="settings_restart_title">Settings changed</string>
+    <string name="settings_restart_message">Settings have been changed. Please, restart for the change to take effect. \n\nRestart the app now?</string>
+    <string name="settings_restart_ok">Restart</string>
+    <string name="settings_restart_cancel">Cancel</string>
 
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Storage permission</string>
