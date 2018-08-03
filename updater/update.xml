@@ -1,11 +1,10 @@
 <AppUpdater>
   <update>
-    <latestVersion>2.1</latestVersion>
-    <latestVersionCode>21</latestVersionCode>
+    <latestVersion>2.1.1</latestVersion>
+    <latestVersionCode>22</latestVersionCode>
     <url>https://github.com/MenosGrante/Rekado/releases</url>
     <releaseNotes>
-- Added support for Light and Dark (AMOLED) themes
-- Added support for changing accent color
+- Fixed Lakka booting (update coreboot)
     </releaseNotes>
   </update>
 </AppUpdater>

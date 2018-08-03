@@ -9,8 +9,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 21
-        versionName "2.1"
+        versionCode 22
+        versionName "2.1.1"
 
         externalNativeBuild {
             cmake {
