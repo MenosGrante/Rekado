@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -21,6 +20,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/lakkaCBFSTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -33,29 +33,16 @@
                 android:id="@+id/lakkaCBFSStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
                 android:drawablePadding="16dp"
                 android:drawableStart="@drawable/ic_lakka_ready"
                 android:gravity="center_vertical"
                 android:text="@string/lakka_tools_ready"
                 android:textColor="@color/colorGreen"
                 android:textSize="16sp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorDivider" />
-
-            <TextView
-                android:id="@+id/lakkaCBFSDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:gravity="center_vertical"
-                android:text="@string/lakka_last_update"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="16sp"
-                tools:textColor="?android:attr/textColorPrimaryInverse" />
 
         </LinearLayout>
 
@@ -71,6 +58,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/lakkaCorebootTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -91,21 +79,17 @@
                 android:textColor="@color/colorGreen"
                 android:textSize="16sp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorDivider" />
-
-            <TextView
-                android:id="@+id/lakkaCorebootDate"
+            <Button
+                android:id="@+id/lakkaCorebootButton"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:gravity="center_vertical"
-                android:text="@string/lakka_last_update"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="16sp"
-                tools:textColor="?android:attr/textColorPrimaryInverse" />
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/lakka_button_add"
+                android:textColor="?attr/colorAccent" />
 
         </LinearLayout>
     </LinearLayout>

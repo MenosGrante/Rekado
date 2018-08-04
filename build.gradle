@@ -8,7 +8,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.3'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.51"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.60"
     }
 }
 
@@ -26,7 +26,7 @@ allprojects {
 ext {
     currentSDKVersion = 27
     minimumSDKVersion = 21
-    kotlinVersion = '1.2.51'
+    kotlinVersion = '1.2.60'
     kotlinCoroutines = '0.24.0'
 
     androidSupportVersion = '27.1.1'

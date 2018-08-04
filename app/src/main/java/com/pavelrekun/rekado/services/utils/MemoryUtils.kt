@@ -14,7 +14,7 @@ object MemoryUtils {
 
         copyFile(sxPayloadFile, FileOutputStream("${PayloadHelper.FOLDER_PATH}/${PayloadHelper.BASIC_PAYLOAD_NAME}"))
 
-        EventBus.getDefault().post(Events.UpdateListEvent())
+        EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
     }
 
     @Throws(IOException::class)

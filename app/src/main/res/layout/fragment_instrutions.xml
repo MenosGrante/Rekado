@@ -81,6 +81,36 @@
             android:elevation="3dp"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/instructions_category_coreboot"
+                android:textColor="?attr/colorAccent"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:lineSpacingMultiplier="1.1"
+                android:text="@string/instructions_category_coreboot_description"
+                android:textColor="?android:attr/textColorPrimary"
+                tools:textColor="?android:attr/textColorPrimaryInverse" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/colorBackgroundSecondary"
+            android:elevation="3dp"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

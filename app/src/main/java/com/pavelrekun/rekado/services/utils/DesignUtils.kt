@@ -1,10 +1,16 @@
 package com.pavelrekun.rekado.services.utils
 
+import android.app.ActivityManager
+import android.graphics.BitmapFactory
+import android.support.v4.content.ContextCompat
 import android.support.v7.preference.PreferenceManager
 import com.pavelrekun.rang.Rang
 import com.pavelrekun.rang.colors.NightMode
 import com.pavelrekun.rang.colors.PrimaryColor
+import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.RekadoApplication
+import com.pavelrekun.rekado.base.BaseActivity
+
 
 object DesignUtils {
 
@@ -17,6 +23,12 @@ object DesignUtils {
             "enabled" -> Rang.config(RekadoApplication.instance.applicationContext).nightMode(NightMode.NIGHT).oledMode(false).apply()
             "amoled" -> Rang.config(RekadoApplication.instance.applicationContext).primaryColor(PrimaryColor.CASTRO_OLED).nightMode(NightMode.NIGHT).oledMode(true).apply()
         }
+    }
+
+    fun applyColorToTaskDescription(activity: BaseActivity) {
+        val bitmap = BitmapFactory.decodeResource(activity.resources, R.mipmap.ic_launcher)
+        val taskDescription = ActivityManager.TaskDescription(activity.getString(R.string.app_name), bitmap, ContextCompat.getColor(activity, R.color.colorBackgroundPrimary))
+        activity.setTaskDescription(taskDescription)
     }
 
 }

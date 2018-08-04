@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
 import com.pavelrekun.konae.Konae
+import com.pavelrekun.konae.filters.ExtensionFileFilter
 import com.pavelrekun.rang.utils.ColorsHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
@@ -94,6 +95,8 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
                         onChosenFileListener(dirFile)
                     }
                 })
+                .withFileFilter(ExtensionFileFilter("bin"))
+                .withTitle(activity.getString(R.string.dialog_file_chooser_payload_title))
                 .build()
                 .show()
     }
@@ -102,13 +105,13 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
         val payload = Payload(PayloadHelper.getName(pathFile.absolutePath), PayloadHelper.getPath(PayloadHelper.getName(pathFile.absolutePath)))
 
         if (!payload.name.contains("bin")) {
-            Toast.makeText(activity, activity.getString(R.string.helper_error_file_wrong), Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, activity.getString(R.string.helper_error_file_payload_wrong), Toast.LENGTH_SHORT).show()
         }
 
         try {
             MemoryUtils.toFile(pathFile, (PayloadHelper.FOLDER_PATH + "/" + payload.name))
 
-            EventBus.getDefault().post(Events.UpdateListEvent())
+            EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
             LogHelper.log(LogHelper.INFO, "Added new payload: ${payload.name}")
         } catch (e: IOException) {
             e.printStackTrace()

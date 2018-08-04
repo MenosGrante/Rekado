@@ -1,10 +1,13 @@
 <AppUpdater>
   <update>
-    <latestVersion>2.1.1</latestVersion>
-    <latestVersionCode>22</latestVersionCode>
+    <latestVersion>2.2</latestVersion>
+    <latestVersionCode>23</latestVersionCode>
     <url>https://github.com/MenosGrante/Rekado/releases</url>
     <releaseNotes>
-- Fixed Lakka booting (update coreboot)
+- Added ability to upload own "coreboot" files and update it later
+- Fixed bug with "light" task description in dark theme
+- Fixed crash in Settings, when storage permission have not been granted
+- Update Kotlin to 1.2.60
     </releaseNotes>
   </update>
 </AppUpdater>

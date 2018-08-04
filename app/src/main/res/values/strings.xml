@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">Rekado</string>
-    <string name="app_version" translatable="false">2.1.1</string>
+    <string name="app_version" translatable="false">2.2</string>
 
     <!-- Strings for Navigation -->
     <string name="navigation_payloads">Payloads</string>
@@ -22,6 +22,8 @@
     <string name="instructions_category_cable_description">First you need to find a cable to connect your device to the Nintendo Switch. For proper work, this should be a cable that is designed for data transmission, not just for charging.\n\nIt is advisable to use an A-to-C cable and an USB OTG adapter.</string>
     <string name="instructions_category_payload">Payload</string>
     <string name="instructions_category_payload_description">In the \u0022Payloads\u0022 category, click the \u0022+\u0022 button to select preloaded payload from your device\'s storage. Or simply transfer your payload to the Rekado folder in the device\'s memory.\n\nOr you can use the default payload (SX Loader)</string>
+    <string name="instructions_category_coreboot" translatable="false">Coreboot (Lakka)</string>
+    <string name="instructions_category_coreboot_description">In the \u0022Lakka\u0022 category, click the \u0022Add\u0022 or \u0022Update\u0022 button to select preloaded \u0022coreboot\u0022 file from your device\'s storage. Or simply transfer your \u0022coreboot\u0022 file to the Rekado/Lakka folder in the device\'s memory.</string>
     <string name="instructions_category_rcm" translatable="false">RCM</string>
     <string name="instructions_category_rcm_description">Enter your Nintendo Switch into RCM mode in any convenient way. \n\nYour Nintendo Switch will power on by itself when plugged in, be sure to hold VOLUME +.</string>
     <string name="instructions_category_final">Final</string>
@@ -36,6 +38,8 @@
     <string name="lakka_tools_ready">Ready</string>
     <string name="lakka_tools_not_ready">Not ready</string>
     <string name="lakka_last_update">Last update: %1$s</string>
+    <string name="lakka_button_add">Add</string>
+    <string name="lakka_button_update">Update</string>
 
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Auto injector</string>
@@ -69,7 +73,10 @@
     <string name="dialog_injector_chooser_title">Select injector</string>
     <string name="dialog_injector_chooser_payload">Boot (Payload)</string>
     <string name="dialog_injector_chooser_lakka">Boot (Lakka)</string>
+    <string name="dialog_file_chooser_payload_title">Choose payload</string>
+    <string name="dialog_file_chooser_coreboot_title">Choose \u0022coreboot\u0022</string>
 
     <!-- Strings for Helper -->
-    <string name="helper_error_file_wrong">Are you sure this is correct payload file?</string>
+    <string name="helper_error_file_payload_wrong">Are you sure this is correct payload file?</string>
+    <string name="helper_error_file_coreboot_wrong">Are you sure this is correct \u0022coreboot\u0022 file?</string>
 </resources>

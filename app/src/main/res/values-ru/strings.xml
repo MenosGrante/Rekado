@@ -17,6 +17,7 @@
     <string name="instructions_category_cable_description">Сначала вам нужно подобрать кабель для подключения вашего устройства к Nintendo Switch. Для правильной работы это должен быть кабель, разработанный для передачи данных. \n\nРекомендуется использовать A-to-C кабель и USB OTG адаптер.</string>
     <string name="instructions_category_payload">Загрузчик</string>
     <string name="instructions_category_payload_description">В категории \u0022Загрузчики\u0022 нажмите на кнопку \u0022+\u0022, чтобы выбрать интересующий вас загрузчик из памяти устройства. Так же вы можете вручную перенести загрузчик в папку Rekado в памяти вашего устройства. \n\nИли вы можете использовать загрузчик по умолчанию (SX Loader)</string>
+    <string name="instructions_category_coreboot_description">В категории \u0022Lakka\u0022 нажмите на кнопку \u0022Добавить\u0022 или \u0022Обновить\u0022, чтобы выбрать заранее загруженный \u0022coreboot\u0022 файл из памяти устройства. Так же вы можете вручную перенести \u0022coreboot\u0022 файл в папку Rekado/Lakka в памяти вашего устройства.</string>
     <string name="instructions_category_rcm_description">Введите свой Nintendo Switch в режим RCM любым удобным вам способом. \n\nВаш Nintendo Switch включиться автоматически, не забудье удерживать кнопку ЗВУК + при этом.</string>
     <string name="instructions_category_final">Финал</string>
     <string name="instructions_category_final_description">Подключите ваше устройство к Nintendo Switch и дайте разрешение на подключение по USB, если будет необходимо. Подождите, пока программа предложит вам выбрать, что именно вы хотите запустить, загрузчик или Lakka.\n\nЕсли вы выбирете загрузчик, вам необходимо выбрать необходимый загрузчик и ожидайть конца загрузки.\n\nЕсли вы выбирете Lakka, просто дождитесь конца загрузки.</string>
@@ -28,6 +29,8 @@
     <string name="lakka_tools_ready">Готово</string>
     <string name="lakka_tools_not_ready">Не готово</string>
     <string name="lakka_last_update">Обновлено: %1$s</string>
+    <string name="lakka_button_add">Добавить</string>
+    <string name="lakka_button_update">Обновить</string>
 
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Автоинжектор</string>
@@ -60,7 +63,10 @@
     <string name="dialog_injector_chooser_title">Выбрать инжектор</string>
     <string name="dialog_injector_chooser_payload">Загрузка (Загрузчик)</string>
     <string name="dialog_injector_chooser_lakka">Загрузка (Lakka)</string>
+    <string name="dialog_file_chooser_payload_title">Выберите загрузчик</string>
+    <string name="dialog_file_chooser_coreboot_title">Выберите \u0022coreboot\u0022 файл</string>
 
     <!-- Strings for Helper -->
-    <string name="helper_error_file_wrong">Вы уверены, что это правильный файл загрузчика?</string>
+    <string name="helper_error_file_payload_wrong">Вы уверены, что это правильный файл загрузчика?</string>
+    <string name="helper_error_file_coreboot_wrong">Вы уверены, что это правильный \u0022coreboot\u0022 файл?</string>
 </resources>

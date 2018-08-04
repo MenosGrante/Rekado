@@ -8,6 +8,7 @@ open class BaseActivity : RangActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         DesignUtils.setNightTheme()
+        DesignUtils.applyColorToTaskDescription(this)
         super.onCreate(savedInstanceState)
     }
 

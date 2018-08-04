@@ -26,10 +26,10 @@ class Konae : AdapterView.OnItemClickListener {
     private val adapterSetter: AdapterSetter? = null
     private lateinit var result: Result
     private lateinit var fileFilter: FileFilter
+    private lateinit var title: String
 
     fun with(context: Context): Konae {
         this.context = context
-        this.fileFilter = ExtensionFileFilter("bin")
 
         updateCurrentDir()
 
@@ -38,6 +38,16 @@ class Konae : AdapterView.OnItemClickListener {
 
     fun withChosenListener(result: Result): Konae {
         this.result = result
+        return this
+    }
+
+    fun withFileFilter(fileFilter: ExtensionFileFilter): Konae {
+        this.fileFilter = fileFilter
+        return this
+    }
+
+    fun withTitle(title: String):Konae {
+        this.title = title
         return this
     }
 
@@ -54,7 +64,7 @@ class Konae : AdapterView.OnItemClickListener {
         adapterSetter?.apply(adapter)
 
         val builder = AlertDialog.Builder(context)
-        builder.setTitle(R.string.dialog_title)
+        builder.setTitle(title)
         builder.setAdapter(adapter, null)
 
         builder.setNegativeButton(R.string.dialog_button_negative, null)

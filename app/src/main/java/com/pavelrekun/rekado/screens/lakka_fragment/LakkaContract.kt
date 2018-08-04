@@ -10,6 +10,9 @@ package com.pavelrekun.rekado.screens.lakka_fragment
 
          fun initCorebootCategory()
 
+         fun initClickListeners()
+
+         fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
      }
 
 }

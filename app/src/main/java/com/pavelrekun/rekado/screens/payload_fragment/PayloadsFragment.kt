@@ -34,7 +34,7 @@ class PayloadsFragment : Fragment() {
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onEvent(event: Events.UpdateListEvent) {
+    fun onEvent(eventPayloads: Events.UpdatePayloadsListEvent) {
         mvpView.updateList()
     }
 

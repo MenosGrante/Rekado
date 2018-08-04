@@ -10,6 +10,7 @@ import com.pavelrekun.rekado.services.usb.USBHandler
 import com.pavelrekun.rekado.services.utils.BinaryUtils
 import com.pavelrekun.rekado.services.utils.Utils
 import java.io.ByteArrayOutputStream
+import java.io.File
 import java.io.IOException
 import java.io.OutputStream
 
@@ -63,7 +64,7 @@ class LakkaLoader : USBHandler {
         entry = entry or 1
         BinaryUtils.writeInt32(buffer, 0, entry)
         payload.write(buffer, 0, 4)
-        readAdditionalFile(LakkaHelper.PAYLOAD_FILENAME, payload)
+        readPayloadFile(LakkaHelper.PAYLOAD_FILENAME, payload)
         val payloadData = payload.toByteArray()
 
         var i = 0
@@ -112,8 +113,14 @@ class LakkaLoader : USBHandler {
     }
 
     @Throws(IOException::class)
-    private fun readAdditionalFile(name: String, outputStream: OutputStream) {
+    private fun readPayloadFile(name: String, outputStream: OutputStream) {
         val inputStream = context.assets.open(name)
+        inputStream.copyTo(outputStream, 4096)
+    }
+
+    @Throws(IOException::class)
+    private fun readCorebootFile(outputStream: OutputStream) {
+        val inputStream = File("${LakkaHelper.FOLDER_PATH}/coreboot.rom").inputStream()
         inputStream.copyTo(outputStream, 4096)
     }
 
@@ -154,7 +161,7 @@ class LakkaLoader : USBHandler {
     @Throws(IOException::class)
     private fun cbfs() {
         val dataStream = ByteArrayOutputStream()
-        readAdditionalFile(LakkaHelper.COREBOOT_FILENAME, dataStream)
+        readCorebootFile(dataStream)
 
         val data = dataStream.toByteArray()
 

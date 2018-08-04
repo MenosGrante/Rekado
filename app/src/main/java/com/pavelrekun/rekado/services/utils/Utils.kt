@@ -3,7 +3,8 @@ package com.pavelrekun.rekado.services.utils
 import android.net.Uri
 import android.support.customtabs.CustomTabsIntent
 import com.pavelrekun.rekado.RekadoApplication
-import kotlin.experimental.and
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 object Utils {
@@ -32,4 +33,8 @@ object Utils {
         return result.toString()
     }
 
+    fun getCurrentDate(): String {
+        val dateFormat = SimpleDateFormat("dd.MM.YYYY", Locale.getDefault())
+        return dateFormat.format(Date())
+    }
 }
