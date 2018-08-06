@@ -15,7 +15,7 @@ Payload and Lakka launcher written in Kotlin.
 * Wait for payload to finish loading on your console
 
 ## Download
-You can get application's APK from Releases form in this repository.
+You can get application's APK from [Releases](https://github.com/MenosGrante/Rekado/releases) form in this repository.
 
 ## FAQ
 **Does application require Root?**
@@ -37,6 +37,7 @@ Yes, starting from 2.0 update Rekado can launch Lakka distribution.
 
 ## Donate
 If you enjoy my application and want to support development you can simply do it :)  
+
 **BTC** - 3BEFPP6a5CPjo3nmJNnjfDfzbAqaYoTNEW  
 **BHC** - qprm4e9ukx583msf6865jpr666hnuaal2unmafce27  
 **ETH** - 0xa38a34F62d52C5d44a045C834266535C586A11B5  
