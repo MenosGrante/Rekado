@@ -4,6 +4,7 @@
     <string name="navigation_payloads">Загрузчики</string>
     <string name="navigation_instructions">Инструкция</string>
     <string name="navigation_logs">Логи</string>
+    <string name="navigation_donate">Пожертвовать</string>
     <string name="navigation_about">О программе</string>
     <string name="navigation_settings">Настройки</string>
 
@@ -54,6 +55,10 @@
     <string name="permission_storage_dialog_description">Rekado нужно это разрешение для добавления загрузчиков из памяти устройства</string>
     <string name="permission_storage_button">Запросить</string>
     <string name="permission_storage_error">Не удалось получить доступ к хранилищу. Повторите попытку позже.</string>
+
+    <!-- Strings for Donate -->
+    <string name="donate_description">Вы можете поддержать разарботку приложения разными путями.</string>
+    <string name="donate_address_copied">Адрес %1$s был скопирован!</string>
 
     <!-- Strings for Loader -->
     <string name="dialog_loader_title">Выбор</string>

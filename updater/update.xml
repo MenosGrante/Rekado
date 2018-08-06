@@ -5,9 +5,9 @@
     <url>https://github.com/MenosGrante/Rekado/releases</url>
     <releaseNotes>
 - Added ability to upload own "coreboot" files and update it later
+- Added ability to support application development (donating)
 - Fixed bug with "light" task description in dark theme
 - Fixed crash in Settings, when storage permission have not been granted
-- Update Kotlin to 1.2.60
     </releaseNotes>
   </update>
 </AppUpdater>

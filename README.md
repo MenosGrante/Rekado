@@ -30,7 +30,14 @@ This should not happen when using the "correct" payloads. But I am not responsib
 
 Yes, starting from 2.0 update Rekado can launch Lakka distribution.
 
-## Thanks
+## Credits
 * [DavidBuchanan314](https://github.com/DavidBuchanan314) for creating NXLoader.
 * [natinusala](https://github.com/natinusala) for creating lakka_linux_launcher.
 * [ealfonso93](https://github.com/ealfonso93) for contributing in this project.
+
+## Donate
+If you enjoy my application and want to support development you can simply do it :)
+**BTC** - 3BEFPP6a5CPjo3nmJNnjfDfzbAqaYoTNEW
+**BHC** - qprm4e9ukx583msf6865jpr666hnuaal2unmafce27
+**ETH** - 0xa38a34F62d52C5d44a045C834266535C586A11B5
+**LTC** - MGDSCZ9VrQQ3SW64wPsiY7Xa31DCvrbDnL

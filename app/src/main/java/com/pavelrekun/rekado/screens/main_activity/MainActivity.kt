@@ -4,10 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.ViewGroup
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.screens.about_activity.AboutActivity
 import com.pavelrekun.rekado.screens.settings_activity.SettingsActivity
+import com.pavelrekun.rekado.services.dialogs.DonateDialog
+import com.pavelrekun.rekado.services.utils.DesignUtils
 
 
 class MainActivity : BaseActivity() {
@@ -35,6 +38,13 @@ class MainActivity : BaseActivity() {
 
             R.id.navigation_settings -> {
                 startActivity(Intent(this, SettingsActivity::class.java))
+                true
+            }
+
+            R.id.navigation_donate -> {
+                val donateDialog = DonateDialog(this)
+                donateDialog.window.setLayout(DesignUtils.convertDPtoPX(360), ViewGroup.LayoutParams.WRAP_CONTENT)
+                donateDialog.show()
                 true
             }
 

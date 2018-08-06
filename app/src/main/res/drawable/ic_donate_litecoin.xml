@@ -1,0 +1,11 @@
+<!--drawable/litecoin.xml-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportHeight="24"
+    android:viewportWidth="24">
+
+    <path
+        android:fillColor="@color/colorIcons"
+        android:pathData="M12.55 15.92l0.61-2.14 1.65-0.59 1.44-5.56-1.69 0.68L16.25 2H8l-2.62 9.77-1.66 0.57-1.5 5.57L4 17.27 2.66 22h17.5l1.62-6.08h-9.23M19.39 21H4l1.46-5.35-1.74 0.65 0.86-3.19 1.66-0.57L8.74 3H15l-1.87 7 1.7-0.7L14 12.42 12.33 13l-1.11 3.91h9.28L19.39 21z" />
+</vector>

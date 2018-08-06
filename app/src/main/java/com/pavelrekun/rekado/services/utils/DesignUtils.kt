@@ -4,6 +4,7 @@ import android.app.ActivityManager
 import android.graphics.BitmapFactory
 import android.support.v4.content.ContextCompat
 import android.support.v7.preference.PreferenceManager
+import android.util.TypedValue
 import com.pavelrekun.rang.Rang
 import com.pavelrekun.rang.colors.NightMode
 import com.pavelrekun.rang.colors.PrimaryColor
@@ -29,6 +30,11 @@ object DesignUtils {
         val bitmap = BitmapFactory.decodeResource(activity.resources, R.mipmap.ic_launcher)
         val taskDescription = ActivityManager.TaskDescription(activity.getString(R.string.app_name), bitmap, ContextCompat.getColor(activity, R.color.colorBackgroundPrimary))
         activity.setTaskDescription(taskDescription)
+    }
+
+    fun convertDPtoPX(dp: Int): Int {
+        val resources = RekadoApplication.instance.applicationContext.resources
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), resources.displayMetrics).toInt()
     }
 
 }

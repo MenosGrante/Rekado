@@ -8,6 +8,7 @@
     <string name="navigation_instructions">Instructions</string>
     <string name="navigation_logs">Logs</string>
     <string name="navigation_about">About</string>
+    <string name="navigation_donate">Donate</string>
     <string name="navigation_settings">Settings</string>
 
     <!-- Strings for About -->
@@ -31,6 +32,15 @@
 
     <!-- Strings for Logs -->
     <string name="logs_actions_list">List of actions</string>
+
+    <!-- Strings for Donate -->
+    <string name="donate_title">Donate</string>
+    <string name="donate_description">You can support the development of the application in several ways.</string>
+    <string name="donate_bitcoin" translatable="false">Bitcoin</string>
+    <string name="donate_bitcoin_cash" translatable="false">Bitcoin Cash</string>
+    <string name="donate_ethereum" translatable="false">Ethereum</string>
+    <string name="donate_litecoin" translatable="false">Litecoin</string>
+    <string name="donate_address_copied">%1$s address copied!</string>
 
     <!-- Strings for Lakka -->
     <string name="lakka_category_cbfs" translatable="false">CBFS</string>
