@@ -77,7 +77,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         appearanceNightMode.setOnPreferenceChangeListener { _, _ ->
-            Dialogs.openRestartDialog(activity as BaseActivity)
+            Dialogs.showRestartDialog(activity as BaseActivity)
             true
         }
 

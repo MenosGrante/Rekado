@@ -30,26 +30,7 @@ class MainActivity : BaseActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.navigation_about -> {
-                startActivity(Intent(this, AboutActivity::class.java))
-                true
-            }
-
-            R.id.navigation_settings -> {
-                startActivity(Intent(this, SettingsActivity::class.java))
-                true
-            }
-
-            R.id.navigation_donate -> {
-                val donateDialog = DonateDialog(this)
-                donateDialog.window.setLayout(DesignUtils.convertDPtoPX(360), ViewGroup.LayoutParams.WRAP_CONTENT)
-                donateDialog.show()
-                true
-            }
-
-            else -> super.onOptionsItemSelected(item)
-        }
+        return mvpView.onOptionsItemSelected(item)
     }
 
     override fun onStart() {

@@ -86,7 +86,7 @@ object Dialogs {
         return resetDialog
     }
 
-    fun openRestartDialog(activity: Activity) {
+    fun showRestartDialog(activity: BaseActivity) {
         val builder = AlertDialog.Builder(activity)
         builder.setTitle(R.string.settings_restart_title)
         builder.setMessage(R.string.settings_restart_message)
