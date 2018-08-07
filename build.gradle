@@ -7,7 +7,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.3'
+        classpath 'com.android.tools.build:gradle:3.1.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.60"
     }
 }
@@ -24,7 +24,7 @@ allprojects {
 }
 
 ext {
-    currentSDKVersion = 27
+    currentSDKVersion = 28
     minimumSDKVersion = 21
     kotlinVersion = '1.2.60'
     kotlinCoroutines = '0.24.0'
@@ -33,7 +33,6 @@ ext {
 
     paperVersion = '2.6'
     eventBusVersion = '3.1.1'
-    commonsIOVersion = '2.6'
     materialDialogsVersion = '0.9.6.0'
     appUpdaterVersion = '2.7'
 }

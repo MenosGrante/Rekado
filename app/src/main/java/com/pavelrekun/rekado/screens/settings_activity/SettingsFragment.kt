@@ -13,6 +13,7 @@ import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.dialogs.Dialogs
 import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
+import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
 import com.pavelrekun.rekado.services.utils.SettingsUtils
 

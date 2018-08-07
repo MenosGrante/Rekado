@@ -32,6 +32,8 @@
     <string name="lakka_last_update">Обновлено: %1$s</string>
     <string name="lakka_button_add">Добавить</string>
     <string name="lakka_button_update">Обновить</string>
+    <string name="lakka_coreboot_dialog_title">Что такое \u0022Coreboot\u0022?</string>
+    <string name="lakka_coreboot_dialog_description">\u0022Coreboot\u0022 - это специальный файл, который нужен для загрузки Lakka на Nintendo Switch.</string>
 
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Автоинжектор</string>

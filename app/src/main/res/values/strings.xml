@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">Rekado</string>
-    <string name="app_version" translatable="false">2.2</string>
+    <string name="app_version" translatable="false">2.2.1</string>
 
     <!-- Strings for Navigation -->
     <string name="navigation_payloads">Payloads</string>
@@ -50,6 +50,8 @@
     <string name="lakka_last_update">Last update: %1$s</string>
     <string name="lakka_button_add">Add</string>
     <string name="lakka_button_update">Update</string>
+    <string name="lakka_coreboot_dialog_title">What is \u0022coreboot\u0022?</string>
+    <string name="lakka_coreboot_dialog_description">\u0022Coreboot\u0022 is special file needed to load Lakka on Nintendo Switch.</string>
 
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Auto injector</string>

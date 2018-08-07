@@ -1,12 +1,14 @@
 package com.pavelrekun.rekado.services.lakka
 
 import android.os.Environment
-import com.pavelrekun.rekado.services.utils.SettingsUtils
+import com.pavelrekun.rekado.services.utils.Utils
 import java.io.File
+import java.util.*
 
 object LakkaHelper {
 
     val FOLDER_PATH = "${Environment.getExternalStorageDirectory()}/Rekado/Lakka"
+    val COREBOOT_FILE_PATH = "$FOLDER_PATH/coreboot.rom"
 
     const val PAYLOAD_FILENAME = "cbfs.bin"
     const val COREBOOT_FILENAME = "coreboot.rom"
@@ -19,11 +21,11 @@ object LakkaHelper {
     }
 
     fun checkCorebootPresent(): Boolean {
-        return File("$FOLDER_PATH/coreboot.rom").exists()
+        return File(COREBOOT_FILE_PATH).exists()
     }
 
     fun getCorebootUpdateDate(): String {
-        return SettingsUtils.getCorebootUpdateDate().toString()
+        return Utils.formatDate(Date(File(COREBOOT_FILE_PATH).lastModified()))
     }
 
 }

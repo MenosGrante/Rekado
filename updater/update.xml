@@ -1,13 +1,13 @@
 <AppUpdater>
   <update>
-    <latestVersion>2.2</latestVersion>
-    <latestVersionCode>23</latestVersionCode>
+    <latestVersion>2.2.1</latestVersion>
+    <latestVersionCode>24</latestVersionCode>
     <url>https://github.com/MenosGrante/Rekado/releases</url>
     <releaseNotes>
-- Added ability to upload own "coreboot" files and update it later
-- Added ability to support application development (donating)
-- Fixed bug with "light" task description in dark theme
-- Fixed crash in Settings, when storage permission have not been granted
+- Improved support for Android Pie (9.0)
+- Added small FAQ for coreboot file
+- Fixed bug with null update date of coreboot filename
+- Fixed crash in settings
     </releaseNotes>
   </update>
 </AppUpdater>

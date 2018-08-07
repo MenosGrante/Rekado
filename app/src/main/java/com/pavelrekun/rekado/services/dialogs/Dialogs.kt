@@ -1,7 +1,7 @@
 package com.pavelrekun.rekado.services.dialogs
 
-import android.app.Activity
 import android.content.Intent
+import android.support.annotation.StringRes
 import android.support.v4.app.ActivityCompat
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
@@ -17,6 +17,15 @@ import org.greenrobot.eventbus.EventBus
 
 
 object Dialogs {
+
+    fun showDialog(activity: BaseActivity, @StringRes title: Int, @StringRes description: Int) {
+        val builder = AlertDialog.Builder(activity)
+        builder.setTitle(title)
+        builder.setMessage(description)
+
+        val dialog = builder.create()
+        dialog.show()
+    }
 
     fun showInjectorSelectorDialog(activity: BaseActivity): AlertDialog {
         val builder = AlertDialog.Builder(activity)

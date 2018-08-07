@@ -9,12 +9,12 @@ import com.pavelrekun.konae.Konae
 import com.pavelrekun.konae.filters.ExtensionFileFilter
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
+import com.pavelrekun.rekado.services.dialogs.Dialogs
 import com.pavelrekun.rekado.services.eventbus.Events
 import com.pavelrekun.rekado.services.lakka.LakkaHelper
 import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
-import com.pavelrekun.rekado.services.utils.SettingsUtils
 import kotlinx.android.synthetic.main.fragment_lakka.*
 import org.greenrobot.eventbus.EventBus
 import java.io.File
@@ -67,6 +67,8 @@ class LakkaView(private val activity: BaseActivity, private val fragment: Fragme
             activity.lakkaCorebootTitle.text = activity.getString(R.string.lakka_category_coreboot)
             activity.lakkaCorebootButton.text = activity.getString(R.string.lakka_button_add)
         }
+
+        activity.lakkaCorebootHelp.setOnClickListener { Dialogs.showDialog(activity, R.string.lakka_coreboot_dialog_title, R.string.lakka_coreboot_dialog_description) }
     }
 
     override fun initClickListeners() {
@@ -113,7 +115,6 @@ class LakkaView(private val activity: BaseActivity, private val fragment: Fragme
 
         try {
             MemoryUtils.toFile(file, LakkaHelper.FOLDER_PATH + "/coreboot.rom")
-            SettingsUtils.saveCorebootUpdateDate()
             EventBus.getDefault().post(Events.UpdateCorebootEvent())
             LogHelper.log(LogHelper.INFO, "Added coreboot file!")
         } catch (e: IOException) {
