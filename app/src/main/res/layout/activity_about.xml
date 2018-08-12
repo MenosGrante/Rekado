@@ -14,7 +14,7 @@
         android:elevation="3dp"
         app:navigationIcon="@drawable/ic_navigation_back"
         app:title="@string/navigation_about"
-        app:titleTextColor="?attr/colorAccent" />
+        app:titleTextColor="?android:attr/textColorPrimary" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="36dp"
                 android:contentDescription="@null"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/ic_launcher_hi_resolution" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -64,6 +64,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"
+                android:fontFamily="sans-serif-medium"
                 android:text="https://github.com/MenosGrante/Rekado"
                 android:textColor="?attr/colorAccent"
                 android:textSize="16sp" />
@@ -122,11 +123,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp   "
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:background="@color/colorBackgroundSecondary"
                 android:elevation="3dp"
-                android:layout_marginBottom="16dp   "
                 android:orientation="vertical">
 
                 <TextView

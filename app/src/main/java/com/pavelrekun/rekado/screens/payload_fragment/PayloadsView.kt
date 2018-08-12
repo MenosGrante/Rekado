@@ -1,12 +1,13 @@
 package com.pavelrekun.rekado.screens.payload_fragment
 
 import android.Manifest
-import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
 import com.pavelrekun.konae.Konae
+import com.pavelrekun.konae.filters.ExtensionFileFilter
+import com.pavelrekun.rang.utils.ColorsHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
@@ -16,7 +17,6 @@ import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
-import com.pavelrekun.rekado.services.utils.toFile
 import kotlinx.android.synthetic.main.fragment_payloads.*
 import org.greenrobot.eventbus.EventBus
 import java.io.File
@@ -27,13 +27,12 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
 
     private lateinit var adapter: PayloadsAdapter
 
-    private var chooserStorageInternal = true
-
     override fun initViews() {
         activity.setTitle(R.string.navigation_payloads)
 
         prepareList()
         initClickListeners()
+        initDesign()
     }
 
     override fun prepareList() {
@@ -52,6 +51,10 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
         activity.payloadsList.setHasFixedSize(true)
         activity.payloadsList.layoutManager = LinearLayoutManager(activity)
         activity.payloadsList.adapter = adapter
+    }
+
+    override fun initDesign() {
+        activity.payloadsAdd.setColorFilter(ColorsHelper.getContrastColor(activity, ColorsHelper.resolveAccentColor(activity)))
     }
 
     override fun updateList() {
@@ -92,6 +95,8 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
                         onChosenFileListener(dirFile)
                     }
                 })
+                .withFileFilter(ExtensionFileFilter("bin"))
+                .withTitle(activity.getString(R.string.dialog_file_chooser_payload_title))
                 .build()
                 .show()
     }
@@ -100,17 +105,17 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
         val payload = Payload(PayloadHelper.getName(pathFile.absolutePath), PayloadHelper.getPath(PayloadHelper.getName(pathFile.absolutePath)))
 
         if (!payload.name.contains("bin")) {
-            Toast.makeText(activity, activity.getString(R.string.helper_error_file_wrong), Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, activity.getString(R.string.helper_error_file_payload_wrong), Toast.LENGTH_SHORT).show()
         }
 
         try {
-            pathFile.toFile(PayloadHelper.FOLDER_PATH + "/" + payload.name)
+            MemoryUtils.toFile(pathFile, (PayloadHelper.FOLDER_PATH + "/" + payload.name))
 
-            EventBus.getDefault().postSticky(Events.UpdateListEvent())
-            LogHelper.log(1, "Added new payload: ${payload.name}")
+            EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
+            LogHelper.log(LogHelper.INFO, "Added new payload: ${payload.name}")
         } catch (e: IOException) {
             e.printStackTrace()
-            LogHelper.log(0, "Failed to add payload: ${payload.name}")
+            LogHelper.log(LogHelper.ERROR, "Failed to add payload: ${payload.name}")
         }
     }
 }

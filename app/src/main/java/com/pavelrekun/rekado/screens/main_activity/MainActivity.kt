@@ -4,10 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.ViewGroup
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.screens.about_activity.AboutActivity
 import com.pavelrekun.rekado.screens.settings_activity.SettingsActivity
+import com.pavelrekun.rekado.services.dialogs.DonateDialog
+import com.pavelrekun.rekado.services.utils.DesignUtils
 
 
 class MainActivity : BaseActivity() {
@@ -27,19 +30,7 @@ class MainActivity : BaseActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.navigation_about -> {
-                startActivity(Intent(this, AboutActivity::class.java))
-                true
-            }
-
-            R.id.navigation_settings -> {
-                startActivity(Intent(this, SettingsActivity::class.java))
-                true
-            }
-
-            else -> super.onOptionsItemSelected(item)
-        }
+        return mvpView.onOptionsItemSelected(item)
     }
 
     override fun onStart() {

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="dialog_title">Choose payload</string>
     <string name="dialog_button_storage_internal">Internal</string>
     <string name="dialog_button_storage_external">External</string>
     <string name="dialog_button_negative">Close</string>

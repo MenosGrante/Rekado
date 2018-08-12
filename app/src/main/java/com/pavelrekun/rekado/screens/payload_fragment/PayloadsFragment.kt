@@ -33,8 +33,8 @@ class PayloadsFragment : Fragment() {
         mvpView.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
-    fun onEvent(event: Events.UpdateListEvent) {
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onEvent(eventPayloads: Events.UpdatePayloadsListEvent) {
         mvpView.updateList()
     }
 

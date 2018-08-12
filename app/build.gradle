@@ -9,8 +9,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 15
-        versionName "1.3"
+        versionCode 24
+        versionName "2.2.1"
 
         externalNativeBuild {
             cmake {
@@ -65,7 +65,9 @@ dependencies {
     implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
     implementation "com.github.javiersantos:AppUpdater:$appUpdaterVersion"
 
+    // Own
     implementation project(":konae")
+    implementation (name: 'rang', ext: 'aar')
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"

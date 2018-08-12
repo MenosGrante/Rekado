@@ -1,5 +1,7 @@
 package com.pavelrekun.rekado.screens.main_activity
 
+import android.view.MenuItem
+
 interface MainContract {
 
     interface View {
@@ -14,6 +16,7 @@ interface MainContract {
 
         fun onStop()
 
+        fun onOptionsItemSelected(item: MenuItem): Boolean
     }
 
 }

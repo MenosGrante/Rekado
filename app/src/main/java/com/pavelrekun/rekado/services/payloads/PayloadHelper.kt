@@ -2,9 +2,7 @@ package com.pavelrekun.rekado.services.payloads
 
 import android.os.Environment
 import com.pavelrekun.rekado.data.Payload
-import com.pavelrekun.rekado.services.eventbus.Events
 import io.paperdb.Paper
-import org.greenrobot.eventbus.EventBus
 import java.io.File
 
 
@@ -17,7 +15,7 @@ object PayloadHelper {
 
     fun init() {
         val folderFile = File(FOLDER_PATH)
-        if (!folderFile.exists()) folderFile.mkdir()
+        if (!folderFile.exists()) folderFile.mkdirs()
     }
 
     fun getAll(): MutableList<Payload> {
@@ -70,14 +68,9 @@ object PayloadHelper {
 
     fun putChosen(payload: Payload) {
         Paper.book().write(CHOSEN_PAYLOAD, payload)
-        EventBus.getDefault().postSticky(Events.PayloadSelected())
     }
 
     fun getChosen(): Payload {
         return Paper.book().read(CHOSEN_PAYLOAD)
-    }
-
-    fun removeChosen() {
-        Paper.book().delete(CHOSEN_PAYLOAD)
     }
 }

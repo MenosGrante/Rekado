@@ -4,7 +4,11 @@
     <item
         android:id="@+id/navigation_settings"
         android:title="@string/navigation_settings" />
-    
+
+    <item
+        android:id="@+id/navigation_donate"
+        android:title="@string/navigation_donate" />
+
     <item
         android:id="@+id/navigation_about"
         android:title="@string/navigation_about" />

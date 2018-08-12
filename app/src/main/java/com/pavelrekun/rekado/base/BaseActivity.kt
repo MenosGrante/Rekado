@@ -1,11 +1,14 @@
 package com.pavelrekun.rekado.base
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import com.pavelrekun.rang.activity.RangActivity
+import com.pavelrekun.rekado.services.utils.DesignUtils
 
-open class BaseActivity : AppCompatActivity() {
+open class BaseActivity : RangActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        DesignUtils.setNightTheme()
+        DesignUtils.applyColorToTaskDescription(this)
         super.onCreate(savedInstanceState)
     }
 

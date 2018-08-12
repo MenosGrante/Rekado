@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_injector_selector_payload"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:drawablePadding="24dp"
+        android:drawableStart="@drawable/ic_navigation_payloads"
+        android:focusable="true"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_vertical"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="@string/dialog_injector_chooser_payload"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        tools:textColor="?android:attr/textColorPrimaryInverse" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider" />
+
+    <TextView
+        android:id="@+id/dialog_injector_selector_lakka"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:drawablePadding="24dp"
+        android:drawableStart="@drawable/ic_navigation_lakka"
+        android:focusable="true"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_vertical"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="@string/dialog_injector_chooser_lakka"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        tools:textColor="?android:attr/textColorPrimaryInverse" />
+
+</LinearLayout>
