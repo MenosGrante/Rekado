@@ -1,5 +1,6 @@
 package com.pavelrekun.rekado.screens.about_activity
 
+import com.pavelrekun.rekado.BuildConfig
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.utils.Utils
@@ -14,11 +15,16 @@ class AboutView(private val activity: BaseActivity) : AboutContract.View {
     override fun initViews() {
         initToolbar()
         initClickListeners()
+        initVersion()
     }
 
     override fun initToolbar() {
         activity.setSupportActionBar(activity.aboutToolbar)
         activity.aboutToolbar.setNavigationOnClickListener { activity.onBackPressed() }
+    }
+
+    override fun initVersion() {
+        activity.aboutVersion.text = "${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})"
     }
 
     override fun initClickListeners() {

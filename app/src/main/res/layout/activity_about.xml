@@ -46,11 +46,11 @@
                 tools:textColor="?android:attr/textColorPrimaryInverse" />
 
             <TextView
+                android:id="@+id/aboutVersion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
-                android:text="@string/app_version"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="16sp"
                 tools:textColor="?android:attr/textColorPrimaryInverse" />
