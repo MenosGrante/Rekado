@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name" translatable="false">Rekado</string>
+
+    <!-- Strings for Navigation -->
+    <string name="navigation_payloads">Payload</string>
+    <string name="navigation_lakka" translatable="false">Lakka</string>
+    <string name="navigation_instructions">Istruzioni</string>
+    <string name="navigation_logs">Registro</string>
+    <string name="navigation_about">Al riguardo</string>
+    <string name="navigation_donate">Dona</string>
+    <string name="navigation_settings">Impostazioni</string>
+
+    <!-- Strings for About -->
+    <string name="about_category_information">Informazioni</string>
+    <string name="about_category_developer">Sviluppatore</string>
+    <string name="about_information_description">Applicazione scritta in Kotlin e C++. Viene usata per iniettare payload o avviare Lakka su Nintendo Switch</string>
+    <string name="about_developer_github" translatable="false">GitHub</string>
+    <string name="about_developer_twitter" translatable="false">Twitter</string>
+
+    <!-- Strings for Instructions -->
+    <string name="instructions_category_cable">Cavo</string>
+    <string name="instructions_category_cable_description">Prima devi trovare un cavo per connettere il tuo dispositivo al Nintendo Switch. Per funzionare, dovrebbe essere un cavo progettato per trasmettere dati, non solo per ricarica.\n\nSi consiglia di usare un cavo da A a C ed un adattatore USB OTG.</string>
+    <string name="instructions_category_payload">Payload</string>
+    <string name="instructions_category_payload_description">Nella categoria \u0022Payload\u0022, tocca il pulsante \u0022+\u0022 per selezionare un payload dalla memoria del tuo dispositivo. O semplicemente trasferisci il tuo payload nella cartella Rekado nella memoria del dispositivo.\n\nO puoi usare il payload predefinito (SX Loader)</string>
+    <string name="instructions_category_coreboot" translatable="false">Coreboot (Lakka)</string>
+    <string name="instructions_category_coreboot_description">Nella categoria \u0022Lakka\u0022, tocca il pulsante \u0022Aggiungi\u0022 o \u0022Aggiorna\u0022 per selezionare il file \u0022coreboot\u0022 dalla memoria del tuo dispositivo. O semplicemente trasferisci il tuo file \u0022coreboot\u0022 nella cartella Rekado/Lakka nella memoria del dispositivo.</string>
+    <string name="instructions_category_rcm" translatable="false">RCM</string>
+    <string name="instructions_category_rcm_description">Avvia il tuo Nintendo Switch in modalità RCM con il metodo che preferisci. \n\nIl tuo Nintendo Switch si accenderà da solo quando collegato, assicurati di tenere premuto VOLUME +.</string>
+    <string name="instructions_category_final">Conclusione</string>
+    <string name="instructions_category_final_description">Connetti il dispositivo al Nintendo Switch e permetti l'accesso USB se richiesto. Attendi finchè il programma ti chiede di selezionare cosa vuoi iniettare, payload o Lakka.\n\nSe selezioni payload, dovrai scegliere quello che ti serve.\n\nSe scegli Lakka, devi solo attendere il caricamento.</string>
+
+    <!-- Strings for Logs -->
+    <string name="logs_actions_list">Elenco di azioni</string>
+
+    <!-- Strings for Donate -->
+    <string name="donate_title">Dona</string>
+    <string name="donate_description">Puoi supportare lo sviluppo dell\'applicazione in diversi modi.</string>
+    <string name="donate_bitcoin" translatable="false">Bitcoin</string>
+    <string name="donate_bitcoin_cash" translatable="false">Bitcoin Cash</string>
+    <string name="donate_ethereum" translatable="false">Ethereum</string>
+    <string name="donate_litecoin" translatable="false">Litecoin</string>
+    <string name="donate_address_copied">Indirizzo %1$s copiato!</string>
+
+    <!-- Strings for Lakka -->
+    <string name="lakka_category_cbfs" translatable="false">CBFS</string>
+    <string name="lakka_category_coreboot" translatable="false">Coreboot</string>
+    <string name="lakka_tools_ready">Pronto</string>
+    <string name="lakka_tools_not_ready">Non pronto</string>
+    <string name="lakka_last_update">Ultimo aggiornamento: %1$s</string>
+    <string name="lakka_button_add">Aggiungi</string>
+    <string name="lakka_button_update">Aggiorna</string>
+    <string name="lakka_coreboot_dialog_title">Cos\'è \u0022coreboot\u0022?</string>
+    <string name="lakka_coreboot_dialog_description">\u0022Coreboot\u0022 è uno speciale file necessario per caricare Lakka su Nintendo Switch.</string>
+
+    <!-- Strings for Settings -->
+    <string name="settings_category_auto_injector">Autoiniettore</string>
+    <string name="settings_auto_injector_status_title_disabled">Attiva \u0022autoiniettore\u0022</string>
+    <string name="settings_auto_injector_status_title_enabled">Disattiva \u0022autoiniettore\u0022</string>
+    <string name="settings_auto_injector_payload_title">Payload</string>
+    <string name="settings_category_payloads">Payload</string>
+    <string name="settings_payloads_reset_title">Svuota</string>
+    <string name="settings_payloads_reset_summary">Rimuovi tutti i payload aggiunti (eccetto SX Loader 
+primario)</string>
+    <string name="settings_category_appearance">Aspetto</string>
+    <string name="settings_appearance_night_mode_title">Modalità notte</string>
+    <string name="settings_appearance_accent_color_title">Colore titoli</string>
+    <string name="settings_appearance_accent_color_summary">Colore usato per gli elementi in UI</string>
+    <string name="settings_restart_title">Impostazioni modificate</string>
+    <string name="settings_restart_message">Le impostazioni sono state modificate. Si prega di riavviare perchè abbia 
+effetto la modifica. \n\nRiavviare l\'app adesso?</string>
+    <string name="settings_restart_ok">Riavvia</string>
+    <string name="settings_restart_cancel">Annulla</string>
+
+    <!-- Strings for Permissions -->
+    <string name="permission_storage_dialog_title">Autorizzazione archiviazione</string>
+    <string name="permission_storage_dialog_description">Rekado richiede questa autorizzazione per caricare i file payload dalla memoria del tuo dispositivo.</string>
+    <string name="permission_storage_button">Richiedi</string>
+    <string name="permission_storage_error">Impossibile accedere alla memoria del dispositivo. Prova a dare l\'autorizzazione di nuovo.</string>
+
+    <!-- Strings for Dialogs -->
+    <string name="dialog_loader_title">Scegli payload</string>
+    <string name="dialog_reset_payloads_title">Svuota</string>
+    <string name="dialog_reset_payloads_summary">Sei sicuro di volere eliminare i payload?</string>
+    <string name="dialog_positive" translatable="false">OK</string>
+    <string name="dialog_negative">Annulla</string>
+    <string name="dialog_injector_chooser_title">Seleziona iniettore</string>
+    <string name="dialog_injector_chooser_payload">Avvia (Payload)</string>
+    <string name="dialog_injector_chooser_lakka">Avvia (Lakka)</string>
+    <string name="dialog_file_chooser_payload_title">Scegli payload</string>
+    <string name="dialog_file_chooser_coreboot_title">Scegli \u0022coreboot\u0022</string>
+
+    <!-- Strings for Helper -->
+    <string name="helper_error_file_payload_wrong">Sei sicuro che sia il file payload giusto?</string>
+    <string name="helper_error_file_coreboot_wrong">Sei sicuro che sia il file \u0022coreboot\u0022 giusto?</string>
+</resources>
