@@ -27,7 +27,7 @@
     <string name="instructions_category_rcm" translatable="false">RCM</string>
     <string name="instructions_category_rcm_description">Avvia il tuo Nintendo Switch in modalità RCM con il metodo che preferisci. \n\nIl tuo Nintendo Switch si accenderà da solo quando collegato, assicurati di tenere premuto VOLUME +.</string>
     <string name="instructions_category_final">Conclusione</string>
-    <string name="instructions_category_final_description">Connetti il dispositivo al Nintendo Switch e permetti l'accesso USB se richiesto. Attendi finchè il programma ti chiede di selezionare cosa vuoi iniettare, payload o Lakka.\n\nSe selezioni payload, dovrai scegliere quello che ti serve.\n\nSe scegli Lakka, devi solo attendere il caricamento.</string>
+    <string name="instructions_category_final_description">Connetti il dispositivo al Nintendo Switch e permetti l\'accesso USB se richiesto. Attendi finchè il programma ti chiede di selezionare cosa vuoi iniettare, payload o Lakka.\n\nSe selezioni payload, dovrai scegliere quello che ti serve.\n\nSe scegli Lakka, devi solo attendere il caricamento.</string>
 
     <!-- Strings for Logs -->
     <string name="logs_actions_list">Elenco di azioni</string>
