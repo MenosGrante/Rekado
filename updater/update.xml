@@ -1,13 +1,13 @@
 <AppUpdater>
   <update>
-    <latestVersion>2.2.1</latestVersion>
-    <latestVersionCode>24</latestVersionCode>
+    <latestVersion>2.3</latestVersion>
+    <latestVersionCode>25</latestVersionCode>
     <url>https://github.com/MenosGrante/Rekado/releases</url>
     <releaseNotes>
-- Improved support for Android Pie (9.0)
-- Added small FAQ for coreboot file
-- Fixed bug with null update date of coreboot filename
-- Fixed crash in settings
+- Bundled ReiNX official payload
+- Added French localization
+- Added Italian localization
+- Updated Kotlin and Coroutines to latest versions
     </releaseNotes>
   </update>
 </AppUpdater>
