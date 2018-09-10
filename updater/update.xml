@@ -1,7 +1,7 @@
 <AppUpdater>
   <update>
     <latestVersion>2.3</latestVersion>
-    <latestVersionCode>25</latestVersionCode>
+    <latestVersionCode>26</latestVersionCode>
     <url>https://github.com/MenosGrante/Rekado/releases</url>
     <releaseNotes>
 - Bundled ReiNX official payload
