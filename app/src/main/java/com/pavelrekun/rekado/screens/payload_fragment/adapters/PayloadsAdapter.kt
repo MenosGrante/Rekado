@@ -38,7 +38,7 @@ class PayloadsAdapter(var data: MutableList<Payload>) : RecyclerView.Adapter<Pay
         fun bind(payload: Payload) {
             itemPayloadName.text = payload.name
 
-            itemPayloadRemove.visibility = if (payload.name == PayloadHelper.BASIC_PAYLOAD_NAME) View.GONE else View.VISIBLE
+            itemPayloadRemove.visibility = if (payload.name == PayloadHelper.BUNDLED_PAYLOAD_SX || payload.name == PayloadHelper.BUNDLED_PAYLOAD_REINX) View.GONE else View.VISIBLE
 
             itemPayloadRemove.setOnClickListener {
                 MemoryUtils.removeFile(payload.path)

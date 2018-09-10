@@ -9,7 +9,9 @@ import java.io.File
 object PayloadHelper {
 
     val FOLDER_PATH = "${Environment.getExternalStorageDirectory()}/Rekado/"
-    const val BASIC_PAYLOAD_NAME = "sx_loader.bin"
+
+    const val BUNDLED_PAYLOAD_SX = "sx_loader.bin"
+    const val BUNDLED_PAYLOAD_REINX = "ReiNX.bin"
 
     private const val CHOSEN_PAYLOAD = "CHOSEN_PAYLOAD"
 
@@ -32,7 +34,7 @@ object PayloadHelper {
 
     fun clearFolder() {
         File(FOLDER_PATH).listFiles().forEach {
-            if (it.name != BASIC_PAYLOAD_NAME) {
+            if (it.name != BUNDLED_PAYLOAD_SX || it.name != BUNDLED_PAYLOAD_REINX) {
                 it.delete()
             }
         }

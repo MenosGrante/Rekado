@@ -21,7 +21,7 @@ object SettingsUtils {
     }
 
     fun getAutoInjectorPayload(): String {
-        return Paper.book().read(AUTO_INJECTOR_PAYLOAD, PayloadHelper.BASIC_PAYLOAD_NAME)
+        return Paper.book().read(AUTO_INJECTOR_PAYLOAD, PayloadHelper.BUNDLED_PAYLOAD_SX)
     }
 
 }

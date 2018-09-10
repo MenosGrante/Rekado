@@ -44,7 +44,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     override fun initList() {
-        MemoryUtils.copyAsset()
+        MemoryUtils.copyBundledPayloads()
 
         adapter = PayloadsAdapter(PayloadHelper.getAll())
 
