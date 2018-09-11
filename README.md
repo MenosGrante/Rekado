@@ -26,6 +26,7 @@ Application doesn't require Root on your device.
 This should not happen when using the "correct" payloads. But I am not responsible for possible problems.
 
 **I want to help in Rekado's localization to my language, what should I do?**
+
 Rekado's localization files placed in few places:
 * \app\src\main\res\values\strings.xml
 * \app\src\main\res\values\arrays.xml
