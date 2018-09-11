@@ -21,7 +21,7 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mvpView = MainView(this)
+        mvpView = MainView(this, savedInstanceState)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

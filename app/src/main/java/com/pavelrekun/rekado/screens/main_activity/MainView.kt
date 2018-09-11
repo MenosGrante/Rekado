@@ -1,6 +1,7 @@
 package com.pavelrekun.rekado.screens.main_activity
 
 import android.content.Intent
+import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.MenuItem
 import android.view.ViewGroup
@@ -21,7 +22,7 @@ import com.pavelrekun.rekado.services.utils.DesignUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainView(private val activity: BaseActivity) : MainContract.View {
+class MainView(private val activity: BaseActivity, private val savedInstanceState: Bundle?) : MainContract.View {
 
     private var appUpdater: AppUpdater
 
@@ -48,8 +49,10 @@ class MainView(private val activity: BaseActivity) : MainContract.View {
     }
 
     override fun initNavigationClickListener() {
-        chooseNavigationItem(R.id.navigation_instructions)
-        activity.mainNavigationBar.selectedItemId = R.id.navigation_instructions
+        if (savedInstanceState == null) {
+            chooseNavigationItem(R.id.navigation_instructions)
+            activity.mainNavigationBar.selectedItemId = R.id.navigation_instructions
+        }
 
         activity.mainNavigationBar.setOnNavigationItemSelectedListener {
             chooseNavigationItem(it.itemId)
@@ -93,7 +96,7 @@ class MainView(private val activity: BaseActivity) : MainContract.View {
         if (fragment != null) {
             val transaction = activity.supportFragmentManager.beginTransaction()
             transaction.replace(R.id.main_content_frame, fragment)
-            transaction.commitNow()
+            transaction.commit()
         }
     }
 
