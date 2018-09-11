@@ -3,14 +3,11 @@ package com.pavelrekun.rekado.services.usb
 import android.hardware.usb.UsbDevice
 import android.hardware.usb.UsbManager
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
 import com.afollestad.materialdialogs.MaterialDialog
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.dialogs.Dialogs
 import com.pavelrekun.rekado.services.eventbus.Events
-import com.pavelrekun.rekado.services.lakka.LakkaLoader
 import com.pavelrekun.rekado.services.logs.LogHelper
-import com.pavelrekun.rekado.services.logs.LogHelper.ERROR
 import com.pavelrekun.rekado.services.logs.LogHelper.INFO
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.payloads.PayloadLoader
@@ -27,7 +24,6 @@ class USBReceiver : BaseActivity() {
 
     private var usbHandler: USBHandler? = null
 
-    private lateinit var injectorChooserDialog: AlertDialog
     private lateinit var payloadChooserDialog: MaterialDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +38,7 @@ class USBReceiver : BaseActivity() {
                 PayloadHelper.putChosen(PayloadHelper.find(SettingsUtils.getAutoInjectorPayload())!!)
                 injectPayload()
             } else {
-                injectorChooserDialog = Dialogs.showInjectorSelectorDialog(this)
+                payloadChooserDialog = Dialogs.showPayloadsDialog(this)
             }
         }
     }
@@ -59,20 +55,6 @@ class USBReceiver : BaseActivity() {
         finishReceiver()
     }
 
-    private fun injectLakka() {
-        try {
-            if (SwitchUtils.isRCM(device)) {
-                usbHandler = LakkaLoader()
-                usbHandler?.handleDevice(device)
-                LogHelper.log(INFO, "Lakka loading finished for device: ${device.deviceName}")
-            }
-        } catch (t: Throwable) {
-            LogHelper.log(ERROR, "Failed to inject Lakka!")
-        }
-
-        finishReceiver()
-    }
-
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onEvent(event: Events.PayloadSelected) {
         injectPayload()
@@ -81,21 +63,6 @@ class USBReceiver : BaseActivity() {
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onEvent(event: Events.PayloadNotSelected) {
         finishReceiver()
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onEvent(event: Events.InjectorMethodNotSelected) {
-        finishReceiver()
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
-    fun onEvent(event: Events.InjectorMethodPayloadSelected) {
-        payloadChooserDialog = Dialogs.showPayloadsDialog(this)
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onEvent(event: Events.InjectorMethodLakkaSelected) {
-        injectLakka()
     }
 
     override fun onStart() {
@@ -109,10 +76,6 @@ class USBReceiver : BaseActivity() {
     }
 
     private fun finishReceiver() {
-        if (this::injectorChooserDialog.isInitialized && injectorChooserDialog.isShowing) {
-            injectorChooserDialog.dismiss()
-        }
-
         if (this::payloadChooserDialog.isInitialized && payloadChooserDialog.isShowing) {
             payloadChooserDialog.dismiss()
         }

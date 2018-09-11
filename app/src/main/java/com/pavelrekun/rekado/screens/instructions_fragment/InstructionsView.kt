@@ -17,6 +17,5 @@ class InstructionsView(private val activity: BaseActivity) : InstructionsContrac
 
     override fun initClickListeners() {
         activity.instructionsRCMHelp.setOnClickListener { Utils.openLink(Constants.HELP_RCM) }
-        activity.instructionsCorebootHelp.setOnClickListener { Dialogs.showDialog(activity, R.string.lakka_coreboot_dialog_title, R.string.lakka_coreboot_dialog_description) }
     }
 }

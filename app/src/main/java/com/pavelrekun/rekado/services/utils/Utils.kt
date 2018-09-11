@@ -32,9 +32,4 @@ object Utils {
 
         return result.toString()
     }
-
-    fun formatDate(date: Date): String {
-        val dateFormat = SimpleDateFormat("dd.MM.YYYY", Locale.getDefault())
-        return dateFormat.format(date)
-    }
 }
