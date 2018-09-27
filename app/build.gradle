@@ -20,7 +20,17 @@ android {
     }
 
     buildTypes {
+        debug {
+            ndk {
+                abiFilters "arm64-v8a", "armeabi-v7a"
+            }
+        }
+
         release {
+            ndk {
+                abiFilters "arm64-v8a", "armeabi-v7a"
+            }
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -54,10 +64,10 @@ kotlin {
 }
 
 dependencies {
-    implementation "com.android.support:design:$androidSupportVersion"
-    implementation "com.android.support:recyclerview-v7:$androidSupportVersion"
-    implementation "com.android.support:customtabs:$androidSupportVersion"
-    implementation "com.android.support:preference-v7:$androidSupportVersion"
+    implementation "com.google.android.material:material:$materialComponentsVersion"
+    implementation "androidx.recyclerview:recyclerview:$androidXVersion"
+    implementation "androidx.browser:browser:$androidXVersion"
+    implementation "androidx.preference:preference:$androidXVersion"
 
     // Tools
     implementation "io.paperdb:paperdb:$paperVersion"
@@ -67,10 +77,10 @@ dependencies {
 
     // Own
     implementation project(":konae")
-    implementation (name: 'rang', ext: 'aar')
+    implementation(name: 'rang', ext: 'aar')
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutines"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutinesVersion"
 }

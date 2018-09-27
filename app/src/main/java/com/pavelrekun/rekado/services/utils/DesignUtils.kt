@@ -2,12 +2,12 @@ package com.pavelrekun.rekado.services.utils
 
 import android.app.ActivityManager
 import android.graphics.BitmapFactory
-import android.support.v4.content.ContextCompat
-import android.support.v7.preference.PreferenceManager
 import android.util.TypedValue
-import com.pavelrekun.rang.Rang
-import com.pavelrekun.rang.colors.NightMode
-import com.pavelrekun.rang.colors.PrimaryColor
+import androidx.core.content.ContextCompat
+import androidx.preference.PreferenceManager
+import com.pavelrekun.rang.data.NightMode
+import com.pavelrekun.rang.data.PrimaryColor
+import com.pavelrekun.rang.services.Rang
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.base.BaseActivity

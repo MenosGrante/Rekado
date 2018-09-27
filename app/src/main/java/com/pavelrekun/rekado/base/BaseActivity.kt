@@ -1,7 +1,7 @@
 package com.pavelrekun.rekado.base
 
 import android.os.Bundle
-import com.pavelrekun.rang.activity.RangActivity
+import com.pavelrekun.rang.base.RangActivity
 import com.pavelrekun.rekado.services.utils.DesignUtils
 
 open class BaseActivity : RangActivity() {

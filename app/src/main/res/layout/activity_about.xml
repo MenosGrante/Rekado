@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/aboutToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -81,8 +81,7 @@
                 android:layout_margin="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/about_category_information"
-                android:textColor="?attr/colorAccent"
-                android:textSize="16sp" />
+                android:textColor="?attr/colorAccent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -117,13 +116,12 @@
                 android:layout_margin="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/about_category_developer"
-                android:textColor="?attr/colorAccent"
-                android:textSize="16sp" />
+                android:textColor="?attr/colorAccent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp   "
+                android:layout_marginBottom="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:background="@color/colorBackgroundSecondary"

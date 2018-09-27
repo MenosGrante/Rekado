@@ -1,11 +1,9 @@
 package com.pavelrekun.rekado.services.dialogs
 
 import android.content.Intent
-import android.support.annotation.StringRes
-import android.support.v4.app.ActivityCompat
-import android.support.v7.app.AlertDialog
-import android.view.LayoutInflater
-import android.widget.TextView
+import androidx.annotation.StringRes
+import androidx.core.app.ActivityCompat
+import androidx.appcompat.app.AlertDialog
 import com.afollestad.materialdialogs.MaterialDialog
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity

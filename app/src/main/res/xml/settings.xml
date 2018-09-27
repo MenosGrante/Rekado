@@ -11,7 +11,7 @@
         android:summary="%s"
         android:title="@string/settings_appearance_night_mode_title" />
 
-    <com.pavelrekun.rang.picker.ColorPickerPreference
+    <com.pavelrekun.rang.services.picker.ColorPickerPreference
         android:key="appearance_accent_color"
         android:summary="@string/settings_appearance_accent_color_summary"
         android:title="@string/settings_appearance_accent_color_title" />
@@ -29,6 +29,11 @@
         android:title="@string/settings_auto_injector_payload_title" />
 
     <PreferenceCategory android:title="@string/settings_category_payloads" />
+
+    <CheckBoxPreference
+        android:key="payloads_hide_bundled"
+        android:summary="@string/settings_payloads_remove_bundled_summary"
+        android:title="@string/settings_payloads_remove_bundled_title" />
 
     <Preference
         android:key="payloads_reset"

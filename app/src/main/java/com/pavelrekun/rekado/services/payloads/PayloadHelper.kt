@@ -23,6 +23,8 @@ object PayloadHelper {
     fun getAll(): MutableList<Payload> {
         val payloads: MutableList<Payload> = ArrayList()
 
+        File(FOLDER_PATH).listFiles() ?: return mutableListOf()
+
         File(FOLDER_PATH).listFiles().forEach {
             if (it.path.contains("bin")) {
                 payloads.add(Payload(getName(it.path), it.path))
@@ -32,9 +34,17 @@ object PayloadHelper {
         return payloads
     }
 
-    fun clearFolder() {
+    fun clearFolderWithoutBundled() {
         File(FOLDER_PATH).listFiles().forEach {
             if (it.name != BUNDLED_PAYLOAD_SX || it.name != BUNDLED_PAYLOAD_REINX) {
+                it.delete()
+            }
+        }
+    }
+
+    fun clearBundled() {
+        File(FOLDER_PATH).listFiles().forEach {
+            if (it.name == BUNDLED_PAYLOAD_SX || it.name == BUNDLED_PAYLOAD_REINX) {
                 it.delete()
             }
         }

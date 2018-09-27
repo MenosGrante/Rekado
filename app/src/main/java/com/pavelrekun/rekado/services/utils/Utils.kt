@@ -1,22 +1,20 @@
 package com.pavelrekun.rekado.services.utils
 
 import android.net.Uri
-import android.support.customtabs.CustomTabsIntent
-import com.pavelrekun.rekado.RekadoApplication
-import java.text.SimpleDateFormat
-import java.util.*
+import androidx.browser.customtabs.CustomTabsIntent
+import com.pavelrekun.rekado.base.BaseActivity
 
 
 object Utils {
 
     private val hexArray = "0123456789ABCDEF".toCharArray()
 
-    fun openLink(url: String) {
+    fun openLink(activity: BaseActivity, url: String) {
         val builder = CustomTabsIntent.Builder()
         builder.setShowTitle(true)
 
         val customTabsIntent = builder.build()
-        customTabsIntent.launchUrl(RekadoApplication.instance.applicationContext, Uri.parse(url))
+        customTabsIntent.launchUrl(activity, Uri.parse(url))
     }
 
     fun bytesToHex(bytes: ByteArray): String {
