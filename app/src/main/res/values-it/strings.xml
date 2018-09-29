@@ -44,6 +44,8 @@
     <string name="settings_auto_injector_status_title_enabled">Disattiva \u0022autoiniettore\u0022</string>
     <string name="settings_auto_injector_payload_title">Payload</string>
     <string name="settings_category_payloads">Payload</string>
+    <string name="settings_payloads_remove_bundled_title">Nascondi integrati</string>
+    <string name="settings_payloads_remove_bundled_summary">Nascondi tutti i payload integrati</string>
     <string name="settings_payloads_reset_title">Svuota</string>
     <string name="settings_payloads_reset_summary">Rimuovi tutti i payload aggiunti eccetto i predefiniti (SX Loader/ReiNX)</string>
     <string name="settings_category_appearance">Aspetto</string>
