@@ -1,14 +1,13 @@
 package com.pavelrekun.rekado.screens.logs_fragment
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 
-class LogsFragment : Fragment() {
+class LogsFragment : androidx.fragment.app.Fragment() {
 
     private lateinit var mvpView: LogsContract.View
 
@@ -23,5 +22,10 @@ class LogsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mvpView.initViews()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mvpView.onResume()
     }
 }

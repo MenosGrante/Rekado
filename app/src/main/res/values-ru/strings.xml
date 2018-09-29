@@ -36,6 +36,8 @@
     <string name="settings_auto_injector_status_title_enabled">Выключить \u0022Автоинжектор\u0022</string>
     <string name="settings_auto_injector_payload_title">Загрузчик</string>
     <string name="settings_category_payloads">Загрузчики</string>
+    <string name="settings_payloads_remove_bundled_title">Прятать предустановленные</string>
+    <string name="settings_payloads_remove_bundled_summary">Прятать все предустановленные загрузчики</string>
     <string name="settings_payloads_reset_title">Очистка</string>
     <string name="settings_payloads_reset_summary">Удалить все добавленные загрузчики кроме предустановленных (SX Loader/ReiNX)</string>
     <string name="settings_category_appearance">Внешний вид</string>

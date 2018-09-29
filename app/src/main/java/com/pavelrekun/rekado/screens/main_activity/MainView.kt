@@ -2,7 +2,7 @@ package com.pavelrekun.rekado.screens.main_activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.MenuItem
 import android.view.ViewGroup
 import com.github.javiersantos.appupdater.AppUpdater
@@ -83,7 +83,7 @@ class MainView(private val activity: BaseActivity, private val savedInstanceStat
     }
 
     private fun chooseNavigationItem(id: Int) {
-        var fragment: Fragment? = null
+        var fragment: androidx.fragment.app.Fragment? = null
 
         when (id) {
             R.id.navigation_payloads -> fragment = PayloadsFragment()

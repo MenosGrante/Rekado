@@ -2,12 +2,10 @@ package com.pavelrekun.rekado.screens.payload_fragment
 
 import android.Manifest
 import android.content.pm.PackageManager
-import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
 import com.pavelrekun.konae.Konae
 import com.pavelrekun.konae.filters.ExtensionFileFilter
-import com.pavelrekun.rang.utils.ColorsHelper
+import com.pavelrekun.rang.services.helpers.ColorsHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
@@ -17,13 +15,14 @@ import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
+import com.pavelrekun.rekado.services.utils.SettingsUtils
 import kotlinx.android.synthetic.main.fragment_payloads.*
 import org.greenrobot.eventbus.EventBus
 import java.io.File
 import java.io.IOException
 
 
-class PayloadsView(private val activity: BaseActivity, private val fragment: Fragment) : PayloadsContract.View {
+class PayloadsView(private val activity: BaseActivity, private val fragment: androidx.fragment.app.Fragment) : PayloadsContract.View {
 
     private lateinit var adapter: PayloadsAdapter
 
@@ -44,12 +43,14 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     override fun initList() {
-        MemoryUtils.copyBundledPayloads()
+        if (!SettingsUtils.checkHideBundledEnabled()) {
+            MemoryUtils.copyBundledPayloads()
+        }
 
         adapter = PayloadsAdapter(PayloadHelper.getAll())
 
         activity.payloadsList.setHasFixedSize(true)
-        activity.payloadsList.layoutManager = LinearLayoutManager(activity)
+        activity.payloadsList.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(activity)
         activity.payloadsList.adapter = adapter
     }
 
@@ -117,5 +118,9 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
             e.printStackTrace()
             LogHelper.log(LogHelper.ERROR, "Failed to add payload: ${payload.name}")
         }
+    }
+
+    override fun onResume() {
+        initList()
     }
 }

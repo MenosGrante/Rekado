@@ -28,9 +28,9 @@ class AboutView(private val activity: BaseActivity) : AboutContract.View {
     }
 
     override fun initClickListeners() {
-        activity.aboutLinkGitHubProject.setOnClickListener { Utils.openLink(Constants.GITHUB_PROJECT_LINK) }
-        activity.aboutDeveloperGitHub.setOnClickListener { Utils.openLink(Constants.GITHUB_PROFILE_LINK) }
-        activity.aboutDeveloperTwitter.setOnClickListener { Utils.openLink(Constants.TWITTER_LINK) }
+        activity.aboutLinkGitHubProject.setOnClickListener { Utils.openLink(activity, Constants.GITHUB_PROJECT_LINK) }
+        activity.aboutDeveloperGitHub.setOnClickListener { Utils.openLink(activity, Constants.GITHUB_PROFILE_LINK) }
+        activity.aboutDeveloperTwitter.setOnClickListener { Utils.openLink(activity, Constants.TWITTER_LINK) }
     }
 
 }

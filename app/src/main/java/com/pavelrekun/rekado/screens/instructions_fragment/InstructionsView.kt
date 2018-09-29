@@ -3,7 +3,6 @@ package com.pavelrekun.rekado.screens.instructions_fragment
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.Constants
-import com.pavelrekun.rekado.services.dialogs.Dialogs
 import com.pavelrekun.rekado.services.utils.Utils
 import kotlinx.android.synthetic.main.fragment_instrutions.*
 
@@ -16,6 +15,6 @@ class InstructionsView(private val activity: BaseActivity) : InstructionsContrac
     }
 
     override fun initClickListeners() {
-        activity.instructionsRCMHelp.setOnClickListener { Utils.openLink(Constants.HELP_RCM) }
+        activity.instructionsRCMHelp.setOnClickListener { Utils.openLink(activity, Constants.HELP_RCM) }
     }
 }

@@ -1,5 +1,5 @@
 # Rekado
-Payload launcher for Android OS written in Kotlin.
+Payload launcher written in Kotlin for Nintendo Switch.
 
 **Application doesn't require Root on your device.**
 
