@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name" translatable="false">Rekado</string>
+
+    <!-- Strings for Navigation -->
+    <string name="navigation_payloads">Payload</string>
+    <string name="navigation_instructions">Istruzioni</string>
+    <string name="navigation_logs">Registro</string>
+    <string name="navigation_about">Al riguardo</string>
+    <string name="navigation_donate">Dona</string>
+    <string name="navigation_settings">Impostazioni</string>
+
+    <!-- Strings for About -->
+    <string name="about_category_information">Informazioni</string>
+    <string name="about_category_developer">Sviluppatore</string>
+    <string name="about_information_description">Applicazione scritta in Kotlin e C++. Viene usata per iniettare payload o avviare Lakka su Nintendo Switch</string>
+    <string name="about_developer_github" translatable="false">GitHub</string>
+    <string name="about_developer_twitter" translatable="false">Twitter</string>
+
+    <!-- Strings for Instructions -->
+    <string name="instructions_category_cable">Cavo</string>
+    <string name="instructions_category_cable_description">Prima devi trovare un cavo per connettere il tuo dispositivo al Nintendo Switch. Per funzionare, dovrebbe essere un cavo progettato per trasmettere dati, non solo per ricarica.\n\nSi consiglia di usare un cavo da A a C ed un adattatore USB OTG.</string>
+    <string name="instructions_category_payload">Payload</string>
+    <string name="instructions_category_payload_description">Nella categoria \u0022Payload\u0022, tocca il pulsante \u0022+\u0022 per selezionare un payload dalla memoria del tuo dispositivo. O semplicemente trasferisci il tuo payload nella cartella Rekado nella memoria del dispositivo.\n\nO puoi usare i payload predefiniti (SX Loader/ReiNX)</string>
+    <string name="instructions_category_rcm" translatable="false">RCM</string>
+    <string name="instructions_category_rcm_description">Avvia il tuo Nintendo Switch in modalità RCM con il metodo che preferisci. \n\nIl tuo Nintendo Switch si accenderà da solo quando collegato, assicurati di tenere premuto VOLUME +.</string>
+    <string name="instructions_category_final">Conclusione</string>
+    <string name="instructions_category_final_description">Connetti il dispositivo al Nintendo Switch e permetti l\'accesso USB se richiesto. Attendi finchè la finestra di scelta del payload si apre e seleziona quale vuoi caricare.</string>
+
+    <!-- Strings for Logs -->
+    <string name="logs_actions_list">Elenco di azioni</string>
+
+    <!-- Strings for Donate -->
+    <string name="donate_title">Dona</string>
+    <string name="donate_description">Puoi supportare lo sviluppo dell\'applicazione in diversi modi.</string>
+    <string name="donate_bitcoin" translatable="false">Bitcoin</string>
+    <string name="donate_bitcoin_cash" translatable="false">Bitcoin Cash</string>
+    <string name="donate_ethereum" translatable="false">Ethereum</string>
+    <string name="donate_litecoin" translatable="false">Litecoin</string>
+    <string name="donate_address_copied">Indirizzo %1$s copiato!</string>
+
+    <!-- Strings for Settings -->
+    <string name="settings_category_auto_injector">Autoiniettore</string>
+    <string name="settings_auto_injector_status_title_disabled">Attiva \u0022autoiniettore\u0022</string>
+    <string name="settings_auto_injector_status_title_enabled">Disattiva \u0022autoiniettore\u0022</string>
+    <string name="settings_auto_injector_payload_title">Payload</string>
+    <string name="settings_category_payloads">Payload</string>
+    <string name="settings_payloads_remove_bundled_title">Nascondi integrati</string>
+    <string name="settings_payloads_remove_bundled_summary">Nascondi tutti i payload integrati</string>
+    <string name="settings_payloads_reset_title">Svuota</string>
+    <string name="settings_payloads_reset_summary">Rimuovi tutti i payload aggiunti eccetto i predefiniti (SX Loader/ReiNX)</string>
+    <string name="settings_category_appearance">Aspetto</string>
+    <string name="settings_appearance_night_mode_title">Modalità notte</string>
+    <string name="settings_appearance_accent_color_title">Colore titoli</string>
+    <string name="settings_appearance_accent_color_summary">Colore usato per gli elementi in UI</string>
+    <string name="settings_restart_title">Impostazioni modificate</string>
+    <string name="settings_restart_message">Le impostazioni sono state modificate. Si prega di riavviare perchè abbia effetto la modifica. \n\nRiavviare l\'app adesso?</string>
+    <string name="settings_restart_ok">Riavvia</string>
+    <string name="settings_restart_cancel">Annulla</string>
+    <string name="settings_accent_color_title_dialog">Scegli un colore</string>
+
+    <!-- Strings for Permissions -->
+    <string name="permission_storage_dialog_title">Autorizzazione archiviazione</string>
+    <string name="permission_storage_dialog_description">Rekado richiede questa autorizzazione per caricare i file payload dalla memoria del tuo dispositivo.</string>
+    <string name="permission_storage_button">Richiedi</string>
+    <string name="permission_storage_error">Impossibile accedere alla memoria del dispositivo. Prova a dare l\'autorizzazione di nuovo.</string>
+
+    <!-- Strings for Dialogs -->
+    <string name="dialog_loader_title">Scegli payload</string>
+    <string name="dialog_reset_payloads_title">Svuota</string>
+    <string name="dialog_reset_payloads_summary">Sei sicuro di volere eliminare i payload?</string>
+    <string name="dialog_positive" translatable="false">OK</string>
+    <string name="dialog_negative">Annulla</string>
+    <string name="dialog_file_chooser_payload_title">Scegli payload</string>
+
+    <!-- Strings for Helper -->
+    <string name="helper_error_file_payload_wrong">Sei sicuro che sia il file payload giusto?</string>
+</resources>
