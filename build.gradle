@@ -27,7 +27,7 @@ ext {
     currentSDKVersion = 28
     minimumSDKVersion = 21
     kotlinVersion = '1.2.71'
-    kotlinCoroutinesVersion = '0.26.1'
+    kotlinCoroutinesVersion = '0.30.0'
 
     androidXVersion = '1.0.0'
     materialComponentsVersion = '1.0.0'

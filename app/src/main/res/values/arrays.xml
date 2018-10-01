@@ -5,10 +5,4 @@
         <item>Enabled</item>
         <item>Enabled (AMOLED)</item>
     </string-array>
-
-    <string-array name="settings_appearance_night_mode_values" translatable="false">
-        <item>disabled</item>
-        <item>enabled</item>
-        <item>amoled</item>
-    </string-array>
 </resources>
