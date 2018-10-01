@@ -1,13 +1,18 @@
 <AppUpdater>
   <update>
-    <latestVersion>2.3</latestVersion>
-    <latestVersionCode>26</latestVersionCode>
+    <latestVersion>2.4</latestVersion>
+    <latestVersionCode>27</latestVersionCode>
     <url>https://github.com/MenosGrante/Rekado/releases</url>
     <releaseNotes>
-- Bundled ReiNX official payload
-- Added French localization
-- Added Italian localization
-- Updated Kotlin and Coroutines to latest versions
+- Added ability to hide bundled payloads
+- Added auto refresh for logs, when changing screens
+- Updated font size for headers
+- Updated Theme engine with new colors
+- Fixed additional selector state in Settings when changing accent color
+- Fixed crash in Settings
+- Removed Lakka loading support (only booting from Hekate supported officially)
+- Fixed UI bug #16 (BottomNavigationView related)
+- Migrated to Android Jetpack and Material Components
     </releaseNotes>
   </update>
 </AppUpdater>
