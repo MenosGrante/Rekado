@@ -110,7 +110,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
         }
 
         try {
-            MemoryUtils.toFile(pathFile, (PayloadHelper.FOLDER_PATH + "/" + payload.name))
+            MemoryUtils.toFile(pathFile, "${PayloadHelper.FOLDER_PATH}/${payload.name}")
 
             EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
             LogHelper.log(LogHelper.INFO, "Added new payload: ${payload.name}")
@@ -121,6 +121,8 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
     }
 
     override fun onResume() {
-        initList()
+        if (this::adapter.isInitialized) {
+            prepareList()
+        }
     }
 }
