@@ -35,10 +35,9 @@
     <string name="settings_auto_injector_status_title_enabled">Menonaktifkan inject otomatis</string>
     <string name="settings_auto_injector_status_title_disabled">Mengaktifkan inject otomatis</string>
     <string name="settings_category_auto_injector">Inject otomatis</string>
-    <string name="donate_address_copied">%1$s alamat berhasil disalin!</string>
     <string name="donate_title">Donasi</string>
     <string name="logs_actions_list">Daftar Tindakan</string>
-    <string name="donate_description">Kamu bisa mendukung pengembang aplikasi dengan berbagai cara</string>
+    <string name="donate_description">Anda dapat mendukung pengembangan aplikasi dengan membelikan saya kopi.</string>
     <string name="instructions_category_final">Terakhir</string>
     <string name="about_information_description">Aplikasi ditulis dengan Kotlin dan C++ yang digunakan untuk memasukan muatan ke Nintendo Switch</string>
     <string name="navigation_logs">Catatan</string>

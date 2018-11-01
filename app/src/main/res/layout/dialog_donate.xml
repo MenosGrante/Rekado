@@ -23,88 +23,14 @@
         android:textColor="?android:attr/textColorSecondary"
         android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/donateBitcoin"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/donateBuyMeCoffee"
+        android:layout_width="200dp"
         android:layout_height="56dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:clickable="true"
-        android:drawableStart="@drawable/ic_donate_bitcoin"
-        android:drawablePadding="24dp"
-        android:focusable="true"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center_vertical"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:text="@string/donate_bitcoin"
-        android:textColor="?android:attr/textColorPrimary"
-        android:textSize="16sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorDivider" />
-
-    <TextView
-        android:id="@+id/donateBitcoinCash"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:clickable="true"
-        android:drawableStart="@drawable/ic_donate_bitcoin_cash"
-        android:drawablePadding="24dp"
-        android:focusable="true"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center_vertical"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:text="@string/donate_bitcoin_cash"
-        android:textColor="?android:attr/textColorPrimary"
-        android:textSize="16sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorDivider" />
-
-    <TextView
-        android:id="@+id/donateEthereum"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:clickable="true"
-        android:drawableStart="@drawable/ic_donate_ethereum"
-        android:drawablePadding="24dp"
-        android:focusable="true"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center_vertical"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:text="@string/donate_ethereum"
-        android:textColor="?android:attr/textColorPrimary"
-        android:textSize="16sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorDivider" />
-
-    <TextView
-        android:id="@+id/donateLitecoin"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginBottom="24dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:clickable="true"
-        android:drawableStart="@drawable/ic_donate_litecoin"
-        android:drawablePadding="24dp"
-        android:focusable="true"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center_vertical"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:text="@string/donate_litecoin"
-        android:textColor="?android:attr/textColorPrimary"
-        android:textSize="16sp" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@null"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/pic_donate" />
 
 </LinearLayout>

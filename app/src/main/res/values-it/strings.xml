@@ -26,8 +26,7 @@
 
     <!-- Strings for Donate -->
     <string name="donate_title">Dona</string>
-    <string name="donate_description">Puoi supportare lo sviluppo dell\'applicazione in diversi modi.</string>
-    <string name="donate_address_copied">Indirizzo %1$s copiato!</string>
+    <string name="donate_description">Puoi supportare lo sviluppo dell\'applicazione acquistandomi un caffè.</string>
 
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Autoiniettore</string>

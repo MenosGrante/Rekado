@@ -1,8 +1,6 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="RekadoBaseTheme" parent="Theme.MaterialComponents.NoActionBar">
-        <!-- Customize your theme here. -->
+    <style name="Theme.Rekado.DayNight" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -10,9 +8,7 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
     </style>
 
-    <style name="Theme.Rekado.DayNight" parent="Theme.MaterialComponents.Light.NoActionBar" />
-
-    <style name="RekadoInvisibleTheme" parent="RekadoBaseTheme">
+    <style name="RekadoInvisibleTheme" parent="Theme.Rekado.DayNight">
         <item name="android:windowAnimationStyle">@null</item>
     </style>
 
