@@ -18,9 +18,9 @@
 
     <!-- Strings for Instructions -->
     <string name="instructions_category_cable">Cable</string>
-    <string name="instructions_category_cable_description">First you need to find a cable to connect your device to the Nintendo Switch. For proper work, this should be a cable that is designed for data transmission, not just for charging.\n\nIt is advisable to use an A-to-C cable and an USB OTG adapter.</string>
+    <string name="instructions_category_cable_description">First you need to find a cable to connect your device to the Nintendo Switch. For proper work, this should be a cable that is designed for data transmission, not just for charging.  It is advisable to use an A-to-C cable and an USB OTG adapter.</string>
     <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">In the \u0022Payloads\u0022 category, click the \u0022+\u0022 button to select preloaded payload from your device\'s storage. Or simply transfer your payload to the Rekado folder in the device\'s memory.\n\nOr you can use the bundled payloads (SX Loader/ReiNX)</string>
+    <string name="instructions_category_payload_description">In the Payloads category, click the + button to select preloaded payload from your device\'s storage. Or simply transfer your payload to the Rekado folder in the device\'s memory.  Or you can use the bundled payloads (SX Loader/ReiNX)</string>
     <string name="instructions_category_rcm" translatable="false">RCM</string>
     <string name="instructions_category_rcm_description">Enter your Nintendo Switch into RCM mode in any convenient way. \n\nYour Nintendo Switch will power on by itself when plugged in, be sure to hold VOLUME +.</string>
     <string name="instructions_category_final">Final</string>
