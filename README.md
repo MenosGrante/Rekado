@@ -1,3 +1,5 @@
+<a href="https://www.buymeacoffee.com/pavelrekun" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+
 # Rekado
 Payload launcher written in Kotlin for Nintendo Switch.
 
@@ -40,9 +42,4 @@ You should translate it. Files marked with **translatable="false"** should not b
 * [unbranched](https://github.com/unbranched) for Italian localization.
 
 ## Donate
-If you enjoy my application and want to support development you can simply do it :)  
-
-**BTC** - 3BEFPP6a5CPjo3nmJNnjfDfzbAqaYoTNEW  
-**BHC** - qprm4e9ukx583msf6865jpr666hnuaal2unmafce27  
-**ETH** - 0xa38a34F62d52C5d44a045C834266535C586A11B5  
-**LTC** - MGDSCZ9VrQQ3SW64wPsiY7Xa31DCvrbDnL  
+I have created and supporting this application in my free time, so if you want to support me, follow my <a href="https://www.buymeacoffee.com/pavelrekun" target="_blank">"Buy me coffee"</a> link :)
