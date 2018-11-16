@@ -13,7 +13,7 @@ class InstructionsFragment : androidx.fragment.app.Fragment() {
     private lateinit var mvpView: InstructionsContract.View
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_instrutions, container, false)
+        val view = inflater.inflate(R.layout.fragment_instructions, container, false)
         val activity = activity as BaseActivity
 
         mvpView = InstructionsView(activity)

@@ -4,7 +4,7 @@ import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.utils.Utils
-import kotlinx.android.synthetic.main.fragment_instrutions.*
+import kotlinx.android.synthetic.main.fragment_instructions.*
 
 class InstructionsView(private val activity: BaseActivity) : InstructionsContract.View {
 

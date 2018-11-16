@@ -39,7 +39,7 @@
     <string name="logs_actions_list">Daftar Tindakan</string>
     <string name="donate_description">Anda dapat mendukung pengembangan aplikasi dengan membelikan saya kopi.</string>
     <string name="instructions_category_final">Terakhir</string>
-    <string name="about_information_description">Aplikasi ditulis dengan Kotlin dan C++ yang digunakan untuk memasukan muatan ke Nintendo Switch</string>
+    <string name="about_information_description">Aplikasi ditulis dengan Kotlin dan C++ yang digunakan untuk memasukan muatan ke Nintendo Switch.</string>
     <string name="navigation_logs">Catatan</string>
     <string name="navigation_payloads">Muatan</string>
     <string name="instructions_category_payload">Muatan</string>

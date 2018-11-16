@@ -16,7 +16,7 @@
         app:titleTextColor="?android:attr/textColorPrimary" />
 
     <FrameLayout
-        android:id="@+id/main_content_frame"
+        android:id="@+id/mainFragmentFrame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/mainNavigationBar"
@@ -24,12 +24,12 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/mainNavigationBar"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:background="@color/colorBackgroundSecondary"
         android:elevation="5dp"
-        app:elevation="5dp"
         app:itemIconTint="@drawable/state_navigation_item"
         app:itemTextColor="@drawable/state_navigation_item"
         app:menu="@menu/menu_bottom_navigation" />

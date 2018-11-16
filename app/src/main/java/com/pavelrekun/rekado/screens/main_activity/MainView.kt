@@ -2,12 +2,9 @@ package com.pavelrekun.rekado.screens.main_activity
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.MenuItem
 import android.view.ViewGroup
-import com.github.javiersantos.appupdater.AppUpdater
-import com.github.javiersantos.appupdater.enums.Display
-import com.github.javiersantos.appupdater.enums.UpdateFrom
+import androidx.fragment.app.Fragment
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.screens.about_activity.AboutActivity
@@ -15,32 +12,19 @@ import com.pavelrekun.rekado.screens.instructions_fragment.InstructionsFragment
 import com.pavelrekun.rekado.screens.logs_fragment.LogsFragment
 import com.pavelrekun.rekado.screens.payload_fragment.PayloadsFragment
 import com.pavelrekun.rekado.screens.settings_activity.SettingsActivity
-import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.dialogs.DonateDialog
 import com.pavelrekun.rekado.services.utils.DesignUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
-
 class MainView(private val activity: BaseActivity, private val savedInstanceState: Bundle?) : MainContract.View {
-
-    private var appUpdater: AppUpdater
 
     init {
         initViews()
-
-        appUpdater = initUpdater()
-    }
-
-    private fun initUpdater(): AppUpdater {
-        return AppUpdater(activity)
-                .setDisplay(Display.DIALOG)
-                .setUpdateFrom(UpdateFrom.XML)
-                .setUpdateJSON(Constants.UPDATE_CONFIG_LINK)
     }
 
     override fun initViews() {
-        initNavigationClickListener()
         initToolbar()
+        initNavigationClickListener()
     }
 
     override fun initToolbar() {
@@ -57,6 +41,8 @@ class MainView(private val activity: BaseActivity, private val savedInstanceStat
             chooseNavigationItem(it.itemId)
             true
         }
+
+        activity.mainNavigationBar.setOnNavigationItemReselectedListener { }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -83,7 +69,7 @@ class MainView(private val activity: BaseActivity, private val savedInstanceStat
     }
 
     private fun chooseNavigationItem(id: Int) {
-        var fragment: androidx.fragment.app.Fragment? = null
+        var fragment: Fragment? = null
 
         when (id) {
             R.id.navigation_payloads -> fragment = PayloadsFragment()
@@ -93,16 +79,8 @@ class MainView(private val activity: BaseActivity, private val savedInstanceStat
 
         if (fragment != null) {
             val transaction = activity.supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.main_content_frame, fragment)
+            transaction.replace(R.id.mainFragmentFrame, fragment)
             transaction.commit()
         }
-    }
-
-    override fun onStart() {
-        appUpdater.start()
-    }
-
-    override fun onStop() {
-        appUpdater.stop()
     }
 }

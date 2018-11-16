@@ -16,7 +16,7 @@
         app:titleTextColor="?android:attr/textColorPrimary" />
 
     <FrameLayout
-        android:id="@+id/settingsFrame"
+        android:id="@+id/settingsFragmentFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

@@ -3,7 +3,7 @@ package com.pavelrekun.rekado.services.usb
 import android.hardware.usb.UsbDevice
 import android.hardware.usb.UsbManager
 import android.os.Bundle
-import com.afollestad.materialdialogs.MaterialDialog
+import androidx.appcompat.app.AlertDialog
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.dialogs.Dialogs
 import com.pavelrekun.rekado.services.eventbus.Events
@@ -24,7 +24,9 @@ class USBReceiver : BaseActivity() {
 
     private var usbHandler: USBHandler? = null
 
-    private lateinit var payloadChooserDialog: MaterialDialog
+    private lateinit var payloadChooserDialog: AlertDialog
+
+    // TODO: Check payloads dialog works after changing from MaterialDialog to AlertDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

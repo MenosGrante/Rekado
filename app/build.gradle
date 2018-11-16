@@ -9,28 +9,19 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 29
-        versionName "2.4.2"
+        versionCode 30
+        versionName "2.5"
 
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11"
+                arguments "-DANDROID_STL=c++_shared"
             }
         }
     }
 
     buildTypes {
-        debug {
-            ndk {
-                abiFilters "arm64-v8a", "armeabi-v7a"
-            }
-        }
-
         release {
-            ndk {
-                abiFilters "arm64-v8a", "armeabi-v7a"
-            }
-
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -57,23 +48,15 @@ android {
     }
 }
 
-kotlin {
-    experimental {
-        coroutines "enable"
-    }
-}
-
 dependencies {
     implementation "com.google.android.material:material:$materialComponentsVersion"
-    implementation "androidx.recyclerview:recyclerview:$androidXVersion"
-    implementation "androidx.browser:browser:$androidXVersion"
-    implementation "androidx.preference:preference:$androidXVersion"
+    implementation "androidx.recyclerview:recyclerview:$androidXOtherVersion"
+    implementation "androidx.browser:browser:$androidXOtherVersion"
+    implementation "androidx.preference:preference:$androidXOtherVersion"
 
     // Tools
     implementation "io.paperdb:paperdb:$paperVersion"
     implementation "org.greenrobot:eventbus:$eventBusVersion"
-    implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
-    implementation "com.github.javiersantos:AppUpdater:$appUpdaterVersion"
 
     // Own
     implementation project(":konae")

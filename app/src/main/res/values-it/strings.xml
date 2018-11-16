@@ -10,7 +10,7 @@
     <!-- Strings for About -->
     <string name="about_category_information">Informazioni</string>
     <string name="about_category_developer">Sviluppatore</string>
-    <string name="about_information_description">Applicazione scritta in Kotlin e C++. Viene usata per iniettare payload o avviare Lakka su Nintendo Switch</string>
+    <string name="about_information_description">Applicazione scritta in Kotlin e C++. Viene usata per iniettare payload o avviare Lakka su Nintendo Switch.</string>
 
     <!-- Strings for Instructions -->
     <string name="instructions_category_cable">Cavo</string>

@@ -21,7 +21,7 @@ android {
 }
 
 dependencies {
-    implementation "androidx.appcompat:appcompat:$androidXVersion"
+    implementation "androidx.appcompat:appcompat:$androidXCompatVersion"
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
