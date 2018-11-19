@@ -14,7 +14,7 @@
         android:elevation="3dp"
         app:navigationIcon="@drawable/ic_navigation_back"
         app:title="@string/navigation_about"
-        app:titleTextColor="?android:attr/textColorPrimary" />
+        app:titleTextColor="@color/colorNavigationControls" />
 
     <ScrollView
         android:layout_width="match_parent"

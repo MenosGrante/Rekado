@@ -12,6 +12,7 @@ object PayloadHelper {
 
     const val BUNDLED_PAYLOAD_SX = "sx_loader.bin"
     const val BUNDLED_PAYLOAD_REINX = "ReiNX.bin"
+    const val BUNDLED_PAYLOAD_HEKATE = "hekate.bin"
 
     private const val CHOSEN_PAYLOAD = "CHOSEN_PAYLOAD"
 
@@ -36,7 +37,7 @@ object PayloadHelper {
 
     fun clearFolderWithoutBundled() {
         File(FOLDER_PATH).listFiles().forEach {
-            if (it.name != BUNDLED_PAYLOAD_SX || it.name != BUNDLED_PAYLOAD_REINX) {
+            if (it.name != BUNDLED_PAYLOAD_SX || it.name != BUNDLED_PAYLOAD_REINX || it.name != BUNDLED_PAYLOAD_HEKATE) {
                 it.delete()
             }
         }
@@ -44,7 +45,7 @@ object PayloadHelper {
 
     fun clearBundled() {
         File(FOLDER_PATH).listFiles().forEach {
-            if (it.name == BUNDLED_PAYLOAD_SX || it.name == BUNDLED_PAYLOAD_REINX) {
+            if (it.name == BUNDLED_PAYLOAD_SX || it.name == BUNDLED_PAYLOAD_REINX || it.name == BUNDLED_PAYLOAD_HEKATE) {
                 it.delete()
             }
         }

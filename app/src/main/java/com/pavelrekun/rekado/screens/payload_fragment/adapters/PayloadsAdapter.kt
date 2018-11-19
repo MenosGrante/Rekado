@@ -1,6 +1,5 @@
 package com.pavelrekun.rekado.screens.payload_fragment.adapters
 
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,7 +37,8 @@ class PayloadsAdapter(var data: MutableList<Payload>) : androidx.recyclerview.wi
         fun bind(payload: Payload) {
             itemPayloadName.text = payload.name
 
-            itemPayloadRemove.visibility = if (payload.name == PayloadHelper.BUNDLED_PAYLOAD_SX || payload.name == PayloadHelper.BUNDLED_PAYLOAD_REINX) View.GONE else View.VISIBLE
+            itemPayloadRemove.visibility = if (payload.name == PayloadHelper.BUNDLED_PAYLOAD_SX
+                    || payload.name == PayloadHelper.BUNDLED_PAYLOAD_REINX || payload.name == PayloadHelper.BUNDLED_PAYLOAD_HEKATE) View.GONE else View.VISIBLE
 
             itemPayloadRemove.setOnClickListener {
                 MemoryUtils.removeFile(payload.path)

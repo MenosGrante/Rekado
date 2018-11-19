@@ -13,7 +13,7 @@
         android:elevation="3dp"
         app:navigationIcon="@drawable/ic_navigation_back"
         app:title="@string/navigation_settings"
-        app:titleTextColor="?android:attr/textColorPrimary" />
+        app:titleTextColor="@color/colorNavigationControls" />
 
     <FrameLayout
         android:id="@+id/settingsFragmentFrame"

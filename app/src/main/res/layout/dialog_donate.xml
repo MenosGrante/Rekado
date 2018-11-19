@@ -25,8 +25,8 @@
 
     <ImageView
         android:id="@+id/donateBuyMeCoffee"
-        android:layout_width="200dp"
-        android:layout_height="56dp"
+        android:layout_width="150dp"
+        android:layout_height="36dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"
         android:contentDescription="@null"
