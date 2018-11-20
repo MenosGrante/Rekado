@@ -1,11 +1,12 @@
 package com.pavelrekun.rekado.services.dialogs
 
 import android.content.Intent
-import android.view.View
-import android.widget.AdapterView
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
+import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.callbacks.onDismiss
+import com.afollestad.materialdialogs.list.listItems
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
@@ -26,47 +27,17 @@ object Dialogs {
         dialog.show()
     }
 
-    fun showPayloadsDialog(activity: BaseActivity): AlertDialog {
-        var dialog: AlertDialog? = null
-
-        val builder = AlertDialog.Builder(activity)
-        builder.setTitle(R.string.dialog_loader_title)
-        builder.setSingleChoiceItems(PayloadHelper.getNames().toTypedArray(), 0, null)
-        builder.setOnDismissListener { EventBus.getDefault().post(Events.PayloadNotSelected()) }
-        builder.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                EventBus.getDefault().post(Events.PayloadNotSelected())
-            }
-
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                val name = PayloadHelper.getNames()[position]
-                PayloadHelper.putChosen(PayloadHelper.find(name) as Payload)
-                EventBus.getDefault().post(Events.PayloadSelected())
-                dialog?.dismiss()
-            }
-        })
-
-        dialog = builder.create()
-
-        /*val dialog = MaterialDialog.Builder(activity)
+    fun showPayloadsDialog(activity: BaseActivity): MaterialDialog {
+        val dialog = MaterialDialog(activity)
                 .title(R.string.dialog_loader_title)
-                .backgroundColorRes(R.color.colorPrimary)
-                .contentColorAttr(android.R.attr.textColorPrimary)
-                .titleColorAttr(android.R.attr.textColorPrimary)
-                .items(PayloadHelper.getNames())
-                .itemsCallback { dialog, _, _, name ->
-                    PayloadHelper.putChosen(PayloadHelper.find(name.toString()) as Payload)
+                .listItems(items = PayloadHelper.getNames()) { dialog, index, text ->
+                    PayloadHelper.putChosen(PayloadHelper.find(text) as Payload)
                     EventBus.getDefault().post(Events.PayloadSelected())
                     dialog.hide()
                 }
+                .onDismiss { EventBus.getDefault().post(Events.PayloadNotSelected()) }
 
-                .dismissListener {
-                    EventBus.getDefault().post(Events.PayloadNotSelected())
-                }
-
-                .build()
-
-        dialog.show()*/
+        dialog.show()
 
         return dialog
     }

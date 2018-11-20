@@ -31,6 +31,7 @@ ext {
     androidXCompatVersion = '1.0.0'
     androidXOtherVersion = '1.0.0'
     materialComponentsVersion = '1.0.0'
+    materialDialogsVersion = '2.0.0-beta5'
 
     paperVersion = '2.6'
     eventBusVersion = '3.1.1'
