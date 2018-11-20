@@ -46,6 +46,12 @@ android {
     lintOptions {
         abortOnError false
     }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "[${versionName}] Rekado [${versionCode}].apk"
+        }
+    }
 }
 
 dependencies {

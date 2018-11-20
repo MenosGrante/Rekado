@@ -41,6 +41,7 @@ You should translate it. Files marked with **translatable="false"** should not b
 * [ealfonso93](https://github.com/ealfonso93) for contributing in this project.
 * [unbranched](https://github.com/unbranched) for Italian localization.
 * [wendyliga](https://github.com/wendyliga) for Indonesian localization.
+* [javito1081](https://github.com/javito1081) for Spanish localization.
 
 ## Donate
 I have created and supporting this application in my free time, so if you want to support me, follow my <a href="https://www.buymeacoffee.com/pavelrekun" target="_blank">"Buy me coffee"</a> link :)
