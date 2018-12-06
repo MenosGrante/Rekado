@@ -44,7 +44,7 @@
             android:label="@string/app_name"
             android:noHistory="true"
             android:taskAffinity="com.example.taskAffinityUsbEventReceiver"
-            android:theme="@style/RekadoInvisibleTheme">
+            android:theme="@style/Theme.Rekado.Invisible">
             <intent-filter>
                 <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
             </intent-filter>

@@ -9,7 +9,7 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
     </style>
 
-    <style name="RekadoInvisibleTheme" parent="Theme.Rekado.DayNight">
+    <style name="Theme.Rekado.Invisible" parent="Theme.Rekado.DayNight">
         <item name="android:windowAnimationStyle">@null</item>
     </style>
 

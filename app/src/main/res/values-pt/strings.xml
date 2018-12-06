@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name" translatable="false">Rekado</string>
 
     <!-- Strings for Navigation -->
     <string name="navigation_payloads">Payloads</string>
@@ -13,15 +12,12 @@
     <string name="about_category_information">Informação</string>
     <string name="about_category_developer">Desenvolvedor</string>
     <string name="about_information_description">Aplicação escrita em Kotlin e C++. É usada para injetar payloads na Nintendo Switch.</string>
-    <string name="about_developer_github" translatable="false">GitHub</string>
-    <string name="about_developer_twitter" translatable="false">Twitter</string>
 
     <!-- Strings for Instructions -->
     <string name="instructions_category_cable">Cabo</string>
     <string name="instructions_category_cable_description">Primeiro tens de encontrar um capo para ligar o teu dispositivo á Nintendo Switch. Para funcionar corretamente este tem de ser um cabo de transmissão de dados, e não apenas um cabo de carregar.\n\nÉ recomendado usar um cabo A-para-C e um adaptador USB OTG.</string>
     <string name="instructions_category_payload">Payload</string>
     <string name="instructions_category_payload_description">Na categoria \u0022Payloads\u0022 , toca no botão \u0022+\u0022 para selecionar um payload precarregado na memória do teu dispositivo. Ou simplesmente transfere o teu payload para a pasta Rekado na memória do teu dispositivo.\n\nOu podes usar os payloads incluidos (SX Loader/ReiNX)</string>
-    <string name="instructions_category_rcm" translatable="false">RCM</string>
     <string name="instructions_category_rcm_description">Liga Nintendo Switch no modo RCM. \n\nA tua Nintendo Switch vai ligar-se automaticamente quando conectada, mantém premido o VOLUME +.</string>
     <string name="instructions_category_final">Final</string>
     <string name="instructions_category_final_description">Connecta o teu dispositivo á Nintendo Switch e permite o acesso USB se necessário. Espera até o dialogo para escolher o payload aparecer e seleciona o que desejas carregar.</string>
@@ -63,7 +59,6 @@
     <string name="dialog_loader_title">Escolher payload</string>
     <string name="dialog_reset_payloads_title">Limpar</string>
     <string name="dialog_reset_payloads_summary">Tens a certeza que queres apagar os payloads?</string>
-    <string name="dialog_positive" translatable="false">OK</string>
     <string name="dialog_negative">Cancelaa</string>
     <string name="dialog_file_chooser_payload_title">Escolher payload</string>
 
