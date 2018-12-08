@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="settings_appearance_night_mode_entries">
-        <item>Disabled</item>
-        <item>Enabled</item>
-        <item>Enabled (AMOLED)</item>
+        <item>Désactivé</item>
+        <item>Activé</item>
+        <item>Activé (AMOLED)</item>
     </string-array>
 
     <string-array name="settings_appearance_night_mode_values" translatable="false">
