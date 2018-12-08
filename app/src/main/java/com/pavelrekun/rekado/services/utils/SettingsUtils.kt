@@ -8,6 +8,8 @@ object SettingsUtils {
     private const val AUTO_INJECTOR_ENABLED = "AUTO_INJECTOR_ENABLED"
     private const val AUTO_INJECTOR_PAYLOAD = "AUTO_INJECTOR_PAYLOAD"
 
+    private const val HIDE_BUNDLED_ENABLED = "HIDE_BUNDLED_ENABLED"
+
     fun updateAutoInjectorEnabled(enabled: Boolean) {
         Paper.book().write(AUTO_INJECTOR_ENABLED, enabled)
     }
@@ -21,7 +23,15 @@ object SettingsUtils {
     }
 
     fun getAutoInjectorPayload(): String {
-        return Paper.book().read(AUTO_INJECTOR_PAYLOAD, PayloadHelper.BASIC_PAYLOAD_NAME)
+        return Paper.book().read(AUTO_INJECTOR_PAYLOAD, PayloadHelper.BUNDLED_PAYLOAD_SX)
+    }
+
+    fun updateHideBundledEnabled(enabled: Boolean) {
+        Paper.book().write(HIDE_BUNDLED_ENABLED, enabled)
+    }
+
+    fun checkHideBundledEnabled(): Boolean  {
+        return Paper.book().read(HIDE_BUNDLED_ENABLED, false)
     }
 
 }

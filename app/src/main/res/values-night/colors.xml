@@ -6,6 +6,8 @@
     <color name="colorBackgroundPrimary">#303030</color>
     <color name="colorBackgroundSecondary">#424242</color>
 
+    <color name="colorNavigationControls">@color/colorWhite</color>
+
     <color name="colorIcons">#C6C6C6</color>
     <color name="colorDivider">#494949</color>
 </resources>

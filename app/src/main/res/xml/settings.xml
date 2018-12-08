@@ -7,11 +7,13 @@
         android:defaultValue="enabled"
         android:entries="@array/settings_appearance_night_mode_entries"
         android:entryValues="@array/settings_appearance_night_mode_values"
+        android:icon="@drawable/ic_settings_appearance_night_mode"
         android:key="appearance_night_mode"
         android:summary="%s"
         android:title="@string/settings_appearance_night_mode_title" />
 
-    <com.pavelrekun.rang.picker.ColorPickerPreference
+    <com.pavelrekun.rang.services.picker.ColorPickerPreference
+        android:icon="@drawable/ic_settings_appearance_accent"
         android:key="appearance_accent_color"
         android:summary="@string/settings_appearance_accent_color_summary"
         android:title="@string/settings_appearance_accent_color_title" />
@@ -19,18 +21,27 @@
     <PreferenceCategory android:title="@string/settings_category_auto_injector" />
 
     <CheckBoxPreference
+        android:icon="@drawable/ic_settings_auto_injector"
         android:key="auto_injector_enable"
         android:title="@string/settings_auto_injector_status_title_disabled" />
 
     <ListPreference
         android:enabled="false"
+        android:icon="@drawable/ic_settings_payload"
         android:key="auto_injector_payload"
         android:summary="%s"
         android:title="@string/settings_auto_injector_payload_title" />
 
     <PreferenceCategory android:title="@string/settings_category_payloads" />
 
+    <CheckBoxPreference
+        android:icon="@drawable/ic_settings_payloads_hide"
+        android:key="payloads_hide_bundled"
+        android:summary="@string/settings_payloads_remove_bundled_summary"
+        android:title="@string/settings_payloads_remove_bundled_title" />
+
     <Preference
+        android:icon="@drawable/ic_settings_payloads_clear"
         android:key="payloads_reset"
         android:summary="@string/settings_payloads_reset_summary"
         android:title="@string/settings_payloads_reset_title" />

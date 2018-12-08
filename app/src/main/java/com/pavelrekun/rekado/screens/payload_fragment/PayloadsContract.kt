@@ -20,6 +20,8 @@ interface PayloadsContract {
 
         fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
 
+        fun onResume()
+
     }
 
 }

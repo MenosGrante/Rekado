@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#FAF9FA</color>
-    <color name="colorPrimaryDark">#E0E0E0</color>
+    <color name="colorPrimaryDark">#AAAAAA</color>
     <color name="colorAccent">#6AB7FF</color>
 
     <color name="colorBackgroundPrimary">#FAF9FA</color>
     <color name="colorBackgroundSecondary">#FFFFFF</color>
+
+    <color name="colorNavigationControls">@color/colorBlack</color>
 
     <color name="colorIcons">#757575</color>
     <color name="colorDivider">#E0E0E0</color>

@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:background="@color/colorBackgroundSecondary"
-    android:elevation="3dp"
-    android:orientation="vertical">
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/colorDivider"
+    app:strokeWidth="1.5dp">
 
     <View
         android:id="@+id/itemLogType"
@@ -18,10 +23,9 @@
         android:id="@+id/itemLogName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:lineSpacingMultiplier="1.1"
+        android:lineSpacingMultiplier="1.3"
         android:padding="16dp"
         android:textColor="?android:attr/textColorPrimary"
-        tools:text="Log"
-        tools:textColor="?android:attr/textColorPrimaryInverse" />
+        tools:text="Log" />
 
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

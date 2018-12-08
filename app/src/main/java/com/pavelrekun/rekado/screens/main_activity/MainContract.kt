@@ -12,10 +12,6 @@ interface MainContract {
 
         fun initNavigationClickListener()
 
-        fun onStart()
-
-        fun onStop()
-
         fun onOptionsItemSelected(item: MenuItem): Boolean
     }
 

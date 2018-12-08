@@ -8,6 +8,8 @@ interface AboutContract {
 
         fun initToolbar()
 
+        fun initVersion()
+
         fun initClickListeners()
 
     }

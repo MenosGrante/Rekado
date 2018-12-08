@@ -12,6 +12,8 @@ interface LogsContract {
 
         fun initDesign()
 
+        fun onResume()
+
     }
 
 }

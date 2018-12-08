@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Strings for Navigation -->
+    <string name="navigation_payloads">Завантажувачі</string>
+    <string name="navigation_instructions">Інструкції</string>
+    <string name="navigation_logs">Дії</string>
+    <string name="navigation_about">Про програму</string>
+    <string name="navigation_donate">Пожертвувати</string>
+    <string name="navigation_settings">Налаштування</string>
+
+    <!-- Strings for About -->
+    <string name="about_category_information">Інформація</string>
+    <string name="about_category_developer">Розробник</string>
+    <string name="about_information_description">Додаток написано на Kotlin з використанням C++. Воно використовується для ін\'єкцій завантажувачів на Nintendo Switch.</string>
+
+    <!-- Strings for Instructions -->
+    <string name="instructions_category_cable">Кабель</string>
+    <string name="instructions_category_cable_description">Спочатку вам потрібно знайти кабель для підключення вашого пристрою до Nintendo Switch. Для правильної роботи це має бути кабель, призначений для передачі даних, а не тільки для зарядки.\n\nДоцільно використовувати кабель A-to-C і адаптер USB OTG.</string>
+    <string name="instructions_category_payload">Завантажувач</string>
+    <string name="instructions_category_payload_description">У категорії \Завантажувачі\u0022, натисніть на кнопку \u0022+\u0022, щоб вибрати заздалегідь завантажений завантажувач з пам\'яті вашого пристрою. Або просто перенесіть ваш завантажувач в папку Rekado в пам\'яті вашого пристрою. \n\nТак само ви можете використовувати приготовані завантажувачі (SX Loader / ReiNX).</string>
+    <string name="instructions_category_rcm_description">Введіть ваш Nintendo Switch в режим RCM будь-яким зручним для вас способом.\n\nВаш Nintendo Switch буде включений сам по собі при підключенні, обов\'язково утримуйте ГРОМКОСТЬ +.</string>
+    <string name="instructions_category_final">Фінал</string>
+    <string name="instructions_category_final_description">Підключіть пристрій до Nintendo Switch і при необхідності дозвольте доступ до USB. Відкриється діалогове вікно вибору завантажувача, де вам необхідно вибрати цікавий завантажувач.</string>
+
+    <!-- Strings for Logs -->
+    <string name="logs_actions_list">Список дій</string>
+
+    <!-- Strings for Donate -->
+    <string name="donate_title">Пожертвувати</string>
+    <string name="donate_description">Ви можете підтримати розробку програми, купивши мені каву.</string>
+
+    <!-- Strings for Settings -->
+    <string name="settings_category_auto_injector">Автоінжектор</string>
+    <string name="settings_auto_injector_status_title_disabled">Увімкнути \u0022Автоінжектор\u0022</string>
+    <string name="settings_auto_injector_status_title_enabled">Вимкнути \u0022Автоінжектор\u0022</string>
+    <string name="settings_auto_injector_payload_title">Завантажувач</string>
+    <string name="settings_category_payloads">Завантажувачі</string>
+    <string name="settings_payloads_remove_bundled_title">Ховати встановлені</string>
+    <string name="settings_payloads_remove_bundled_summary">Ховати всі попередньо встановлені завантажувачі</string>
+    <string name="settings_payloads_reset_title">Очищення</string>
+    <string name="settings_payloads_reset_summary">Видалити всі додані завантажувачі крім попередньо встановлених (SX Loader/ReiNX)</string>
+    <string name="settings_category_appearance">Зовнішній вигляд</string>
+    <string name="settings_appearance_night_mode_title">Нічний режим</string>
+    <string name="settings_appearance_accent_color_title">Колір акценту</string>
+    <string name="settings_appearance_accent_color_summary">Колір використовуваний для фарбування елементів інтерфейсу</string>
+    <string name="settings_restart_title">Налаштування змінені</string>
+    <string name="settings_restart_message">Налаштування були змінені. Перезавантажте програму, щоб зміни вступили в силу.\n\nПерезавантажити зараз?</string>
+    <string name="settings_restart_ok">Перезавантажити</string>
+    <string name="settings_restart_cancel">Скасувати</string>
+    <string name="settings_accent_color_title_dialog">Вибір кольору</string>
+
+    <!-- Strings for Permissions -->
+    <string name="permission_storage_dialog_title">Дозвіл на зберігання</string>
+    <string name="permission_storage_dialog_description">Rekado вимагає цей дозвіл для отримання завантажувачів з пам\'яті пристрою.</string>
+    <string name="permission_storage_button">Запросити</string>
+    <string name="permission_storage_error">Не вдалося отримати доступ до пам\'яті пристрою. Спробуйте знову отримати дозвіл.</string>
+
+    <!-- Strings for Dialogs -->
+    <string name="dialog_loader_title">Вибрати завантажувач</string>
+    <string name="dialog_reset_payloads_title">Очищення</string>
+    <string name="dialog_reset_payloads_summary">Ви дійсно хочете видалити всі завантажувачі?</string>
+    <string name="dialog_negative">Скасувати</string>
+    <string name="dialog_file_chooser_payload_title">Вибір завантажувача</string>
+
+    <!-- Strings for Helper -->
+    <string name="helper_error_file_payload_wrong">Ви впевнені, що це правильний завантажувач?</string>
+</resources>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/aboutToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,7 +14,7 @@
         android:elevation="3dp"
         app:navigationIcon="@drawable/ic_navigation_back"
         app:title="@string/navigation_about"
-        app:titleTextColor="?android:attr/textColorPrimary" />
+        app:titleTextColor="@color/colorNavigationControls" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -46,11 +46,11 @@
                 tools:textColor="?android:attr/textColorPrimaryInverse" />
 
             <TextView
+                android:id="@+id/aboutVersion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
-                android:text="@string/app_version"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="16sp"
                 tools:textColor="?android:attr/textColorPrimaryInverse" />
@@ -75,99 +75,101 @@
                 android:layout_marginTop="16dp"
                 android:background="@color/colorDivider" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/about_category_information"
-                android:textColor="?attr/colorAccent"
-                android:textSize="16sp" />
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/colorDivider"
+                app:strokeWidth="1.5dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:background="@color/colorBackgroundSecondary"
-                android:elevation="3dp"
-                android:orientation="vertical">
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:padding="16dp"
-                    android:text="@string/about_information_description"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="16sp"
-                    tools:textColor="?android:attr/textColorPrimaryInverse" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/about_category_information"
+                        android:textColor="?attr/colorAccent"
+                        android:textSize="16sp" />
 
-            <View
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:lineSpacingMultiplier="1.3"
+                        android:text="@string/about_information_description"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorDivider" />
-
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/about_category_developer"
-                android:textColor="?attr/colorAccent"
-                android:textSize="16sp" />
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/colorDivider"
+                app:strokeWidth="1.5dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp   "
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:background="@color/colorBackgroundSecondary"
-                android:elevation="3dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/aboutDeveloperGitHub"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:drawablePadding="16dp"
-                    android:drawableStart="@drawable/ic_about_github"
-                    android:focusable="true"
-                    android:gravity="center_vertical"
-                    android:padding="16dp"
-                    android:text="@string/about_developer_github"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="16sp"
-                    tools:textColor="?android:attr/textColorPrimaryInverse" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/colorDivider" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:padding="16dp"
+                        android:text="@string/about_category_developer"
+                        android:textColor="?attr/colorAccent"
+                        android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/aboutDeveloperTwitter"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:drawablePadding="16dp"
-                    android:drawableStart="@drawable/ic_about_twitter"
-                    android:focusable="true"
-                    android:gravity="center_vertical"
-                    android:padding="16dp"
-                    android:text="@string/about_developer_twitter"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="16sp"
-                    tools:textColor="?android:attr/textColorPrimaryInverse" />
+                    <TextView
+                        android:id="@+id/aboutDeveloperGitHub"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/ic_about_github"
+                        android:drawablePadding="16dp"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/about_developer_github"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp" />
 
-            </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorDivider" />
+
+                    <TextView
+                        android:id="@+id/aboutDeveloperTwitter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/ic_about_twitter"
+                        android:drawablePadding="16dp"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/about_developer_twitter"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </ScrollView>
 
