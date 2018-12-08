@@ -1,12 +1,12 @@
 package com.pavelrekun.rekado.services.dialogs
 
 import android.content.Intent
-import android.support.annotation.StringRes
-import android.support.v4.app.ActivityCompat
-import android.support.v7.app.AlertDialog
-import android.view.LayoutInflater
-import android.widget.TextView
+import androidx.annotation.StringRes
+import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat
 import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.callbacks.onDismiss
+import com.afollestad.materialdialogs.list.listItems
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
@@ -27,54 +27,15 @@ object Dialogs {
         dialog.show()
     }
 
-    fun showInjectorSelectorDialog(activity: BaseActivity): AlertDialog {
-        val builder = AlertDialog.Builder(activity)
-        val view = LayoutInflater.from(activity).inflate(R.layout.dialog_injector_selector, null)
-        builder.setView(view)
-        builder.setTitle(R.string.dialog_injector_chooser_title)
-
-        val bootPayload = view.findViewById<TextView>(R.id.dialog_injector_selector_payload)
-        val bootLakka = view.findViewById<TextView>(R.id.dialog_injector_selector_lakka)
-
-        val dialog = builder.create()
-        dialog.show()
-
-        dialog.setOnDismissListener {
-            EventBus.getDefault().post(Events.InjectorMethodNotSelected())
-        }
-
-        bootPayload.setOnClickListener {
-            EventBus.getDefault().post(Events.InjectorMethodPayloadSelected())
-            dialog.hide()
-        }
-
-        bootLakka.setOnClickListener {
-            EventBus.getDefault().post(Events.InjectorMethodLakkaSelected())
-            dialog.hide()
-        }
-
-        return dialog
-    }
-
     fun showPayloadsDialog(activity: BaseActivity): MaterialDialog {
-
-        val dialog = MaterialDialog.Builder(activity)
+        val dialog = MaterialDialog(activity)
                 .title(R.string.dialog_loader_title)
-                .backgroundColorRes(R.color.colorPrimary)
-                .contentColorAttr(android.R.attr.textColorPrimary)
-                .titleColorAttr(android.R.attr.textColorPrimary)
-                .items(PayloadHelper.getNames())
-                .itemsCallback { dialog, _, _, name ->
-                    PayloadHelper.putChosen(PayloadHelper.find(name.toString()) as Payload)
+                .listItems(items = PayloadHelper.getNames()) { dialog, index, text ->
+                    PayloadHelper.putChosen(PayloadHelper.find(text) as Payload)
                     EventBus.getDefault().post(Events.PayloadSelected())
                     dialog.hide()
                 }
-
-                .dismissListener {
-                    EventBus.getDefault().post(Events.PayloadNotSelected())
-                }
-
-                .build()
+                .onDismiss { EventBus.getDefault().post(Events.PayloadNotSelected()) }
 
         dialog.show()
 

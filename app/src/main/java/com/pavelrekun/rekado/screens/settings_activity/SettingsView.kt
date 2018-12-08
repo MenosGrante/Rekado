@@ -22,7 +22,7 @@ class SettingsView(private val activity: BaseActivity) : SettingsContract.View {
 
     override fun initFragment() {
         activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.settingsFrame, SettingsFragment())
+                .replace(R.id.settingsFragmentFrame, SettingsFragment())
                 .commit()
     }
 }

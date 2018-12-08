@@ -1,4 +1,3 @@
-<!--drawable/arrow_left.xml-->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
@@ -6,6 +5,6 @@
     android:viewportWidth="24">
 
     <path
-        android:fillColor="?android:attr/textColorPrimary"
+        android:fillColor="@color/colorNavigationControls"
         android:pathData="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" />
 </vector>

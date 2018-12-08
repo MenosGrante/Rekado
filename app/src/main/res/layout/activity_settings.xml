@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/settingsToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,10 +13,10 @@
         android:elevation="3dp"
         app:navigationIcon="@drawable/ic_navigation_back"
         app:title="@string/navigation_settings"
-        app:titleTextColor="?android:attr/textColorPrimary" />
+        app:titleTextColor="@color/colorNavigationControls" />
 
     <FrameLayout
-        android:id="@+id/settingsFrame"
+        android:id="@+id/settingsFragmentFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

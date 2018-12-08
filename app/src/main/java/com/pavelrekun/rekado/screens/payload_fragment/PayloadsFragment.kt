@@ -1,7 +1,6 @@
 package com.pavelrekun.rekado.screens.payload_fragment
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,7 @@ import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
-class PayloadsFragment : Fragment() {
+class PayloadsFragment : androidx.fragment.app.Fragment() {
 
     private lateinit var mvpView: PayloadsContract.View
 
@@ -36,6 +35,11 @@ class PayloadsFragment : Fragment() {
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onEvent(eventPayloads: Events.UpdatePayloadsListEvent) {
         mvpView.updateList()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mvpView.onResume()
     }
 
     override fun onStart() {

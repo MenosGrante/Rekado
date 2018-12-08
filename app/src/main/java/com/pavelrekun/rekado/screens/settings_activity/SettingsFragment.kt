@@ -4,10 +4,10 @@ import android.Manifest
 import android.app.AlertDialog
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.support.v7.preference.CheckBoxPreference
-import android.support.v7.preference.ListPreference
-import android.support.v7.preference.PreferenceFragmentCompat
 import android.widget.Toast
+import androidx.preference.CheckBoxPreference
+import androidx.preference.ListPreference
+import androidx.preference.PreferenceFragmentCompat
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.dialogs.Dialogs
@@ -30,6 +30,11 @@ class SettingsFragment : PreferenceFragmentCompat() {
     }
 
     private fun initPayloadsCategoryPreferences() {
+        if (!SettingsUtils.checkHideBundledEnabled()) {
+            MemoryUtils.copyBundledPayloads()
+        }
+
+        val payloadsHideBundled = findPreference("payloads_hide_bundled")
         val payloadsResetPreference = findPreference("payloads_reset")
 
         val autoInjectorEnable = findPreference("auto_injector_enable") as CheckBoxPreference
@@ -42,7 +47,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         autoInjectorPayload.entryValues = PayloadHelper.getNames().toTypedArray()
         autoInjectorPayload.entries = PayloadHelper.getNames().toTypedArray()
-        if (autoInjectorPayload.value == null) autoInjectorPayload.setValueIndex(0)
+        if (autoInjectorPayload.value == null && PayloadHelper.getNames().isNotEmpty()) autoInjectorPayload.setValueIndex(0)
         autoInjectorPayload.isEnabled = autoInjectorEnable.isChecked
 
         autoInjectorEnable.setOnPreferenceChangeListener { _, newValue ->
@@ -65,11 +70,17 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
+        payloadsHideBundled.setOnPreferenceChangeListener { _, newValue ->
+            SettingsUtils.updateHideBundledEnabled(newValue as Boolean)
+            PayloadHelper.clearBundled()
+            true
+        }
+
         payloadsResetPreference.setOnPreferenceClickListener {
             val dialog = Dialogs.showPayloadsResetDialog(activity as BaseActivity)
 
             dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                PayloadHelper.clearFolder()
+                PayloadHelper.clearFolderWithoutBundled()
                 dialog.dismiss()
 
                 LogHelper.log(LogHelper.INFO, "Payloads database cleaned!")

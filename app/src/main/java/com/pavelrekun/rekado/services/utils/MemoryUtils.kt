@@ -8,11 +8,16 @@ import java.io.*
 
 object MemoryUtils {
 
-    fun copyAsset() {
+    fun copyBundledPayloads() {
         val assetManager = RekadoApplication.instance.applicationContext.assets
-        val sxPayloadFile = assetManager.open(PayloadHelper.BASIC_PAYLOAD_NAME)
 
-        copyFile(sxPayloadFile, FileOutputStream("${PayloadHelper.FOLDER_PATH}/${PayloadHelper.BASIC_PAYLOAD_NAME}"))
+        val sxPayloadFile = assetManager.open(PayloadHelper.BUNDLED_PAYLOAD_SX)
+        val reiNXPayloadFile = assetManager.open(PayloadHelper.BUNDLED_PAYLOAD_REINX)
+        val hekatePayloadFile = assetManager.open(PayloadHelper.BUNDLED_PAYLOAD_HEKATE)
+
+        copyFile(sxPayloadFile, FileOutputStream("${PayloadHelper.FOLDER_PATH}/${PayloadHelper.BUNDLED_PAYLOAD_SX}"))
+        copyFile(reiNXPayloadFile, FileOutputStream("${PayloadHelper.FOLDER_PATH}/${PayloadHelper.BUNDLED_PAYLOAD_REINX}"))
+        copyFile(hekatePayloadFile, FileOutputStream("${PayloadHelper.FOLDER_PATH}/${PayloadHelper.BUNDLED_PAYLOAD_HEKATE}"))
 
         EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
     }

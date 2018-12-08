@@ -9,12 +9,13 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 24
-        versionName "2.2.1"
+        versionCode 31
+        versionName "2.5.1"
 
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11"
+                arguments "-DANDROID_STL=c++_shared"
             }
         }
     }
@@ -45,32 +46,29 @@ android {
     lintOptions {
         abortOnError false
     }
-}
 
-kotlin {
-    experimental {
-        coroutines "enable"
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "[${versionName}] Rekado [${versionCode}].apk"
+        }
     }
 }
 
 dependencies {
-    implementation "com.android.support:design:$androidSupportVersion"
-    implementation "com.android.support:recyclerview-v7:$androidSupportVersion"
-    implementation "com.android.support:customtabs:$androidSupportVersion"
-    implementation "com.android.support:preference-v7:$androidSupportVersion"
+    implementation "com.google.android.material:material:$materialComponentsVersion"
+    implementation "androidx.recyclerview:recyclerview:$androidXOtherVersion"
+    implementation "androidx.browser:browser:$androidXOtherVersion"
+    implementation "androidx.preference:preference:$androidXOtherVersion"
 
     // Tools
     implementation "io.paperdb:paperdb:$paperVersion"
     implementation "org.greenrobot:eventbus:$eventBusVersion"
     implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
-    implementation "com.github.javiersantos:AppUpdater:$appUpdaterVersion"
 
     // Own
     implementation project(":konae")
-    implementation (name: 'rang', ext: 'aar')
+    implementation(name: 'rang', ext: 'aar')
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutines"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutines"
 }
