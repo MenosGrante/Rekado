@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name" translatable="false">Rekado</string>
-
     <!-- Strings for Navigation -->
     <string name="navigation_payloads">Payloads</string>
     <string name="navigation_instructions">Instructions</string>
@@ -13,42 +11,39 @@
     <string name="about_category_information">Informations</string>
     <string name="about_category_developer">Développeur</string>
     <string name="about_information_description">Application écrite en Kotlin et C++. Elle sert à injecter des payloads ou démarrer Lakka sur la Switch</string>
-    <string name="about_developer_github" translatable="false">GitHub</string>
-    <string name="about_developer_twitter" translatable="false">Twitter</string>
 
     <!-- Strings for Instructions -->
     <string name="instructions_category_cable">Cable</string>
-    <string name="instructions_category_cable_description">Pour commencer, vous devez avoir un cable pour connecter votre appareil à la Switch. Pour un bon fonctionnement, le cable doit permettre la transmission de donnée, pas seulement charger la batterie.\n\nIl est conseillé d'utiliser un cable USB type A vers type C et un adaptateur OTG.</string>
+    <string name="instructions_category_cable_description">Pour commencer, vous devez avoir un cable pour connecter votre appareil à la Switch. Pour un bon fonctionnement, le cable doit permettre la transmission de donnée, pas seulement charger la batterie.\n\nIl est conseillé d\'utiliser un cable USB type A vers type C et un adaptateur OTG.</string>
     <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">Dans la categorie \u0022Payloads\u0022, cliquez sur le bouton \u0022+\u0022 pour sélectionner votre payload depuis un dossier sur votre appareil. Ou bien mettez simplement votre payload dans le dossier Rekado à la racine du stockage de votre appareil.\n\nOu encore, vous pouvez utliser la payload par défaut (SX loader)</string>
-    <string name="instructions_category_rcm" translatable="false">RCM</string>
+    <string name="instructions_category_payload_description">Dans la categorie \u0022Payloads\u0022, cliquez sur le bouton \u0022+\u0022 pour sélectionner votre payload depuis un dossier sur votre appareil. Ou bien mettez simplement votre payload dans le dossier Rekado à la racine du stockage de votre appareil. \n\nOu encore, vous pouvez utliser la payload par défaut (SX loader)</string>
     <string name="instructions_category_rcm_description">Mettez votre Switch en mode RCM. \n\nVotre Switch démarera automatiquement lorsque vous brancherez le cable, veuillez vous assurez que vous appuyez sur le bouton VOLUME + de la Switch avant le branchement.</string>
     <string name="instructions_category_final">Final</string>
-    <string name="instructions_category_final_description">Connectez votre appareil à la Switch et autorisez la permission pour l'accès USB si nécesaire. Attendez que l'appli vous demande quoi injecter.\n\nSi vous sélectionnez payload, l'appli vous demandera laquelle choisir.\n\nSi vous choissisez Lakka, vous devez simplement attendre qu'il se lance.</string>
+    <string name="instructions_category_final_description">Connectez votre appareil à la Switch et autorisez la permission pour l\'accès USB si nécesaire. Attendez que l\'appli vous demande quoi injecter. \n\nSi vous sélectionnez payload, l\'appli vous demandera laquelle choisir.\n\nSi vous choissisez Lakka, vous devez simplement attendre qu\'il se lance.</string>
 
     <!-- Strings for Logs -->
     <string name="logs_actions_list">Liste des actions</string>
 
     <!-- Strings for Donate -->
     <string name="donate_title">Dons</string>
-    <string name="donate_description">Vous pouvez soutenir le développement en m'achetant un café.</string>
+    <string name="donate_description">Vous pouvez soutenir le développement en m\'achetant un café.</string>
 
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Injection automatique</string>
-    <string name="settings_auto_injector_status_title_disabled">Activer l'\u0022Auto injector\u0022</string>
-    <string name="settings_auto_injector_status_title_enabled">Désactiver l'\u0022Auto injector\u0022</string>
+    <string name="settings_auto_injector_status_title_disabled">Activer \u0022Auto injector\u0022</string>
+    <string name="settings_auto_injector_status_title_enabled">Désactiver \u0022Auto injector\u0022</string>
     <string name="settings_auto_injector_payload_title">Payload</string>
     <string name="settings_category_payloads">Payloads</string>
     <string name="settings_payloads_remove_bundled_title">Cacher payloads intégrées</string>
     <string name="settings_payloads_remove_bundled_summary">Cache toutes les payloads intégrées à Rekado</string>
     <string name="settings_payloads_reset_title">Effacer</string>
-    <string name="settings_payloads_reset_summary">Enlever toutes les payloads (à l'exception de SX Loader)</string>
+    <string name="settings_payloads_reset_summary">Enlever toutes les payloads (à l\'exception de SX Loader)</string>
     <string name="settings_category_appearance">Apparance</string>
     <string name="settings_appearance_night_mode_title">Mode Nuit</string>
     <string name="settings_appearance_accent_color_title">Couleurs accentuées</string>
-    <string name="settings_appearance_accent_color_summary">Couleur utilisée pour les éléments de l'interface</string>
+    <string name="settings_appearance_accent_color_summary">Couleur utilisée pour les éléments de l\'interface</string>
     <string name="settings_restart_title">Paramètres modifiés</string>
-    <string name="settings_restart_message">Les paramètres ont été modifiés. Veuillez redémarrer pour que les changements prennent effet. \n\nRedémarrer l'appli maintenant ?</string>
+    <string name="settings_restart_message">Les paramètres ont été modifiés. Veuillez redémarrer pour que les changements prennent effet. \n\nRedémarrer l\'appli maintenant ?</string>
     <string name="settings_restart_ok">Redémarrer</string>
     <string name="settings_restart_cancel">Annuler</string>
     <string name="settings_accent_color_title_dialog">Choisir une couleur</string>
@@ -57,16 +52,15 @@
     <string name="permission_storage_dialog_title">Permission de stockage</string>
     <string name="permission_storage_dialog_description">Rekado a besoin de cette permission pour accéder à la payload.</string>
     <string name="permission_storage_button">Requête</string>
-    <string name="permission_storage_error">Impossible d'accéder au stockage de l'appareil. Essayer d'accorder la permission à nouveau.</string>
+    <string name="permission_storage_error">Impossible d\'accéder au stockage de l\'appareil. Essayer d\'accorder la permission à nouveau.</string>
 
     <!-- Strings for Dialogs -->
     <string name="dialog_loader_title">Choisir une payload</string>
     <string name="dialog_reset_payloads_title">Effacer</string>
     <string name="dialog_reset_payloads_summary">Etes vous sur de vouloir effacer cette payload ?</string>
-    <string name="dialog_positive" translatable="false">OK</string>
     <string name="dialog_negative">Annuler</string>
     <string name="dialog_file_chooser_payload_title">Choisir la payload</string>
 
     <!-- Strings for Helper -->
-    <string name="helper_error_file_payload_wrong">Etes vous sûr(e) que c'est le bon fochier payload ?</string>
+    <string name="helper_error_file_payload_wrong">Etes vous sûr(e) que c\'est le bon fochier payload?</string>
 </resources>
