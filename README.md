@@ -43,6 +43,7 @@ You should translate it. Files marked with **translatable="false"** should not b
 * [wendyliga](https://github.com/wendyliga) for Indonesian localization.
 * [javito1081](https://github.com/javito1081) for Spanish localization.
 * [TheSergioEduP](https://github.com/TheSergioEduP) for Portuguese localization.
+* [tiliarou](https://github.com/tiliarou) for French localization.
 
 ## Donate
 I have created and supporting this application in my free time, so if you want to support me, follow my <a href="https://www.buymeacoffee.com/pavelrekun" target="_blank">"Buy me coffee"</a> link :)
