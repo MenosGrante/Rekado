@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Strings for Navigation -->
+    <string name="navigation_payloads">Payloads</string>
+    <string name="navigation_instructions">Instruções</string>
+    <string name="navigation_logs">Logs</string>
+    <string name="navigation_about">Sobre</string>
+    <string name="navigation_donate">Doar</string>
+    <string name="navigation_settings">Configurações</string>
+
+    <!-- Strings for About -->
+    <string name="about_category_information">Informações</string>
+    <string name="about_category_developer">Desenvolvedor</string>
+    <string name="about_information_description">Aplicativo usado para injeção de payloads em consoles Nintendo Switch. Código fonte escrito em Kotlin e C++.</string>
+
+    <!-- Strings for Instructions -->
+    <string name="instructions_category_cable">Cabo</string>
+    <string name="instructions_category_cable_description">Você precisará de um cabo USB-C para ligar o smartphone ao Nintendo Switch. É preciso um cabo que sirva para transferência de dados, não que sirva apenas para recarregar a bateria.\n\nUm cabo USB-A para C e um adaptador OTG são recomendados.</string>
+    <string name="instructions_category_payload">Payload</string>
+    <string name="instructions_category_payload_description">Na categoria \u0022Payloads\u0022 , clique em \u0022+\u0022 para selecionar um payload que tenha previamente baixado para a memória do smartphone. Ou simplesmente copie o arquivo payload preferido para a pasta Rekado na memória do smartphone.\n\nOu use um dos payloads incluídos (Hekate/ReiNX/SX Loader)</string>
+    <string name="instructions_category_rcm_description">Ligue o Nintendo Switch no modo RCM.\n\nCom o console totalmente desligado, isira o jig no trilho do JoyCon direito, mantenha pressionado o botão VOLUME + e em seguida pressione o botão POWER.</string>
+    <string name="instructions_category_final">Final</string>
+    <string name="instructions_category_final_description">Connecte o smartphone ao Nintendo Switch e permita o acesso USB se for solicitado pelo smartphone. Espere até a caixa de diálogo para escolher o payload aparecer e selecione o payload que deseja injetar.</string>
+
+    <!-- Strings for Logs -->
+    <string name="logs_actions_list">Lista de ações</string>
+
+    <!-- Strings for Donate -->
+    <string name="donate_title">Doar</string>
+    <string name="donate_description">Você pode suportar o desenvolvimento d aplicativo comprando-me um café.</string>
+
+    <!-- Strings for Settings -->
+    <string name="settings_category_auto_injector">Injetor automático</string>
+    <string name="settings_auto_injector_status_title_disabled">Ativar \u0022Auto injetor\u0022</string>
+    <string name="settings_auto_injector_status_title_enabled">Desativar \u0022Auto injetor\u0022</string>
+    <string name="settings_auto_injector_payload_title">Payload</string>
+    <string name="settings_category_payloads">Payloads</string>
+    <string name="settings_payloads_remove_bundled_title">Ocultar incluídos</string>
+    <string name="settings_payloads_remove_bundled_summary">Oculta todos os payloads incluidos com o aplicativo</string>
+    <string name="settings_payloads_reset_title">Limpar</string>
+    <string name="settings_payloads_reset_summary">Remove todos os payloads exceto os incluídos (Hekate/ReiNX/SX Loader)</string>
+    <string name="settings_category_appearance">Aparência</string>
+    <string name="settings_appearance_night_mode_title">Modo noturno</string>
+    <string name="settings_appearance_accent_color_title">Cor de destaque</string>
+    <string name="settings_appearance_accent_color_summary">Cor usada nos elementos de destaque da interface</string>
+    <string name="settings_restart_title">onfigurações alteradas</string>
+    <string name="settings_restart_message">As configurações foram alteradas. Por favor reinicie o aplicativo para que as mudanças sejam aplicadas. \n\nReiniciar o aplicativo agora?</string>
+    <string name="settings_restart_ok">Reiniciar</string>
+    <string name="settings_restart_cancel">cancelar</string>
+    <string name="settings_accent_color_title_dialog">Escolher Cor</string>
+
+    <!-- Strings for Permissions -->
+    <string name="permission_storage_dialog_title">Permições de armazenamento</string>
+    <string name="permission_storage_dialog_description">Rekado precisa desta permição para acessar os payloads salvos na memória do smartphone.</string>
+    <string name="permission_storage_button">Conceder</string>
+    <string name="permission_storage_error">Impossível acessar a memória do smartphone. Conceda o acesso novamente.</string>
+
+    <!-- Strings for Dialogs -->
+    <string name="dialog_loader_title">Escolher payload</string>
+    <string name="dialog_reset_payloads_title">Limpar</string>
+    <string name="dialog_reset_payloads_summary">Tem certeza que deseja apagar os payloads?</string>
+    <string name="dialog_negative">Cancelar</string>
+    <string name="dialog_file_chooser_payload_title">Escolher payload</string>
+
+    <!-- Strings for Helper -->
+    <string name="helper_error_file_payload_wrong">Tem certeza que este é o payload correto?</string>
+</resources>

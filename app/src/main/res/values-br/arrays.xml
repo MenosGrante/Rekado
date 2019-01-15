@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="settings_appearance_night_mode_entries">
+        <item>Desativado</item>
+        <item>Ativado</item>
+        <item>Ativado (AMOLED)</item>
+    </string-array>
+</resources>
