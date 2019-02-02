@@ -14,33 +14,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="?android:attr/windowBackground"
+            app:cardCornerRadius="6dp"
             app:cardElevation="0dp"
-            app:strokeColor="@color/colorDivider"
-            app:strokeWidth="1.5dp">
+            app:strokeColor="?attr/colorStroke"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    style="@style/Text.Subtitle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/instructions_category_cable"
-                    android:textColor="?attr/colorAccent"
-                    android:textSize="16sp" />
+                    android:text="@string/instructions_category_cable" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
                     android:lineSpacingMultiplier="1.3"
                     android:text="@string/instructions_category_cable_description"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="16sp" />
+                    android:textColor="?android:attr/textColorPrimary" />
 
             </LinearLayout>
 
@@ -52,33 +51,32 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="?android:attr/windowBackground"
+            app:cardCornerRadius="6dp"
             app:cardElevation="0dp"
-            app:strokeColor="@color/colorDivider"
-            app:strokeWidth="1.5dp">
+            app:strokeColor="?attr/colorStroke"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    style="@style/Text.Subtitle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/instructions_category_payload"
-                    android:textColor="?attr/colorAccent"
-                    android:textSize="16sp" />
+                    android:text="@string/instructions_category_payload" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
                     android:lineSpacingMultiplier="1.3"
                     android:text="@string/instructions_category_payload_description"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="16sp" />
+                    android:textColor="?android:attr/textColorPrimary" />
 
             </LinearLayout>
 
@@ -90,16 +88,16 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="?android:attr/windowBackground"
+            app:cardCornerRadius="6dp"
             app:cardElevation="0dp"
-            app:strokeColor="@color/colorDivider"
-            app:strokeWidth="1.5dp">
+            app:strokeColor="?attr/colorStroke"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -107,13 +105,11 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/Text.Subtitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/instructions_category_rcm"
-                        android:textColor="?attr/colorAccent"
-                        android:textSize="16sp" />
+                        android:text="@string/instructions_category_rcm" />
 
                     <ImageView
                         android:id="@+id/instructionsRCMHelp"
@@ -125,6 +121,7 @@
                         android:clickable="true"
                         android:contentDescription="@null"
                         android:focusable="true"
+                        android:padding="16dp"
                         android:src="@drawable/ic_help" />
 
                 </LinearLayout>
@@ -132,11 +129,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
                     android:lineSpacingMultiplier="1.3"
                     android:text="@string/instructions_category_rcm_description"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="16sp" />
+                    android:textColor="?android:attr/textColorPrimary" />
 
             </LinearLayout>
 
@@ -148,33 +146,32 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="?android:attr/windowBackground"
+            app:cardCornerRadius="6dp"
             app:cardElevation="0dp"
-            app:strokeColor="@color/colorDivider"
-            app:strokeWidth="1.5dp">
+            app:strokeColor="?attr/colorStroke"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    style="@style/Text.Subtitle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/instructions_category_final"
-                    android:textColor="?attr/colorAccent"
-                    android:textSize="16sp" />
+                    android:text="@string/instructions_category_final" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
                     android:lineSpacingMultiplier="1.3"
                     android:text="@string/instructions_category_final_description"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="16sp" />
+                    android:textColor="?android:attr/textColorPrimary" />
 
             </LinearLayout>
 

@@ -39,14 +39,17 @@
     <string name="settings_payloads_reset_title">Svuota</string>
     <string name="settings_payloads_reset_summary">Rimuovi tutti i payload aggiunti eccetto i predefiniti (SX Loader/ReiNX/Hekate)</string>
     <string name="settings_category_appearance">Aspetto</string>
-    <string name="settings_appearance_night_mode_title">Modalità notte</string>
+    <string name="settings_appearance_theme_title">Tema</string>
+    <string name="settings_appearance_theme_summary">Tema principale dell\'applicazione</string>
+    <string name="settings_appearance_updating">Aggiornamento dell\'aspetto…</string>
     <string name="settings_appearance_accent_color_title">Colore titoli</string>
     <string name="settings_appearance_accent_color_summary">Colore usato per gli elementi in UI</string>
     <string name="settings_restart_title">Impostazioni modificate</string>
     <string name="settings_restart_message">Le impostazioni sono state modificate. Si prega di riavviare perché abbia effetto la modifica. \n\nRiavviare l\'app adesso?</string>
     <string name="settings_restart_ok">Riavvia</string>
     <string name="settings_restart_cancel">Annulla</string>
-    <string name="settings_accent_color_title_dialog">Scegli un colore</string>
+    <string name="settings_picker_color_title">Scegli il colore</string>
+    <string name="settings_picker_theme_title">Scegli il tema</string>
 
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Autorizzazione archiviazione</string>

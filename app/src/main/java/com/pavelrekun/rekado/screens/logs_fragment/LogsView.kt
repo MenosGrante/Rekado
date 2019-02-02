@@ -1,11 +1,11 @@
 package com.pavelrekun.rekado.screens.logs_fragment
 
 import androidx.recyclerview.widget.RecyclerView
-import com.pavelrekun.rang.services.helpers.ColorsHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.screens.logs_fragment.adapters.LogsAdapter
 import com.pavelrekun.rekado.services.logs.LogHelper
+import com.pavelrekun.siga.services.extensions.tintIconReverse
 import kotlinx.android.synthetic.main.fragment_logs.*
 
 class LogsView(private val activity: BaseActivity) : LogsContract.View {
@@ -46,7 +46,7 @@ class LogsView(private val activity: BaseActivity) : LogsContract.View {
     }
 
     override fun initDesign() {
-        activity.logsClearButton.setColorFilter(ColorsHelper.getContrastColor(activity, ColorsHelper.resolveAccentColor(activity)))
+        activity.logsClearButton.tintIconReverse()
     }
 
     override fun onResume() {

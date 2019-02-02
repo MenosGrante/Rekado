@@ -36,14 +36,17 @@
     <string name="settings_payloads_reset_title">清除</string>
     <string name="settings_payloads_reset_summary">移除所有添加的 payloads (自带的 SX Loader/ReiNX 除外)</string>
     <string name="settings_category_appearance">主题</string>
-    <string name="settings_appearance_night_mode_title">夜间模式</string>
+    <string name="settings_appearance_theme_title">主题</string>
+    <string name="settings_appearance_theme_summary">应用程序的主题</string>
+    <string name="settings_appearance_updating">更新外观…</string>
     <string name="settings_appearance_accent_color_title">强调颜色</string>
     <string name="settings_appearance_accent_color_summary">用于淡色 UI 元素的颜色</string>
     <string name="settings_restart_title">设置已更改</string>
     <string name="settings_restart_message">设置已更改。请重新启动后可以使更改生效。\n\n是否现在重启 app？</string>
     <string name="settings_restart_ok">重新启动</string>
     <string name="settings_restart_cancel">取消</string>
-    <string name="settings_accent_color_title_dialog">选择颜色</string>
+    <string name="settings_picker_color_title">选择颜色</string>
+    <string name="settings_picker_theme_title">选择主题</string>
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">存储权限</string>
     <string name="permission_storage_dialog_description">Rekado 需要此权限才能从设备的存储中获取 payload 文件。</string>

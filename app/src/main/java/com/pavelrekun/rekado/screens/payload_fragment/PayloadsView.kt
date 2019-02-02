@@ -5,7 +5,6 @@ import android.content.pm.PackageManager
 import android.widget.Toast
 import com.pavelrekun.konae.Konae
 import com.pavelrekun.konae.filters.ExtensionFileFilter
-import com.pavelrekun.rang.services.helpers.ColorsHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
@@ -16,6 +15,7 @@ import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
 import com.pavelrekun.rekado.services.utils.SettingsUtils
+import com.pavelrekun.siga.services.extensions.tintIconReverse
 import kotlinx.android.synthetic.main.fragment_payloads.*
 import org.greenrobot.eventbus.EventBus
 import java.io.File
@@ -55,7 +55,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
     }
 
     override fun initDesign() {
-        activity.payloadsAdd.setColorFilter(ColorsHelper.getContrastColor(activity, ColorsHelper.resolveAccentColor(activity)))
+        activity.payloadsAdd.tintIconReverse()
     }
 
     override fun updateList() {
@@ -90,16 +90,11 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
     }
 
     private fun getPayloadFromStorage() {
-        Konae().with(activity)
-                .withChosenListener(object : Konae.Result {
-                    override fun onChoosePath(dirFile: File) {
-                        onChosenFileListener(dirFile)
-                    }
-                })
-                .withFileFilter(ExtensionFileFilter("bin"))
-                .withTitle(activity.getString(R.string.dialog_file_chooser_payload_title))
-                .build()
-                .show()
+        Konae().with(activity).withChosenListener(object : Konae.Result {
+            override fun onChoosePath(dirFile: File) {
+                onChosenFileListener(dirFile)
+            }
+        }).withFileFilter(ExtensionFileFilter("bin")).withTitle(activity.getString(R.string.dialog_file_chooser_payload_title)).build().show()
     }
 
     private fun onChosenFileListener(pathFile: File) {

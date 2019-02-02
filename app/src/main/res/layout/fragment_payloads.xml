@@ -10,30 +10,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="?android:attr/windowBackground"
+        app:cardCornerRadius="6dp"
         app:cardElevation="0dp"
-        app:strokeColor="@color/colorDivider"
-        app:strokeWidth="1.5dp">
+        app:strokeColor="?attr/colorStroke"
+        app:strokeWidth="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                style="@style/Text.Subtitle"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/navigation_payloads"
-                android:textColor="?attr/colorAccent"
-                android:textSize="16sp" />
+                android:text="@string/navigation_payloads" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/payloadsList"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:overScrollMode="never"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
                 tools:listitem="@layout/item_payload" />
         </LinearLayout>
 

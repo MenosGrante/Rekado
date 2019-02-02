@@ -10,10 +10,9 @@
         android:id="@+id/mainToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorBackgroundSecondary"
+        android:background="?attr/colorBackgroundSecondary"
         android:elevation="3dp"
-        app:title="Rekado"
-        app:titleTextColor="@color/colorNavigationControls" />
+        app:titleTextColor="?android:attr/textColorPrimary" />
 
     <FrameLayout
         android:id="@+id/mainFragmentFrame"
@@ -28,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorBackgroundSecondary"
+        android:background="?attr/colorBackgroundSecondary"
         android:elevation="5dp"
         app:itemIconTint="@drawable/state_navigation_item"
         app:itemTextColor="@drawable/state_navigation_item"

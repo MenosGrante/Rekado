@@ -9,15 +9,15 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 32
-        versionName "2.5.2"
+        versionCode 33
+        versionName "2.6"
 
-        externalNativeBuild {
+        /*externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11"
                 arguments "-DANDROID_STL=c++_shared"
             }
-        }
+        }*/
     }
 
     buildTypes {
@@ -59,6 +59,7 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$androidXOtherVersion"
     implementation "androidx.browser:browser:$androidXOtherVersion"
     implementation "androidx.preference:preference:$androidXOtherVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$androidXConstraintLayoutVersion"
 
     // Tools
     implementation "io.paperdb:paperdb:$paperVersion"
@@ -67,7 +68,7 @@ dependencies {
 
     // Own
     implementation project(":konae")
-    implementation(name: 'rang', ext: 'aar')
+    implementation(name: 'siga', ext: 'aar')
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"

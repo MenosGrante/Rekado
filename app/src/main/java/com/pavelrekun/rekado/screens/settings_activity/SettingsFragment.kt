@@ -4,10 +4,13 @@ import android.Manifest
 import android.app.AlertDialog
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.preference.CheckBoxPreference
 import androidx.preference.ListPreference
 import androidx.preference.PreferenceFragmentCompat
+import com.google.android.material.snackbar.Snackbar
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.dialogs.Dialogs
@@ -16,14 +19,26 @@ import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
 import com.pavelrekun.rekado.services.utils.SettingsUtils
+import com.pavelrekun.rekado.services.utils.Utils
+import com.pavelrekun.siga.pickers.theme.ThemePickerFragment
+import kotlinx.android.synthetic.main.activity_settings.*
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
+    private lateinit var activity: BaseActivity
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        activity.setTitle(R.string.navigation_settings)
+    }
+
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        activity = getActivity() as BaseActivity
+
         addPreferencesFromResource(R.xml.settings)
 
-        if (!PermissionsUtils.checkPermissionGranted(activity as BaseActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            PermissionsUtils.showPermissionDialog(activity as BaseActivity, this, PermissionsUtils.PERMISSIONS_WRITE_REQUEST_CODE)
+        if (!PermissionsUtils.checkPermissionGranted(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            PermissionsUtils.showPermissionDialog(activity, this, PermissionsUtils.PERMISSIONS_WRITE_REQUEST_CODE)
         } else {
             initPayloadsCategoryPreferences()
         }
@@ -40,7 +55,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         val autoInjectorEnable = findPreference("auto_injector_enable") as CheckBoxPreference
         val autoInjectorPayload = findPreference("auto_injector_payload") as ListPreference
 
-        val appearanceNightMode = findPreference("appearance_night_mode") as ListPreference
+        val appearanceTheme = findPreference("appearance_theme")
         val appearanceAccentColor = findPreference("appearance_accent_color")
 
         autoInjectorEnable.setTitle(if (autoInjectorEnable.isChecked) R.string.settings_auto_injector_status_title_enabled else R.string.settings_auto_injector_status_title_disabled)
@@ -77,7 +92,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         payloadsResetPreference.setOnPreferenceClickListener {
-            val dialog = Dialogs.showPayloadsResetDialog(activity as BaseActivity)
+            val dialog = Dialogs.showPayloadsResetDialog(activity)
 
             dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                 PayloadHelper.clearFolderWithoutBundled()
@@ -88,13 +103,16 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
-        appearanceNightMode.setOnPreferenceChangeListener { _, _ ->
-            Dialogs.showRestartDialog(activity as BaseActivity)
+        appearanceTheme.setOnPreferenceClickListener {
+            openSettingsFragment(ThemePickerFragment {
+                openUpdatingMessage()
+            })
+
             true
         }
 
         appearanceAccentColor.setOnPreferenceChangeListener { _, _ ->
-            activity?.recreate()
+            activity.recreate()
             true
         }
     }
@@ -107,5 +125,20 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 Toast.makeText(activity, R.string.permission_storage_error, Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun openSettingsFragment(fragment: Fragment) {
+        activity.supportFragmentManager?.beginTransaction()?.setCustomAnimations(R.anim.fade_in, R.anim.fade_out)?.replace(R.id.settingsFragmentFrame, fragment, fragment::class.java.simpleName)?.addToBackStack(null)?.commit()
+    }
+
+    private fun openUpdatingMessage() {
+        val updatingMessage = Snackbar.make(activity.settingsFragmentFrame, R.string.settings_appearance_updating, 500)
+
+        updatingMessage.addCallback(object : Snackbar.Callback() {
+            override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
+                super.onDismissed(transientBottomBar, event)
+                Utils.restartActivity(activity)
+            }
+        }).show()
     }
 }

@@ -39,14 +39,17 @@
     <string name="settings_payloads_reset_title">Effacer</string>
     <string name="settings_payloads_reset_summary">Enlever toutes les payloads (à l\'exception de SX Loader)</string>
     <string name="settings_category_appearance">Apparance</string>
-    <string name="settings_appearance_night_mode_title">Mode Nuit</string>
+    <string name="settings_appearance_theme_title">Thème</string>
+    <string name="settings_appearance_theme_summary">Thème principal de l\'application</string>
+    <string name="settings_appearance_updating">Mise à jour de l\'apparence…</string>
     <string name="settings_appearance_accent_color_title">Couleurs accentuées</string>
     <string name="settings_appearance_accent_color_summary">Couleur utilisée pour les éléments de l\'interface</string>
     <string name="settings_restart_title">Paramètres modifiés</string>
     <string name="settings_restart_message">Les paramètres ont été modifiés. Veuillez redémarrer pour que les changements prennent effet. \n\nRedémarrer l\'appli maintenant ?</string>
     <string name="settings_restart_ok">Redémarrer</string>
     <string name="settings_restart_cancel">Annuler</string>
-    <string name="settings_accent_color_title_dialog">Choisir une couleur</string>
+    <string name="settings_picker_color_title">Choisissez la couleur</string>
+    <string name="settings_picker_theme_title">Choisissez un thème</string>
 
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Permission de stockage</string>

@@ -40,14 +40,17 @@
     <string name="settings_payloads_reset_title">Очистка</string>
     <string name="settings_payloads_reset_summary">Удалить все добавленные загрузчики кроме предустановленных (SX Loader/ReiNX)</string>
     <string name="settings_category_appearance">Внешний вид</string>
-    <string name="settings_appearance_night_mode_title">Ночной режим</string>
+    <string name="settings_appearance_theme_title">Тема</string>
+    <string name="settings_appearance_theme_summary">Основная тема приложения</string>
+    <string name="settings_appearance_updating">Обновление внешнего вида…</string>
     <string name="settings_appearance_accent_color_title">Цвет акцента</string>
     <string name="settings_appearance_accent_color_summary">Цвет используемый для покраски элементов интерфейса</string>
     <string name="settings_restart_title">Настройки изменены</string>
     <string name="settings_restart_message">Настройки были изменены. Перезагрузите приложение, чтобы изменения вступили в силу. \n\nПерезагрузить сейчас?</string>
     <string name="settings_restart_ok">Перезагрузить</string>
     <string name="settings_restart_cancel">Отмена</string>
-    <string name="settings_accent_color_title_dialog">Выбор цвета</string>
+    <string name="settings_picker_color_title">Выберите цвет</string>
+    <string name="settings_picker_theme_title">Выберите тему</string>
 
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Разрешение на хранение</string>

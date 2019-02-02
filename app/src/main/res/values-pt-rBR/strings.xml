@@ -40,14 +40,17 @@
     <string name="settings_payloads_reset_title">Limpar</string>
     <string name="settings_payloads_reset_summary">Remove todos os payloads exceto os incluídos (Hekate/ReiNX/SX Loader)</string>
     <string name="settings_category_appearance">Aparência</string>
-    <string name="settings_appearance_night_mode_title">Modo noturno</string>
+    <string name="settings_appearance_theme_title">Tema</string>
+    <string name="settings_appearance_theme_summary">Tema principal da aplicação</string>
+    <string name="settings_appearance_updating">Aparência atualização…</string>
     <string name="settings_appearance_accent_color_title">Cor de destaque</string>
     <string name="settings_appearance_accent_color_summary">Cor usada nos elementos de destaque da interface</string>
     <string name="settings_restart_title">onfigurações alteradas</string>
     <string name="settings_restart_message">As configurações foram alteradas. Por favor reinicie o aplicativo para que as mudanças sejam aplicadas. \n\nReiniciar o aplicativo agora?</string>
     <string name="settings_restart_ok">Reiniciar</string>
     <string name="settings_restart_cancel">cancelar</string>
-    <string name="settings_accent_color_title_dialog">Escolher Cor</string>
+    <string name="settings_picker_color_title">Escolha a cor</string>
+    <string name="settings_picker_theme_title">Escolha tema</string>
 
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Permições de armazenamento</string>

@@ -13,7 +13,7 @@ import com.pavelrekun.rekado.screens.logs_fragment.LogsFragment
 import com.pavelrekun.rekado.screens.payload_fragment.PayloadsFragment
 import com.pavelrekun.rekado.screens.settings_activity.SettingsActivity
 import com.pavelrekun.rekado.services.dialogs.DonateDialog
-import com.pavelrekun.rekado.services.utils.DesignUtils
+import com.pavelrekun.siga.services.extensions.convertDPtoPX
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainView(private val activity: BaseActivity, private val savedInstanceState: Bundle?) : MainContract.View {
@@ -59,7 +59,7 @@ class MainView(private val activity: BaseActivity, private val savedInstanceStat
 
             R.id.navigation_donate -> {
                 val donateDialog = DonateDialog(activity)
-                donateDialog.window.setLayout(DesignUtils.convertDPtoPX(360), ViewGroup.LayoutParams.WRAP_CONTENT)
+                donateDialog.window.setLayout(360.convertDPtoPX(activity), ViewGroup.LayoutParams.WRAP_CONTENT)
                 donateDialog.show()
                 true
             }

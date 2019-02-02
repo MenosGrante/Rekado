@@ -2,12 +2,11 @@ package com.pavelrekun.rekado
 
 import android.annotation.SuppressLint
 import android.app.Application
-import com.pavelrekun.rang.data.AccentColor
-import com.pavelrekun.rang.data.NightMode
-import com.pavelrekun.rang.data.PrimaryColor
-import com.pavelrekun.rang.services.Rang
 import com.pavelrekun.rekado.services.logs.LogHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
+import com.pavelrekun.siga.data.AccentColor
+import com.pavelrekun.siga.data.Theme
+import com.pavelrekun.siga.services.Siga
 import io.paperdb.Paper
 
 @SuppressLint("StaticFieldLeak")
@@ -27,12 +26,12 @@ class RekadoApplication : Application() {
         LogHelper.init()
         PayloadHelper.init()
 
-        prepareRang()
+        configureSiga()
     }
 
-    private fun prepareRang() {
-        val defaultSetup = Rang.defaults().primaryColor(PrimaryColor.CASTRO).accentColor(AccentColor.LIGHT_BLUE_A400).nightMode(NightMode.NIGHT).oledMode(false)
-        Rang.init(this, defaultSetup)
+    private fun configureSiga() {
+        val defaultSetup = Siga.defaults().nightMode(Theme.DARK_DEFAULT).accentColor(AccentColor.LIGHT_BLUE_A400)
+        Siga.init(this, defaultSetup)
     }
 
 }

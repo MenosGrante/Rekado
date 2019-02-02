@@ -8,10 +8,11 @@
     android:layout_marginTop="8dp"
     android:layout_marginEnd="16dp"
     android:layout_marginBottom="8dp"
-    app:cardCornerRadius="4dp"
+    app:cardBackgroundColor="?android:attr/windowBackground"
+    app:cardCornerRadius="6dp"
     app:cardElevation="0dp"
-    app:strokeColor="@color/colorDivider"
-    app:strokeWidth="1.5dp">
+    app:strokeColor="?attr/colorStroke"
+    app:strokeWidth="1dp">
 
     <View
         android:id="@+id/itemLogType"

@@ -3,16 +3,13 @@
 
     <PreferenceCategory android:title="@string/settings_category_appearance" />
 
-    <ListPreference
-        android:defaultValue="enabled"
-        android:entries="@array/settings_appearance_night_mode_entries"
-        android:entryValues="@array/settings_appearance_night_mode_values"
+    <Preference
         android:icon="@drawable/ic_settings_appearance_night_mode"
-        android:key="appearance_night_mode"
-        android:summary="%s"
-        android:title="@string/settings_appearance_night_mode_title" />
+        android:key="appearance_theme"
+        android:summary="@string/settings_appearance_theme_summary"
+        android:title="@string/settings_appearance_theme_title" />
 
-    <com.pavelrekun.rang.services.picker.ColorPickerPreference
+    <com.pavelrekun.siga.pickers.color.ColorPickerPreference
         android:icon="@drawable/ic_settings_appearance_accent"
         android:key="appearance_accent_color"
         android:summary="@string/settings_appearance_accent_color_summary"

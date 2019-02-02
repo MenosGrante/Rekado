@@ -41,14 +41,17 @@
     <string name="settings_payloads_reset_title">Limpiar</string>
     <string name="settings_payloads_reset_summary">Remueve todos los payloads con excepcion de los paquetes (SX Loader/ReiNX)</string>
     <string name="settings_category_appearance">Apariencia</string>
-    <string name="settings_appearance_night_mode_title">Modo Nocturno</string>
+    <string name="settings_appearance_theme_title">Tema</string>
+    <string name="settings_appearance_theme_summary">Tema principal de la aplicación</string>
+    <string name="settings_appearance_updating">Actualizando apariencia…</string>
     <string name="settings_appearance_accent_color_title">Color de Acentuado</string>
     <string name="settings_appearance_accent_color_summary">Usado para darle color los elementos del UI</string>
     <string name="settings_restart_title">Configuracion Cambiada</string>
     <string name="settings_restart_message">La configuracion ha sido cambiada. Porfavor, reinicie para que los cambios tomen efecto. \n\nReiniciar aplicacion ahora?</string>
     <string name="settings_restart_ok">Reiniciar</string>
     <string name="settings_restart_cancel">Cancelar</string>
-    <string name="settings_accent_color_title_dialog">Escoja el Color</string>
+    <string name="settings_picker_color_title">Elegir color</string>
+    <string name="settings_picker_theme_title">Escoge un tema</string>
 
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Permiso de almacenamiento</string>

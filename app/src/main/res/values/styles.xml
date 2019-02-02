@@ -2,7 +2,7 @@
 
     <style name="Theme.Rekado.DayNight" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">#CCCCCC</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
@@ -10,6 +10,14 @@
 
     <style name="Theme.Rekado.Invisible" parent="Theme.Rekado.DayNight">
         <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="Text" parent="android:Widget.TextView" />
+
+    <style name="Text.Subtitle">
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
 </resources>

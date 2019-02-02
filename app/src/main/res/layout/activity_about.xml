@@ -10,11 +10,10 @@
         android:id="@+id/aboutToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorBackgroundSecondary"
+        android:background="?attr/colorBackgroundSecondary"
         android:elevation="3dp"
         app:navigationIcon="@drawable/ic_navigation_back"
-        app:title="@string/navigation_about"
-        app:titleTextColor="@color/colorNavigationControls" />
+        app:title="@string/navigation_about" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -73,51 +72,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="16dp"
-                android:background="@color/colorDivider" />
+                android:background="?attr/colorDivider" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                app:cardCornerRadius="4dp"
+                app:cardBackgroundColor="?android:attr/windowBackground"
+                app:cardCornerRadius="6dp"
                 app:cardElevation="0dp"
-                app:strokeColor="@color/colorDivider"
-                app:strokeWidth="1.5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/about_category_information"
-                        android:textColor="?attr/colorAccent"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="16dp"
-                        android:lineSpacingMultiplier="1.3"
-                        android:text="@string/about_information_description"
-                        android:textColor="?android:attr/textColorPrimary"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                app:cardCornerRadius="4dp"
-                app:cardElevation="0dp"
-                app:strokeColor="@color/colorDivider"
-                app:strokeWidth="1.5dp">
+                app:strokeColor="?attr/colorStroke"
+                app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -125,13 +90,46 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        style="@style/Text.Subtitle"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
-                        android:padding="16dp"
-                        android:text="@string/about_category_developer"
-                        android:textColor="?attr/colorAccent"
-                        android:textSize="16sp" />
+                        android:text="@string/about_category_information" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:lineSpacingMultiplier="1.3"
+                        android:text="@string/about_information_description"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="?android:attr/windowBackground"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp"
+                app:strokeColor="?attr/colorStroke"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Text.Subtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_category_developer" />
 
                     <TextView
                         android:id="@+id/aboutDeveloperGitHub"
@@ -145,13 +143,12 @@
                         android:gravity="center_vertical"
                         android:padding="16dp"
                         android:text="@string/about_developer_github"
-                        android:textColor="?android:attr/textColorPrimary"
-                        android:textSize="16sp" />
+                        android:textColor="?android:attr/textColorPrimary" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/colorDivider" />
+                        android:background="?attr/colorDivider" />
 
                     <TextView
                         android:id="@+id/aboutDeveloperTwitter"
@@ -165,8 +162,7 @@
                         android:gravity="center_vertical"
                         android:padding="16dp"
                         android:text="@string/about_developer_twitter"
-                        android:textColor="?android:attr/textColorPrimary"
-                        android:textSize="16sp" />
+                        android:textColor="?android:attr/textColorPrimary" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

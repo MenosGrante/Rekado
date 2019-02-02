@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="settings_appearance_night_mode_entries">
-        <item>Non Aktif</item>
-        <item>Aktif</item>
-        <item>Aktif (AMOLED)</item>
-    </string-array>
-
-</resources>

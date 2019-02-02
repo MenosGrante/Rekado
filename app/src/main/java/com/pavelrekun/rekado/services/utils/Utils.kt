@@ -1,8 +1,12 @@
 package com.pavelrekun.rekado.services.utils
 
+import android.content.Intent
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
+import androidx.core.app.ActivityCompat
+import androidx.fragment.app.FragmentManager
 import com.pavelrekun.rekado.base.BaseActivity
+import com.pavelrekun.rekado.screens.main_activity.MainActivity
 
 
 object Utils {
@@ -29,5 +33,16 @@ object Utils {
         }
 
         return result.toString()
+    }
+
+    fun restartApplication(activity: BaseActivity) {
+        val intent = Intent(activity, MainActivity::class.java)
+        ActivityCompat.finishAffinity(activity)
+        activity.startActivity(intent)
+    }
+
+    fun restartActivity(activity: BaseActivity) {
+        activity.recreate()
+        activity.supportFragmentManager?.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
     }
 }
