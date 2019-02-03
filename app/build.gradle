@@ -11,13 +11,6 @@ android {
         targetSdkVersion currentSDKVersion
         versionCode 33
         versionName "2.6"
-
-        /*externalNativeBuild {
-            cmake {
-                cppFlags "-std=c++11"
-                arguments "-DANDROID_STL=c++_shared"
-            }
-        }*/
     }
 
     buildTypes {
@@ -51,6 +44,10 @@ android {
         variant.outputs.all { output ->
             outputFileName = "[${versionName}] Rekado [${versionCode}].apk"
         }
+    }
+
+    aaptOptions {
+        noCompress 'bin'
     }
 }
 

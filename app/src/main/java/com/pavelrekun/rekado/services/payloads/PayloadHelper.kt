@@ -8,7 +8,7 @@ import java.io.File
 
 object PayloadHelper {
 
-    val FOLDER_PATH = "${Environment.getExternalStorageDirectory()}/Rekado/"
+    val FOLDER_PATH = "${Environment.getExternalStorageDirectory().absolutePath}/Rekado/"
 
     const val BUNDLED_PAYLOAD_SX = "sx_loader.bin"
     const val BUNDLED_PAYLOAD_REINX = "ReiNX.bin"
