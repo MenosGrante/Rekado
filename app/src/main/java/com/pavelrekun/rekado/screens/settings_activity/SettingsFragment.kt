@@ -35,7 +35,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         activity = getActivity() as BaseActivity
 
-        addPreferencesFromResource(R.xml.settings)
+        addPreferencesFromResource(R.xml.preferences)
 
         if (!PermissionsUtils.checkPermissionGranted(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
             PermissionsUtils.showPermissionDialog(activity, this, PermissionsUtils.PERMISSIONS_WRITE_REQUEST_CODE)
@@ -112,7 +112,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         appearanceAccentColor.setOnPreferenceChangeListener { _, _ ->
-            activity.recreate()
+            openUpdatingMessage()
             true
         }
     }

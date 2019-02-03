@@ -50,6 +50,7 @@
     <string name="settings_restart_cancel">Annuler</string>
     <string name="settings_picker_color_title">Choisissez la couleur</string>
     <string name="settings_picker_theme_title">Choisissez un thème</string>
+    <string name="settings_picker_theme_preview">Aperçu</string>
 
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Permission de stockage</string>

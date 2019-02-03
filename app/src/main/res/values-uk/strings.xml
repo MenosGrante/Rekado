@@ -51,6 +51,7 @@
     <string name="settings_restart_cancel">Скасувати</string>
     <string name="settings_picker_color_title">Виберіть колір</string>
     <string name="settings_picker_theme_title">Виберіть тему</string>
+    <string name="settings_picker_theme_preview">Превью</string>
 
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Дозвіл на зберігання</string>

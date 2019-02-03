@@ -50,6 +50,7 @@
     <string name="settings_restart_cancel">Annulla</string>
     <string name="settings_picker_color_title">Scegli il colore</string>
     <string name="settings_picker_theme_title">Scegli il tema</string>
+    <string name="settings_picker_theme_preview">Anteprima</string>
 
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Autorizzazione archiviazione</string>

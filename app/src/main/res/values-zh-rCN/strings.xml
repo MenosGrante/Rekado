@@ -47,6 +47,7 @@
     <string name="settings_restart_cancel">取消</string>
     <string name="settings_picker_color_title">选择颜色</string>
     <string name="settings_picker_theme_title">选择主题</string>
+    <string name="settings_picker_theme_preview">预习</string>
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">存储权限</string>
     <string name="permission_storage_dialog_description">Rekado 需要此权限才能从设备的存储中获取 payload 文件。</string>
