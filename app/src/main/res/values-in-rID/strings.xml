@@ -29,7 +29,7 @@
     <string name="settings_appearance_theme_summary">Tema utama aplikasi</string>
     <string name="settings_appearance_updating">Memperbarui penampilan…</string>
     <string name="settings_category_appearance">Tampilan</string>
-    <string name="settings_payloads_reset_summary">Hapus semua tambahan muatan kecuali bawaan (SX Loader/ReiNX)</string>
+    <string name="settings_payloads_reset_summary">Hapus semua tambahan muatan kecuali bawaan (SX Loader/ReiNX/Hekate)</string>
     <string name="settings_payloads_reset_title">Membersihkan</string>
     <string name="settings_payloads_remove_bundled_summary">Menyembunyikan semua Muatan bawaan</string>
     <string name="settings_payloads_remove_bundled_title">Menyembunyikan Muatan bawaan</string>
@@ -49,6 +49,6 @@
     <string name="instructions_category_payload">Muatan</string>
     <string name="instructions_category_final_description">Humbungkan perangkat ke nintendo switch dan izinkan izin untuk akses USB (jika memungkinkan). Tunggu sampai dialog pemilih Muatan muncul dan pilih salah satu untuk dimuat</string>
     <string name="instructions_category_rcm_description">Masukan Nintedo Switch anda ke mode RCM dengan cara yang paling mudah buat anda. Nintendo Switch anda akan hidup otomatis ketika dicolok , pastikan untuk menekan tombol VOLUME +</string>
-    <string name="instructions_category_payload_description">Di Muatan Category, pilih tombol + dan pilih Muatan dari penyimpanan perangkat. atau Anda bisa memilih memindahkan muatan anda ke folder Rekado di memori perangkat. atau anda bisa menggunakan muatan bawaan (SX Loader/ReiNX))</string>
+    <string name="instructions_category_payload_description">Di Muatan Category, pilih tombol + dan pilih Muatan dari penyimpanan perangkat. atau Anda bisa memilih memindahkan muatan anda ke folder Rekado di memori perangkat. atau anda bisa menggunakan muatan bawaan (SX Loader/ReiNX/Hekate)</string>
     <string name="instructions_category_cable_description">Pertama anda membutuhkan kabel untuk menghubungkan perangkat anda ke Nintendo Switch. Untuk berkerja maksimal , Kabel yang digunakan harus diperuntukan untuk memindahkan data , bukan hanya untuk cas.sangat dianjurkan untuk menggunakan A-ke-C kabel dan adapter USB OTG</string>
 </resources>

@@ -12,7 +12,7 @@ object PayloadHelper {
 
     const val BUNDLED_PAYLOAD_SX = "sx_loader.bin"
     const val BUNDLED_PAYLOAD_REINX = "ReiNX.bin"
-    const val BUNDLED_PAYLOAD_HEKATE = "hekate.bin"
+    const val BUNDLED_PAYLOAD_HEKATE = "hekate [4.6].bin"
 
     private const val CHOSEN_PAYLOAD = "CHOSEN_PAYLOAD"
 

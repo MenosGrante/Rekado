@@ -9,7 +9,7 @@ import com.pavelrekun.siga.data.Theme
 import com.pavelrekun.siga.services.Siga
 import io.paperdb.Paper
 
-@SuppressLint("StaticFieldLeak")
+@SuppressLint("ALL")
 class RekadoApplication : Application() {
 
     companion object {
@@ -26,11 +26,11 @@ class RekadoApplication : Application() {
         LogHelper.init()
         PayloadHelper.init()
 
-        configureSiga()
+        configureThemeEngine()
     }
 
-    private fun configureSiga() {
-        val defaultSetup = Siga.defaults().nightMode(Theme.DARK_DEFAULT).accentColor(AccentColor.LIGHT_BLUE_A400)
+    private fun configureThemeEngine() {
+        val defaultSetup = Siga.defaults().theme(Theme.DARK_DEFAULT).accentColor(AccentColor.LIGHT_BLUE_500)
         Siga.init(this, defaultSetup)
     }
 

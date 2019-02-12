@@ -17,7 +17,7 @@
     <string name="instructions_category_cable">Cabo</string>
     <string name="instructions_category_cable_description">Primeiro tens de encontrar um capo para ligar o teu dispositivo á Nintendo Switch. Para funcionar corretamente este tem de ser um cabo de transmissão de dados, e não apenas um cabo de carregar.\n\nÉ recomendado usar um cabo A-para-C e um adaptador USB OTG.</string>
     <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">Na categoria \u0022Payloads\u0022 , toca no botão \u0022+\u0022 para selecionar um payload precarregado na memória do teu dispositivo. Ou simplesmente transfere o teu payload para a pasta Rekado na memória do teu dispositivo.\n\nOu podes usar os payloads incluidos (SX Loader/ReiNX)</string>
+    <string name="instructions_category_payload_description">Na categoria \u0022Payloads\u0022 , toca no botão \u0022+\u0022 para selecionar um payload precarregado na memória do teu dispositivo. Ou simplesmente transfere o teu payload para a pasta Rekado na memória do teu dispositivo.\n\nOu podes usar os payloads incluidos (SX Loader/ReiNX/Hekate)</string>
     <string name="instructions_category_rcm_description">Liga Nintendo Switch no modo RCM. \n\nA tua Nintendo Switch vai ligar-se automaticamente quando conectada, mantém premido o VOLUME +.</string>
     <string name="instructions_category_final">Final</string>
     <string name="instructions_category_final_description">Connecta o teu dispositivo á Nintendo Switch e permite o acesso USB se necessário. Espera até o dialogo para escolher o payload aparecer e seleciona o que desejas carregar.</string>
@@ -38,7 +38,7 @@
     <string name="settings_payloads_remove_bundled_title">Ocultar incluidos</string>
     <string name="settings_payloads_remove_bundled_summary">Oculta todos os payloads incluidos com a aplicação</string>
     <string name="settings_payloads_reset_title">Limpar</string>
-    <string name="settings_payloads_reset_summary">Remove todos os payloads excepto os incluidos (SX Loader/ReiNX)</string>
+    <string name="settings_payloads_reset_summary">Remove todos os payloads excepto os incluidos (SX Loader/ReiNX/Hekate)</string>
     <string name="settings_category_appearance">Aparência</string>
     <string name="settings_appearance_theme_title">Tema</string>
     <string name="settings_appearance_theme_summary">Tema principal da aplicação</string>

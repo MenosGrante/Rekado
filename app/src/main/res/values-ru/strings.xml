@@ -17,7 +17,7 @@
     <string name="instructions_category_cable">Кабель</string>
     <string name="instructions_category_cable_description">Сначала вам нужно найти кабель для подключения вашего устройства к Nintendo Switch. Для правильной работы это должен быть кабель, предназначенный для передачи данных, а не только для зарядки.\n\nЦелесообразно использовать кабель A-to-C и адаптер USB OTG.</string>
     <string name="instructions_category_payload">Загрузчик</string>
-    <string name="instructions_category_payload_description">В категории \u0022Загрузчики\u0022, нажмите на кнопку \u0022+\u0022, чтобы выбрать заранее загруженный загрузчик из памяти вашего устройства. Или просто перенесите ваш загрузчик в папку Rekado в памяти вашего устройства. \n\nТакже вы можете использовать приготовленные загрузчики (SX Loader/ReiNX).</string>
+    <string name="instructions_category_payload_description">В категории \u0022Загрузчики\u0022, нажмите на кнопку \u0022+\u0022, чтобы выбрать заранее загруженный загрузчик из памяти вашего устройства. Или просто перенесите ваш загрузчик в папку Rekado в памяти вашего устройства. \n\nТакже вы можете использовать приготовленные загрузчики (SX Loader/ReiNX/Hekate).</string>
     <string name="instructions_category_rcm_description">Введите ваш Nintendo Switch в режим RCM любым удобным для вас способом. \n\nВаш Nintendo Switch будет включен сам по себе при подключении, обязательно удерживайте ГРОМКОСТЬ +.</string>
     <string name="instructions_category_final">Заключение</string>
     <string name="instructions_category_final_description">Подключите устройство к Nintendo Switch и при необходимости разрешите доступ к USB. Откроется диалоговое окно выбора загрузчика, где вам необходимо выбрать интересующий загрузчик.</string>
@@ -38,7 +38,7 @@
     <string name="settings_payloads_remove_bundled_title">Прятать предустановленные</string>
     <string name="settings_payloads_remove_bundled_summary">Прятать все предустановленные загрузчики</string>
     <string name="settings_payloads_reset_title">Очистка</string>
-    <string name="settings_payloads_reset_summary">Удалить все добавленные загрузчики кроме предустановленных (SX Loader/ReiNX)</string>
+    <string name="settings_payloads_reset_summary">Удалить все добавленные загрузчики кроме предустановленных (SX Loader/ReiNX/Hekate)</string>
     <string name="settings_category_appearance">Внешний вид</string>
     <string name="settings_appearance_theme_title">Тема</string>
     <string name="settings_appearance_theme_summary">Основная тема приложения</string>

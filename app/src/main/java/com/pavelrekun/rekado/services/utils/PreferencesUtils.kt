@@ -10,6 +10,6 @@ object PreferencesUtils {
         val preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(RekadoApplication.instance.applicationContext)
         val theme = preferences.getString("appearance_theme_night_mode", Theme.DARK_DEFAULT.id)
 
-        Siga.config(RekadoApplication.instance.applicationContext).nightMode(Theme.findById(theme)).apply()
+        Siga.config(RekadoApplication.instance.applicationContext).theme(Theme.findById(theme)).apply()
     }
 }
