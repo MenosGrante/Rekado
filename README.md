@@ -42,7 +42,9 @@ You should translate it. Files marked with **translatable="false"** should not b
 * [unbranched](https://github.com/unbranched) for Italian localization.
 * [wendyliga](https://github.com/wendyliga) for Indonesian localization.
 * [javito1081](https://github.com/javito1081) for Spanish localization.
-* [TheSergioEduP](https://github.com/TheSergioEduP) for Portuguese localization.
+* [TheSergioEduP](https://github.com/TheSergioEduP) for Portuguese (Portugal) localization.
+* [DavidOliM](https://github.com/DavidOliM) for Portuguese (Brazil) localization.
+* [carlchina](https://github.com/carlchina) for Chinese Simplified localization.
 * [tiliarou](https://github.com/tiliarou) for French localization.
 
 ## Donate
