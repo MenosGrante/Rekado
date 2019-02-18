@@ -16,7 +16,7 @@
     <string name="instructions_category_cable">数据线</string>
     <string name="instructions_category_cable_description">首先你需要一根数据线来连接你的手机和任天堂 Switch，要正常的工作，这条数据线必须为了传输数据设计而不是只用来充电的，\n\n建议使用A-to-C电缆和USB OTG适配器。</string>
     <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">在 \ u0022Payloads\u0022 列表中, 点击 \ u0022+\u0022 按钮从设备的储存卡中选择需要加载的 payload。或者你可以将payload 拷贝到设备内存中的 Rekado 文件夹中。\n\n或者使用自带的payload (SX Loader/ReiNX/Hekate)</string>
+    <string name="instructions_category_payload_description">在 \u0022Payloads\u0022 列表中, 点击 \u0022+\u0022 按钮从设备的储存卡中选择需要加载的 payload。或者你可以将payload 拷贝到设备内存中的 Rekado 文件夹中。\n\n或者使用自带的payload (SX Loader/ReiNX/Hekate)</string>
     <string name="instructions_category_rcm_description">在任何时候让你的任天堂 Switch 进入 RCM 模式。\n\n你的任天堂 Switch 需要按住音量+，然后再插入数据线就会开机。</string>
     <string name="instructions_category_final">完成</string>
     <string name="instructions_category_final_description">将设备连接到任天堂 Switch 并在有需要时允许 usb 访问权限。将打开 payloads 选择对话框，并在对话框内选择需要加载的 payloads。</string>
