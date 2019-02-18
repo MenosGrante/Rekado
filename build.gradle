@@ -32,6 +32,7 @@ ext {
     materialComponentsVersion = '1.0.0'
     materialDialogsVersion = '2.0.0'
 
+    assetCopier = '0.1.1'
     paperVersion = '2.6'
     eventBusVersion = '3.1.1'
 }

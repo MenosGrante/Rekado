@@ -62,6 +62,7 @@ dependencies {
     implementation "io.paperdb:paperdb:$paperVersion"
     implementation "org.greenrobot:eventbus:$eventBusVersion"
     implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
+    implementation "com.github.flipagram:android-assetcopier:$assetCopier"
 
     // Own
     implementation project(":konae")
