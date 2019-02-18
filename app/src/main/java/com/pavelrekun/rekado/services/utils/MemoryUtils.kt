@@ -15,9 +15,9 @@ object MemoryUtils {
         val reiNXPayloadFile = assetManager.open(PayloadHelper.BUNDLED_PAYLOAD_REINX)
         val hekatePayloadFile = assetManager.open(PayloadHelper.BUNDLED_PAYLOAD_HEKATE)
 
-        copyFile(sxPayloadFile, FileOutputStream("${PayloadHelper.FOLDER_PATH}/${PayloadHelper.BUNDLED_PAYLOAD_SX}"))
-        copyFile(reiNXPayloadFile, FileOutputStream("${PayloadHelper.FOLDER_PATH}/${PayloadHelper.BUNDLED_PAYLOAD_REINX}"))
-        copyFile(hekatePayloadFile, FileOutputStream("${PayloadHelper.FOLDER_PATH}/${PayloadHelper.BUNDLED_PAYLOAD_HEKATE}"))
+        copyFile(sxPayloadFile, FileOutputStream(File("${PayloadHelper.FOLDER_PATH}/${PayloadHelper.BUNDLED_PAYLOAD_SX}")))
+        copyFile(reiNXPayloadFile, FileOutputStream(File("${PayloadHelper.FOLDER_PATH}/${PayloadHelper.BUNDLED_PAYLOAD_REINX}")))
+        copyFile(hekatePayloadFile, FileOutputStream(File("${PayloadHelper.FOLDER_PATH}/${PayloadHelper.BUNDLED_PAYLOAD_HEKATE}")))
 
         EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
     }
