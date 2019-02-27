@@ -31,7 +31,6 @@ This should not happen when using the "correct" payloads. But I am not responsib
 
 Rekado's localization files placed in few places:
 * \app\src\main\res\values\strings.xml
-* \app\src\main\res\values\arrays.xml
 * \konae\src\main\res\values\strings.xml
 
 You should translate it. Files marked with **translatable="false"** should not be included in your localization. After finishing create **Pull request** and your localization will be added in Rekado.
@@ -46,6 +45,7 @@ You should translate it. Files marked with **translatable="false"** should not b
 * [DavidOliM](https://github.com/DavidOliM) for Portuguese (Brazil) localization.
 * [carlchina](https://github.com/carlchina) for Chinese Simplified localization.
 * [tiliarou](https://github.com/tiliarou) for French localization.
+* [mixon606](https://github.com/mixon606) for Polish localization.
 
 ## Donate
 I have created and supporting this application in my free time, so if you want to support me, follow my <a href="https://www.buymeacoffee.com/pavelrekun" target="_blank">"Buy me coffee"</a> link :)
