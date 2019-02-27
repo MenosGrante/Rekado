@@ -103,10 +103,14 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
+        val themePickerFragment = ThemePickerFragment()
+
+        themePickerFragment.setClickListener {
+            openUpdatingMessage()
+        }
+
         appearanceTheme.setOnPreferenceClickListener {
-            openSettingsFragment(ThemePickerFragment {
-                openUpdatingMessage()
-            })
+            openSettingsFragment(themePickerFragment)
 
             true
         }
