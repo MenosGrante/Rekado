@@ -30,7 +30,7 @@ class RekadoApplication : Application() {
     }
 
     private fun configureThemeEngine() {
-        val defaultSetup = Siga.defaults().theme(Theme.DARK_DEFAULT).accentColor(AccentColor.LIGHT_BLUE_500)
+        val defaultSetup = Siga.createDefaults().theme(Theme.DARK_DEFAULT).accentColor(AccentColor.LIGHT_BLUE_500)
         Siga.init(this, defaultSetup)
     }
 

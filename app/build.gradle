@@ -9,7 +9,7 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 35
+        versionCode 36
         versionName "2.6.1"
     }
 
