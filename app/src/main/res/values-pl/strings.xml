@@ -16,7 +16,7 @@
     <string name="instructions_category_cable">Kabel</string>
     <string name="instructions_category_cable_description">Na początek podtrzebujesz kabel który może połączyć twoje urządzenie z Nintendo Switch. Aby działało poprawnie, twój kabel pownien być stworzony do przenosienia plików, nie tylko do ładowania.\n\nJest polecane żeby urzywać A-to-C kabel i USB OTG adapter.</string>
     <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">W \u0022Payloads\u0022 kategorii, kliknij \u0022+\u0022 ¿eby wybraæ przewybrany payload od twojego urz¹dzenia dysku/karty SD. Lub ztranferuj twój payload do folderu Rekado na pamiêci twojego urz¹dzenia.\n\nLub mo¿esz u¿yæ payloady które s¹ w pakiecie z aplikacj¹ (SX Loader/ReiNX/Hekate)</string>
+    <string name="instructions_category_payload_description">W \u0022Payloads\u0022 kategorii, kliknij \u0022+\u0022 żeby wybrać przewybrany payload od twojego urządzenia dysku/karty SD. Lub ztranferuj twój payload do folderu Rekado na pamiêci twojego urządzenia.\n\nLub możesz użyć payloady które są w pakiecie z aplikacją (SX Loader/ReiNX/Hekate)</string>
     <string name="instructions_category_rcm_description">Włącz twojego Nintendo Switch w RCM mode w dowolny sposób. \n\nTwój Nintendo Switch włączy sie sam z siebie kiedy podłączony, pamiętaj aby trzymać VOLUME +.</string>
     <string name="instructions_category_final">Na koniec</string>
     <string name="instructions_category_final_description">Podłącz Nintendo Switch i pozwól na dostęp USB jeżeli trzeba. Poczekaj na wybieracz payloadów dialog otworzy sie i wybierz którzy chcesz załądować.</string>
@@ -54,8 +54,8 @@
 
     <!-- Strings for Permissions -->
     <string name="permission_storage_dialog_title">Uprawnienia do przeglądania pamięci</string>
-    <string name="permission_storage_dialog_description">Rekado potrzebuje to uprawnienie żeby dostać payloady z pamięci urządzenia.</string>
-    <string name="permission_storage_button">Prośba</string>
+    <string name="permission_storage_dialog_description">Rekado potrzebuje to uprawnienie żeby dostać payloady z pamięci urządzenia. Czy chcesz kontyunować?</string>
+    <string name="permission_storage_button">Ok</string>
     <string name="permission_storage_error">Nie można było sie dostać do urządzenia pamięci. Spróbuj dodać uprawnienia jeszcze raz.</string>
 
     <!-- Strings for Dialogs -->
