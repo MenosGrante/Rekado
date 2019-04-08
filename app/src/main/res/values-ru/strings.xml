@@ -11,6 +11,7 @@
     <!-- Strings for About -->
     <string name="about_category_information">Информация</string>
     <string name="about_category_developer">Разработчик</string>
+    <string name="about_developer_personal_site">Персональный сайт</string>
     <string name="about_information_description">Приложение написано на Kotlin с использованием C++. Оно используется для инъекций загрузчиков на Nintendo Switch.</string>
 
     <!-- Strings for Instructions -->

@@ -11,6 +11,7 @@
     <!-- Strings for About -->
     <string name="about_category_information">Інформація</string>
     <string name="about_category_developer">Розробник</string>
+    <string name="about_developer_personal_site">Персональний сайт</string>
     <string name="about_information_description">Додаток написано на Kotlin з використанням C++. Воно використовується для ін\'єкцій завантажувачів на Nintendo Switch.</string>
 
     <!-- Strings for Instructions -->

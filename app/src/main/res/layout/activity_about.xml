@@ -132,6 +132,25 @@
                         android:text="@string/about_category_developer" />
 
                     <TextView
+                        android:id="@+id/aboutDeveloperPersonalSite"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/ic_about_personal_site"
+                        android:drawablePadding="16dp"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/about_developer_personal_site"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?attr/colorDivider" />
+
+                    <TextView
                         android:id="@+id/aboutDeveloperGitHub"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

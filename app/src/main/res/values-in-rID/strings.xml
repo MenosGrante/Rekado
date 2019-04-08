@@ -7,6 +7,7 @@
     <string name="navigation_about">Tentang</string>
     <string name="navigation_instructions">Instruksi</string>
     <string name="about_category_developer">Pengembang</string>
+    <string name="about_developer_personal_site">Situs pribadi</string>
     <string name="dialog_negative">Batal</string>
     <string name="dialog_file_chooser_payload_title">Pilih Muatan</string>
     <string name="helper_error_file_payload_wrong">Apakah anda yakin telah memilih Muatan yang benar?</string>

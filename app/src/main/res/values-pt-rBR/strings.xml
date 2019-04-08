@@ -11,6 +11,7 @@
     <!-- Strings for About -->
     <string name="about_category_information">Informações</string>
     <string name="about_category_developer">Desenvolvedor</string>
+    <string name="about_developer_personal_site">Site pessoal</string>
     <string name="about_information_description">Aplicativo usado para injeção de payloads em consoles Nintendo Switch. Código fonte escrito em Kotlin e C++.</string>
 
     <!-- Strings for Instructions -->

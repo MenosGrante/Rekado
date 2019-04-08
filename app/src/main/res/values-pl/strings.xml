@@ -10,6 +10,7 @@
     <!-- Strings for About -->
     <string name="about_category_information">Informacje</string>
     <string name="about_category_developer">Deweloper</string>
+    <string name="about_developer_personal_site">Osobista strona</string>
     <string name="about_information_description">Aplikacja została napisana w Kotlin i C++. Jest używana żeby wkładać payloady na Nintendo Switch.</string>
 
     <!-- Strings for Instructions -->

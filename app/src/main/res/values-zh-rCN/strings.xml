@@ -11,6 +11,7 @@
     <!-- Strings for About -->
     <string name="about_category_information">信息</string>
     <string name="about_category_developer">开发人员</string>
+    <string name="about_developer_personal_site">个人网站</string>
     <string name="about_information_description">本应用使用 Kotlin 和 C++ 编程，他用于任天堂 Switch 加载 payloads。</string>
     <!-- Strings for Instructions -->
     <string name="instructions_category_cable">数据线</string>
