@@ -77,6 +77,8 @@
     <string name="dialog_payload_name">Type in your payload name - must have .bin at end of the name.</string>
     <string name="dialog_payload_url">Type in your payload\'s download url.</string>
     <string name="dialog_payload_download">Download</string>
+    <string name="dialog_payload_downloading">Downloading</string>
+    <string name="dialog_payload_from">from</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_payload_wrong">Are you sure this is correct payload file?</string>

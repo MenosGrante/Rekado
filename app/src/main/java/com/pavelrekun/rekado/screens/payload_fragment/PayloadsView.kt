@@ -178,36 +178,11 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
         builder.setPositiveButton(R.string.dialog_payload_download) {
             dialogInterface, i ->
             addPayloadFromUrl(payloadname.text.toString(), payloadurl.text.toString())
-            Toast.makeText(activity, "Downloading " + payloadname.text.toString() + " from " + payloadurl.text.toString(), Toast.LENGTH_LONG).show()
+            Toast.makeText(activity, R.string.dialog_payload_downloading.toString() + " " + payloadname.text.toString() + " " + R.string.dialog_payload_from.toString() + " " + payloadurl.text.toString(), Toast.LENGTH_LONG).show()
 
         }
         builder.show()
     }
-
-
-/*
-
-    fun addPayloadUrlOld() {
-        val alert = AlertDialog.Builder(activity)
-        val editurl = EditText(activity)
-        alert.setMessage("Enter Your Payload's url")
-        alert.setTitle("get your payload from a url")
-
-        alert.setView(editurl)
-
-        alert.setPositiveButton("Download", DialogInterface.OnClickListener { dialog, whichButton ->
-            payloadurl = editurl.text.toString()
-            addPayloadFromUrl(payloadurl, "ownpayload.bin")
-        })
-
-        alert.setNegativeButton("Cancel", DialogInterface.OnClickListener { dialog, whichButton ->
-            // what ever you want to do with No option.
-        })
-
-        alert.show()
-
-    }
-    */
 
     override fun onResume() {
         if (this::adapter.isInitialized) {
