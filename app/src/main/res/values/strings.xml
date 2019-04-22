@@ -72,6 +72,12 @@
     <string name="dialog_negative">Cancel</string>
     <string name="dialog_file_chooser_payload_title">Choose payload</string>
 
+
+    <string name="dialog_payload_download_title">Download your payload bin</string>
+    <string name="dialog_payload_name">Type in your payload name - must have .bin at end of the name.</string>
+    <string name="dialog_payload_url">Type in your payload\'s download url.</string>
+    <string name="dialog_payload_download">Download</string>
+
     <!-- Strings for Helper -->
     <string name="helper_error_file_payload_wrong">Are you sure this is correct payload file?</string>
 </resources>

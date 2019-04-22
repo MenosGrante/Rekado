@@ -10,8 +10,10 @@ object PayloadHelper {
 
     val FOLDER_PATH = "${Environment.getExternalStorageDirectory().absolutePath}/Rekado/"
 
-    const val BUNDLED_PAYLOAD_SX = "sx_loader.bin"
-    const val BUNDLED_PAYLOAD_REINX = "ReiNX.bin"
+    //I do not think we should bundle other payloads.
+    //TODO put in option to download your own payload from a url.
+    //ELY M.
+
     const val BUNDLED_PAYLOAD_HEKATE = "hekate.bin"
     const val BUNDLED_PAYLOAD_HEKATE_OLD = "hekate [4.6].bin"
 
@@ -38,7 +40,7 @@ object PayloadHelper {
 
     fun clearFolderWithoutBundled() {
         File(FOLDER_PATH).listFiles().forEach {
-            if (it.name != BUNDLED_PAYLOAD_SX || it.name != BUNDLED_PAYLOAD_REINX || it.name != BUNDLED_PAYLOAD_HEKATE) {
+            if (it.name != BUNDLED_PAYLOAD_HEKATE) {
                 it.delete()
             }
         }
@@ -46,7 +48,7 @@ object PayloadHelper {
 
     fun clearBundled() {
         File(FOLDER_PATH).listFiles().forEach {
-            if (it.name == BUNDLED_PAYLOAD_SX || it.name == BUNDLED_PAYLOAD_REINX || it.name == BUNDLED_PAYLOAD_HEKATE) {
+            if (it.name == BUNDLED_PAYLOAD_HEKATE) {
                 it.delete()
             }
         }

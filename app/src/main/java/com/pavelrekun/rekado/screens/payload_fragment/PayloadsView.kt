@@ -2,6 +2,7 @@ package com.pavelrekun.rekado.screens.payload_fragment
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.os.Environment
 import android.widget.Toast
 import com.pavelrekun.konae.Konae
 import com.pavelrekun.konae.filters.ExtensionFileFilter
@@ -17,10 +18,21 @@ import com.pavelrekun.rekado.services.utils.PermissionsUtils
 import com.pavelrekun.rekado.services.utils.SettingsUtils
 import com.pavelrekun.siga.services.extensions.tintIconReverse
 import kotlinx.android.synthetic.main.fragment_payloads.*
+import okhttp3.Interceptor
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import java.util.concurrent.TimeUnit
 import org.greenrobot.eventbus.EventBus
-import java.io.File
-import java.io.IOException
-
+import java.nio.charset.Charset
+import android.content.DialogInterface
+import android.text.Editable
+import android.widget.EditText
+import android.app.AlertDialog
+import android.view.LayoutInflater
+import android.view.View
+import kotlinx.coroutines.*
+import java.io.*
+import okio.Okio
 
 class PayloadsView(private val activity: BaseActivity, private val fragment: androidx.fragment.app.Fragment) : PayloadsContract.View {
 
@@ -55,6 +67,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
     }
 
     override fun initDesign() {
+        activity.payloadsAddUrl.tintIconReverse()
         activity.payloadsAdd.tintIconReverse()
     }
 
@@ -65,6 +78,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
     }
 
     override fun initClickListeners() {
+        activity.payloadsAddUrl.setOnClickListener { addPayloadUrl() }
         activity.payloadsAdd.setOnClickListener { addPayload() }
     }
 
@@ -114,6 +128,86 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
             LogHelper.log(LogHelper.ERROR, "Failed to add payload: ${payload.name}")
         }
     }
+
+
+    private val uiDispatcher: CoroutineDispatcher = Dispatchers.Main
+
+    fun addPayloadFromUrl(filename: String, url: String) = GlobalScope.launch(uiDispatcher) {
+
+        val path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Rekado/"
+        val client = OkHttpClient()
+
+        LogHelper.log(LogHelper.INFO, "rekado DOWNLOADING!!!!!!!! " + filename + " from "+url)
+
+        withContext(Dispatchers.IO) {
+            LogHelper.log(LogHelper.INFO, "rekado DOWNLOADING2222 " + filename + " from "+url)
+
+            try {
+                val request = Request.Builder()
+                        .url(url)
+                        .build()
+
+                val response = client.newCall(request).execute()
+
+
+                val Directory = File(path)
+                if (!Directory.exists()) {
+                    Directory.mkdirs()
+                }
+
+                val sink = Okio.buffer(Okio.sink(File(Directory, filename)))
+                sink.writeAll(response.body()?.source())
+                sink.close()
+                response.body()?.close()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+
+    }
+
+
+
+    fun addPayloadUrl() {
+        val builder = AlertDialog.Builder(activity)
+        val dialogLayout = LayoutInflater.from(activity).inflate(R.layout.dialog_payload_download, null)
+        builder.setTitle(R.string.dialog_payload_download_title)
+        val payloadname  = dialogLayout.findViewById<EditText>(R.id.payload_name)
+        val payloadurl  = dialogLayout.findViewById<EditText>(R.id.payload_url)
+        builder.setView(dialogLayout)
+        builder.setPositiveButton(R.string.dialog_payload_download) {
+            dialogInterface, i ->
+            addPayloadFromUrl(payloadname.text.toString(), payloadurl.text.toString())
+            Toast.makeText(activity, "Downloading " + payloadname.text.toString() + " from " + payloadurl.text.toString(), Toast.LENGTH_LONG).show()
+
+        }
+        builder.show()
+    }
+
+
+/*
+
+    fun addPayloadUrlOld() {
+        val alert = AlertDialog.Builder(activity)
+        val editurl = EditText(activity)
+        alert.setMessage("Enter Your Payload's url")
+        alert.setTitle("get your payload from a url")
+
+        alert.setView(editurl)
+
+        alert.setPositiveButton("Download", DialogInterface.OnClickListener { dialog, whichButton ->
+            payloadurl = editurl.text.toString()
+            addPayloadFromUrl(payloadurl, "ownpayload.bin")
+        })
+
+        alert.setNegativeButton("Cancel", DialogInterface.OnClickListener { dialog, whichButton ->
+            // what ever you want to do with No option.
+        })
+
+        alert.show()
+
+    }
+    */
 
     override fun onResume() {
         if (this::adapter.isInitialized) {

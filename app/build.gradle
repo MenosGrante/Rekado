@@ -45,7 +45,7 @@ android {
             outputFileName = "[${versionName}] Rekado [${versionCode}].apk"
         }
     }
-
+    
     aaptOptions {
         noCompress 'bin'
     }
@@ -63,6 +63,13 @@ dependencies {
     implementation "org.greenrobot:eventbus:$eventBusVersion"
     implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
     implementation "com.github.flipagram:android-assetcopier:$assetCopier"
+
+    // okhttp for downloading
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+
+    // coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutinesVersion"
 
     // Own
     implementation project(":konae")

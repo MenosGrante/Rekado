@@ -12,8 +12,7 @@ object MemoryUtils {
     fun copyBundledPayloads() {
         removeOldFiles()
 
-        copyFile(PayloadHelper.BUNDLED_PAYLOAD_SX)
-        copyFile(PayloadHelper.BUNDLED_PAYLOAD_REINX)
+
         copyFile(PayloadHelper.BUNDLED_PAYLOAD_HEKATE)
 
         EventBus.getDefault().post(Events.UpdatePayloadsListEvent())

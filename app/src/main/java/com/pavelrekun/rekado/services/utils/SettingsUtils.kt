@@ -23,7 +23,7 @@ object SettingsUtils {
     }
 
     fun getAutoInjectorPayload(): String {
-        return Paper.book().read(AUTO_INJECTOR_PAYLOAD, PayloadHelper.BUNDLED_PAYLOAD_SX)
+        return Paper.book().read(AUTO_INJECTOR_PAYLOAD, PayloadHelper.BUNDLED_PAYLOAD_HEKATE)
     }
 
     fun updateHideBundledEnabled(enabled: Boolean) {
