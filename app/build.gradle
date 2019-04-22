@@ -9,8 +9,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 39
-        versionName "2.6.4"
+        versionCode 40
+        versionName "2.6.5-elys-mod"
     }
 
     buildTypes {

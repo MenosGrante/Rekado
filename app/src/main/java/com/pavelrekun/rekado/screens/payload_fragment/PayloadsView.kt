@@ -18,18 +18,12 @@ import com.pavelrekun.rekado.services.utils.PermissionsUtils
 import com.pavelrekun.rekado.services.utils.SettingsUtils
 import com.pavelrekun.siga.services.extensions.tintIconReverse
 import kotlinx.android.synthetic.main.fragment_payloads.*
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import java.util.concurrent.TimeUnit
 import org.greenrobot.eventbus.EventBus
-import java.nio.charset.Charset
-import android.content.DialogInterface
-import android.text.Editable
 import android.widget.EditText
 import android.app.AlertDialog
 import android.view.LayoutInflater
-import android.view.View
 import kotlinx.coroutines.*
 import java.io.*
 import okio.Okio
@@ -178,7 +172,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
         builder.setPositiveButton(R.string.dialog_payload_download) {
             dialogInterface, i ->
             addPayloadFromUrl(payloadname.text.toString(), payloadurl.text.toString())
-            Toast.makeText(activity, R.string.dialog_payload_downloading.toString() + " " + payloadname.text.toString() + " " + R.string.dialog_payload_from.toString() + " " + payloadurl.text.toString(), Toast.LENGTH_LONG).show()
+            Toast.makeText(activity, activity.getString(R.string.dialog_payload_downloading) + " " + payloadname.text.toString() + " " + activity.getString(R.string.dialog_payload_from) + " " + payloadurl.text.toString(), Toast.LENGTH_LONG).show()
 
         }
         builder.show()
