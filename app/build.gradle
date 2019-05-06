@@ -10,7 +10,7 @@ android {
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
         versionCode 40
-        versionName "2.6.5-elys-mod"
+        versionName "2.6.5"
     }
 
     buildTypes {
