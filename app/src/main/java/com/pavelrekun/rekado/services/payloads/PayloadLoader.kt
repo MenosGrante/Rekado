@@ -33,7 +33,7 @@ class PayloadLoader : USBHandler {
     override fun handleDevice(device: UsbDevice) {
         Logger.info("Triggering selected payload!")
 
-        val context = RekadoApplication.instance.applicationContext
+        val context = RekadoApplication.context
 
         val usbManager = context.getSystemService(Context.USB_SERVICE) as UsbManager
         usbInterface = device.getInterface(0)
@@ -108,6 +108,8 @@ class PayloadLoader : USBHandler {
             }
             lowBuffer = lowBuffer xor true
             bytesSent += 0x1000
+
+            Thread.sleep(500) // TODO: Very experimental fix, that should be tested before launch
         }
 
         Logger.info("Sent $bytesSent bytes")

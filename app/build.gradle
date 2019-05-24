@@ -69,7 +69,6 @@ dependencies {
     implementation "com.github.flipagram:android-assetcopier:$assetCopier"
     implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
 
-
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion"

@@ -37,7 +37,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
 
     override fun prepareList() {
         if (!PermissionsUtils.checkPermissionGranted(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            PermissionsUtils.showPermissionDialog(activity, fragment, PermissionsUtils.PERMISSIONS_READ_REQUEST_CODE)
+            PermissionsUtils.showPermissionDialog(activity, fragment, PermissionsUtils.PERMISSIONS_WRITE_REQUEST_CODE)
         } else {
             initList()
         }
@@ -61,6 +61,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
     }
 
     override fun updateList() {
+        // FIXME: When we calling this method right after first start of application and adding payloads it won't update list, because adapter won't be initialized on that time
         if (this::adapter.isInitialized) {
             adapter.updateList()
         }

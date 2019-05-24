@@ -28,7 +28,7 @@ object MemoryUtils {
 
     private fun copyFile(inputPath: String) {
         try {
-            AssetCopier(RekadoApplication.instance.applicationContext)
+            AssetCopier(RekadoApplication.context)
                     .withFileScanning()
                     .copy(inputPath, File(PayloadHelper.FOLDER_PATH))
         } catch (e: Exception) {
