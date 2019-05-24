@@ -122,7 +122,7 @@
                         android:contentDescription="@null"
                         android:focusable="true"
                         android:padding="16dp"
-                        android:src="@drawable/ic_help" />
+                        android:src="@drawable/ic_instructions_help" />
 
                 </LinearLayout>
 

@@ -1,15 +1,12 @@
 package com.pavelrekun.rekado.services.payloads
 
 import android.content.Context
-import android.content.ServiceConnection
 import android.hardware.usb.UsbDevice
 import android.hardware.usb.UsbDeviceConnection
 import android.hardware.usb.UsbInterface
 import android.hardware.usb.UsbManager
 import com.pavelrekun.rekado.RekadoApplication
-import com.pavelrekun.rekado.services.logs.LogHelper
-import com.pavelrekun.rekado.services.logs.LogHelper.ERROR
-import com.pavelrekun.rekado.services.logs.LogHelper.INFO
+import com.pavelrekun.rekado.services.Logger
 import com.pavelrekun.rekado.services.usb.USBHandler
 import com.pavelrekun.rekado.services.utils.Utils
 import java.io.FileInputStream
@@ -34,7 +31,7 @@ class PayloadLoader : USBHandler {
     private lateinit var usbInterface: UsbInterface
 
     override fun handleDevice(device: UsbDevice) {
-        LogHelper.log(INFO, "Triggering selected payload!")
+        Logger.info("Triggering selected payload!")
 
         val context = RekadoApplication.instance.applicationContext
 
@@ -51,12 +48,12 @@ class PayloadLoader : USBHandler {
 
         val deviceID = ByteArray(16)
         if (usbConnection.bulkTransfer(startEndpoint, deviceID, deviceID.size, 999) != deviceID.size) {
-            LogHelper.log(ERROR, "Failed to get Device ID!")
+            Logger.error("Failed to get Device ID!")
             return
         }
 
 
-        LogHelper.log(INFO, "Device ID: ${Utils.bytesToHex(deviceID)}")
+        Logger.info("Device ID: ${Utils.bytesToHex(deviceID)}")
 
         /* [2] - Building payload */
 
@@ -80,7 +77,7 @@ class PayloadLoader : USBHandler {
             intermezzoStream.read(intermezzo)
             intermezzoStream.close()
         } catch (e: IOException) {
-            LogHelper.log(0, "Failed to read intermezzo: $e")
+            Logger.error("Failed to read intermezzo: $e")
             return
         }
 
@@ -91,7 +88,7 @@ class PayloadLoader : USBHandler {
         try {
             payload.put(getPayload())
         } catch (e: IOException) {
-            LogHelper.log(ERROR, "Failed to read payload: $e")
+            Logger.error("Failed to read payload: $e")
             return
         }
 
@@ -106,22 +103,22 @@ class PayloadLoader : USBHandler {
             payload.get(chunk)
 
             if (usbConnection.bulkTransfer(endEndpoint, chunk, chunk.size, 999) != chunk.size) {
-                LogHelper.log(ERROR, "Sending payload failed at offset $bytesSent")
+                Logger.error("Sending payload failed at offset $bytesSent")
                 return
             }
             lowBuffer = lowBuffer xor true
             bytesSent += 0x1000
         }
 
-        LogHelper.log(INFO, "Sent $bytesSent bytes")
+        Logger.info("Sent $bytesSent bytes")
 
         // 0x7000 = STACK_END = high DMA buffer address
         when (nativeTriggerExploit(usbConnection.fileDescriptor, 0x7000)) {
-            0 -> LogHelper.log(INFO, "Exploit triggered!")
-            -1 -> LogHelper.log(ERROR, "SUBMITURB failed!")
-            -2 -> LogHelper.log(ERROR, "DISCARDURB failed!")
-            -3 -> LogHelper.log(ERROR, "REAPURB failed!")
-            -4 -> LogHelper.log(ERROR, "Wrong URB reaped!  Maybe that doesn't matter?")
+            0 -> Logger.info("Exploit triggered!")
+            -1 -> Logger.error("SUBMITURB failed!")
+            -2 -> Logger.error("DISCARDURB failed!")
+            -3 -> Logger.error("REAPURB failed!")
+            -4 -> Logger.error("Wrong URB reaped!  Maybe that doesn't matter?")
         }
     }
 
@@ -133,10 +130,10 @@ class PayloadLoader : USBHandler {
         val chosenPayload = PayloadHelper.getChosen()
         val chosenPayloadFile = FileInputStream(chosenPayload.path)
 
-        LogHelper.log(INFO, "Opening chosen payload: ${chosenPayload.name}")
+        Logger.info("Opening chosen payload: ${chosenPayload.name}")
 
         val chosenPayloadData = ByteArray(chosenPayloadFile.available())
-        LogHelper.log(INFO, "Read ${Integer.toString(chosenPayloadFile.read(chosenPayloadData))} bytes from payload file!")
+        Logger.info("Read ${Integer.toString(chosenPayloadFile.read(chosenPayloadData))} bytes from payload file!")
 
         chosenPayloadFile.close()
         return chosenPayloadData

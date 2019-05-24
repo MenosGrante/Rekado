@@ -14,7 +14,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.dialogs.Dialogs
-import com.pavelrekun.rekado.services.logs.LogHelper
+import com.pavelrekun.rekado.services.Logger
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
@@ -69,10 +69,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
             autoInjectorPayload.isEnabled = newValue as Boolean
 
             if (newValue) {
-                LogHelper.log(LogHelper.INFO, "\"Auto injector\" enabled!")
+                Logger.info("\"Auto injector\" enabled!")
                 autoInjectorEnable.setTitle(R.string.settings_auto_injector_status_title_enabled)
             } else {
-                LogHelper.log(LogHelper.INFO, "\"Auto injector\" disabled!")
+                Logger.info("\"Auto injector\" disabled!")
                 autoInjectorEnable.setTitle(R.string.settings_auto_injector_status_title_disabled)
             }
 
@@ -98,7 +98,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 PayloadHelper.clearFolderWithoutBundled()
                 dialog.dismiss()
 
-                LogHelper.log(LogHelper.INFO, "Payloads database cleaned!")
+                Logger.info("Payloads database cleaned!")
             }
             true
         }

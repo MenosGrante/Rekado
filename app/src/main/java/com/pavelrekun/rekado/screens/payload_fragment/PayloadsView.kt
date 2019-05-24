@@ -9,8 +9,9 @@ import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.screens.payload_fragment.adapters.PayloadsAdapter
-import com.pavelrekun.rekado.services.eventbus.Events
-import com.pavelrekun.rekado.services.logs.LogHelper
+import com.pavelrekun.rekado.services.dialogs.Dialogs
+import com.pavelrekun.rekado.services.Events
+import com.pavelrekun.rekado.services.Logger
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
@@ -55,6 +56,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
     }
 
     override fun initDesign() {
+        activity.payloadsAddUrl.tintIconReverse()
         activity.payloadsAdd.tintIconReverse()
     }
 
@@ -65,6 +67,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
     }
 
     override fun initClickListeners() {
+        activity.payloadsAddUrl.setOnClickListener { Dialogs.showPayloadsDownloadDialog(activity) }
         activity.payloadsAdd.setOnClickListener { addPayload() }
     }
 
@@ -108,10 +111,10 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
             MemoryUtils.toFile(pathFile, "${PayloadHelper.FOLDER_PATH}/${payload.name}")
 
             EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
-            LogHelper.log(LogHelper.INFO, "Added new payload: ${payload.name}")
+            Logger.info("Added new payload: ${payload.name}")
         } catch (e: IOException) {
             e.printStackTrace()
-            LogHelper.log(LogHelper.ERROR, "Failed to add payload: ${payload.name}")
+            Logger.error("Failed to add payload: ${payload.name}")
         }
     }
 

@@ -1,7 +1,7 @@
 package com.pavelrekun.rekado.services.utils
 
 import com.pavelrekun.rekado.RekadoApplication
-import com.pavelrekun.rekado.services.eventbus.Events
+import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import flipagram.assetcopylib.AssetCopier
 import org.greenrobot.eventbus.EventBus

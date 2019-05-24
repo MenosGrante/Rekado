@@ -1,3 +1,8 @@
+!files
+git.txt
+/!files
+*.bat
+
 ### Android ###
 # Built application files
 *.apk

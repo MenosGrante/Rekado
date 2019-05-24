@@ -1,25 +1,30 @@
-package com.pavelrekun.rekado.services.logs
+package com.pavelrekun.rekado.services
 
 import com.pavelrekun.rekado.data.Log
 import io.paperdb.Paper
 
-object LogHelper {
+object Logger {
 
     private const val LOGS_LIST_KEY = "LOGS_LIST_KEY"
 
-    const val INFO = 1
-    const val ERROR = 0
+    private const val INFO = 1
+    private const val ERROR = 0
 
     private lateinit var logsList: MutableList<Log>
 
     fun init() {
         logsList = ArrayList()
-        log(INFO, "Application started!")
+        info("Application started!")
         saveLogs()
     }
 
-    fun log(type: Int, message: String) {
-        logsList.add(Log(message, type))
+    fun info(message: String) {
+        logsList.add(Log(message, INFO))
+        saveLogs()
+    }
+
+    fun error(message: String) {
+        logsList.add(Log(message, ERROR))
         saveLogs()
     }
 

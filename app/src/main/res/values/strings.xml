@@ -72,6 +72,11 @@
     <string name="dialog_negative">Cancel</string>
     <string name="dialog_file_chooser_payload_title">Choose payload</string>
 
+    <string name="dialog_payload_download_title">Download</string>
+    <string name="dialog_payload_download_name">Name</string>
+    <string name="dialog_payload_download_url" translatable="false">URL</string>
+    <string name="dialog_payload_download_button">Download</string>
+
     <!-- Strings for Helper -->
     <string name="helper_error_file_payload_wrong">Are you sure this is correct payload file?</string>
 </resources>

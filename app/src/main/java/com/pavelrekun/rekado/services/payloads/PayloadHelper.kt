@@ -1,8 +1,20 @@
 package com.pavelrekun.rekado.services.payloads
 
 import android.os.Environment
+import android.widget.Toast
+import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
+import com.pavelrekun.rekado.services.Events
+import com.pavelrekun.rekado.services.Logger
 import io.paperdb.Paper
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okio.Okio
+import org.greenrobot.eventbus.EventBus
 import java.io.File
 
 
@@ -70,6 +82,16 @@ object PayloadHelper {
         return "$FOLDER_PATH/$name"
     }
 
+    fun getRootDirectory(): File {
+        val file = File(FOLDER_PATH)
+
+        if (!file.exists()) {
+            file.mkdirs()
+        }
+
+        return file
+    }
+
     fun find(name: String): Payload? {
         for (payload in getAll()) {
             if (payload.name == name) {
@@ -87,4 +109,48 @@ object PayloadHelper {
     fun getChosen(): Payload {
         return Paper.book().read(CHOSEN_PAYLOAD)
     }
+
+    fun downloadPayload(activity: BaseActivity, name: String, url: String) = GlobalScope.launch(Dispatchers.Main) {
+        val properName = if (name.endsWith(".bin")) name else "$name.bin"
+        val httpClient = OkHttpClient()
+
+        try {
+            withContext(Dispatchers.Default) {
+                val request = Request.Builder()
+                        .url(url)
+                        .build()
+
+                val response = httpClient
+                        .newCall(request)
+                        .execute()
+                        .body()
+
+                val contentType = response?.contentType()?.subtype()
+
+                if (response != null && contentType != null && contentType == "octet-stream") {
+                    Logger.info("Downloading payload: $properName.")
+
+                    val targetPlace = File(getRootDirectory(), properName)
+
+                    if (!targetPlace.exists()) {
+                        targetPlace.mkdirs()
+                    }
+
+                    val sink = Okio.buffer(Okio.sink(targetPlace))
+                    sink.writeAll(response.source())
+                    sink.close()
+
+                    response.close()
+
+                    EventBus.getDefault().post(Events.PayloadDownloadedSuccessfully(properName))
+                } else {
+                    throw Exception()
+                }
+            }
+        } catch (e: Exception) {
+            Toast.makeText(activity, "Failed to download payload. Check your internet connection or typos in URL.", Toast.LENGTH_SHORT).show()
+            Logger.error("Failed to download payload: $properName.")
+        }
+    }
+
 }

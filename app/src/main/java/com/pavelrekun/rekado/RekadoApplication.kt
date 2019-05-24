@@ -2,7 +2,7 @@ package com.pavelrekun.rekado
 
 import android.annotation.SuppressLint
 import android.app.Application
-import com.pavelrekun.rekado.services.logs.LogHelper
+import com.pavelrekun.rekado.services.Logger
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.siga.data.Color
 import com.pavelrekun.siga.data.Theme
@@ -23,7 +23,7 @@ class RekadoApplication : Application() {
 
         Paper.init(this)
 
-        LogHelper.init()
+        Logger.init()
         PayloadHelper.init()
 
         configureThemeEngine()

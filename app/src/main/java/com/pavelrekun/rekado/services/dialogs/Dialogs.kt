@@ -1,31 +1,20 @@
 package com.pavelrekun.rekado.services.dialogs
 
-import android.content.Intent
-import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
-import androidx.core.app.ActivityCompat
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.callbacks.onDismiss
 import com.afollestad.materialdialogs.list.listItems
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
-import com.pavelrekun.rekado.screens.main_activity.MainActivity
-import com.pavelrekun.rekado.services.eventbus.Events
+import com.pavelrekun.rekado.services.Events
+import com.pavelrekun.rekado.services.extensions.getString
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
+import kotlinx.android.synthetic.main.dialog_payload_download.*
 import org.greenrobot.eventbus.EventBus
 
 
 object Dialogs {
-
-    fun showDialog(activity: BaseActivity, @StringRes title: Int, @StringRes description: Int) {
-        val builder = AlertDialog.Builder(activity)
-        builder.setTitle(title)
-        builder.setMessage(description)
-
-        val dialog = builder.create()
-        dialog.show()
-    }
 
     fun showPayloadsDialog(activity: BaseActivity): MaterialDialog {
         val dialog = MaterialDialog(activity)
@@ -56,20 +45,20 @@ object Dialogs {
         return resetDialog
     }
 
-    fun showRestartDialog(activity: BaseActivity) {
+    fun showPayloadsDownloadDialog(activity: BaseActivity) {
+        val view = activity.layoutInflater.inflate(R.layout.dialog_payload_download, null)
+
         val builder = AlertDialog.Builder(activity)
-        builder.setTitle(R.string.settings_restart_title)
-        builder.setMessage(R.string.settings_restart_message)
+        builder.setView(view)
+        builder.setTitle(R.string.dialog_payload_download_title)
 
-        builder.setNegativeButton(R.string.settings_restart_cancel) { _, _ -> }
+        val dialog = builder.create()
+        dialog.show()
 
-        builder.setPositiveButton(R.string.settings_restart_ok) { _, _ ->
-            ActivityCompat.finishAffinity(activity)
-            activity.startActivity(Intent(activity, MainActivity::class.java))
+        dialog.dialogDownloadPayloadDownload.setOnClickListener {
+            PayloadHelper.downloadPayload(activity, dialog.dialogDownloadPayloadName.getString(), dialog.dialogDownloadPayloadURL.getString())
+            dialog.dismiss()
         }
-
-        val restartDialog = builder.create()
-        restartDialog.show()
     }
 
 }

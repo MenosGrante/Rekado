@@ -31,7 +31,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="36dp"
                 android:contentDescription="@null"
-                android:src="@drawable/ic_launcher_hi_resolution" />
+                android:src="@drawable/pic_logo" />
 
             <TextView
                 android:layout_width="wrap_content"

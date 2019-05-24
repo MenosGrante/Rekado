@@ -14,7 +14,7 @@ object PermissionsUtils {
     const val PERMISSIONS_READ_REQUEST_CODE = 125
     const val PERMISSIONS_WRITE_REQUEST_CODE = 126
 
-    private fun requestPermissions(fragment: androidx.fragment.app.Fragment, permissions: Array<String>, code: Int) {
+    private fun requestPermissions(fragment: Fragment, permissions: Array<String>, code: Int) {
         fragment.requestPermissions(permissions, code)
     }
 
@@ -23,7 +23,7 @@ object PermissionsUtils {
         return result == PackageManager.PERMISSION_GRANTED
     }
 
-    fun showPermissionDialog(activity: Activity, fragment: androidx.fragment.app.Fragment, code: Int) {
+    fun showPermissionDialog(activity: Activity, fragment: Fragment, code: Int) {
         val builder = AlertDialog.Builder(activity)
         builder.setTitle(R.string.permission_storage_dialog_title)
         builder.setMessage(R.string.permission_storage_dialog_description)

@@ -4,10 +4,10 @@ object SerialDefinier {
 
     private var number: Long = 0
 
-    const val STATUS_NOT_PATCHED = 0
-    const val STATUS_PATCHED = 1
-    const val STATUS_MAY_BE_PATCHED = 2
-    const val STATUS_UNDEFINED = 3
+    private const val STATUS_NOT_PATCHED = 0
+    private const val STATUS_PATCHED = 1
+    private const val STATUS_MAY_BE_PATCHED = 2
+    private const val STATUS_UNDEFINED = 3
 
     fun defineConsoleStatus(serialNumber: String): Int {
         this.number = serialNumber.takeLastWhile { !it.isLetter() }.toLong()

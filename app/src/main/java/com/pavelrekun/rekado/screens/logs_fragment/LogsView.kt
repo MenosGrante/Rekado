@@ -4,7 +4,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.screens.logs_fragment.adapters.LogsAdapter
-import com.pavelrekun.rekado.services.logs.LogHelper
+import com.pavelrekun.rekado.services.Logger
 import com.pavelrekun.siga.services.extensions.tintIconReverse
 import kotlinx.android.synthetic.main.fragment_logs.*
 
@@ -21,7 +21,7 @@ class LogsView(private val activity: BaseActivity) : LogsContract.View {
     }
 
     override fun initList() {
-        adapter = LogsAdapter(LogHelper.getLogs())
+        adapter = LogsAdapter(Logger.getLogs())
 
         activity.logsActionsList.setHasFixedSize(true)
         activity.logsActionsList.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(activity)
@@ -37,7 +37,7 @@ class LogsView(private val activity: BaseActivity) : LogsContract.View {
 
     override fun initClickListeners() {
         activity.logsClearButton.setOnClickListener {
-            LogHelper.clearLogs()
+            Logger.clearLogs()
 
             if (this::adapter.isInitialized) {
                 adapter.updateList()

@@ -6,9 +6,8 @@ import android.os.Bundle
 import com.afollestad.materialdialogs.MaterialDialog
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.dialogs.Dialogs
-import com.pavelrekun.rekado.services.eventbus.Events
-import com.pavelrekun.rekado.services.logs.LogHelper
-import com.pavelrekun.rekado.services.logs.LogHelper.INFO
+import com.pavelrekun.rekado.services.Events
+import com.pavelrekun.rekado.services.Logger
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.payloads.PayloadLoader
 import com.pavelrekun.rekado.services.utils.SettingsUtils
@@ -32,7 +31,7 @@ class USBReceiver : BaseActivity() {
         if (intent.action == UsbManager.ACTION_USB_DEVICE_ATTACHED) {
             device = intent.getParcelableExtra(UsbManager.EXTRA_DEVICE)
 
-            LogHelper.log(INFO, "USB device connected: ${device.deviceName}")
+            Logger.info("USB device connected: ${device.deviceName}")
 
             if (SettingsUtils.checkAutoInjectorEnabled()) {
                 PayloadHelper.putChosen(PayloadHelper.find(SettingsUtils.getAutoInjectorPayload())!!)
@@ -50,7 +49,7 @@ class USBReceiver : BaseActivity() {
 
         usbHandler?.handleDevice(device)
 
-        LogHelper.log(INFO, "Payload loading finished for device: ${device.deviceName}")
+        Logger.info("Payload loading finished for device: ${device.deviceName}")
 
         finishReceiver()
     }

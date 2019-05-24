@@ -52,6 +52,10 @@ android {
 }
 
 dependencies {
+    // Own
+    implementation project(":konae")
+    implementation(name: 'siga', ext: 'aar')
+
     implementation "com.google.android.material:material:$materialComponentsVersion"
     implementation "androidx.recyclerview:recyclerview:$androidXOtherVersion"
     implementation "androidx.browser:browser:$androidXOtherVersion"
@@ -63,11 +67,11 @@ dependencies {
     implementation "org.greenrobot:eventbus:$eventBusVersion"
     implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
     implementation "com.github.flipagram:android-assetcopier:$assetCopier"
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
 
-    // Own
-    implementation project(":konae")
-    implementation(name: 'siga', ext: 'aar')
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutinesVersion"
 }

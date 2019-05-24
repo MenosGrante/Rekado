@@ -1,4 +1,4 @@
-package com.pavelrekun.rekado.services.eventbus
+package com.pavelrekun.rekado.services
 
 class Events {
 
@@ -7,5 +7,7 @@ class Events {
     class PayloadSelected
 
     class PayloadNotSelected
+
+    class PayloadDownloadedSuccessfully(val payloadName: String)
 
 }

@@ -1,15 +1,14 @@
 package com.pavelrekun.rekado.screens.logs_fragment.adapters
 
 import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.data.Log
-import com.pavelrekun.rekado.services.logs.LogHelper
-import com.pavelrekun.rekado.services.logs.LogHelper.ERROR
+import com.pavelrekun.rekado.services.Logger
+import com.pavelrekun.rekado.services.Logger.ERROR
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_log.*
 
@@ -18,7 +17,7 @@ class LogsAdapter(var data: MutableList<Log>) : androidx.recyclerview.widget.Rec
     override fun getItemCount() = data.size
 
     fun updateList() {
-        this.data = LogHelper.getLogs()
+        this.data = Logger.getLogs()
 
         notifyDataSetChanged()
     }

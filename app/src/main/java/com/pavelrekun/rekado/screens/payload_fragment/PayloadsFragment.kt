@@ -6,7 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
-import com.pavelrekun.rekado.services.eventbus.Events
+import com.pavelrekun.rekado.services.Events
+import com.pavelrekun.rekado.services.Logger
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -33,8 +34,14 @@ class PayloadsFragment : androidx.fragment.app.Fragment() {
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onEvent(eventPayloads: Events.UpdatePayloadsListEvent) {
+    fun onEvent(event: Events.UpdatePayloadsListEvent) {
         mvpView.updateList()
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onEvent(event: Events.PayloadDownloadedSuccessfully) {
+        mvpView.updateList()
+        Logger.info("Payload ${event.payloadName} downloaded successfully.")
     }
 
     override fun onResume() {
