@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="instructions_category_cable">Kabel</string>
-    <string name="about_category_information">Informasi</string>
+    <string name="about_category_description">Informasi</string>
     <string name="navigation_settings">Pengaturan</string>
     <string name="navigation_donate">Donasi</string>
     <string name="navigation_about">Tentang</string>

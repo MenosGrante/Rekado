@@ -11,4 +11,5 @@ object Constants {
     const val PERSONAL_SITE_LINK = "https://pavelrekun.dev"
     const val TWITTER_LINK = "https://twitter.com/menosgrante"
     const val DONATE_LINK = "https://www.buymeacoffee.com/pavelrekun"
+    const val PRODUCT_HUNT_LINK = "https://producthunt.com/@menosgrante/made"
 }

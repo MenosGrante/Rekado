@@ -8,7 +8,7 @@
     <string name="navigation_settings">Paramètres</string>
 
     <!-- Strings for About -->
-    <string name="about_category_information">Informations</string>
+    <string name="about_category_description">Informations</string>
     <string name="about_category_developer">Développeur</string>
     <string name="about_developer_personal_site">Site personnel</string>
     <string name="about_information_description">Application écrite en Kotlin et C++. Elle sert à injecter des payloads ou démarrer Lakka sur la Switch</string>

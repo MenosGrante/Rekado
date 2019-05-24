@@ -10,7 +10,7 @@
     <string name="navigation_settings">Configuracion</string>
 
     <!-- Strings for About -->
-    <string name="about_category_information">Informacion</string>
+    <string name="about_category_description">Informacion</string>
     <string name="about_category_developer">Desarrollador</string>
     <string name="about_developer_personal_site">Sitio personal</string>
     <string name="about_information_description">Aplicacion escrita en Kotlin y C++. Se utiliza para injectar los payloads en el Nintendo Switch.</string>

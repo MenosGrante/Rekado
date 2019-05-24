@@ -12,10 +12,11 @@
     <string name="navigation_serial_checker">Serial checker</string>
 
     <!-- Strings for About -->
-    <string name="about_category_information">Information</string>
+    <string name="about_category_description">Description</string>
     <string name="about_category_developer">Developer</string>
     <string name="about_information_description">Application written in Kotlin and C++. It is used to inject payloads on the Nintendo Switch.</string>
     <string name="about_developer_personal_site">Personal site</string>
+    <string name="about_developer_product_hunt" translatable="false">Product Hunt</string>
     <string name="about_developer_github" translatable="false">GitHub</string>
     <string name="about_developer_twitter" translatable="false">Twitter</string>
 
