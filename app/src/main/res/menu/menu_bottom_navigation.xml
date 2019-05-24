@@ -3,21 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigation_payloads"
+        android:id="@+id/navigationPayloads"
         android:enabled="true"
         android:icon="@drawable/ic_navigation_payloads"
         android:title="@string/navigation_payloads"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/navigation_instructions"
+        android:id="@+id/navigationTools"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_tools"
+        android:title="@string/navigation_tools"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/navigationInstructions"
         android:enabled="true"
         android:icon="@drawable/ic_navigation_instructions"
         android:title="@string/navigation_instructions"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/navigation_logs"
+        android:id="@+id/navigationLogs"
         android:enabled="true"
         android:icon="@drawable/ic_navigation_logs"
         android:title="@string/navigation_logs"

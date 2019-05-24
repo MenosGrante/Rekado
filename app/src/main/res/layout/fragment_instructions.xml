@@ -107,8 +107,9 @@
                     <TextView
                         style="@style/Text.Subtitle"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:gravity="center_vertical"
                         android:text="@string/instructions_category_rcm" />
 
                     <ImageView
@@ -122,7 +123,7 @@
                         android:contentDescription="@null"
                         android:focusable="true"
                         android:padding="16dp"
-                        android:src="@drawable/ic_instructions_help" />
+                        android:src="@drawable/ic_information_help" />
 
                 </LinearLayout>
 

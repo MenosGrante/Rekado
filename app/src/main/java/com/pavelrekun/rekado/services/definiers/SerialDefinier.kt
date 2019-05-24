@@ -7,9 +7,19 @@ object SerialDefinier {
     private const val STATUS_NOT_PATCHED = 0
     private const val STATUS_PATCHED = 1
     private const val STATUS_MAY_BE_PATCHED = 2
-    private const val STATUS_UNDEFINED = 3
+    private const val STATUS_ERROR = 3
 
-    fun defineConsoleStatus(serialNumber: String): Int {
+    fun defineConsoleStatus(serialNumber: String): String {
+        return when (defineConsoleStatusInternal(serialNumber)) {
+            STATUS_NOT_PATCHED -> "Not patched"
+            STATUS_PATCHED -> "Patched"
+            STATUS_MAY_BE_PATCHED -> "May be patched"
+            STATUS_ERROR -> "Can't check this serial number!"
+            else -> "Can't check this serial number!"
+        }
+    }
+
+    private fun defineConsoleStatusInternal(serialNumber: String): Int {
         this.number = serialNumber.takeLastWhile { !it.isLetter() }.toLong()
 
         return when (serialNumber.take(4)) {
@@ -21,7 +31,7 @@ object SerialDefinier {
             "XAJ7" -> detectXAJ7Status()
             "XAW9" -> detectXAW9Status()
             "XAK" -> detectXAKStatus()
-            else -> STATUS_UNDEFINED
+            else -> STATUS_ERROR
         }
     }
 

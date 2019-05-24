@@ -12,6 +12,7 @@ import com.pavelrekun.rekado.screens.instructions_fragment.InstructionsFragment
 import com.pavelrekun.rekado.screens.logs_fragment.LogsFragment
 import com.pavelrekun.rekado.screens.payload_fragment.PayloadsFragment
 import com.pavelrekun.rekado.screens.settings_activity.SettingsActivity
+import com.pavelrekun.rekado.screens.tools_fragment.ToolsFragment
 import com.pavelrekun.rekado.services.dialogs.DonateDialog
 import com.pavelrekun.siga.services.extensions.convertDPtoPX
 import kotlinx.android.synthetic.main.activity_main.*
@@ -33,8 +34,8 @@ class MainView(private val activity: BaseActivity, private val savedInstanceStat
 
     override fun initNavigationClickListener() {
         if (savedInstanceState == null) {
-            chooseNavigationItem(R.id.navigation_instructions)
-            activity.mainNavigationBar.selectedItemId = R.id.navigation_instructions
+            chooseNavigationItem(R.id.navigationInstructions)
+            activity.mainNavigationBar.selectedItemId = R.id.navigationInstructions
         }
 
         activity.mainNavigationBar.setOnNavigationItemSelectedListener {
@@ -72,9 +73,10 @@ class MainView(private val activity: BaseActivity, private val savedInstanceStat
         var fragment: Fragment? = null
 
         when (id) {
-            R.id.navigation_payloads -> fragment = PayloadsFragment()
-            R.id.navigation_instructions -> fragment = InstructionsFragment()
-            R.id.navigation_logs -> fragment = LogsFragment()
+            R.id.navigationPayloads -> fragment = PayloadsFragment()
+            R.id.navigationTools -> fragment = ToolsFragment()
+            R.id.navigationInstructions -> fragment = InstructionsFragment()
+            R.id.navigationLogs -> fragment = LogsFragment()
         }
 
         if (fragment != null) {

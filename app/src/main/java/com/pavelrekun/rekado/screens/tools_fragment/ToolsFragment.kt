@@ -1,4 +1,4 @@
-package com.pavelrekun.rekado.screens.logs_fragment
+package com.pavelrekun.rekado.screens.tools_fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,25 +8,21 @@ import androidx.fragment.app.Fragment
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 
-class LogsFragment : Fragment() {
+class ToolsFragment : Fragment() {
 
-    private lateinit var mvpView: LogsContract.View
+    private lateinit var mvpView: ToolsContract.View
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_logs, container, false)
+        val view = inflater.inflate(R.layout.fragment_tools, container, false)
         val activity = activity as BaseActivity
 
-        mvpView = LogsView(activity)
+        mvpView = ToolsView(activity, view)
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mvpView.initViews()
+        mvpView.onViewCreated()
     }
 
-    override fun onResume() {
-        super.onResume()
-        mvpView.onResume()
-    }
 }
