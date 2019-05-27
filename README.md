@@ -33,6 +33,7 @@ This should not happen when using the "correct" payloads. But I am not responsib
 ## Credits
 * [DavidBuchanan314](https://github.com/DavidBuchanan314) for creating NXLoader.
 * [ealfonso93](https://github.com/ealfonso93) for contributing in this project.
+* [ELY3M](https://github.com/ELY3M) for contributing in this project.
 
 ## Donate
 I have created and supporting this application in my free time, so if you want to support me, follow my <a href="https://www.buymeacoffee.com/pavelrekun" target="_blank">"Buy me coffee"</a> link :)
