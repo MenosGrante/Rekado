@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="translators_languages" translatable="false">
+        <item>English</item> <!-- English -->
+        <item>Русский</item> <!-- Russian -->
+        <item>Українська</item> <!-- Ukrainian -->
+    </string-array>
+
+    <string-array name="translators_people" translatable="false">
+        <item>Pavel Rekun (Menos)</item> <!-- English -->
+        <item>Pavel Rekun (Menos)</item> <!-- Russian -->
+        <item>Pavel Rekun (Menos)</item> <!-- Ukrainian -->
+    </string-array>
+
+</resources>

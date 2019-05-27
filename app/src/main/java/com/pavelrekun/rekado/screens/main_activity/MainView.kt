@@ -13,6 +13,7 @@ import com.pavelrekun.rekado.screens.logs_fragment.LogsFragment
 import com.pavelrekun.rekado.screens.payload_fragment.PayloadsFragment
 import com.pavelrekun.rekado.screens.settings_activity.SettingsActivity
 import com.pavelrekun.rekado.screens.tools_fragment.ToolsFragment
+import com.pavelrekun.rekado.screens.translators_activity.TranslatorsActivity
 import com.pavelrekun.rekado.services.dialogs.DonateDialog
 import com.pavelrekun.siga.services.extensions.convertDPtoPX
 import kotlinx.android.synthetic.main.activity_main.*
@@ -62,6 +63,11 @@ class MainView(private val activity: BaseActivity, private val savedInstanceStat
                 val donateDialog = DonateDialog(activity)
                 donateDialog.window.setLayout(360.convertDPtoPX(activity), ViewGroup.LayoutParams.WRAP_CONTENT)
                 donateDialog.show()
+                true
+            }
+
+            R.id.navigation_translators -> {
+                activity.startActivity(Intent(activity, TranslatorsActivity::class.java))
                 true
             }
 

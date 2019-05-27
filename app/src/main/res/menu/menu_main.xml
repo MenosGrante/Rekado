@@ -6,6 +6,10 @@
         android:title="@string/navigation_settings" />
 
     <item
+        android:id="@+id/navigation_translators"
+        android:title="@string/navigation_translators" />
+
+    <item
         android:id="@+id/navigation_donate"
         android:title="@string/navigation_donate" />
 
