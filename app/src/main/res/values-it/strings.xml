@@ -65,6 +65,9 @@
     <string name="dialog_reset_payloads_summary">Sei sicuro di volere eliminare i payload?</string>
     <string name="dialog_negative">Annulla</string>
     <string name="dialog_file_chooser_payload_title">Scegli payload</string>
+    <string name="dialog_button_storage_internal">Interna</string>
+    <string name="dialog_button_storage_external">Esterna</string>
+    <string name="dialog_button_negative">Chiudi</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_payload_wrong">Sei sicuro che sia il file payload giusto?</string>

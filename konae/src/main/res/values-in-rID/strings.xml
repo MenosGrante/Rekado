@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="dialog_button_storage_internal">Dalam</string>
-    <string name="dialog_button_storage_external">Luar</string>
-    <string name="dialog_button_negative">Tutup</string>
-</resources>

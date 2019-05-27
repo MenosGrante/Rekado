@@ -66,6 +66,9 @@
     <string name="dialog_reset_payloads_summary">Вы действительно хотите удалить все загрузчики?</string>
     <string name="dialog_negative">Отмена</string>
     <string name="dialog_file_chooser_payload_title">Выбор загрузчика</string>
+    <string name="dialog_button_storage_internal">Внутренняя</string>
+    <string name="dialog_button_storage_external">Внешняя</string>
+    <string name="dialog_button_negative">Закрыть</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_payload_wrong">Вы уверены, что это правильный загрузчик?</string>

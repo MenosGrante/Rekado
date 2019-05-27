@@ -65,6 +65,9 @@
     <string name="dialog_reset_payloads_summary">Czy jesteś pewien że chcesz usunąć payloady?</string>
     <string name="dialog_negative">Anuluj</string>
     <string name="dialog_file_chooser_payload_title">Wybierz payload</string>
+    <string name="dialog_button_storage_internal">Dysk lokalny</string>
+    <string name="dialog_button_storage_external">Karta SD/Dysk na USB</string>
+    <string name="dialog_button_negative">Zamknij</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_payload_wrong">Czy jesteś pewien że to jest prawidłowy payload?</string>

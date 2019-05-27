@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 
-class InstructionsFragment : androidx.fragment.app.Fragment() {
+class InstructionsFragment : Fragment() {
 
     private lateinit var mvpView: InstructionsContract.View
 

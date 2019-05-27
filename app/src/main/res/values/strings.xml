@@ -78,11 +78,13 @@
     <string name="dialog_positive" translatable="false">OK</string>
     <string name="dialog_negative">Cancel</string>
     <string name="dialog_file_chooser_payload_title">Choose payload</string>
-
     <string name="dialog_payload_download_title">Download</string>
     <string name="dialog_payload_download_name">Name</string>
     <string name="dialog_payload_download_url" translatable="false">URL</string>
     <string name="dialog_payload_download_button">Download</string>
+    <string name="dialog_button_storage_internal">Internal</string>
+    <string name="dialog_button_storage_external">External</string>
+    <string name="dialog_button_negative">Close</string>
 
     <!-- Strings for Serial Checker -->
     <string name="serial_checker_category_checker">Checker</string>

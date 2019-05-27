@@ -29,23 +29,11 @@ This should not happen when using the "correct" payloads. But I am not responsib
 
 **I want to help in Rekado's localization to my language, what should I do?**
 
-Rekado's localization files placed in few places:
-* \app\src\main\res\values\strings.xml
-* \konae\src\main\res\values\strings.xml
-
-You should translate it. Files marked with **translatable="false"** should not be included in your localization. After finishing create **Pull request** and your localization will be added in Rekado.
+All localization files moved to OneSky platform (which I am using for my other projects) and if you want to add/update/check any localization follow [this link](https://rekundevelopment.oneskyapp.com/collaboration/project?id=336657) to start. I will decline all pull requests with your localizations and will accept only OneSky versions, which I will manually add in new updates.
 
 ## Credits
 * [DavidBuchanan314](https://github.com/DavidBuchanan314) for creating NXLoader.
 * [ealfonso93](https://github.com/ealfonso93) for contributing in this project.
-* [unbranched](https://github.com/unbranched) for Italian localization.
-* [wendyliga](https://github.com/wendyliga) for Indonesian localization.
-* [javito1081](https://github.com/javito1081) for Spanish localization.
-* [TheSergioEduP](https://github.com/TheSergioEduP) for Portuguese (Portugal) localization.
-* [DavidOliM](https://github.com/DavidOliM) for Portuguese (Brazil) localization.
-* [carlchina](https://github.com/carlchina) for Chinese Simplified localization.
-* [tiliarou](https://github.com/tiliarou) for French localization.
-* [mixon606](https://github.com/mixon606) for Polish localization.
 
 ## Donate
 I have created and supporting this application in my free time, so if you want to support me, follow my <a href="https://www.buymeacoffee.com/pavelrekun" target="_blank">"Buy me coffee"</a> link :)

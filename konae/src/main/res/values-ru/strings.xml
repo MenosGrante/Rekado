@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="dialog_button_storage_internal">Внутренняя</string>
-    <string name="dialog_button_storage_external">Внешняя</string>
-    <string name="dialog_button_negative">Закрыть</string>
-</resources>

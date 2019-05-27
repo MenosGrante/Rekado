@@ -66,6 +66,9 @@
     <string name="dialog_reset_payloads_summary">Ви дійсно хочете видалити всі завантажувачі?</string>
     <string name="dialog_negative">Скасувати</string>
     <string name="dialog_file_chooser_payload_title">Вибір завантажувача</string>
+    <string name="dialog_button_storage_internal">Внутрішня</string>
+    <string name="dialog_button_storage_external">Зовнішня</string>
+    <string name="dialog_button_negative">Закрити</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_payload_wrong">Ви впевнені, що це правильний завантажувач?</string>

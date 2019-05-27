@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="dialog_button_storage_internal">Interne</string>
-    <string name="dialog_button_storage_external">Externe</string>
-    <string name="dialog_button_negative">Fermer</string>
-</resources>

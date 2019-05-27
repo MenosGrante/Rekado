@@ -3,15 +3,17 @@ package com.pavelrekun.rekado.screens.payload_fragment
 import android.Manifest
 import android.content.pm.PackageManager
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.pavelrekun.konae.Konae
 import com.pavelrekun.konae.filters.ExtensionFileFilter
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.screens.payload_fragment.adapters.PayloadsAdapter
-import com.pavelrekun.rekado.services.dialogs.Dialogs
 import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.Logger
+import com.pavelrekun.rekado.services.dialogs.Dialogs
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.PermissionsUtils
@@ -23,7 +25,7 @@ import java.io.File
 import java.io.IOException
 
 
-class PayloadsView(private val activity: BaseActivity, private val fragment: androidx.fragment.app.Fragment) : PayloadsContract.View {
+class PayloadsView(private val activity: BaseActivity, private val fragment: Fragment) : PayloadsContract.View {
 
     private lateinit var adapter: PayloadsAdapter
 
@@ -37,7 +39,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
 
     override fun prepareList() {
         if (!PermissionsUtils.checkPermissionGranted(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            PermissionsUtils.showPermissionDialog(activity, fragment, PermissionsUtils.PERMISSIONS_WRITE_REQUEST_CODE)
+            PermissionsUtils.showPermissionDialog(activity, fragment, PermissionsUtils.PERMISSIONS_GET_PAYLOADS)
         } else {
             initList()
         }
@@ -51,7 +53,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
         adapter = PayloadsAdapter(PayloadHelper.getAll())
 
         activity.payloadsList.setHasFixedSize(true)
-        activity.payloadsList.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(activity)
+        activity.payloadsList.layoutManager = LinearLayoutManager(activity)
         activity.payloadsList.adapter = adapter
     }
 
@@ -61,7 +63,6 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
     }
 
     override fun updateList() {
-        // FIXME: When we calling this method right after first start of application and adding payloads it won't update list, because adapter won't be initialized on that time
         if (this::adapter.isInitialized) {
             adapter.updateList()
         }
@@ -82,7 +83,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: and
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         when (requestCode) {
-            PermissionsUtils.PERMISSIONS_READ_REQUEST_CODE -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            PermissionsUtils.PERMISSIONS_GET_PAYLOADS -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 initList()
             }
             PermissionsUtils.PERMISSIONS_WRITE_REQUEST_CODE -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {

@@ -60,6 +60,9 @@
     <string name="dialog_reset_payloads_summary">确定要删除 payload 吗？</string>
     <string name="dialog_negative">取消</string>
     <string name="dialog_file_chooser_payload_title">选择 payload</string>
+    <string name="dialog_button_storage_internal">内部</string>
+    <string name="dialog_button_storage_external">外部</string>
+    <string name="dialog_button_negative">关闭</string>
     <!-- Strings for Helper -->
     <string name="helper_error_file_payload_wrong">您确定这是正确的 Payload 吗？</string>
 </resources>

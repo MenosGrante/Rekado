@@ -14,6 +14,8 @@ object PermissionsUtils {
     const val PERMISSIONS_READ_REQUEST_CODE = 125
     const val PERMISSIONS_WRITE_REQUEST_CODE = 126
 
+    const val PERMISSIONS_GET_PAYLOADS = 130
+
     private fun requestPermissions(fragment: Fragment, permissions: Array<String>, code: Int) {
         fragment.requestPermissions(permissions, code)
     }
