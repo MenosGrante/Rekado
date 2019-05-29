@@ -6,6 +6,7 @@ import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.definiers.SerialDefinier
 import com.pavelrekun.rekado.services.extensions.getString
+import com.pavelrekun.rekado.services.extensions.isEmpty
 import com.pavelrekun.rekado.services.utils.Utils
 import kotlinx.android.synthetic.main.activity_serial_checker.*
 
@@ -32,7 +33,16 @@ class SerialCheckerView(private val activity: BaseActivity) : SerialCheckerContr
 
     override fun initClickListeners() {
         activity.serialCheckerCheck.setOnClickListener {
-            Toast.makeText(activity, SerialDefinier.defineConsoleStatus(activity.serialCheckerField.getString()), Toast.LENGTH_SHORT).show()
+            if (!activity.serialCheckerField.isEmpty()) {
+                try {
+                    val text = SerialDefinier.defineConsoleStatus(activity.serialCheckerField.getString())
+                    Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()
+                } catch (e: Exception) {
+                    Toast.makeText(activity, R.string.serial_checker_status_error, Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(activity, R.string.serial_checker_status_empty, Toast.LENGTH_SHORT).show()
+            }
         }
 
         activity.serialCheckerHelp.setOnClickListener {

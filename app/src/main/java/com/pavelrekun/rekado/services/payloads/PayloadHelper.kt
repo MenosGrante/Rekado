@@ -2,6 +2,7 @@ package com.pavelrekun.rekado.services.payloads
 
 import android.os.Environment
 import android.widget.Toast
+import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.Events
@@ -116,14 +117,9 @@ object PayloadHelper {
 
         try {
             withContext(Dispatchers.Default) {
-                val request = Request.Builder()
-                        .url(url)
-                        .build()
+                val request = Request.Builder().url(url).build()
 
-                val response = httpClient
-                        .newCall(request)
-                        .execute()
-                        .body()
+                val response = httpClient.newCall(request).execute().body()
 
                 val contentType = response?.contentType()?.subtype()
 
@@ -131,10 +127,6 @@ object PayloadHelper {
                     Logger.info("Downloading payload: $properName.")
 
                     val targetPlace = File(getRootDirectory(), properName)
-
-                    if (!targetPlace.exists()) {
-                        targetPlace.mkdirs()
-                    }
 
                     val sink = Okio.buffer(Okio.sink(targetPlace))
                     sink.writeAll(response.source())
@@ -146,9 +138,14 @@ object PayloadHelper {
                 } else {
                     throw Exception()
                 }
+
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(activity, activity.getString(R.string.payloads_download_status_success, properName), Toast.LENGTH_SHORT).show()
+                }
             }
         } catch (e: Exception) {
-            Toast.makeText(activity, "Failed to download payload. Check your internet connection or typos in URL.", Toast.LENGTH_SHORT).show()
+            e.printStackTrace()
+            Toast.makeText(activity, activity.getString(R.string.payloads_download_status_error, properName), Toast.LENGTH_SHORT).show()
             Logger.error("Failed to download payload: $properName.")
         }
     }

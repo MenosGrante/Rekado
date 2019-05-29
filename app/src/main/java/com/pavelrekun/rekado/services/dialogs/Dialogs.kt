@@ -1,5 +1,6 @@
 package com.pavelrekun.rekado.services.dialogs
 
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.callbacks.onDismiss
@@ -9,6 +10,7 @@ import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.extensions.getString
+import com.pavelrekun.rekado.services.extensions.isEmpty
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import kotlinx.android.synthetic.main.dialog_payload_download.*
 import org.greenrobot.eventbus.EventBus
@@ -56,8 +58,12 @@ object Dialogs {
         dialog.show()
 
         dialog.dialogDownloadPayloadDownload.setOnClickListener {
-            PayloadHelper.downloadPayload(activity, dialog.dialogDownloadPayloadName.getString(), dialog.dialogDownloadPayloadURL.getString())
-            dialog.dismiss()
+            if(!dialog.dialogDownloadPayloadName.isEmpty() && !dialog.dialogDownloadPayloadURL.isEmpty()) {
+                PayloadHelper.downloadPayload(activity, dialog.dialogDownloadPayloadName.getString(), dialog.dialogDownloadPayloadURL.getString())
+                dialog.dismiss()
+            } else {
+                Toast.makeText(activity, R.string.payloads_download_status_empty, Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

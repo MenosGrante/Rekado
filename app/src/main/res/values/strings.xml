@@ -21,6 +21,11 @@
     <string name="about_developer_github" translatable="false">GitHub</string>
     <string name="about_developer_twitter" translatable="false">Twitter</string>
 
+    <!-- Strings for Payloads -->
+    <string name="payloads_download_status_empty">Name or URL should not be empty!</string>
+    <string name="payloads_download_status_success">Successfully downloaded %1$s payload!</string>
+    <string name="payloads_download_status_error">Error occurred during downloading %1$s payload. Check you connection or typos in URL.</string>
+
     <!-- Strings for Tools -->
     <string name="tools_serial_checker_title">Serial checker</string>
     <string name="tools_serial_checker_description">Check if you Nintendo Switch is hackable using your unit\'s serial number</string>
@@ -100,6 +105,11 @@
     <string name="serial_checker_information_xaj7">Serials beginning with XAJ7\nXAJ70000000000 - XAJ70040000000: Not patched\nXAJ70040000000 - XAJ70050000000: Possibly patched\nXAJ70050000000 and higher: Patched\n\n</string>
     <string name="serial_checker_information_xaw9">Serials beginning with XAW9\nRefurbished units directly from Nintendo, no information, but very possible all of them are patched.\n\n</string>
     <string name="serial_checker_information_xak">Serials beginning with XAK\nNo information available, since those are only sold in Korea.</string>
+    <string name="serial_checker_status_not_patched">Not patched</string>
+    <string name="serial_checker_status_patched">Patched</string>
+    <string name="serial_checker_status_possibly_patched">Possibly patched</string>
+    <string name="serial_checker_status_error">Can\'t check this serial number!</string>
+    <string name="serial_checker_status_empty">Serial number can\'t be empty!</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_payload_wrong">Are you sure this is correct payload file?</string>

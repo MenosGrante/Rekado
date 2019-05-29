@@ -108,8 +108,6 @@ class PayloadLoader : USBHandler {
             }
             lowBuffer = lowBuffer xor true
             bytesSent += 0x1000
-
-            Thread.sleep(500) // TODO: Very experimental fix, that should be tested before launch
         }
 
         Logger.info("Sent $bytesSent bytes")
