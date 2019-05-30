@@ -5,12 +5,14 @@
         <item>English</item> <!-- English -->
         <item>Русский</item> <!-- Russian -->
         <item>Українська</item> <!-- Ukrainian -->
+        <item>Português (Brasil)</item> <!-- Brazilian -->
     </string-array>
 
     <string-array name="translators_people" translatable="false">
         <item>Pavel Rekun (Menos)</item> <!-- English -->
         <item>Pavel Rekun (Menos)</item> <!-- Russian -->
         <item>Pavel Rekun (Menos)</item> <!-- Ukrainian -->
+        <item>DavidOliM</item> <!-- Brazilian -->
     </string-array>
 
 </resources>

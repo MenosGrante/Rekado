@@ -99,7 +99,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
             override fun onChoosePath(dirFile: File) {
                 onChosenFileListener(dirFile)
             }
-        }).withFileFilter(ExtensionFileFilter("bin")).withTitle(activity.getString(R.string.dialog_file_chooser_payload_title)).build().show()
+        }).withFileFilter(ExtensionFileFilter("bin")).onlyDirectory(false).withTitle(activity.getString(R.string.dialog_file_chooser_payload_title)).build().show()
     }
 
     private fun onChosenFileListener(pathFile: File) {

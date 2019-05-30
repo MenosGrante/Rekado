@@ -2,12 +2,12 @@ package com.pavelrekun.konae
 
 import android.content.Context
 import android.os.Environment
-import androidx.appcompat.app.AlertDialog
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
+import androidx.appcompat.app.AlertDialog
 import com.pavelrekun.konae.adapters.DirectoryAdapter
-import com.pavelrekun.konae.filters.ExtensionFileFilter
+import com.pavelrekun.konae.filters.DirectoryFilter
 import com.pavelrekun.konae.utils.StorageUtils
 import java.io.File
 import java.io.FileFilter
@@ -27,6 +27,7 @@ class Konae : AdapterView.OnItemClickListener {
     private lateinit var result: Result
     private lateinit var fileFilter: FileFilter
     private lateinit var title: String
+    private var onlyDirectories: Boolean = false
 
     fun with(context: Context): Konae {
         this.context = context
@@ -41,13 +42,18 @@ class Konae : AdapterView.OnItemClickListener {
         return this
     }
 
-    fun withFileFilter(fileFilter: ExtensionFileFilter): Konae {
+    fun withFileFilter(fileFilter: FileFilter): Konae {
         this.fileFilter = fileFilter
         return this
     }
 
-    fun withTitle(title: String):Konae {
+    fun withTitle(title: String): Konae {
         this.title = title
+        return this
+    }
+
+    fun onlyDirectory(onlyDirectories: Boolean): Konae {
+        this.onlyDirectories = onlyDirectories
         return this
     }
 
@@ -77,6 +83,12 @@ class Konae : AdapterView.OnItemClickListener {
                 close()
                 build()
                 show()
+            }
+        }
+
+        if (onlyDirectories && fileFilter is DirectoryFilter) {
+            builder.setPositiveButton(R.string.dialog_button_storage_select) { dialog, which ->
+                result.onChoosePath(currentDir)
             }
         }
 
@@ -168,12 +180,12 @@ class Konae : AdapterView.OnItemClickListener {
                 file
             } else {
                 result.onChoosePath(file)
-                alertDialog.dismiss()
+                close()
                 return
             }
         }
-        refreshDirs()
 
+        refreshDirs()
     }
 
     interface AdapterSetter {
