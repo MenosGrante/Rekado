@@ -26,7 +26,7 @@
     <string name="instructions_category_cable">Кабель</string>
     <string name="instructions_category_cable_description">Сначала вам нужно найти кабель для подключения вашего устройства к Nintendo Switch. Для правильной работы это должен быть кабель, предназначенный для передачи данных, а не только для зарядки.\n\nЦелесообразно использовать кабель A-to-C и адаптер USB OTG.</string>
     <string name="instructions_category_payload">Загрузчик</string>
-    <string name="instructions_category_payload_description">В категории "Загрузчики", нажмите на кнопку "+", чтобы выбрать заранее загруженный загрузчик из памяти вашего устройства. Или просто перенесите ваш загрузчик в папку Rekado в памяти вашего устройства.\n\nТакже вы можете использовать приготовленные загрузчики (SX Loader/ReiNX/Hekate).</string>
+    <string name="instructions_category_payload_description">\u0412 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438 \"\u0417\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a\u0438\", \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u043d\u0430 \u043a\u043d\u043e\u043f\u043a\u0443 \"+\", \u0447\u0442\u043e\u0431\u044b \u0432\u044b\u0431\u0440\u0430\u0442\u044c \u0437\u0430\u0440\u0430\u043d\u0435\u0435 \u0437\u0430\u0433\u0440\u0443\u0436\u0435\u043d\u043d\u044b\u0439 \u0437\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a \u0438\u0437 \u043f\u0430\u043c\u044f\u0442\u0438 \u0432\u0430\u0448\u0435\u0433\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430. \u0418\u043b\u0438 \u043f\u0440\u043e\u0441\u0442\u043e \u043f\u0435\u0440\u0435\u043d\u0435\u0441\u0438\u0442\u0435 \u0432\u0430\u0448 \u0437\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a \u0432 \u043f\u0430\u043f\u043a\u0443 Rekado \u0432 \u043f\u0430\u043c\u044f\u0442\u0438 \u0432\u0430\u0448\u0435\u0433\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430. \n\n\u0422\u0430\u043a\u0436\u0435 \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c \u043f\u0440\u0438\u0433\u043e\u0442\u043e\u0432\u043b\u0435\u043d\u043d\u044b\u0435 \u0437\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a\u0438 (SX Loader/ReiNX/Hekate).</string>
     <string name="instructions_category_rcm_description">Введите ваш Nintendo Switch в режим RCM любым удобным для вас способом. \n\nВаш Nintendo Switch будет включен сам по себе при подключении, обязательно удерживайте ГРОМКОСТЬ +.</string>
     <string name="instructions_category_final">Заключение</string>
     <string name="instructions_category_final_description">Подключите устройство к Nintendo Switch и при необходимости разрешите доступ к USB. Откроется диалоговое окно выбора загрузчика, где вам необходимо выбрать интересующий загрузчик.</string>
@@ -37,8 +37,8 @@
     <string name="donate_description">Вы можете поддержать разработку приложения, купив мне кофе.</string>
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Автоинжектор</string>
-    <string name="settings_auto_injector_status_title_disabled">Включить "Автоинжектор"</string>
-    <string name="settings_auto_injector_status_title_enabled">Выключить "Автоинжектор"</string>
+    <string name="settings_auto_injector_status_title_disabled">\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \"\u0410\u0432\u0442\u043e\u0438\u043d\u0436\u0435\u043a\u0442\u043e\u0440\"</string>
+    <string name="settings_auto_injector_status_title_enabled">\u0412\u044b\u043a\u043b\u044e\u0447\u0438\u0442\u044c \"\u0410\u0432\u0442\u043e\u0438\u043d\u0436\u0435\u043a\u0442\u043e\u0440\"</string>
     <string name="settings_auto_injector_payload_title">Загрузчик</string>
     <string name="settings_category_payloads">Загрузчики</string>
     <string name="settings_payloads_remove_bundled_title">Прятать предустановленные</string>

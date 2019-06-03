@@ -6,6 +6,7 @@
         <item>Русский</item> <!-- Russian -->
         <item>Українська</item> <!-- Ukrainian -->
         <item>Português (Brasil)</item> <!-- Brazilian -->
+        <item>Français</item> <!-- French -->
     </string-array>
 
     <string-array name="translators_people" translatable="false">
@@ -13,6 +14,7 @@
         <item>Pavel Rekun (Menos)</item> <!-- Russian -->
         <item>Pavel Rekun (Menos)</item> <!-- Ukrainian -->
         <item>DavidOliM</item> <!-- Brazilian -->
+        <item>tiliarou, gclotault</item> <!-- French -->
     </string-array>
 
 </resources>
