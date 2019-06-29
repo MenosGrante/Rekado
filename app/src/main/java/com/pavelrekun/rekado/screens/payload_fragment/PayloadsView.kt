@@ -50,7 +50,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
             MemoryUtils.copyBundledPayloads()
         }
 
-        adapter = PayloadsAdapter(PayloadHelper.getAll())
+        adapter = PayloadsAdapter(PayloadHelper.getAllPayloads())
 
         activity.payloadsList.setHasFixedSize(true)
         activity.payloadsList.layoutManager = LinearLayoutManager(activity)
@@ -103,14 +103,14 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     private fun onChosenFileListener(pathFile: File) {
-        val payload = Payload(PayloadHelper.getName(pathFile.absolutePath), PayloadHelper.getPath(PayloadHelper.getName(pathFile.absolutePath)))
+        val payload = Payload(pathFile.name, PayloadHelper.getPath(pathFile.name))
 
         if (!payload.name.contains("bin")) {
             Toast.makeText(activity, activity.getString(R.string.helper_error_file_payload_wrong), Toast.LENGTH_SHORT).show()
         }
 
         try {
-            MemoryUtils.toFile(pathFile, "${PayloadHelper.FOLDER_PATH}/${payload.name}")
+            MemoryUtils.toFile(pathFile, "${PayloadHelper.getLocation()}/${payload.name}")
 
             EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
             Logger.info("Added new payload: ${payload.name}")

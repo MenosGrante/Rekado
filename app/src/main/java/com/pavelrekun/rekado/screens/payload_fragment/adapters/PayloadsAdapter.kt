@@ -18,7 +18,7 @@ class PayloadsAdapter(var data: MutableList<Payload>) : androidx.recyclerview.wi
     override fun getItemCount() = data.size
 
     fun updateList() {
-        this.data = PayloadHelper.getAll()
+        this.data = PayloadHelper.getAllPayloads()
 
         notifyDataSetChanged()
     }

@@ -10,8 +10,6 @@ import java.io.File
 object MemoryUtils {
 
     fun copyBundledPayloads() {
-        removeOldFiles()
-
         copyFile(PayloadHelper.BUNDLED_PAYLOAD_SX)
         copyFile(PayloadHelper.BUNDLED_PAYLOAD_REINX)
         copyFile(PayloadHelper.BUNDLED_PAYLOAD_HEKATE)
@@ -19,18 +17,9 @@ object MemoryUtils {
         EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
     }
 
-    private fun removeOldFiles() {
-        val oldVersionHekate = File(PayloadHelper.BUNDLED_PAYLOAD_HEKATE_OLD)
-        if (oldVersionHekate.exists()) {
-            oldVersionHekate.delete()
-        }
-    }
-
     private fun copyFile(inputPath: String) {
         try {
-            AssetCopier(RekadoApplication.context)
-                    .withFileScanning()
-                    .copy(inputPath, File(PayloadHelper.FOLDER_PATH))
+            AssetCopier(RekadoApplication.context).withFileScanning().copy(inputPath, PayloadHelper.getLocation())
         } catch (e: Exception) {
             e.printStackTrace()
         }

@@ -43,6 +43,7 @@
                         android:text="@string/serial_checker_category_checker" />
 
                     <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/serialCheckerFieldOverflow"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -56,6 +57,8 @@
                         app:boxCornerRadiusTopStart="6dp"
                         app:boxStrokeColor="?attr/colorAccent"
                         app:boxStrokeWidth="1dp"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="14"
                         app:passwordToggleDrawable="@null">
 
                         <com.google.android.material.textfield.TextInputEditText

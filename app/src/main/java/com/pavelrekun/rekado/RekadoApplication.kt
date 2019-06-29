@@ -29,7 +29,6 @@ class RekadoApplication : Application() {
 
     private fun configureInternalSystems() {
         Logger.init()
-        PayloadHelper.init()
     }
 
     private fun configureDatabase() {

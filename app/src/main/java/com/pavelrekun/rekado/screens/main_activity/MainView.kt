@@ -61,7 +61,7 @@ class MainView(private val activity: BaseActivity, private val savedInstanceStat
 
             R.id.navigation_donate -> {
                 val donateDialog = DonateDialog(activity)
-                donateDialog.window.setLayout(360.convertDPtoPX(activity), ViewGroup.LayoutParams.WRAP_CONTENT)
+                donateDialog.window?.setLayout(360.convertDPtoPX(activity), ViewGroup.LayoutParams.WRAP_CONTENT)
                 donateDialog.show()
                 true
             }

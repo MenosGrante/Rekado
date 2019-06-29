@@ -12,7 +12,7 @@ import java.io.File
 
 class DirectoryAdapter(context: Context, private val fileList: List<File>, resId: Int) : ArrayAdapter<File>(context, resId, R.id.item_file_name, fileList) {
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val viewGroup = super.getView(position, convertView, parent) as ViewGroup
 
         val fileName = viewGroup.findViewById<TextView>(R.id.item_file_name)

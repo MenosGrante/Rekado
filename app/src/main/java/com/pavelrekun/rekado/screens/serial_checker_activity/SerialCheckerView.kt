@@ -33,15 +33,19 @@ class SerialCheckerView(private val activity: BaseActivity) : SerialCheckerContr
 
     override fun initClickListeners() {
         activity.serialCheckerCheck.setOnClickListener {
-            if (!activity.serialCheckerField.isEmpty()) {
-                try {
-                    val text = SerialDefinier.defineConsoleStatus(activity.serialCheckerField.getString())
-                    Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()
-                } catch (e: Exception) {
-                    Toast.makeText(activity, R.string.serial_checker_status_error, Toast.LENGTH_SHORT).show()
+            if (activity.serialCheckerField.length() <= 14) {
+                if (!activity.serialCheckerField.isEmpty()) {
+                    try {
+                        val text = SerialDefinier.defineConsoleStatus(activity.serialCheckerField.getString(true))
+                        Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()
+                    } catch (e: Exception) {
+                        Toast.makeText(activity, R.string.serial_checker_status_error, Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    Toast.makeText(activity, R.string.serial_checker_status_empty, Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(activity, R.string.serial_checker_status_empty, Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, R.string.serial_checker_status_too_long, Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -51,15 +55,7 @@ class SerialCheckerView(private val activity: BaseActivity) : SerialCheckerContr
     }
 
     override fun generateInformation() {
-        val serialsInformation = activity.getString(R.string.serial_checker_information_xaw1) +
-                activity.getString(R.string.serial_checker_information_xaw4) +
-                activity.getString(R.string.serial_checker_information_xaw7) +
-                activity.getString(R.string.serial_checker_information_xaj1) +
-                activity.getString(R.string.serial_checker_information_xaj4) +
-                activity.getString(R.string.serial_checker_information_xaj7) +
-                activity.getString(R.string.serial_checker_information_xaw9) +
-                activity.getString(R.string.serial_checker_information_xak)
-
+        val serialsInformation = activity.getString(R.string.serial_checker_information_xaw1) + activity.getString(R.string.serial_checker_information_xaw4) + activity.getString(R.string.serial_checker_information_xaw7) + activity.getString(R.string.serial_checker_information_xaj1) + activity.getString(R.string.serial_checker_information_xaj4) + activity.getString(R.string.serial_checker_information_xaj7) + activity.getString(R.string.serial_checker_information_xaw9) + activity.getString(R.string.serial_checker_information_xak)
         activity.serialCheckerInformation.text = serialsInformation
     }
 }
