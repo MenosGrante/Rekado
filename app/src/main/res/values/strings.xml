@@ -114,4 +114,5 @@
 
     <!-- Strings for Helper -->
     <string name="helper_error_file_payload_wrong">Are you sure this is correct payload file?</string>
+    <string name="helper_error_adding_payload">Selected payload can not be added!</string>
 </resources>

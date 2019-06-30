@@ -1,5 +1,6 @@
 package com.pavelrekun.rekado.screens.payload_fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -30,8 +31,8 @@ class PayloadsFragment : Fragment() {
         mvpView.initViews()
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        mvpView.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        mvpView.onActivityResult(requestCode, resultCode, data)
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

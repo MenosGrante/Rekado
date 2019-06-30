@@ -12,4 +12,8 @@ object Constants {
     const val TWITTER_LINK = "https://twitter.com/menosgrante"
     const val DONATE_LINK = "https://www.buymeacoffee.com/pavelrekun"
     const val PRODUCT_HUNT_LINK = "https://producthunt.com/@menosgrante/made"
+
+    const val MIME_BINARY = "application/octet-stream"
+
+    const val KEY_OPEN_PAYLOAD = 123
 }

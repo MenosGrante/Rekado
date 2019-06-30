@@ -37,11 +37,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         addPreferencesFromResource(R.xml.preferences)
 
-        if (!PermissionsUtils.checkPermissionGranted(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            PermissionsUtils.showPermissionDialog(activity, this, PermissionsUtils.PERMISSIONS_WRITE_REQUEST_CODE)
-        } else {
-            initPayloadsCategoryPreferences()
-        }
+        initPayloadsCategoryPreferences()
     }
 
     private fun initPayloadsCategoryPreferences() {
@@ -118,16 +114,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
         appearanceAccentColor.setOnPreferenceChangeListener { _, _ ->
             openUpdatingMessage()
             true
-        }
-    }
-
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        when (requestCode) {
-            PermissionsUtils.PERMISSIONS_WRITE_REQUEST_CODE -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                initPayloadsCategoryPreferences()
-            } else {
-                Toast.makeText(activity, R.string.permission_storage_error, Toast.LENGTH_SHORT).show()
-            }
         }
     }
 
