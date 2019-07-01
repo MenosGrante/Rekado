@@ -2,6 +2,7 @@ package com.pavelrekun.rekado.screens.settings_activity
 
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
+import com.pavelrekun.rekado.screens.settings_activity.main_settings_fragment.MainSettingsFragment
 import kotlinx.android.synthetic.main.activity_settings.*
 
 class SettingsView(private val activity: BaseActivity) : SettingsContract.View {
@@ -22,7 +23,7 @@ class SettingsView(private val activity: BaseActivity) : SettingsContract.View {
 
     override fun initFragment() {
         activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.settingsFragmentFrame, SettingsFragment())
+                .replace(R.id.settingsFragmentFrame, MainSettingsFragment())
                 .commit()
     }
 }

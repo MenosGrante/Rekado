@@ -55,6 +55,7 @@ dependencies {
     // Own
     implementation(name: 'siga', ext: 'aar')
 
+    implementation "androidx.core:core-ktx:$androidCoreKTX"
     implementation "com.google.android.material:material:$materialComponentsVersion"
     implementation "androidx.recyclerview:recyclerview:$androidXOtherVersion"
     implementation "androidx.browser:browser:$androidXOtherVersion"

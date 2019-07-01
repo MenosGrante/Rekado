@@ -1,6 +1,8 @@
 package com.pavelrekun.rekado.services.payloads
 
 import android.widget.Toast
+import androidx.core.content.edit
+import androidx.preference.PreferenceManager
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.base.BaseActivity
@@ -22,11 +24,13 @@ import java.io.File
 
 object PayloadHelper {
 
+    private val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(RekadoApplication.context)
+
+    private const val CHOSEN_PAYLOAD = "CHOSEN_PAYLOAD"
+
     const val BUNDLED_PAYLOAD_SX = "sx_loader.bin"
     const val BUNDLED_PAYLOAD_REINX = "ReiNX.bin"
     const val BUNDLED_PAYLOAD_HEKATE = "hekate.bin"
-
-    private const val CHOSEN_PAYLOAD = "CHOSEN_PAYLOAD"
 
     fun getLocation(): File {
         return RekadoApplication.context.getExternalFilesDir(null) ?: RekadoApplication.context.filesDir
@@ -52,13 +56,9 @@ object PayloadHelper {
         return getAllPayloads().singleOrNull { it.name == name }
     }
 
-    fun putChosen(payload: Payload) {
-        Paper.book().write(CHOSEN_PAYLOAD, payload)
-    }
+    fun putChosen(payload: Payload) = sharedPreferences.edit { putString(CHOSEN_PAYLOAD, payload.name) }
 
-    fun getChosen(): Payload {
-        return Paper.book().read(CHOSEN_PAYLOAD)
-    }
+    fun getChosen(): Payload = find
 
     private fun getAllFiles() = getLocation().listFiles().filter { it != null && it.extension == "bin" }.toMutableList()
 

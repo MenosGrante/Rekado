@@ -1,37 +1,22 @@
 package com.pavelrekun.rekado.services.utils
 
+import androidx.preference.PreferenceManager
+import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
-import io.paperdb.Paper
 
 object SettingsUtils {
 
-    private const val AUTO_INJECTOR_ENABLED = "AUTO_INJECTOR_ENABLED"
-    private const val AUTO_INJECTOR_PAYLOAD = "AUTO_INJECTOR_PAYLOAD"
+    private val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(RekadoApplication.context)
 
-    private const val HIDE_BUNDLED_ENABLED = "HIDE_BUNDLED_ENABLED"
+    private const val AUTO_INJECTOR_ENABLED = "auto_injector_enable"
+    private const val AUTO_INJECTOR_PAYLOAD = "auto_injector_payload"
 
-    fun updateAutoInjectorEnabled(enabled: Boolean) {
-        Paper.book().write(AUTO_INJECTOR_ENABLED, enabled)
-    }
+    private const val HIDE_BUNDLED_ENABLED = "payloads_hide_bundled"
 
-    fun checkAutoInjectorEnabled(): Boolean {
-        return Paper.book().read(AUTO_INJECTOR_ENABLED, false)
-    }
+    fun checkAutoInjectorEnabled() = sharedPreferences.getBoolean(AUTO_INJECTOR_ENABLED, false)
 
-    fun updateAutoInjectorPayload(payloadName: String) {
-        Paper.book().write(AUTO_INJECTOR_PAYLOAD, payloadName)
-    }
+    fun getAutoInjectorPayload() = sharedPreferences.getString(AUTO_INJECTOR_PAYLOAD, PayloadHelper.BUNDLED_PAYLOAD_HEKATE)
 
-    fun getAutoInjectorPayload(): String {
-        return Paper.book().read(AUTO_INJECTOR_PAYLOAD, PayloadHelper.BUNDLED_PAYLOAD_SX)
-    }
-
-    fun updateHideBundledEnabled(enabled: Boolean) {
-        Paper.book().write(HIDE_BUNDLED_ENABLED, enabled)
-    }
-
-    fun checkHideBundledEnabled(): Boolean  {
-        return Paper.book().read(HIDE_BUNDLED_ENABLED, false)
-    }
+    fun checkHideBundledEnabled() = sharedPreferences.getBoolean(HIDE_BUNDLED_ENABLED, false)
 
 }
