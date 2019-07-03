@@ -9,7 +9,6 @@ import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.Logger
-import io.paperdb.Paper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -20,7 +19,6 @@ import okio.buffer
 import okio.sink
 import org.greenrobot.eventbus.EventBus
 import java.io.File
-
 
 object PayloadHelper {
 
@@ -33,7 +31,8 @@ object PayloadHelper {
     const val BUNDLED_PAYLOAD_HEKATE = "hekate.bin"
 
     fun getLocation(): File {
-        return RekadoApplication.context.getExternalFilesDir(null) ?: RekadoApplication.context.filesDir
+        return RekadoApplication.context.getExternalFilesDir(null)
+                ?: RekadoApplication.context.filesDir
     }
 
     fun getAllPayloads() = getAllFiles().map { Payload(it.name, it.path) }.toMutableList()
@@ -48,17 +47,13 @@ object PayloadHelper {
 
     fun getNames() = getAllFiles().map { it.name }.toMutableList()
 
-    fun getPath(name: String): String {
-        return "${getLocation()}/$name"
-    }
-
-    fun find(name: String): Payload? {
-        return getAllPayloads().singleOrNull { it.name == name }
+    fun find(name: String): Payload {
+        return getAllPayloads().find { it.name == name } as Payload
     }
 
     fun putChosen(payload: Payload) = sharedPreferences.edit { putString(CHOSEN_PAYLOAD, payload.name) }
 
-    fun getChosen(): Payload = find
+    fun getChosen(): Payload = find(sharedPreferences.getString(CHOSEN_PAYLOAD, "").toString())
 
     private fun getAllFiles() = getLocation().listFiles().filter { it != null && it.extension == "bin" }.toMutableList()
 

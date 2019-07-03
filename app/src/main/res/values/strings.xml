@@ -40,11 +40,7 @@
     <string name="instructions_category_final">Final</string>
     <string name="instructions_category_final_description">Connect the device to the Nintendo Switch and allow permission for the USB access if necessary. Wait unit payloads chooser dialog will be opened and select which one you want to load.</string>
 
-    <!-- Strings for Logs -->
-    <string name="logs_actions_list">List of actions</string>
-
     <!-- Strings for Donate -->
-    <string name="donate_title">Donate</string>
     <string name="donate_description">You can support the development of the application by buying me a coffee.</string>
 
     <!-- Strings for Settings -->
@@ -63,33 +59,20 @@
     <string name="settings_appearance_updating">Updating appearance…</string>
     <string name="settings_appearance_accent_color_title">Accent color</string>
     <string name="settings_appearance_accent_color_summary">Color used to tint UI elements</string>
-    <string name="settings_restart_title">Settings changed</string>
-    <string name="settings_restart_message">Settings have been changed. Please, restart for the change to take effect. \n\nRestart the app now?</string>
-    <string name="settings_restart_ok">Restart</string>
-    <string name="settings_restart_cancel">Cancel</string>
     <string name="settings_picker_color_title">Choose color</string>
     <string name="settings_picker_theme_title">Choose theme</string>
     <string name="settings_picker_theme_preview">Preview</string>
-
-    <!-- Strings for Permissions -->
-    <string name="permission_storage_dialog_title">Storage permission</string>
-    <string name="permission_storage_dialog_description">Rekado need this permission to get payload files from your device\'s storage.</string>
-    <string name="permission_storage_button">Request</string>
-    <string name="permission_storage_error">Could not access device\'s storage. Try to get permission again.</string>
 
     <!-- Strings for Dialogs -->
     <string name="dialog_loader_title">Choose payload</string>
     <string name="dialog_reset_payloads_title">Clear</string>
     <string name="dialog_reset_payloads_summary">Are you sure you want to delete payloads?</string>
-    <string name="dialog_positive" translatable="false">OK</string>
-    <string name="dialog_negative">Cancel</string>
     <string name="dialog_file_chooser_payload_title">Choose payload</string>
     <string name="dialog_payload_download_title">Download</string>
     <string name="dialog_payload_download_name">Name</string>
     <string name="dialog_payload_download_url" translatable="false">URL</string>
     <string name="dialog_payload_download_button">Download</string>
-    <string name="dialog_button_storage_internal">Internal</string>
-    <string name="dialog_button_storage_external">External</string>
+    <string name="dialog_button_positive" translatable="false">OK</string>
     <string name="dialog_button_negative">Close</string>
 
     <!-- Strings for Serial Checker -->
@@ -113,6 +96,5 @@
     <string name="serial_checker_status_too_long">Maximum length of the serial number is 14 characters!</string>
 
     <!-- Strings for Helper -->
-    <string name="helper_error_file_payload_wrong">Are you sure this is correct payload file?</string>
     <string name="helper_error_adding_payload">Selected payload can not be added!</string>
 </resources>

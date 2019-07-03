@@ -36,7 +36,7 @@ class SerialCheckerView(private val activity: BaseActivity) : SerialCheckerContr
             if (activity.serialCheckerField.length() <= 14) {
                 if (!activity.serialCheckerField.isEmpty()) {
                     try {
-                        val text = SerialDefinier.defineConsoleStatus(activity.serialCheckerField.getString(true))
+                        val text = SerialDefinier.defineConsoleStatus(activity.serialCheckerField.getString())
                         Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()
                     } catch (e: Exception) {
                         Toast.makeText(activity, R.string.serial_checker_status_error, Toast.LENGTH_SHORT).show()

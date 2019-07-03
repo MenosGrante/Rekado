@@ -7,7 +7,6 @@ import com.afollestad.materialdialogs.callbacks.onDismiss
 import com.afollestad.materialdialogs.list.listItems
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
-import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.extensions.getString
 import com.pavelrekun.rekado.services.extensions.isEmpty
@@ -22,7 +21,7 @@ object Dialogs {
         val dialog = MaterialDialog(activity)
                 .title(R.string.dialog_loader_title)
                 .listItems(items = PayloadHelper.getNames()) { dialog, index, text ->
-                    PayloadHelper.putChosen(PayloadHelper.find(text) as Payload)
+                    PayloadHelper.putChosen(PayloadHelper.find(text))
                     EventBus.getDefault().post(Events.PayloadSelected())
                     dialog.hide()
                 }
@@ -38,8 +37,8 @@ object Dialogs {
         builder.setTitle(R.string.dialog_reset_payloads_title)
         builder.setMessage(R.string.dialog_reset_payloads_summary)
 
-        builder.setNegativeButton(R.string.dialog_negative) { _, _ -> }
-        builder.setPositiveButton(R.string.dialog_positive) { _, _ -> }
+        builder.setNegativeButton(R.string.dialog_button_negative) { _, _ -> }
+        builder.setPositiveButton(R.string.dialog_button_positive) { _, _ -> }
 
         val resetDialog = builder.create()
         resetDialog.show()

@@ -27,6 +27,10 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
     private lateinit var payloadsHideBundled: Preference
     private lateinit var payloadsResetPreference: Preference
 
+    init {
+        onCreatePreferences()
+    }
+
     override fun onCreatePreferences() {
         preparePreferences()
 

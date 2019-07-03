@@ -12,6 +12,7 @@ import com.pavelrekun.rekado.services.utils.MemoryUtils
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_payload.*
 import org.greenrobot.eventbus.EventBus
+import java.io.File
 
 class PayloadsAdapter(var data: MutableList<Payload>) : androidx.recyclerview.widget.RecyclerView.Adapter<PayloadsAdapter.ViewHolder>() {
 
@@ -41,7 +42,7 @@ class PayloadsAdapter(var data: MutableList<Payload>) : androidx.recyclerview.wi
                     || payload.name == PayloadHelper.BUNDLED_PAYLOAD_REINX || payload.name == PayloadHelper.BUNDLED_PAYLOAD_HEKATE) View.GONE else View.VISIBLE
 
             itemPayloadRemove.setOnClickListener {
-                MemoryUtils.removeFile(payload.path)
+                File(payload.path).delete()
                 EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
                 Logger.info("Payload ${payload.name} deleted!")
             }

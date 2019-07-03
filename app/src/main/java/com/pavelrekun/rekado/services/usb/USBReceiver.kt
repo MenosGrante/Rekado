@@ -34,7 +34,7 @@ class USBReceiver : BaseActivity() {
             Logger.info("USB device connected: ${device.deviceName}")
 
             if (SettingsUtils.checkAutoInjectorEnabled()) {
-                PayloadHelper.putChosen(PayloadHelper.find(SettingsUtils.getAutoInjectorPayload())!!)
+                PayloadHelper.putChosen(PayloadHelper.find(SettingsUtils.getAutoInjectorPayload()!!))
                 injectPayload()
             } else {
                 payloadChooserDialog = Dialogs.showPayloadsDialog(this)
