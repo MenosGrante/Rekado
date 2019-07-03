@@ -18,6 +18,18 @@ Payload launcher written in Kotlin for Nintendo Switch.
 ## Download
 You can get APK (installation file) from [Releases](https://github.com/MenosGrante/Rekado/releases) form in this repository.
 
+## Known issues
+**Nothing happens after connecting Nintendo Switch**
+In most cases this problems occurs if your device doesn't not support OTG connection or it could be just disabled by default (e.g. OnePlus devices). Try to check if your device supports it and check if it is enabled and try again.
+
+**Sending payload failed at offset**
+
+This problem is in most cases not related to the used device, but to the cable or adapter. It occurs most often due to cables that are not designed to transfer large amounts of data. Try to use another cable or adapter.
+
+**SUBMITURB**
+
+This problems occurs on device with old USB-controllers installed in their devices (EHCI/USB 2.0). This is device-only problem, that can be fixed with installing additional kernel patches, what is not recommended to do yourself. Only devices with xHCI (USB 3.0) controllers supported now.
+
 ## Localization
 All localization files moved to OneSky platform (which I am using for my other projects) and if you want to add/update/check any localization follow [this link](https://rekundevelopment.oneskyapp.com/collaboration/project?id=336657) to start. I will decline all pull requests with your localizations and will accept only OneSky versions, which I will manually add in new updates.
 

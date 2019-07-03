@@ -5,16 +5,16 @@
         <item>English</item> <!-- English -->
         <item>Русский</item> <!-- Russian -->
         <item>Українська</item> <!-- Ukrainian -->
-        <item>Português (Brasil)</item> <!-- Brazilian -->
-        <item>Français</item> <!-- French -->
+        <!--<item>Português (Brasil)</item> &lt;!&ndash; Brazilian &ndash;&gt;-->
+        <!--<item>Français</item> &lt;!&ndash; French &ndash;&gt;-->
     </string-array>
 
     <string-array name="translators_people" translatable="false">
         <item>Pavel Rekun (Menos)</item> <!-- English -->
         <item>Pavel Rekun (Menos)</item> <!-- Russian -->
         <item>Pavel Rekun (Menos)</item> <!-- Ukrainian -->
-        <item>DavidOliM</item> <!-- Brazilian -->
-        <item>tiliarou, gclotault</item> <!-- French -->
+        <!--<item>DavidOliM</item> &lt;!&ndash; Brazilian &ndash;&gt;-->
+        <!--<item>tiliarou, gclotault</item> &lt;!&ndash; French &ndash;&gt;-->
     </string-array>
 
 </resources>
