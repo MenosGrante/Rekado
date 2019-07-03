@@ -20,6 +20,7 @@ You can get APK (installation file) from [Releases](https://github.com/MenosGran
 
 ## Known issues
 **Nothing happens after connecting Nintendo Switch**
+
 In most cases this problems occurs if your device doesn't not support OTG connection or it could be just disabled by default (e.g. OnePlus devices). Try to check if your device supports it and check if it is enabled and try again.
 
 **Sending payload failed at offset**
