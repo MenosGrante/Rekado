@@ -5,16 +5,22 @@
         <item>English</item> <!-- English -->
         <item>Русский</item> <!-- Russian -->
         <item>Українська</item> <!-- Ukrainian -->
-        <!--<item>Português (Brasil)</item> &lt;!&ndash; Brazilian &ndash;&gt;-->
-        <!--<item>Français</item> &lt;!&ndash; French &ndash;&gt;-->
+        <item>Português (Brasil)</item> <!-- Brazilian -->
+        <item>Français</item> <!-- French -->
+        <item>Italiano</item> <!-- Italian -->
+        <item>Polski</item> <!-- Polish -->
+        <item>Türkçe</item> <!-- Turkish -->
     </string-array>
 
     <string-array name="translators_people" translatable="false">
         <item>Pavel Rekun (Menos)</item> <!-- English -->
         <item>Pavel Rekun (Menos)</item> <!-- Russian -->
         <item>Pavel Rekun (Menos)</item> <!-- Ukrainian -->
-        <!--<item>DavidOliM</item> &lt;!&ndash; Brazilian &ndash;&gt;-->
-        <!--<item>tiliarou, gclotault</item> &lt;!&ndash; French &ndash;&gt;-->
+        <item>DavidOliM, zyz696</item> <!-- Brazilian -->
+        <item>tiliarou, gclotault</item> <!-- French -->
+        <item>tiliarou, Francesco Ognibene</item> <!-- Italian -->
+        <item>mixon606</item> <!-- Polish -->
+        <item>Mahmut Pekkara</item> <!-- Turkish -->
     </string-array>
 
 </resources>

@@ -2,6 +2,8 @@ package com.pavelrekun.rekado.screens.payload_fragment
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
+import android.provider.MediaStore
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +15,7 @@ import com.pavelrekun.rekado.services.Constants.KEY_OPEN_PAYLOAD
 import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.Logger
 import com.pavelrekun.rekado.services.dialogs.Dialogs
+import com.pavelrekun.rekado.services.extensions.extractFileName
 import com.pavelrekun.rekado.services.extensions.extractName
 import com.pavelrekun.rekado.services.extensions.toFile
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
@@ -21,6 +24,7 @@ import com.pavelrekun.rekado.services.utils.SettingsUtils
 import com.pavelrekun.siga.services.extensions.tintIconReverse
 import kotlinx.android.synthetic.main.fragment_payloads.*
 import org.greenrobot.eventbus.EventBus
+
 
 class PayloadsView(private val activity: BaseActivity, private val fragment: Fragment) : PayloadsContract.View {
 
@@ -74,9 +78,8 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
         if (requestCode == KEY_OPEN_PAYLOAD) {
             when (resultCode) {
                 Activity.RESULT_OK -> data?.data?.let {
-                    val path = it.path
-                    if (path != null) {
-                        val name = path.extractName()
+                    val name = it.extractFileName()
+                    if (name != null) {
                         val inputStream = activity.contentResolver.openInputStream(it)
 
                         if (inputStream != null) {

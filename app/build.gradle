@@ -9,7 +9,7 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 51
+        versionCode 52
         versionName "3.1"
     }
 
@@ -66,7 +66,6 @@ dependencies {
     implementation "io.paperdb:paperdb:$paperVersion"
     implementation "org.greenrobot:eventbus:$eventBusVersion"
     implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
-    implementation "com.github.flipagram:android-assetcopier:$assetCopier"
     implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
 
     // Kotlin
