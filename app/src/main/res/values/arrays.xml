@@ -10,6 +10,7 @@
         <item>Italiano</item> <!-- Italian -->
         <item>Polski</item> <!-- Polish -->
         <item>Türkçe</item> <!-- Turkish -->
+        <item>한국어</item> <!-- Korean -->
     </string-array>
 
     <string-array name="translators_people" translatable="false">
@@ -21,6 +22,7 @@
         <item>tiliarou, Francesco Ognibene</item> <!-- Italian -->
         <item>mixon606</item> <!-- Polish -->
         <item>Mahmut Pekkara</item> <!-- Turkish -->
+        <item>DDinghoya</item> <!-- Korean -->
     </string-array>
 
 </resources>

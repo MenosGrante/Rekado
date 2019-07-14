@@ -9,7 +9,7 @@
     <string name="navigation_donate">Bağış</string>
     <string name="navigation_settings">Ayarlar</string>
     <string name="navigation_serial_checker">Seri numarası kontrol edici</string>
-    <string name="navigation_translators">Dönüştürücüler</string>
+    <string name="navigation_translators">Çevirmenler</string>
     <!-- Strings for About -->
     <string name="about_category_description">Açıklama</string>
     <string name="about_category_developer">Geliştirici</string>
@@ -35,8 +35,8 @@ Payload seçme ekranı gelesiye kadar bekleyin ve istediğiniz payloadı yollay�
     <string name="donate_description">Bana kahve alarak uygulamanın geliştirilmesine destek olabilirsiniz.</string>
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Otomatik payload yollayıcı</string>
-    <string name="settings_auto_injector_status_title_disabled">Otomatik payload yollay\u0131c\u0131y\u0131 aktif et</string>
-    <string name="settings_auto_injector_status_title_enabled">Otomatik payload yollay\u0131c\u0131y\u0131 devre d\u0131\u015f\u0131 b\u0131rak</string>
+    <string name="settings_auto_injector_status_title_disabled">Oto payload yollay\u0131c\u0131y\u0131 aktif et</string>
+    <string name="settings_auto_injector_status_title_enabled">Oto payload yollay\u0131c\u0131y\u0131 devre d\u0131\u015f\u0131 b\u0131rak</string>
     <string name="settings_auto_injector_payload_title">Payload</string>
     <string name="settings_category_payloads">Payloadlar</string>
     <string name="settings_payloads_remove_bundled_title">Önceden hazır gelen payloadları gizle</string>
@@ -66,13 +66,13 @@ Payload seçme ekranı gelesiye kadar bekleyin ve istediğiniz payloadı yollay�
     <string name="serial_checker_category_information">Bilgi</string>
     <string name="serial_checker_checker_serial_number">Seri numarası</string>
     <string name="serial_checker_checker_button">Kontrol et</string>
-    <string name="serial_checker_information_xaw1">XAW1 ile başlayan seriler\nXAW10000000000 - XAW10074000000: Yamalanmamış\nXAW10075000000 - XAW10120000000: Muhtemelen yamalanmış\nXAW10120000000 and higher: Yamalanmış\n\n</string>
+    <string name="serial_checker_information_xaw1">XAW1 ile başlayan seriler\nXAW10000000000 - XAW10074000000: Yamalanmamış\nXAW10075000000 - XAW10120000000: Muhtemelen yamalanmış\nXAW10120000000 ve yukarısı: Yamalanmış\n\n</string>
     <string name="serial_checker_information_xaw4">XAW4 ile başlayan seriler\nXAW40000000000 - XAW40011000000: Yamalanmamış\nXAW40011000000 - XAW40012000000: Muhtemelen yamalanmış\nXAW40012000000 and higher: Yamalanmış\n\n</string>
-    <string name="serial_checker_information_xaw7">XAW7 ile başlayan seriler\nXAW70000000000 - XAW70017800000: Yamalanmamış\nXAW70017800000 - XAW70030000000: Muhtemelen yamalanmış\nXAW70030000000 and higher: Yamalanmış\n\n</string>
-    <string name="serial_checker_information_xaj1">XAJ1 ile başlayan seriler\nXAJ10000000000 - XAJ10020000000: Yamalanmamış\nXAJ10020000000 - XAJ10030000000:  Muhtemelen yamalanmış\nXAJ10030000000 and higher: Yamalanmış\n\n</string>
-    <string name="serial_checker_information_xaj4">XAJ4 ile başlayan seriler\nXAJ40000000000 - XAJ40046000000: Yamalanmamış\nXAJ40046000000 - XAJ40060000000: Muhtemelen yamalanmış\nXAJ40060000000 and higher: Yamalanmış\n\n</string>
-    <string name="serial_checker_information_xaj7">XAJ7 ile başlayan seriler\nXAJ70000000000 - XAJ70040000000: Yamalanmamış\nXAJ70040000000 - XAJ70050000000: Muhtemelen yamalanmış\nXAJ70050000000 and higher: Yamalanmış</string>
-    <string name="serial_checker_information_xaw9">XAW9 ile başlayan seriler Nintendo\' nun bu konsolları toplayıp yenilediği konsollardır. Bilgi yok ama yüksek ihtimalle hepsi yamalanmış.</string>
+    <string name="serial_checker_information_xaw7">XAW7 ile başlayan seriler\nXAW70000000000 - XAW70017800000: Yamalanmamış\nXAW70017800000 - XAW70030000000: Muhtemelen yamalanmış\nXAW70030000000 ve yukarısı: Yamalanmış\n\n</string>
+    <string name="serial_checker_information_xaj1">XAJ1 ile başlayan seriler\nXAJ10000000000 - XAJ10020000000: Yamalanmamış\nXAJ10020000000 - XAJ10030000000:  Muhtemelen yamalanmış\nXAJ10030000000 ve yukarısı: Yamalanmış\n\n</string>
+    <string name="serial_checker_information_xaj4">XAJ4 ile başlayan seriler\nXAJ40000000000 - XAJ40046000000: Yamalanmamış\nXAJ40046000000 - XAJ40060000000: Muhtemelen yamalanmış\nXAJ40060000000 ve yukarısı: Yamalanmış\n\n</string>
+    <string name="serial_checker_information_xaj7">XAJ7 ile başlayan seriler\nXAJ70000000000 - XAJ70040000000: Yamalanmamış\nXAJ70040000000 - XAJ70050000000: Muhtemelen yamalanmış\nXAJ70050000000 ve yukarısı: Yamalanmış\n\n</string>
+    <string name="serial_checker_information_xaw9">XAW9 ile başlayan seriler Nintendo\' nun bu konsolları toplayıp yenilediği konsollardır. Bilgi yok ama yüksek ihtimalle hepsi yamalanmış.\n\n</string>
     <string name="serial_checker_information_xak">XAK ile başlayan seriler sadece Kore\' de satıldığı için bilgi yok.</string>
     <string name="serial_checker_status_not_patched">Yamalanmamış</string>
     <string name="serial_checker_status_patched">Yamalanmış</string>
