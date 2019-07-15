@@ -94,6 +94,7 @@
     <string name="serial_checker_status_error">Can\'t check this serial number!</string>
     <string name="serial_checker_status_empty">Serial number can\'t be empty!</string>
     <string name="serial_checker_status_too_long">Maximum length of the serial number is 14 characters!</string>
+    <string name="serial_checker_status_scan_failed">Failed to scan barcode!</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_adding_payload">Selected payload can not be added!</string>

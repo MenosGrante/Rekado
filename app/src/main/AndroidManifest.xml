@@ -9,6 +9,7 @@
     <application
         android:name=".RekadoApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
@@ -39,7 +40,9 @@
         <activity
             android:name=".screens.serial_checker_activity.SerialCheckerActivity"
             android:label="@string/navigation_serial_checker"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
 
         <activity
             android:name=".screens.translators_activity.TranslatorsActivity"

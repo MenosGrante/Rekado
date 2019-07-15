@@ -37,4 +37,5 @@ ext {
     paperVersion = '2.6'
     eventBusVersion = '3.1.1'
     okHttpVersion = '4.0.0'
+    zxingVersion = '3.6.0'
 }

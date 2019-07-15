@@ -42,32 +42,51 @@
                         android:layout_height="wrap_content"
                         android:text="@string/serial_checker_category_checker" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/serialCheckerFieldOverflow"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="8dp"
-                        app:boxCornerRadiusBottomEnd="6dp"
-                        app:boxCornerRadiusBottomStart="6dp"
-                        app:boxCornerRadiusTopEnd="6dp"
-                        app:boxCornerRadiusTopStart="6dp"
-                        app:boxStrokeColor="?attr/colorAccent"
-                        app:boxStrokeWidth="1dp"
-                        app:counterEnabled="true"
-                        app:counterMaxLength="14"
-                        app:passwordToggleDrawable="@null">
+                        android:orientation="horizontal">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/serialCheckerField"
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/serialCheckerFieldOverflow"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/serial_checker_checker_serial_number" />
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="1"
+                            app:boxCornerRadiusBottomEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxStrokeColor="?attr/colorAccent"
+                            app:boxStrokeWidth="1dp"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="14"
+                            app:passwordToggleDrawable="@null">
 
-                    </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/serialCheckerField"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/serial_checker_checker_serial_number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/serialCheckerScan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_serial_checker_scan" />
+
+                    </LinearLayout>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/serialCheckerCheck"

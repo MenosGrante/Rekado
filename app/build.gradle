@@ -9,8 +9,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 53
-        versionName "3.1.1"
+        versionCode 54
+        versionName "3.2"
     }
 
     buildTypes {
@@ -67,6 +67,7 @@ dependencies {
     implementation "org.greenrobot:eventbus:$eventBusVersion"
     implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
     implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.journeyapps:zxing-android-embedded:$zxingVersion"
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
