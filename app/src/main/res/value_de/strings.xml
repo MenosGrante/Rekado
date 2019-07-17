@@ -3,196 +3,99 @@
     
     <!-- Strings for Navigation -->
     <string name="navigation_payloads">Payloads</string>
-    <string name="navigation_payloads">Payloads</string>
-    <string name="navigation_tools">Tools</string>
     <string name="navigation_tools">Werkzeuge</string>
-    <string name="navigation_instructions">Instructions</string>
     <string name="navigation_instructions">Anleitung</string>
     <string name="navigation_logs">Logs</string>
-    <string name="navigation_logs">Logs</string>
-    <string name="navigation_about">About</string>
     <string name="navigation_about">Über</string>
-    <string name="navigation_donate">Donate</string>
     <string name="navigation_donate">Spenden</string>
-    <string name="navigation_settings">Settings</string>
     <string name="navigation_settings">Einstellungen</string>
-    <string name="navigation_serial_checker">Serial checker</string>
     <string name="navigation_serial_checker">Seriennummer-Überprüfer</string>
-    <string name="navigation_translators">Translators</string>
     <string name="navigation_translators">Übersetzer</string>
 
-
     <!-- Strings for About -->
-    <!-- Strings for About -->
-    <string name="about_category_description">Description</string>
     <string name="about_category_description">Beschreibung</string>
-    <string name="about_category_developer">Developer</string>
     <string name="about_category_developer">Entwickler</string>
-    <string name="about_information_description">Application written in Kotlin and C++. It is used to inject payloads on the Nintendo Switch.</string>
     <string name="about_information_description">Die App wurde in Kotlin und C++ geschrieben. Sie wird benutzt um Payloads in die Nintendo Switch zu injizieren.</string>
-    <string name="about_developer_personal_site">Personal site</string>
     <string name="about_developer_personal_site">Eigene Webseite</string>
     <string name="about_developer_product_hunt" translatable="false">Product Hunt</string>
-    <string name="about_developer_product_hunt" translatable="false">Product Hunt</string>
-    <string name="about_developer_github" translatable="false">GitHub</string>
     <string name="about_developer_github" translatable="false">GitHub</string>
     <string name="about_developer_twitter" translatable="false">Twitter</string>
-    <string name="about_developer_twitter" translatable="false">Twitter</string>
-
 
     <!-- Strings for Payloads -->
-    <!-- Strings for Payloads -->
-    <string name="payloads_download_status_empty">Name or URL should not be empty!</string>
     <string name="payloads_download_status_empty">Name oder URL sollten nicht leer sein!</string>
-    <string name="payloads_download_status_success">Successfully downloaded %1$s payload!</string>
     <string name="payloads_download_status_success">Erfolgreich den %1$s payload runtergeladen!</string>
-    <string name="payloads_download_status_error">Error occurred during downloading %1$s payload. Check you connection or typos in URL.</string>
     <string name="payloads_download_status_error">Ein Fehler ist während dem runterladen des %1$s Payloads aufgetreten. Bitte überprüfe deine Verbindung und Rechtschreibfehler.</string>
 
-
     <!-- Strings for Tools -->
-    <!-- Strings for Tools -->
-    <string name="tools_serial_checker_title">Serial checker</string>
     <string name="tools_serial_checker_title">Seriennummer-Überprüfer</string>
-    <string name="tools_serial_checker_description">Check if you Nintendo Switch is hackable using your unit\'s serial number</string>
     <string name="tools_serial_checker_description">Überprüfe ob deine Nintendo Switch hackbar ist, anhand der Seriennummer!</string>
 
-
     <!-- Strings for Instructions -->
-    <!-- Strings for Instructions -->
-    <string name="instructions_category_cable">Cable</string>
     <string name="instructions_category_cable">Kabel</string>
-    <string name="instructions_category_cable_description">First you need to find a cable to connect your device to the Nintendo Switch. For proper work, this should be a cable that is designed for data transmission, not just for charging.\n\nIt is advisable to use an A-to-C cable and an USB OTG adapter.</string>
     <string name="instructions_category_cable_description">Als erstes musst du ein Kabel finden, um dich mit der Nintendo Switch zu verbinden. Für einen fehlerlosen Prozess wird ein Kabel empfohlen, welches laden und Daten austauschen kann.\n\nEs wird empfohlen ein A-zu-C Kabel mit einem OTG-Adapter zu nutzen.</string>
     <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">In the \u0022Payloads\u0022 category, click the \u0022+\u0022 button to select preloaded payload from your device\'s storage. Or simply transfer your payload to the Rekado folder in the device\'s memory.\n\nOr you can use the bundled payloads (SX Loader/ReiNX/Hekate)</string>
     <string name="instructions_category_payload_description">In der \u0022Payloads\u0022 Kategorie, drücke die \u0022+\u0022 Taste um den zuletzt genutzen Payload aus dem Gerätespeicher zu verwenden. Du kannst auch ganz einfach einen anderen Payload in den Rekado Ordner im Gerätespeicher kopieren.\n\nOder du kannst die vorinstallierten Payloads benutzen (SX Loader/ReiNX/Hekate)</string>
     <string name="instructions_category_rcm" translatable="false">RCM</string>
-    <string name="instructions_category_rcm" translatable="false">RCM</string>
-    <string name="instructions_category_rcm_description">Enter your Nintendo Switch into RCM mode in any convenient way. \n\nYour Nintendo Switch will power on by itself when plugged in, be sure to hold VOLUME +.</string>
     <string name="instructions_category_rcm_description">Setze deine Nintendo Switch in irgendeiner Weise in den RCM Modus. \n\nDeine Nintendo Switch geht automatisch an, wenn sie eingesteckt wird, vergewisser dich das du Lautstärke + drückst.</string>
-    <string name="instructions_category_final">Final</string>
     <string name="instructions_category_final">Letzter Schritt</string>
-    <string name="instructions_category_final_description">Connect the device to the Nintendo Switch and allow permission for the USB access if necessary. Wait unit payloads chooser dialog will be opened and select which one you want to load.</string>
     <string name="instructions_category_final_description">Verbinde das Gerät mit der Nintendo Switch und akzeptiere die Berechtigung auf USB falls gefragt wird. Warte bis das Payload-Injektor Fenster geöffnet wird und wähle den Payload aus den du ausführen willst#.</string>
 
-
     <!-- Strings for Donate -->
-    <!-- Strings for Donate -->
-    <string name="donate_description">You can support the development of the application by buying me a coffee.</string>
     <string name="donate_description">Du kannst die Entwicklung der App unterstützen, wenn du mir einen Kaffee kaufst.</string>
 
-
     <!-- Strings for Settings -->
-    <!-- Strings for Settings -->
-    <string name="settings_category_auto_injector">Auto injector</string>
     <string name="settings_category_auto_injector">Automatischer Injektor</string>
-    <string name="settings_auto_injector_status_title_disabled">Enable \u0022Auto injector\u0022</string>
     <string name="settings_auto_injector_status_title_disabled">Aktiviere \u0022Auto injector\u0022</string>
-    <string name="settings_auto_injector_status_title_enabled">Disable \u0022Auto injector\u0022</string>
     <string name="settings_auto_injector_status_title_enabled">Deaktiviere \u0022Auto injector\u0022</string>
     <string name="settings_auto_injector_payload_title">Payload</string>
-    <string name="settings_auto_injector_payload_title">Payload</string>
     <string name="settings_category_payloads">Payloads</string>
-    <string name="settings_category_payloads">Payloads</string>
-    <string name="settings_payloads_remove_bundled_title">Hide bundled</string>
     <string name="settings_payloads_remove_bundled_title">Verstecke vorinstallierten Payload</string>
-    <string name="settings_payloads_remove_bundled_summary">Hide all bundled payloads</string>
     <string name="settings_payloads_remove_bundled_summary">Verstecke alle vorinstallierten Payloads</string>
-    <string name="settings_payloads_reset_title">Clear</string>
     <string name="settings_payloads_reset_title">Löschen</string>
-    <string name="settings_payloads_reset_summary">Remove all added payloads except bundled (SX Loader/ReiNX/Hekate)</string>
     <string name="settings_payloads_reset_summary">Lösche alle Payloads bis auf die vorinstallierten (SX Loader/ReiNX/Hekate)</string>
-    <string name="settings_category_appearance">Appearance</string>
     <string name="settings_category_appearance">Erscheinungsbild</string>
-    <string name="settings_appearance_theme_title">Theme</string>
     <string name="settings_appearance_theme_title">Motiv</string>
-    <string name="settings_appearance_theme_summary">Main theme of the application</string>
     <string name="settings_appearance_theme_summary">Hauptmotiv für die App</string>
-    <string name="settings_appearance_updating">Updating appearance…</string>
     <string name="settings_appearance_updating">Aktualisiere Erscheinungsbild…</string>
-    <string name="settings_appearance_accent_color_title">Accent color</string>
     <string name="settings_appearance_accent_color_title">Akzentfarbe</string>
-    <string name="settings_appearance_accent_color_summary">Color used to tint UI elements</string>
     <string name="settings_appearance_accent_color_summary">Farbe die zum Ui Elemente färben benutzt wird</string>
-    <string name="settings_picker_color_title">Choose color</string>
     <string name="settings_picker_color_title">Farbe auswählen</string>
-    <string name="settings_picker_theme_title">Choose theme</string>
     <string name="settings_picker_theme_title">Motiv auswählen</string>
-    <string name="settings_picker_theme_preview">Preview</string>
     <string name="settings_picker_theme_preview">Vorschau</string>
 
-
     <!-- Strings for Dialogs -->
-    <!-- Strings for Dialogs -->
-    <string name="dialog_loader_title">Choose payload</string>
     <string name="dialog_loader_title">Payload auswählen</string>
-    <string name="dialog_reset_payloads_title">Clear</string>
-    <string name="dialog_reset_payloads_title">löschen</string>
-    <string name="dialog_reset_payloads_summary">Are you sure you want to delete payloads?</string>
+    <string name="dialog_reset_payloads_title">Löschen</string>
     <string name="dialog_reset_payloads_summary">Bist du dir sicher das du den Payload löschen willst?</string>
-    <string name="dialog_file_chooser_payload_title">Choose payload</string>
     <string name="dialog_file_chooser_payload_title">Payload auswählen</string>
-    <string name="dialog_payload_download_title">Download</string>
     <string name="dialog_payload_download_title">Herunterladen</string>
     <string name="dialog_payload_download_name">Name</string>
-    <string name="dialog_payload_download_name">Name</string>
     <string name="dialog_payload_download_url" translatable="false">URL</string>
-    <string name="dialog_payload_download_url" translatable="false">URL</string>
-    <string name="dialog_payload_download_button">Download</string>
     <string name="dialog_payload_download_button">Runterladen</string>
     <string name="dialog_button_positive" translatable="false">OK</string>
-    <string name="dialog_button_positive" translatable="false">OK</string>
-    <string name="dialog_button_negative">Close</string>
     <string name="dialog_button_negative">Schließen</string>
 
-
     <!-- Strings for Serial Checker -->
-    <!-- Strings for Serial Checker -->
-    <string name="serial_checker_category_checker">Checker</string>
     <string name="serial_checker_category_checker">Überprüfer</string>
-    <string name="serial_checker_category_information">Information</string>
     <string name="serial_checker_category_information">Informationen</string>
-    <string name="serial_checker_checker_serial_number">Serial number</string>
     <string name="serial_checker_checker_serial_number">Seriennummer</string>
     <string name="serial_checker_checker_button">Check</string>
-    <string name="serial_checker_checker_button">Check</string>
-    <string name="serial_checker_information_xaw1">Serials beginning with XAW1\nXAW10000000000 - XAW10074000000: Not patched\nXAW10075000000 - XAW10120000000: Possibly patched\nXAW10120000000 and higher: Patched\n\n</string>
     <string name="serial_checker_information_xaw1">Seriennummern die Anfangen mit XAW1\nXAW10000000000 - XAW10074000000: Nicht gepatched\nXAW10075000000 - XAW10120000000: Möglicherweise gepatched\nXAW10120000000 und höher: Gepatched\n\n</string>
-    <string name="serial_checker_information_xaw4">Serials beginning with XAW4\nXAW40000000000 - XAW40011000000: Not patched\nXAW40011000000 - XAW40012000000: Possibly patched\nXAW40012000000 and higher: Patched\n\n</string>
     <string name="serial_checker_information_xaw4">Seriennummern die Anfangen mit XAW4\nXAW40000000000 - XAW40011000000: Nicht gepatched\nXAW40011000000 - XAW40012000000: Möglicherweise gepatched\nXAW40012000000 und höher: Gepatched\n\n</string>
-    <string name="serial_checker_information_xaw7">Serials beginning with XAW7\nXAW70000000000 - XAW70017800000: Not patched\nXAW70017800000 - XAW70030000000: Possibly patched\nXAW70030000000 and higher: Patched\n\n</string>
     <string name="serial_checker_information_xaw7">Seriennummern die Anfangen mit XAW7\nXAW70000000000 - XAW70017800000: Nicht gepatched\nXAW70017800000 - XAW70030000000: Möglicherweise gepatched\nXAW70030000000 und höher: Gepatched\n\n</string>
-    <string name="serial_checker_information_xaj1">Serials beginning with XAJ1\nXAJ10000000000 - XAJ10020000000: Not patched\nXAJ10020000000 - XAJ10030000000: Possibly patched\nXAJ10030000000 and higher: Patched\n\n</string>
     <string name="serial_checker_information_xaj1">Seriennummern die Anfangen mit XAJ1\nXAJ10000000000 - XAJ10020000000: Nicht gepatched\nXAJ10020000000 - XAJ10030000000: Möglicherweise gepatched\nXAJ10030000000 und höher: Gepatched\n\n</string>
-    <string name="serial_checker_information_xaj4">Serials beginning with XAJ4\nXAJ40000000000 - XAJ40046000000: Not patched\nXAJ40046000000 - XAJ40060000000: Possibly patched\nXAJ40060000000 and higher: Patched\n\n</string>
     <string name="serial_checker_information_xaj4">Seriennummern die Anfangen mit XAJ4\nXAJ40000000000 - XAJ40046000000: Nicht gepatched\nXAJ40046000000 - XAJ40060000000: Möglicherweise gepatched\nXAJ40060000000 und höher: Gepatched\n\n</string>
-    <string name="serial_checker_information_xaj7">Serials beginning with XAJ7\nXAJ70000000000 - XAJ70040000000: Not patched\nXAJ70040000000 - XAJ70050000000: Possibly patched\nXAJ70050000000 and higher: Patched\n\n</string>
     <string name="serial_checker_information_xaj7">Seriennummern die Anfangen mit XAJ7\nXAJ70000000000 - XAJ70040000000: Nicht gepatched\nXAJ70040000000 - XAJ70050000000: Möglicherweise gepatched\nXAJ70050000000 und höher: Gepatched\n\n</string>
-    <string name="serial_checker_information_xaw9">Serials beginning with XAW9\nRefurbished units directly from Nintendo, no information, but very possible all of them are patched.\n\n</string>
     <string name="serial_checker_information_xaw9">Seriennummern die Anfangen mit XAW9\nGeneralüberholte Einheit die direkt von Nintendo kommt, es sind keine Informationen darüber verfügbar, aber es ist sehr wahrscheinlich das sie gepatched sind.\n\n</string>
-    <string name="serial_checker_information_xak">Serials beginning with XAK\nNo information available, since those are only sold in Korea.</string>
     <string name="serial_checker_information_xak">Seriennummern die Anfangen mit XAK\nKeine Informationen verfügbar, da diese Einheiten nur in Korea verkauft werden.</string>
-    <string name="serial_checker_status_not_patched">Not patched</string>
     <string name="serial_checker_status_not_patched">Nicht gepatched</string>
-    <string name="serial_checker_status_patched">Patched</string>
     <string name="serial_checker_status_patched">Gepatched</string>
-    <string name="serial_checker_status_possibly_patched">Possibly patched</string>
     <string name="serial_checker_status_possibly_patched">Möglicherweise gepatched</string>
-    <string name="serial_checker_status_error">Can\'t check this serial number!</string>
     <string name="serial_checker_status_error">Seriennummer kann nicht überprüft werden!</string>
-    <string name="serial_checker_status_empty">Serial number can\'t be empty!</string>
     <string name="serial_checker_status_empty">Seriennummer kann nicht leer sein!</string>
-    <string name="serial_checker_status_too_long">Maximum length of the serial number is 14 characters!</string>
     <string name="serial_checker_status_too_long">Die maximale Länge der Seriennummer ist 14 Zeichen lang!</string>
-    <string name="serial_checker_status_scan_failed">Failed to scan barcode!</string>
     <string name="serial_checker_status_scan_failed">Barcode kann nicht gescannt werden!</string>
 
-
     <!-- Strings for Helper -->
-    <!-- Strings for Helper -->
-    <string name="helper_error_adding_payload">Selected payload can not be added!</string>
     <string name="helper_error_adding_payload">Ausgewählter Payload kann nicht hinzugefügt werden!</string>
-</resources>
 </resources>
