@@ -2,8 +2,6 @@ package com.pavelrekun.rekado.screens.payload_fragment
 
 import android.app.Activity
 import android.content.Intent
-import android.net.Uri
-import android.provider.MediaStore
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,14 +12,14 @@ import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.Constants.KEY_OPEN_PAYLOAD
 import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.Logger
-import com.pavelrekun.rekado.services.dialogs.Dialogs
+import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.extensions.extractFileName
 import com.pavelrekun.rekado.services.extensions.extractName
 import com.pavelrekun.rekado.services.extensions.toFile
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.SettingsUtils
-import com.pavelrekun.siga.services.extensions.tintIconReverse
+import com.pavelrekun.siga.services.extensions.tintReverse
 import kotlinx.android.synthetic.main.fragment_payloads.*
 import org.greenrobot.eventbus.EventBus
 
@@ -51,8 +49,8 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     override fun initDesign() {
-        activity.payloadsAddUrl.tintIconReverse()
-        activity.payloadsAdd.tintIconReverse()
+        activity.payloadsAddUrl.tintReverse()
+        activity.payloadsAdd.tintReverse()
     }
 
     override fun updateList() {
@@ -62,7 +60,7 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     override fun initClickListeners() {
-        activity.payloadsAddUrl.setOnClickListener { Dialogs.showPayloadsDownloadDialog(activity) }
+        activity.payloadsAddUrl.setOnClickListener { DialogsShower.showPayloadsDownloadDialog(activity) }
         activity.payloadsAdd.setOnClickListener { addPayload() }
     }
 

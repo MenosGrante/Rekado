@@ -15,6 +15,12 @@
         android:summary="@string/settings_appearance_accent_color_summary"
         android:title="@string/settings_appearance_accent_color_title" />
 
+    <Preference
+        android:icon="@drawable/ic_settings_reset"
+        android:key="appearance_reset"
+        android:summary="@string/settings_appearance_reset_summary"
+        android:title="@string/settings_appearance_reset_title" />
+
     <PreferenceCategory android:title="@string/settings_category_auto_injector" />
 
     <CheckBoxPreference

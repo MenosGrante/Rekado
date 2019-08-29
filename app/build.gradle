@@ -9,8 +9,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 54
-        versionName "3.2"
+        versionCode 55
+        versionName "3.3"
     }
 
     buildTypes {
@@ -61,11 +61,10 @@ dependencies {
     implementation "androidx.browser:browser:$androidXOtherVersion"
     implementation "androidx.preference:preference:$androidXOtherVersion"
     implementation "androidx.constraintlayout:constraintlayout:$androidXConstraintLayoutVersion"
+    implementation "com.google.android:flexbox:$flexBoxLayoutVersion"
 
     // Tools
-    implementation "io.paperdb:paperdb:$paperVersion"
     implementation "org.greenrobot:eventbus:$eventBusVersion"
-    implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
     implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
     implementation "com.journeyapps:zxing-android-embedded:$zxingVersion"
 

@@ -6,20 +6,22 @@ import androidx.preference.CheckBoxPreference
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import com.google.android.material.snackbar.Snackbar
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.Logger
-import com.pavelrekun.rekado.services.dialogs.Dialogs
+import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.Utils
+import com.pavelrekun.siga.Siga
 import com.pavelrekun.siga.pickers.theme.ThemePickerFragment
-import kotlinx.android.synthetic.main.activity_settings.*
+import com.pavelrekun.siga.services.enums.Application
+import com.pavelrekun.siga.services.helpers.SettingsDialogsHelper
 
 class MainSettingsView(private val activity: BaseActivity, private val fragment: PreferenceFragmentCompat) : MainSettingsContract.View {
 
     private lateinit var appearanceTheme: Preference
     private lateinit var appearanceAccentColor: Preference
+    private lateinit var appearanceReset: Preference
 
     private lateinit var autoInjectorEnable: CheckBoxPreference
     private lateinit var autoInjectorPayload: ListPreference
@@ -48,10 +50,11 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
 
         appearanceTheme = fragment.findPreference("appearance_theme")
         appearanceAccentColor = fragment.findPreference("appearance_accent_color")
+        appearanceReset = fragment.findPreference("appearance_reset")
     }
 
     override fun initAppearanceCategory() {
-        val themePickerFragment = ThemePickerFragment().apply { setClickListener { openUpdatingMessage() } }
+        val themePickerFragment = ThemePickerFragment().apply { setClickListener { showRestartDialog() } }
 
         appearanceTheme.setOnPreferenceClickListener {
             openSettingsFragment(themePickerFragment)
@@ -60,7 +63,15 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
         }
 
         appearanceAccentColor.setOnPreferenceChangeListener { _, _ ->
-            openUpdatingMessage()
+            showRestartDialog()
+            true
+        }
+
+        appearanceReset.setOnPreferenceClickListener {
+            SettingsDialogsHelper.showSettingsRestartDialog(activity) {
+                Siga.reset(Application.REKADO)
+                Utils.restartApplication(activity)
+            }
             true
         }
     }
@@ -95,7 +106,7 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
         }
 
         payloadsResetPreference.setOnPreferenceClickListener {
-            val dialog = Dialogs.showPayloadsResetDialog(activity)
+            val dialog = DialogsShower.showPayloadsResetDialog(activity)
 
             dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                 PayloadHelper.clearFolderWithoutBundled()
@@ -113,12 +124,9 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
         }
     }
 
-    override fun openUpdatingMessage() {
-        Snackbar.make(activity.settingsFragmentFrame, R.string.settings_appearance_updating, 500).addCallback(object : Snackbar.Callback() {
-            override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
-                super.onDismissed(transientBottomBar, event)
-                Utils.restartActivity(activity)
-            }
-        }).show()
+    private fun showRestartDialog() {
+        SettingsDialogsHelper.showSettingsRestartDialog(activity) {
+            Utils.restartApplication(activity)
+        }
     }
 }

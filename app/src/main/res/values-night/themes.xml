@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="Theme.Rekado.DayNight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">?attr/colorAccent</item>
+        <item name="colorPrimaryDark">?android:attr/windowBackground</item>
+        <item name="colorAccent">?attr/colorAccent</item>
+        <item name="colorSecondary">?attr/colorAccent</item>
+
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="materialAlertDialogTheme">@style/Siga.Widget.Dialog.Alert</item>
+    </style>
+
+</resources>

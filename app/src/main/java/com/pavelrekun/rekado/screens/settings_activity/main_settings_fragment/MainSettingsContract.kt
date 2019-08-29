@@ -18,8 +18,6 @@ interface MainSettingsContract {
 
         fun openSettingsFragment(fragment: Fragment)
 
-        fun openUpdatingMessage()
-
     }
 
 }

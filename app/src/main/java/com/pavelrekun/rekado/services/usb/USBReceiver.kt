@@ -3,11 +3,11 @@ package com.pavelrekun.rekado.services.usb
 import android.hardware.usb.UsbDevice
 import android.hardware.usb.UsbManager
 import android.os.Bundle
-import com.afollestad.materialdialogs.MaterialDialog
+import androidx.appcompat.app.AlertDialog
 import com.pavelrekun.rekado.base.BaseActivity
-import com.pavelrekun.rekado.services.dialogs.Dialogs
 import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.Logger
+import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.payloads.PayloadLoader
 import com.pavelrekun.rekado.services.utils.SettingsUtils
@@ -23,7 +23,7 @@ class USBReceiver : BaseActivity() {
 
     private var usbHandler: USBHandler? = null
 
-    private lateinit var payloadChooserDialog: MaterialDialog
+    private lateinit var payloadChooserDialog: AlertDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +37,7 @@ class USBReceiver : BaseActivity() {
                 PayloadHelper.putChosen(PayloadHelper.find(SettingsUtils.getAutoInjectorPayload()!!))
                 injectPayload()
             } else {
-                payloadChooserDialog = Dialogs.showPayloadsDialog(this)
+                payloadChooserDialog = DialogsShower.showPayloadsDialog(this)
             }
         }
     }
