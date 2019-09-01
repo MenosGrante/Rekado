@@ -10,7 +10,7 @@ android {
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
         versionCode 55
-        versionName "3.3"
+        versionName "3.2"
     }
 
     buildTypes {
