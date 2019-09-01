@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<resources>
+    <!-- Strings for Navigation -->
+    <string name="navigation_payloads">페이로드</string>
+    <string name="navigation_tools">도구</string>
+    <string name="navigation_instructions">지침</string>
+    <string name="navigation_logs">로그</string>
+    <string name="navigation_about">정보</string>
+    <string name="navigation_donate">기부</string>
+    <string name="navigation_settings">설정</string>
+    <string name="navigation_serial_checker">일련 번호 검사기</string>
+    <string name="navigation_translators">번역가</string>
+    <!-- Strings for About -->
+    <string name="about_category_description">설명</string>
+    <string name="about_category_developer">개발자</string>
+    <string name="about_information_description">Kotlin 와 C++로 작성된 응용 프로그램입니다. 닌텐도 스위치에 페이로드를 주입하는데 사용됩니다.</string>
+    <string name="about_developer_personal_site">개인 사이트</string>
+    <!-- Strings for Payloads -->
+    <string name="payloads_download_status_empty">이름 또는 URL은 비워 둘 수 없습니다!</string>
+    <string name="payloads_download_status_success">%1$s 페이로드를 성공적으로 다운로드했습니다!</string>
+    <string name="payloads_download_status_error">%1$s 페이로드를 다운로드 중 오류가 발생했습니다. 연결 또는 URL의 오타를 확인하십시오.</string>
+    <!-- Strings for Tools -->
+    <string name="tools_serial_checker_title">일련 번호 검사기</string>
+    <string name="tools_serial_checker_description">닌텐도 스위치가 장치의 일련 번호를 사용하여 해킹 가능한지 확인하십시오.</string>
+    <!-- Strings for Instructions -->
+    <string name="instructions_category_cable">케이블</string>
+    <string name="instructions_category_cable_description">먼저 장치를 닌텐도 스위치에 연결하기 위한 케이블을 찾아야합니다. 적절한 작업을 위해서는 충전용이 아닌 데이터 전송용으로 설계된 케이블이어야 합니다.\n\nA-to-C 케이블과 USB OTG 어댑터를 사용하는 것이 좋습니다.</string>
+    <string name="instructions_category_payload">페이로드</string>
+    <string name="instructions_category_payload_description">\"\ud398\uc774\ub85c\ub4dc\" \uce74\ud14c\uace0\ub9ac\uc5d0\uc11c \"+\" \ubc84\ud2bc\uc744 \ud074\ub9ad\ud558\uc5ec \uc7a5\uce58\uc758 \uc800\uc7a5\uc18c\uc5d0\uc11c \ubbf8\ub9ac \ub85c\ub4dc\ub41c \ud398\uc774\ub85c\ub4dc\ub97c \uc120\ud0dd\ud558\uc2ed\uc2dc\uc624. \ub610\ub294 \ud398\uc774\ub85c\ub4dc\ub97c \uc7a5\uce58\uc758 \uba54\ubaa8\ub9ac\uc5d0 \uc788\ub294 Rekado \ud3f4\ub354\ub85c \uc804\uc1a1\ud558\uba74\ub429\ub2c8\ub2e4.\n\n\ub610\ub294 \ubc88\ub4e4 \ud398\uc774\ub85c\ub4dc (SX Loader/ReiNX/Hekate)\ub97c \uc0ac\uc6a9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.</string>
+    <string name="instructions_category_rcm_description">편리한 방법으로 닌텐도 스위치를 RCM 모드로 전환하십시오..\n\n전원을 연결하면 닌텐도 스위치의 전원이 켜지므로 볼륨 + 버튼을 누르고 있어야합니다.</string>
+    <string name="instructions_category_final">최종</string>
+    <string name="instructions_category_final_description">장치를 닌텐도 스위치에 연결하고 필요한 경우 USB 액세스 권한을 허용하십시오. 유니트 페이로드 선택 대기 대화 상자가 열리며 로드할 장치를 선택하십시오.</string>
+    <!-- Strings for Donate -->
+    <string name="donate_description">나에게 커피를 사주면 응용 프로그램 개발을 지원할 수 있습니다.</string>
+    <!-- Strings for Settings -->
+    <string name="settings_category_auto_injector">자동 주입기</string>
+    <string name="settings_auto_injector_status_title_disabled">\"\uc790\ub3d9 \uc8fc\uc785\uae30\" \ud65c\uc131\ud654</string>
+    <string name="settings_auto_injector_status_title_enabled">\"\uc790\ub3d9 \uc8fc\uc785\uae30\" \ube44\ud65c\uc131\ud654</string>
+    <string name="settings_auto_injector_payload_title">페이로드</string>
+    <string name="settings_category_payloads">페이로드</string>
+    <string name="settings_payloads_remove_bundled_title">번들 숨김</string>
+    <string name="settings_payloads_remove_bundled_summary">모든 번들 페이로드 숨김</string>
+    <string name="settings_payloads_reset_title">지움</string>
+    <string name="settings_payloads_reset_summary">번들 (SX Loader/ReiNX/Hekate)을 제외한 추가  페이로드 모두 제거</string>
+    <string name="settings_category_appearance">외관</string>
+    <string name="settings_appearance_theme_title">테마</string>
+    <string name="settings_appearance_theme_summary">응용 프로그램의 메인 테마</string>
+    <string name="settings_appearance_updating">외관 업데이트 중...</string>
+    <string name="settings_appearance_accent_color_title">강조 색상</string>
+    <string name="settings_appearance_accent_color_summary">UI 요소의 색조에 사용되는 색상</string>
+    <string name="settings_appearance_reset_title">리셋</string>
+    <string name="settings_appearance_reset_summary">모양 설정을 기본값으로 재설정</string>
+    <string name="settings_picker_color_title">색상 선택</string>
+    <string name="settings_picker_color_button_close">닫기</string>
+    <string name="settings_picker_theme_title">테마 선택</string>
+    <string name="settings_picker_theme_preview">미리보기</string>
+    <string name="settings_picker_theme_category_themes">테마</string>
+    <string name="settings_utils_restart_dialog_title">설정 변경</string>
+    <string name="settings_utils_restart_dialog_message">설정이 변경되었습니다. 변경 사항을 적용하려면 응용 프로그램을 다시 시작하십시오.\n\n지금 앱을 다시 시작 하시겠습니까?</string>
+    <string name="settings_utils_restart_dialog_action_restart">재시작</string>
+    <string name="settings_utils_restart_dialog_action_cancel">취소</string>
+    <!-- Strings for DialogsShower -->
+    <string name="dialog_loader_title">페이로드 선택</string>
+    <string name="dialog_reset_payloads_title">지움</string>
+    <string name="dialog_reset_payloads_summary">페이로드를 삭제 하시겠습니까?</string>
+    <string name="dialog_file_chooser_payload_title">페이로드 선택</string>
+    <string name="dialog_payload_download_title">다운로드</string>
+    <string name="dialog_payload_download_name">이름</string>
+    <string name="dialog_payload_download_button">다운로드</string>
+    <string name="dialog_button_negative">닫기</string>
+    <!-- Strings for Serial Checker -->
+    <string name="serial_checker_category_checker">검사기</string>
+    <string name="serial_checker_category_information">정보</string>
+    <string name="serial_checker_checker_serial_number">일련 번호</string>
+    <string name="serial_checker_checker_button">검사</string>
+    <string name="serial_checker_information_xaw1">XAW1로 시작하는 일련 번호\nXAW10000000000 - XAW10074000000: 패치되지 않았음\nXAW10075000000 - XAW10120000000: 패치된 가능성이 있음\nXAW10120000000 이상: 패치 되었음</string>
+    <string name="serial_checker_information_xaw4">XAW4로 시작하는 일련 번호\nXAW40000000000 - XAW40011000000: 패치되지 않았음\nXAW40011000000 - XAW40012000000: 패치된 가능성이 있음\nXAW40012000000 이상: 패치 되었음</string>
+    <string name="serial_checker_information_xaw7">XAW7로 시작하는 일련 번호\nXAW70000000000 - XAW70017800000: 패치되지 않았음\nXAW70017800000 - XAW70030000000: 패치된 가능성이 있음\nXAW70030000000 이상: 패치 되었음</string>
+    <string name="serial_checker_information_xaj1">XAJ1로 시작하는 일련 번호\nXAJ10000000000 - XAJ10020000000: 패치되지 않았음\nXAJ10020000000 - XAJ10030000000: 패치된 가능성이 있음\nXAJ10030000000 이상: 패치 되었음</string>
+    <string name="serial_checker_information_xaj4">XAJ4로 시작하는 일련 번호\nXAJ40000000000 - XAJ40046000000: 패치되지 않았음\nXAJ40046000000 - XAJ40060000000: 패치된 가능성이 있음\nXAJ40060000000 이상: 패치 되었음</string>
+    <string name="serial_checker_information_xaj7">XAJ7로 시작하는 일련 번호\nXAJ70000000000 - XAJ70040000000: 패치되지 않았음\nXAJ70040000000 - XAJ70050000000: 패치된 가능성이 있음\nXAJ70050000000 이상: 패치 되었음</string>
+    <string name="serial_checker_information_xaw9">XAW9로 시작하는 일련 번호\n닌텐도에서 직접 리퍼비쉬한 유닛, 정보는 없지만 모두 가능합니다.\n</string>
+    <string name="serial_checker_information_xak">XAK로 시작하는 일련 번호\n한국에서만 판매되므로 정보가 없습니다.</string>
+    <string name="serial_checker_status_not_patched">패치되지 않음</string>
+    <string name="serial_checker_status_patched">패치 되었음</string>
+    <string name="serial_checker_status_possibly_patched">패치된 가능성이 있음</string>
+    <string name="serial_checker_status_error">이 일련 번호를 확인할 수 없습니다!</string>
+    <string name="serial_checker_status_empty">일련 번호는 비워둘 수 없습니다!</string>
+    <string name="serial_checker_status_too_long">일련 번호 최대 길이는 14 자입니다!</string>
+    <string name="serial_checker_status_scan_failed">바코드를 스캔하지 못했습니다!</string>
+    <!-- Strings for Helper -->
+    <string name="helper_error_adding_payload">선택한 페이로드를 추가할 수 없습니다!</string>
+</resources>

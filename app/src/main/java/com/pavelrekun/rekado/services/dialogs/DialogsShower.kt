@@ -19,7 +19,7 @@ import org.greenrobot.eventbus.EventBus
 object DialogsShower {
 
     fun showPayloadsDialog(activity: BaseActivity): AlertDialog {
-        val adapter = ArrayAdapter<String>(activity, android.R.layout.select_dialog_singlechoice, PayloadHelper.getNames())
+        val adapter = ArrayAdapter<String>(activity, R.layout.item_dialog_payload, PayloadHelper.getNames())
         val builder = MaterialAlertDialogBuilder(activity)
 
         builder.setTitle(R.string.dialog_loader_title)

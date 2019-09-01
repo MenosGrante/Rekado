@@ -36,8 +36,8 @@ class LogsAdapter(var data: MutableList<Log>) : RecyclerView.Adapter<LogsAdapter
         fun bind(log: Log) {
             itemLogName.text = log.message
 
-            itemLogType.setBackgroundColor(if (log.type == 0) ContextCompat.getColor(RekadoApplication.context, R.color.colorRed)
-            else ContextCompat.getColor(RekadoApplication.context, R.color.colorGreen))
+            itemLogRoot.strokeColor = if (log.type == 0) ContextCompat.getColor(RekadoApplication.context, R.color.colorRed)
+            else ContextCompat.getColor(RekadoApplication.context, R.color.colorGreen)
         }
 
     }
