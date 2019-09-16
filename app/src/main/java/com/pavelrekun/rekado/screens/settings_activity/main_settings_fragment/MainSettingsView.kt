@@ -42,15 +42,15 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
     }
 
     override fun preparePreferences() {
-        payloadsHideBundled = fragment.findPreference("payloads_hide_bundled")
-        payloadsResetPreference = fragment.findPreference("payloads_reset")
+        payloadsHideBundled = fragment.findPreference("payloads_hide_bundled")!!
+        payloadsResetPreference = fragment.findPreference("payloads_reset")!!
 
-        autoInjectorEnable = fragment.findPreference("auto_injector_enable") as CheckBoxPreference
-        autoInjectorPayload = fragment.findPreference("auto_injector_payload") as ListPreference
+        autoInjectorEnable = fragment.findPreference("auto_injector_enable")!!
+        autoInjectorPayload = fragment.findPreference("auto_injector_payload")!!
 
-        appearanceTheme = fragment.findPreference("appearance_theme")
-        appearanceAccentColor = fragment.findPreference("appearance_accent_color")
-        appearanceReset = fragment.findPreference("appearance_reset")
+        appearanceTheme = fragment.findPreference("appearance_theme")!!
+        appearanceAccentColor = fragment.findPreference("appearance_accent_color")!!
+        appearanceReset = fragment.findPreference("appearance_reset")!!
     }
 
     override fun initAppearanceCategory() {

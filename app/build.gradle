@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: "com.github.ben-manes.versions"
 
 android {
     compileSdkVersion currentSDKVersion
@@ -9,8 +10,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 55
-        versionName "3.2"
+        versionCode 56
+        versionName "3.2.1"
     }
 
     buildTypes {
@@ -23,6 +24,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 
     androidExtensions {
@@ -52,16 +57,22 @@ android {
 }
 
 dependencies {
-    // Own
+
+    // Local
     implementation(name: 'siga', ext: 'aar')
 
-    implementation "androidx.core:core-ktx:$androidCoreKTX"
-    implementation "com.google.android.material:material:$materialComponentsVersion"
-    implementation "androidx.recyclerview:recyclerview:$androidXOtherVersion"
-    implementation "androidx.browser:browser:$androidXOtherVersion"
-    implementation "androidx.preference:preference:$androidXOtherVersion"
+    // AndroidX: General
+    implementation "androidx.recyclerview:recyclerview:$androidXRecyclerViewVersion"
+    implementation "androidx.browser:browser:$androidXBrowserVersion"
+    implementation "androidx.preference:preference:$androidXPreferencesVersion"
     implementation "androidx.constraintlayout:constraintlayout:$androidXConstraintLayoutVersion"
+
+    // AndroidX: KTX
+    implementation "androidx.core:core-ktx:$androidXCoreKTX"
+
+    // Design
     implementation "com.google.android:flexbox:$flexBoxLayoutVersion"
+    implementation "com.google.android.material:material:$materialComponentsVersion"
 
     // Tools
     implementation "org.greenrobot:eventbus:$eventBusVersion"
@@ -72,4 +83,5 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutinesVersion"
+
 }

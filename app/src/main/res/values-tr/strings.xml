@@ -49,9 +49,17 @@ Payload seçme ekranı gelesiye kadar bekleyin ve istediğiniz payloadı yollay�
     <string name="settings_appearance_updating">Görünüş güncelleniyor...</string>
     <string name="settings_appearance_accent_color_title">Renk aksanı</string>
     <string name="settings_appearance_accent_color_summary">Arayüz bileşenlerinde kullanılacak renk tonu</string>
+    <string name="settings_appearance_reset_title">Sıfırla</string>
+    <string name="settings_appearance_reset_summary">Görünüşü varsayılan değerlere sıfırla</string>
     <string name="settings_picker_color_title">Renk seç</string>
+    <string name="settings_picker_color_button_close">Kapat</string>
     <string name="settings_picker_theme_title">Tema seç</string>
     <string name="settings_picker_theme_preview">Önizleme</string>
+    <string name="settings_picker_theme_category_themes">Temalar</string>
+    <string name="settings_utils_restart_dialog_title">Ayarlar uygulandı</string>
+    <string name="settings_utils_restart_dialog_message">Ayarlar değişti. Değişikliklerin geçerli olabilmesi için uygulamayı yeniden başlatın.\n\nUygulama şimdi yeniden başlatılsın mı?</string>
+    <string name="settings_utils_restart_dialog_action_restart">Yeniden başlat</string>
+    <string name="settings_utils_restart_dialog_action_cancel">İptal</string>
     <!-- Strings for DialogsShower -->
     <string name="dialog_loader_title">Payload Seçin</string>
     <string name="dialog_reset_payloads_title">Temizle</string>
@@ -80,6 +88,7 @@ Payload seçme ekranı gelesiye kadar bekleyin ve istediğiniz payloadı yollay�
     <string name="serial_checker_status_error">Bu seri numarası kontrol edilemiyor!</string>
     <string name="serial_checker_status_empty">Seri numarası boş olamaz!</string>
     <string name="serial_checker_status_too_long">Seri numarası için maksimum karakter sayısı 14\' tür!</string>
+    <string name="serial_checker_status_scan_failed">Barkod okunamadı!</string>
     <!-- Strings for Helper -->
     <string name="helper_error_adding_payload">Seçilen payload eklenemiyor!</string>
 </resources>

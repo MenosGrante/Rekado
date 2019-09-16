@@ -17,6 +17,7 @@ import java.nio.ByteOrder
 class PayloadLoader : USBHandler {
 
     companion object {
+
         init {
             System.loadLibrary("payload_launcher")
         }
@@ -25,6 +26,7 @@ class PayloadLoader : USBHandler {
         private const val INTERMEZZO_LOCATION = 0x4001F000
         private const val PAYLOAD_LOAD_BLOCK = 0x40020000
         private const val MAX_LENGTH = 0x30298
+
     }
 
     private lateinit var usbConnection: UsbDeviceConnection
@@ -133,7 +135,7 @@ class PayloadLoader : USBHandler {
         Logger.info("Opening chosen payload: ${chosenPayload.name}")
 
         val chosenPayloadData = ByteArray(chosenPayloadFile.available())
-        Logger.info("Read ${Integer.toString(chosenPayloadFile.read(chosenPayloadData))} bytes from payload file!")
+        Logger.info("Read ${chosenPayloadFile.read(chosenPayloadData)} bytes from payload file!")
 
         chosenPayloadFile.close()
         return chosenPayloadData

@@ -6,7 +6,7 @@
     <string name="navigation_instructions">Anleitung</string>
     <string name="navigation_logs">Logs</string>
     <string name="navigation_about">Über</string>
-    <string name="navigation_donate">Spenden</string>
+    <string name="navigation_donate">Unterstütze die Entwicklung</string>
     <string name="navigation_settings">Einstellungen</string>
     <string name="navigation_serial_checker">Seriennummer-Überprüfer</string>
     <string name="navigation_translators">Übersetzer</string>
@@ -48,9 +48,17 @@
     <string name="settings_appearance_updating">Aktualisiere Erscheinungsbild…</string>
     <string name="settings_appearance_accent_color_title">Akzentfarbe</string>
     <string name="settings_appearance_accent_color_summary">Farbe die zum Ui Elemente färben benutzt wird</string>
+    <string name="settings_appearance_reset_title">Zurücksetzen</string>
+    <string name="settings_appearance_reset_summary">Setze das Erscheinungsbild auf die Standardeinstellungen zurück</string>
     <string name="settings_picker_color_title">Farbe auswählen</string>
+    <string name="settings_picker_color_button_close">Schließen</string>
     <string name="settings_picker_theme_title">Motiv auswählen</string>
     <string name="settings_picker_theme_preview">Vorschau</string>
+    <string name="settings_picker_theme_category_themes">Motive</string>
+    <string name="settings_utils_restart_dialog_title">Einstellungen geändert</string>
+    <string name="settings_utils_restart_dialog_message">Es wurden Einstellungen geändert. Bitte starten sie die App neu damit die Änderungen Übernommen werden. Wollen sie die App jetzt neustarten?</string>
+    <string name="settings_utils_restart_dialog_action_restart">Neustarten</string>
+    <string name="settings_utils_restart_dialog_action_cancel">Zurück</string>
     <!-- Strings for DialogsShower -->
     <string name="dialog_loader_title">Payload auswählen</string>
     <string name="dialog_reset_payloads_title">Löschen</string>
@@ -79,6 +87,7 @@
     <string name="serial_checker_status_error">Seriennummer kann nicht überprüft werden!</string>
     <string name="serial_checker_status_empty">Seriennummer kann nicht leer sein!</string>
     <string name="serial_checker_status_too_long">Die maximale Länge der Seriennummer ist 14 Zeichen lang!</string>
+    <string name="serial_checker_status_scan_failed">Scannen des Barcodes ist fehlgeschlagen!</string>
     <!-- Strings for Helper -->
     <string name="helper_error_adding_payload">Ausgewählter Payload kann nicht hinzugefügt werden!</string>
 </resources>

@@ -11,7 +11,7 @@
     <string name="navigation_serial_checker">Проверка по серийному номеру</string>
     <string name="navigation_translators">Переводчики</string>
     <!-- Strings for About -->
-    <string name="about_category_description">Информация</string>
+    <string name="about_category_description">Opt-out</string>
     <string name="about_category_developer">Разработчик</string>
     <string name="about_information_description">Приложение написано на Kotlin с использованием C++. Оно используется для инъекций загрузчиков на Nintendo Switch.</string>
     <string name="about_developer_personal_site">Персональный сайт</string>
@@ -55,7 +55,7 @@
     <string name="settings_picker_theme_title">Выберите тему</string>
     <string name="settings_picker_theme_preview">Превью</string>
     <string name="settings_picker_theme_category_themes">Темы</string>
-    <string name="settings_utils_restart_dialog_title">Настройки изменены</string>
+    <string name="settings_utils_restart_dialog_title">Opt-out</string>
     <string name="settings_utils_restart_dialog_message">Настройки были изменены. Пожалуйста, перезапустите приложение, чтобы изменения вступили в силу.\n\nПерезапустить приложение сейчас?</string>
     <string name="settings_utils_restart_dialog_action_restart">Перезапустить</string>
     <string name="settings_utils_restart_dialog_action_cancel">Отмена</string>
