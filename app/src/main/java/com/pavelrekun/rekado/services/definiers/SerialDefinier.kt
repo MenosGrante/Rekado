@@ -1,6 +1,7 @@
 package com.pavelrekun.rekado.services.definiers
 
 import com.pavelrekun.rekado.R
+import java.util.*
 
 object SerialDefinier {
 
@@ -12,7 +13,7 @@ object SerialDefinier {
     private const val STATUS_ERROR = 3
 
     fun defineConsoleStatus(serialNumber: String): Int {
-        return when (defineConsoleStatusInternal(serialNumber.toUpperCase())) {
+        return when (defineConsoleStatusInternal(serialNumber.toUpperCase(Locale.ROOT))) {
             STATUS_NOT_PATCHED -> R.string.serial_checker_status_not_patched
             STATUS_PATCHED -> R.string.serial_checker_status_patched
             STATUS_POSSIBLY_PATCHED -> R.string.serial_checker_status_possibly_patched

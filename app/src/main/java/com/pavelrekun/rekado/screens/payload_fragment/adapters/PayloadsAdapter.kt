@@ -8,7 +8,6 @@ import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.Logger
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
-import com.pavelrekun.rekado.services.utils.MemoryUtils
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_payload.*
 import org.greenrobot.eventbus.EventBus

@@ -46,7 +46,7 @@ Payload seçme ekranı gelesiye kadar bekleyin ve istediğiniz payloadı yollay�
     <string name="settings_category_appearance">Görünüş</string>
     <string name="settings_appearance_theme_title">Tema</string>
     <string name="settings_appearance_theme_summary">Uygulamanın ana teması</string>
-    <string name="settings_appearance_updating">Görünüş güncelleniyor...</string>
+    <string name="settings_appearance_updating">Görünüş güncelleniyor…</string>
     <string name="settings_appearance_accent_color_title">Renk aksanı</string>
     <string name="settings_appearance_accent_color_summary">Arayüz bileşenlerinde kullanılacak renk tonu</string>
     <string name="settings_appearance_reset_title">Sıfırla</string>

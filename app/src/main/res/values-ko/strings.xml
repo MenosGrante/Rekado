@@ -45,7 +45,7 @@
     <string name="settings_category_appearance">외관</string>
     <string name="settings_appearance_theme_title">테마</string>
     <string name="settings_appearance_theme_summary">응용 프로그램의 메인 테마</string>
-    <string name="settings_appearance_updating">외관 업데이트 중...</string>
+    <string name="settings_appearance_updating">외관 업데이트 중…</string>
     <string name="settings_appearance_accent_color_title">강조 색상</string>
     <string name="settings_appearance_accent_color_summary">UI 요소의 색조에 사용되는 색상</string>
     <string name="settings_appearance_reset_title">리셋</string>

@@ -5,7 +5,6 @@ import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.screens.logs_fragment.adapters.LogsAdapter
 import com.pavelrekun.rekado.services.Logger
-import com.pavelrekun.siga.services.extensions.tintIconReverse
 import com.pavelrekun.siga.services.extensions.tintReverse
 import kotlinx.android.synthetic.main.fragment_logs.*
 
