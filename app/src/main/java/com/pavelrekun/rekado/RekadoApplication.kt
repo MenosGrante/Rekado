@@ -20,8 +20,9 @@ class RekadoApplication : Application() {
     }
 
     private fun configureThemeEngine() {
+        Siga.context = this.applicationContext
         val defaultSetup = Siga.createDefaults().theme(Theme.BLACK).color(Color.LIGHT_BLUE_500)
-        Siga.init(this, defaultSetup)
+        Siga.init(defaultSetup)
     }
 
     private fun configureInternalSystems() {

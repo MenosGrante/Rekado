@@ -21,6 +21,7 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
 
     private lateinit var appearanceTheme: Preference
     private lateinit var appearanceAccentColor: Preference
+    private lateinit var appearanceRandomize: Preference
     private lateinit var appearanceReset: Preference
 
     private lateinit var autoInjectorEnable: CheckBoxPreference
@@ -50,11 +51,14 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
 
         appearanceTheme = fragment.findPreference("appearance_theme")!!
         appearanceAccentColor = fragment.findPreference("appearance_accent_color")!!
+        appearanceRandomize = fragment.findPreference("appearance_randomize")!!
         appearanceReset = fragment.findPreference("appearance_reset")!!
     }
 
     override fun initAppearanceCategory() {
-        val themePickerFragment = ThemePickerFragment().apply { setClickListener { showRestartDialog() } }
+        val themePickerFragment = ThemePickerFragment().apply {
+            setClickListener { openRestartDialog() }
+        }
 
         appearanceTheme.setOnPreferenceClickListener {
             openSettingsFragment(themePickerFragment)
@@ -63,7 +67,15 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
         }
 
         appearanceAccentColor.setOnPreferenceChangeListener { _, _ ->
-            showRestartDialog()
+            openRestartDialog()
+            true
+        }
+
+        appearanceRandomize.setOnPreferenceClickListener {
+            SettingsDialogsHelper.showSettingsRestartDialog(activity) {
+                Siga.randomizeTheme()
+                Utils.restartApplication(activity)
+            }
             true
         }
 
@@ -124,7 +136,7 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
         }
     }
 
-    private fun showRestartDialog() {
+    private fun openRestartDialog() {
         SettingsDialogsHelper.showSettingsRestartDialog(activity) {
             Utils.restartApplication(activity)
         }

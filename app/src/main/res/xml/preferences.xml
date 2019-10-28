@@ -16,6 +16,12 @@
         android:title="@string/settings_appearance_accent_color_title" />
 
     <Preference
+        android:icon="@drawable/ic_settings_appearance_random"
+        android:key="appearance_randomize"
+        android:summary="@string/settings_appearance_randomize_summary"
+        android:title="@string/settings_appearance_randomize_title" />
+
+    <Preference
         android:icon="@drawable/ic_settings_reset"
         android:key="appearance_reset"
         android:summary="@string/settings_appearance_reset_summary"
