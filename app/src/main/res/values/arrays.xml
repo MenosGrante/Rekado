@@ -5,24 +5,24 @@
         <item>English</item> <!-- English -->
         <item>Русский</item> <!-- Russian -->
         <item>Українська</item> <!-- Ukrainian -->
-        <item>Português (Brasil)</item> <!-- Brazilian -->
-        <item>Français</item> <!-- French -->
+<!--        <item>Português (Brasil)</item> &lt;!&ndash; Brazilian &ndash;&gt;-->
+<!--        <item>Français</item> &lt;!&ndash; French &ndash;&gt;-->
         <item>Italiano</item> <!-- Italian -->
-        <item>Polski</item> <!-- Polish -->
-        <item>Türkçe</item> <!-- Turkish -->
-        <item>한국어</item> <!-- Korean -->
+<!--        <item>Polski</item> &lt;!&ndash; Polish &ndash;&gt;-->
+<!--        <item>Türkçe</item> &lt;!&ndash; Turkish &ndash;&gt;-->
+<!--        <item>한국어</item> &lt;!&ndash; Korean &ndash;&gt;-->
     </string-array>
 
     <string-array name="translators_people" translatable="false">
         <item>Pavel Rekun (Menos)</item> <!-- English -->
         <item>Pavel Rekun (Menos)</item> <!-- Russian -->
         <item>Pavel Rekun (Menos)</item> <!-- Ukrainian -->
-        <item>DavidOliM, zyz696</item> <!-- Brazilian -->
-        <item>tiliarou, gclotault</item> <!-- French -->
+<!--        <item>DavidOliM, zyz696</item> &lt;!&ndash; Brazilian &ndash;&gt;-->
+<!--        <item>tiliarou, gclotault</item> &lt;!&ndash; French &ndash;&gt;-->
         <item>tiliarou, Francesco Ognibene</item> <!-- Italian -->
-        <item>mixon606</item> <!-- Polish -->
-        <item>Mahmut Pekkara</item> <!-- Turkish -->
-        <item>DDinghoya</item> <!-- Korean -->
+<!--        <item>mixon606</item> &lt;!&ndash; Polish &ndash;&gt;-->
+<!--        <item>Mahmut Pekkara</item> &lt;!&ndash; Turkish &ndash;&gt;-->
+<!--        <item>DDinghoya</item> &lt;!&ndash; Korean &ndash;&gt;-->
     </string-array>
 
 </resources>

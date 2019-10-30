@@ -46,8 +46,8 @@
     <CheckBoxPreference
         android:icon="@drawable/ic_settings_payloads_hide"
         android:key="payloads_hide_bundled"
-        android:summary="@string/settings_payloads_remove_bundled_summary"
-        android:title="@string/settings_payloads_remove_bundled_title" />
+        android:summary="@string/settings_payloads_remove_pre_installed_summary"
+        android:title="@string/settings_payloads_remove_pre_installed_title" />
 
     <Preference
         android:icon="@drawable/ic_settings_payloads_clear"
