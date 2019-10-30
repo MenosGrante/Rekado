@@ -1,4 +1,4 @@
-<a href="https://www.buymeacoffee.com/pavelrekun" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+<a href="https://www.buymeacoffee.com/pavelrekun" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 # Rekado
 Payload launcher written in Kotlin for Nintendo Switch.
