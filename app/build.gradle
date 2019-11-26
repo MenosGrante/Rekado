@@ -71,7 +71,6 @@ dependencies {
     implementation "androidx.core:core-ktx:$androidXCoreKTX"
 
     // Design
-    implementation "com.google.android:flexbox:$flexBoxLayoutVersion"
     implementation "com.google.android.material:material:$materialComponentsVersion"
 
     // Tools
