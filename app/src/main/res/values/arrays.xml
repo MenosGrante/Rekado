@@ -8,7 +8,7 @@
 <!--        <item>Português (Brasil)</item> &lt;!&ndash; Brazilian &ndash;&gt;-->
 <!--        <item>Français</item> &lt;!&ndash; French &ndash;&gt;-->
         <item>Italiano</item> <!-- Italian -->
-<!--        <item>Polski</item> &lt;!&ndash; Polish &ndash;&gt;-->
+        <item>Polski</item> <!-- Polish -->
 <!--        <item>Türkçe</item> &lt;!&ndash; Turkish &ndash;&gt;-->
 <!--        <item>한국어</item> &lt;!&ndash; Korean &ndash;&gt;-->
     </string-array>
@@ -20,7 +20,7 @@
 <!--        <item>DavidOliM, zyz696</item> &lt;!&ndash; Brazilian &ndash;&gt;-->
 <!--        <item>tiliarou, gclotault</item> &lt;!&ndash; French &ndash;&gt;-->
         <item>tiliarou, Francesco Ognibene</item> <!-- Italian -->
-<!--        <item>mixon606</item> &lt;!&ndash; Polish &ndash;&gt;-->
+        <item>bandithedoge, mixon606</item> <!-- Polish -->
 <!--        <item>Mahmut Pekkara</item> &lt;!&ndash; Turkish &ndash;&gt;-->
 <!--        <item>DDinghoya</item> &lt;!&ndash; Korean &ndash;&gt;-->
     </string-array>
