@@ -65,7 +65,7 @@
     <string name="settings_picker_theme_themes_colorful_olive">Oliva</string>
     <string name="settings_picker_theme_themes_colorful_jungle">Jungla</string>
     <string name="settings_picker_theme_themes_colorful_pepper">Papel</string>
-    <string name="settings_picker_theme_themes_colorful_ocean">Oceano</string>
+    <string name="settings_picker_theme_themes_colorful_ocean">Océano</string>
     <string name="settings_utils_restart_dialog_title">Ajustes cambiados</string>
     <string name="settings_utils_restart_dialog_message">Los ajustes fueron cambiados. Por favor, reinicia la aplicación para que el cambio tenga efecto. \n\n¿Reiniciar la aplicación ahora?</string>
     <string name="settings_utils_restart_dialog_action_restart">Reiniciar</string>

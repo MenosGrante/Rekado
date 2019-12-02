@@ -11,7 +11,7 @@ android {
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
         versionCode 59
-        versionName "3.2.3"
+        versionName "3.2.4"
     }
 
     buildTypes {
