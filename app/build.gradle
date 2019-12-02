@@ -72,6 +72,7 @@ dependencies {
 
     // Design
     implementation "com.google.android.material:material:$materialComponentsVersion"
+    implementation "com.google.android:flexbox:$flexBoxLayoutVersion"
 
     // Tools
     implementation "org.greenrobot:eventbus:$eventBusVersion"
