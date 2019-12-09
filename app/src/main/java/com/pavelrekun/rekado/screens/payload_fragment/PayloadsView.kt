@@ -5,6 +5,7 @@ import android.content.Intent
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.pavelrekun.penza.services.extensions.tintContrast
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.screens.payload_fragment.adapters.PayloadsAdapter
@@ -19,7 +20,6 @@ import com.pavelrekun.rekado.services.extensions.toFile
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import com.pavelrekun.rekado.services.utils.SettingsUtils
-import com.pavelrekun.siga.services.extensions.tintReverse
 import kotlinx.android.synthetic.main.fragment_payloads.*
 import org.greenrobot.eventbus.EventBus
 
@@ -49,8 +49,8 @@ class PayloadsView(private val activity: BaseActivity, private val fragment: Fra
     }
 
     override fun initDesign() {
-        activity.payloadsAddUrl.tintReverse()
-        activity.payloadsAdd.tintReverse()
+        activity.payloadsAddUrl.tintContrast()
+        activity.payloadsAdd.tintContrast()
     }
 
     override fun updateList() {

@@ -12,10 +12,9 @@ import com.pavelrekun.rekado.services.Logger
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.Utils
-import com.pavelrekun.siga.Siga
-import com.pavelrekun.siga.pickers.theme.ThemePickerFragment
-import com.pavelrekun.siga.services.enums.Application
-import com.pavelrekun.siga.services.helpers.SettingsDialogsHelper
+import com.pavelrekun.penza.Penza
+import com.pavelrekun.penza.pickers.theme.ThemePickerFragment
+import com.pavelrekun.penza.services.helpers.SettingsDialogsHelper
 
 class MainSettingsView(private val activity: BaseActivity, private val fragment: PreferenceFragmentCompat) : MainSettingsContract.View {
 
@@ -73,7 +72,7 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
 
         appearanceRandomize.setOnPreferenceClickListener {
             SettingsDialogsHelper.showSettingsRestartDialog(activity) {
-                Siga.randomizeTheme()
+                Penza.randomizeTheme()
                 Utils.restartApplication(activity)
             }
             true
@@ -81,7 +80,7 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
 
         appearanceReset.setOnPreferenceClickListener {
             SettingsDialogsHelper.showSettingsRestartDialog(activity) {
-                Siga.reset(Application.REKADO)
+                Penza.reset()
                 Utils.restartApplication(activity)
             }
             true

@@ -9,7 +9,7 @@
         android:summary="@string/settings_appearance_theme_summary"
         android:title="@string/settings_appearance_theme_title" />
 
-    <com.pavelrekun.siga.pickers.color.ColorPickerPreference
+    <com.pavelrekun.penza.pickers.color.ColorPickerPreference
         android:icon="@drawable/ic_settings_appearance_accent"
         android:key="appearance_accent_color"
         android:summary="@string/settings_appearance_accent_color_summary"

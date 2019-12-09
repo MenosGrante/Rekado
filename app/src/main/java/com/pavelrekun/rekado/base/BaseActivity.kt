@@ -5,17 +5,14 @@ import android.os.Build
 import android.os.Bundle
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.screens.main_activity.MainActivity
-import com.pavelrekun.siga.Siga
-import com.pavelrekun.siga.base.SigaActivity
-import com.pavelrekun.siga.services.enums.Application
-import com.pavelrekun.siga.services.helpers.ColorsHelper
-import com.pavelrekun.siga.services.helpers.DesignHelper
+import com.pavelrekun.penza.base.PenzaActivity
+import com.pavelrekun.penza.services.helpers.ColorsHelper
+import com.pavelrekun.penza.services.helpers.DesignHelper
 
 @SuppressLint("Registered")
-open class BaseActivity : SigaActivity() {
+open class BaseActivity : PenzaActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Siga.updateTheme(true, Application.REKADO)
         super.onCreate(savedInstanceState)
 
         initDesignRules()

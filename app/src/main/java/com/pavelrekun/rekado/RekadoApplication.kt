@@ -4,9 +4,11 @@ import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
 import com.pavelrekun.rekado.services.Logger
-import com.pavelrekun.siga.Siga
-import com.pavelrekun.siga.data.Color
-import com.pavelrekun.siga.data.Theme
+import com.pavelrekun.penza.Penza
+import com.pavelrekun.penza.data.Color
+import com.pavelrekun.penza.data.Theme
+import com.pavelrekun.penza.services.enums.Project
+import com.pavelrekun.penza.services.theme.PenzaTheme
 
 class RekadoApplication : Application() {
 
@@ -20,9 +22,9 @@ class RekadoApplication : Application() {
     }
 
     private fun configureThemeEngine() {
-        Siga.context = this.applicationContext
-        val defaultSetup = Siga.createDefaults().theme(Theme.BLACK).color(Color.LIGHT_BLUE_500)
-        Siga.init(defaultSetup)
+        Penza.context = this.applicationContext
+        val penzaTheme = PenzaTheme(Color.LIGHT_BLUE_500, Theme.BLACK)
+        Penza.initialize(penzaTheme, Project.REKADO, true)
     }
 
     private fun configureInternalSystems() {

@@ -37,7 +37,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/Siga.Widget.Text.Subtitle"
+                        style="@style/Penza.Widget.Text.Subtitle.Padding"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/serial_checker_category_checker" />
@@ -128,7 +128,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            style="@style/Siga.Widget.Text.Subtitle"
+                            style="@style/Penza.Widget.Text.Subtitle.Padding"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"

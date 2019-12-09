@@ -10,8 +10,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 59
-        versionName "3.2.4"
+        versionCode 60
+        versionName "3.3"
     }
 
     buildTypes {
@@ -59,7 +59,7 @@ android {
 dependencies {
 
     // Local
-    implementation(name: 'siga', ext: 'aar')
+    implementation(name: 'penza', ext: 'aar')
 
     // AndroidX: General
     implementation "androidx.recyclerview:recyclerview:$androidXRecyclerViewVersion"
