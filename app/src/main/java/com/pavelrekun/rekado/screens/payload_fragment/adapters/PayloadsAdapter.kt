@@ -37,8 +37,7 @@ class PayloadsAdapter(var data: MutableList<Payload>) : androidx.recyclerview.wi
         fun bind(payload: Payload) {
             itemPayloadName.text = payload.name
 
-            itemPayloadRemove.visibility = if (payload.name == PayloadHelper.BUNDLED_PAYLOAD_SX
-                    || payload.name == PayloadHelper.BUNDLED_PAYLOAD_REINX || payload.name == PayloadHelper.BUNDLED_PAYLOAD_HEKATE) View.GONE else View.VISIBLE
+            itemPayloadRemove.visibility = if (PayloadHelper.isBundledPayload(payload)) View.GONE else View.VISIBLE
 
             itemPayloadRemove.setOnClickListener {
                 File(payload.path).delete()

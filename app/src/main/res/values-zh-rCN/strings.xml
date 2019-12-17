@@ -26,7 +26,7 @@
     <string name="instructions_category_cable">数据线</string>
     <string name="instructions_category_cable_description">首先，你需要一根数据线来连接你的手机和任天堂 Switch。如果想要正常工作，这条数据线必须为了传输数据设计而不是只用来充电的。\n\n建议使用A-to-C电缆和USB OTG适配器。</string>
     <string name="instructions_category_payload">注入文件</string>
-    <string name="instructions_category_payload_description">\u5728 \"\u6ce8\u5165\" \u5217\u8868\u4e2d, \u70b9\u51fb \"+\" \u6309\u94ae\u4ece\u4f60\u8bbe\u5907\u7684\u50a8\u5b58\u5361\u4e2d\u9009\u62e9\u9700\u8981\u52a0\u8f7d\u7684\u6ce8\u5165\u6587\u4ef6\u3002\u6216\u8005\u4f60\u53ef\u4ee5\u5c06\u6ce8\u5165\u6587\u4ef6 \u62f7\u8d1d\u5230\u8bbe\u5907\u5185\u5b58\u4e2d\u7684 Rekado \u6587\u4ef6\u5939\u4e2d(/sdcard/Android/data/com.pavelrekun.rekado/files/)\u3002\n\n\u6216\u8005\u4f7f\u7528\u81ea\u5e26\u7684\u6ce8\u5165\u6587\u4ef6 (SX Loader/ReiNX/Hekate)\u3002</string>
+    <string name="instructions_category_payload_description">\u5728 \"\u6ce8\u5165\" \u5217\u8868\u4e2d, \u70b9\u51fb \"+\" \u6309\u94ae\u4ece\u4f60\u8bbe\u5907\u7684\u50a8\u5b58\u5361\u4e2d\u9009\u62e9\u9700\u8981\u52a0\u8f7d\u7684\u6ce8\u5165\u6587\u4ef6\u3002\u6216\u8005\u4f60\u53ef\u4ee5\u5c06\u6ce8\u5165\u6587\u4ef6 \u62f7\u8d1d\u5230\u8bbe\u5907\u5185\u5b58\u4e2d\u7684 Rekado \u6587\u4ef6\u5939\u4e2d(/sdcard/Android/data/com.pavelrekun.rekado/files/)\u3002\n\n\u6216\u8005\u4f7f\u7528\u81ea\u5e26\u7684\u6ce8\u5165\u6587\u4ef6 (SX Loader/ReiNX/Hekate/Fusee Primary)\u3002</string>
     <string name="instructions_category_rcm_description">在任何时候让你的任天堂 Switch 进入 RCM 模式。 \n你的任天堂 Switch 需要按住音量+，然后再插入数据线就会开机。</string>
     <string name="instructions_category_final">完成</string>
     <string name="instructions_category_final_description">将设备连接到任天堂 Switch 并在有需要时允许 usb 访问权限。将打开 注入文件 选择对话框，并在对话框内选择需要加载的注入文件。</string>
@@ -41,7 +41,7 @@
     <string name="settings_payloads_remove_pre_installed_title">隐藏自带的</string>
     <string name="settings_payloads_remove_pre_installed_summary">隐藏所有自带的注入文件</string>
     <string name="settings_payloads_reset_title">清除</string>
-    <string name="settings_payloads_reset_summary">移除所有自带的 注入文件 (SX Loader/ReiNX/Hekate)</string>
+    <string name="settings_payloads_reset_summary">移除所有自带的 注入文件 (SX Loader/ReiNX/Hekate/Fusee Primary)</string>
     <string name="settings_category_appearance">外观</string>
     <string name="settings_appearance_theme_title">主题</string>
     <string name="settings_appearance_theme_summary">应用程序主题</string>

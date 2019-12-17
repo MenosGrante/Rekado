@@ -34,7 +34,7 @@
     <string name="instructions_category_cable">Cable</string>
     <string name="instructions_category_cable_description">First, you need to find a cable to connect your device to the Nintendo Switch. For proper work, this should be a cable that is designed for data transmission, not just for charging.\n\nIt is advisable to use an A-to-C cable and a USB OTG adapter.</string>
     <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">In the \u0022Payloads\u0022 category, click the \u0022+\u0022 button to select preloaded payload from your device\'s storage. Or simply transfer your payload to the Rekado folder (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nOr you can use the pre-installed payloads (SX Loader/ReiNX/Hekate).</string>
+    <string name="instructions_category_payload_description">In the \u0022Payloads\u0022 category, click the \u0022+\u0022 button to select preloaded payload from your device\'s storage. Or simply transfer your payload to the Rekado folder (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nOr you can use the pre-installed payloads (SX Loader/ReiNX/Hekate/Fusee Primary).</string>
     <string name="instructions_category_rcm" translatable="false">RCM</string>
     <string name="instructions_category_rcm_description">Enter your Nintendo Switch into RCM mode in any convenient way. \n\nYour Nintendo Switch will power on by itself when plugged in, be sure to hold VOLUME +.</string>
     <string name="instructions_category_final">Final</string>
@@ -52,7 +52,7 @@
     <string name="settings_payloads_remove_pre_installed_title">Hide pre-installed</string>
     <string name="settings_payloads_remove_pre_installed_summary">Hide all pre-installed payloads</string>
     <string name="settings_payloads_reset_title">Clear</string>
-    <string name="settings_payloads_reset_summary">Remove all added payloads except pre-installed (SX Loader/ReiNX/Hekate)</string>
+    <string name="settings_payloads_reset_summary">Remove all added payloads except pre-installed (SX Loader/ReiNX/Hekate/Fusee Primary)</string>
     <string name="settings_category_appearance">Appearance</string>
     <string name="settings_appearance_theme_title">Theme</string>
     <string name="settings_appearance_theme_summary">Main theme of the application</string>

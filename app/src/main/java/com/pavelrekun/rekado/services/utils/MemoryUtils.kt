@@ -12,6 +12,7 @@ object MemoryUtils {
         copyAsset(PayloadHelper.BUNDLED_PAYLOAD_SX)
         copyAsset(PayloadHelper.BUNDLED_PAYLOAD_REINX)
         copyAsset(PayloadHelper.BUNDLED_PAYLOAD_HEKATE)
+        copyAsset(PayloadHelper.BUNDLED_PAYLOAD_FUSEE_PRIMARY)
 
         EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
     }

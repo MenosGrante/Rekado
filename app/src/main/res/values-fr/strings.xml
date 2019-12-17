@@ -26,7 +26,7 @@
     <string name="instructions_category_cable">Câble</string>
     <string name="instructions_category_cable_description">Pour commencer, vous devez avoir un câble pour connecter votre appareil à la Switch. Pour un bon fonctionnement, le câble doit permettre la transmission de données, pas seulement charger la batterie.\n\nIl est conseillé d\'utiliser un câble USB type A vers type C et un adaptateur USB OTG.</string>
     <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">Dans la cat\u00e9gorie \"Payloads\", cliquez sur le bouton \"+\" pour s\u00e9lectionner un payload depuis le stockage de votre t\u00e9l\u00e9phone. Ou bien mettez simplement votre payload dans le dossier Rekado de votre console.\n\nOu vous pouvez utiliser les payloads int\u00e9gr\u00e9s (SX Loader/ReiNX/Hekate)</string>
+    <string name="instructions_category_payload_description">Dans la cat\u00e9gorie \"Payloads\", cliquez sur le bouton \"+\" pour s\u00e9lectionner un payload depuis le stockage de votre t\u00e9l\u00e9phone. Ou bien mettez simplement votre payload dans le dossier Rekado de votre console.\n\nOu vous pouvez utiliser les payloads int\u00e9gr\u00e9s (SX Loader/ReiNX/Hekate/Fusee Primary)</string>
     <string name="instructions_category_rcm_description">Mettez votre Switch en mode RCM par la méthode de votre choix. \n\nVotre Switch démarrera automatiquement lorsque vous brancherez le câble, veuillez vous assurer que vous appuyez sur le bouton VOLUME + de la Switch avant le branchement.</string>
     <string name="instructions_category_final">Finalement</string>
     <string name="instructions_category_final_description">Connectez votre appareil à la Switch et autorisez la permission pour l\'accès USB si nécessaire. Attendez que l\'application vous demande quel payload injecter.</string>
@@ -41,7 +41,7 @@
     <string name="settings_payloads_remove_pre_installed_title">Masquer préchargés</string>
     <string name="settings_payloads_remove_pre_installed_summary">Masquer toutes les payloads préchargés</string>
     <string name="settings_payloads_reset_title">Effacer</string>
-    <string name="settings_payloads_reset_summary">Supprimer tous les payloads (à l\'exception de SX Loader/ReiNX/Hekate)</string>
+    <string name="settings_payloads_reset_summary">Supprimer tous les payloads (à l\'exception de SX Loader/ReiNX/Hekate/Fusee Primary)</string>
     <string name="settings_category_appearance">Apparence</string>
     <string name="settings_appearance_theme_title">Thème</string>
     <string name="settings_appearance_theme_summary">Thème principal de l\'application</string>
