@@ -3,6 +3,7 @@ package com.pavelrekun.rekado.screens.payload_fragment.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.Events
@@ -13,7 +14,7 @@ import kotlinx.android.synthetic.main.item_payload.*
 import org.greenrobot.eventbus.EventBus
 import java.io.File
 
-class PayloadsAdapter(var data: MutableList<Payload>) : androidx.recyclerview.widget.RecyclerView.Adapter<PayloadsAdapter.ViewHolder>() {
+class PayloadsAdapter(var data: MutableList<Payload>) : RecyclerView.Adapter<PayloadsAdapter.ViewHolder>() {
 
     override fun getItemCount() = data.size
 
@@ -32,7 +33,7 @@ class PayloadsAdapter(var data: MutableList<Payload>) : androidx.recyclerview.wi
         return ViewHolder(itemView)
     }
 
-    class ViewHolder(override val containerView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(containerView), LayoutContainer {
+    class ViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
 
         fun bind(payload: Payload) {
             itemPayloadName.text = payload.name

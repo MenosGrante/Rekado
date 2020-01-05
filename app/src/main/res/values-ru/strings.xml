@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <resources>
     <!-- Strings for Navigation -->
-    <string name="navigation_payloads">Загрузчики</string>
-    <string name="navigation_tools">Инструменты</string>
-    <string name="navigation_instructions">Инструкции</string>
-    <string name="navigation_logs">Логи</string>
+    <string name="navigation_payloads">downloader</string>
+    <string name="navigation_tools">Tools</string>
+    <string name="navigation_instructions">Instruction</string>
+    <string name="navigation_logs">" logue"</string>
     <string name="navigation_about">О Rekado</string>
     <string name="navigation_donate">Поддержать разработку</string>
-    <string name="navigation_settings">Настройки</string>
+    <string name="navigation_settings">Settings</string>
     <string name="navigation_serial_checker">Проверка по серийному номеру</string>
-    <string name="navigation_translators">Переводчики</string>
+    <string name="navigation_translators">Translator</string>
     <!-- Strings for About -->
-    <string name="about_category_description">Описание</string>
-    <string name="about_category_developer">Разработчики</string>
+    <string name="about_category_description">Description</string>
+    <string name="about_category_developer">Development</string>
     <string name="about_information_description">Приложение написано на Kotlin\'e и C++. Оно используется для ввода загрузчиков на Nintendo Switch.</string>
     <string name="about_developer_personal_site">Персональный сайт</string>
     <!-- Strings for Payloads -->
@@ -26,7 +26,7 @@
     <string name="instructions_category_cable">Кабель</string>
     <string name="instructions_category_cable_description">Во-первых, вам нужно найти кабель для подключения вашего устройства к Nintendo Switch. Для правильной работы это должен быть кабель, предназначенный для передачи данных, а не только для зарядки.\n\nРекомендуется использовать кабель A-to-C и адаптер USB OTG.</string>
     <string name="instructions_category_payload">Загрузчик</string>
-    <string name="instructions_category_payload_description">\u0412 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438 \u00ab\u0417\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a\u0438\u00bb \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u043a\u043d\u043e\u043f\u043a\u0443 \u00ab+\u00bb, \u0447\u0442\u043e\u0431\u044b \u0432\u044b\u0431\u0440\u0430\u0442\u044c \u043f\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u0441\u043a\u0430\u0447\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a \u0438\u0437 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0430 \u0432\u0430\u0448\u0435\u0433\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430. \u0418\u043b\u0438 \u043f\u0440\u043e\u0441\u0442\u043e \u043f\u0435\u0440\u0435\u043d\u0435\u0441\u0438\u0442\u0435 \u0441\u0432\u043e\u0439 \u0437\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a \u0432 \u043f\u0430\u043f\u043a\u0443 Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\n\u0418\u043b\u0438 \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c \u043f\u0440\u0435\u0434\u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044b\u0435 \u0437\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a (SX Loader/ReiNX/Hekate/Fusee Primary).</string>
+    <string name="instructions_category_payload_description">\u0412 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438 \u00ab\u0417\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a\u0438\u00bb \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u043a\u043d\u043e\u043f\u043a\u0443 \u00ab+\u00bb, \u0447\u0442\u043e\u0431\u044b \u0432\u044b\u0431\u0440\u0430\u0442\u044c \u043f\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u0441\u043a\u0430\u0447\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a \u0438\u0437 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0430 \u0432\u0430\u0448\u0435\u0433\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430. \u0418\u043b\u0438 \u043f\u0440\u043e\u0441\u0442\u043e \u043f\u0435\u0440\u0435\u043d\u0435\u0441\u0438\u0442\u0435 \u0441\u0432\u043e\u0439 \u0437\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a \u0432 \u043f\u0430\u043f\u043a\u0443 Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\n\u0418\u043b\u0438 \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c \u043f\u0440\u0435\u0434\u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044b\u0435 \u0437\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a (SX Loader/ReiNX/Hekate).</string>
     <string name="instructions_category_rcm_description">Введите ваш Nintendo Switch в режим RCM любым удобным способом.\n\nВаш Nintendo Switch включится сам при подключении, обязательно держите VOLUME +.</string>
     <string name="instructions_category_final">Заключение</string>
     <string name="instructions_category_final_description">Подключите устройство к Nintendo Switch и разрешите доступ к USB при необходимости. Откроется диалоговое окно «Выбор загрузчика» и выберите, какой из них вы хотите использовать.</string>
@@ -38,10 +38,10 @@
     <string name="settings_auto_injector_status_title_enabled">\u0412\u044b\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u00ab\u0410\u0432\u0442\u043e-\u0438\u043d\u0436\u0435\u043a\u0442\u043e\u0440\u00bb</string>
     <string name="settings_auto_injector_payload_title">Загрузчик</string>
     <string name="settings_category_payloads">Загрузчики</string>
-    <string name="settings_payloads_remove_pre_installed_title">Скрывать предустановленные</string>
+    <string name="settings_payloads_remove_pre_installed_title">Ok</string>
     <string name="settings_payloads_remove_pre_installed_summary">Скрыть все предустановленные загрузчики</string>
     <string name="settings_payloads_reset_title">Очистка</string>
-    <string name="settings_payloads_reset_summary">Удалить все добавленные загрузчики, кроме предварительно установленных (SX Loader/ReiNX/Hekate/Fusee Primary)</string>
+    <string name="settings_payloads_reset_summary">Удалить все добавленные загрузчики, кроме предварительно установленных (SX Loader/ReiNX/Hekate)</string>
     <string name="settings_category_appearance">Внешний вид</string>
     <string name="settings_appearance_theme_title">Тема</string>
     <string name="settings_appearance_theme_summary">Основная тема приложения</string>

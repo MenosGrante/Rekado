@@ -26,7 +26,7 @@
     <string name="instructions_category_cable">케이블</string>
     <string name="instructions_category_cable_description">먼저, 장치를 닌텐도 스위치에 연결하기 위한 케이블을 찾아야합니다. 올바른 작업을 위해서는 충전뿐만 아니라 데이터 전송 용으로 설계된 케이블이어야합니다.\n\nA-to-C 케이블과 USB OTG 어댑터를 사용하는 것이 좋습니다.</string>
     <string name="instructions_category_payload">페이로드</string>
-    <string name="instructions_category_payload_description">\'\ud398\uc774\ub85c\ub4dc\' \uce74\ud14c\uace0\ub9ac\uc5d0\uc11c \'+\' \ubc84\ud2bc\uc744 \ud074\ub9ad\ud558\uc5ec \uae30\uae30 \uc800\uc7a5\uc18c\uc5d0\uc11c \uc0ac\uc804 \ub85c\ub4dc \ub41c \ud398\uc774\ub85c\ub4dc\ub97c \uc120\ud0dd\ud558\uc2ed\uc2dc\uc624. \ub610\ub294 \ud398\uc774\ub85c\ub4dc\ub97c Rekado \ud3f4\ub354 (/sdcard/Android/data/com.pavelrekun.rekado/files/)\ub85c \uc804\uc1a1\ud558\uc2ed\uc2dc\uc624.\n\n\ub610\ub294 \uc0ac\uc804 \uc124\uce58\ub41c \ud398\uc774\ub85c\ub4dc (SX Loader/ReiNX/Hekate/Fusee Primary)\ub97c \uc0ac\uc6a9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.</string>
+    <string name="instructions_category_payload_description">\'\ud398\uc774\ub85c\ub4dc\' \uce74\ud14c\uace0\ub9ac\uc5d0\uc11c \'+\' \ubc84\ud2bc\uc744 \ud074\ub9ad\ud558\uc5ec \uae30\uae30 \uc800\uc7a5\uc18c\uc5d0\uc11c \uc0ac\uc804 \ub85c\ub4dc \ub41c \ud398\uc774\ub85c\ub4dc\ub97c \uc120\ud0dd\ud558\uc2ed\uc2dc\uc624. \ub610\ub294 \ud398\uc774\ub85c\ub4dc\ub97c Rekado \ud3f4\ub354 (/sdcard/Android/data/com.pavelrekun.rekado/files/)\ub85c \uc804\uc1a1\ud558\uc2ed\uc2dc\uc624.\n\n\ub610\ub294 \uc0ac\uc804 \uc124\uce58\ub41c \ud398\uc774\ub85c\ub4dc (SX Loader/ReiNX/Hekate)\ub97c \uc0ac\uc6a9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.</string>
     <string name="instructions_category_rcm_description">편리한 방법으로 닌텐도 스위치를 RCM 모드로 전환하십시오.\n\n닌텐도 스위치가 연결되면 자체적으로 켜집니다. 볼륨 + 버튼을 길게 누르십시오.</string>
     <string name="instructions_category_final">최종</string>
     <string name="instructions_category_final_description">장치를 닌텐도 스위치에 연결하고 필요한 경우 USB 접속 권한을 허용하십시오. 대기 장치 페이로드 선택기 대화 상자가 열리고 로드 할 것을 선택하십시오</string>
@@ -41,7 +41,7 @@
     <string name="settings_payloads_remove_pre_installed_title">사전 설치 숨기기</string>
     <string name="settings_payloads_remove_pre_installed_summary">모든 사전 설치 페이로드 숨기기</string>
     <string name="settings_payloads_reset_title">지움</string>
-    <string name="settings_payloads_reset_summary">사전 설치된 (SX Loader/ReiNX/Hekate/Fusee Primary)를 제외한 추가된 모든 페이로드 제거</string>
+    <string name="settings_payloads_reset_summary">사전 설치된 (SX Loader/ReiNX/Hekate)를 제외한 추가된 모든 페이로드 제거</string>
     <string name="settings_category_appearance">외형</string>
     <string name="settings_appearance_theme_title">테마</string>
     <string name="settings_appearance_theme_summary">응용 프로그램의 주요 테마</string>

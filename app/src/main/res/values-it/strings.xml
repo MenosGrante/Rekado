@@ -26,7 +26,7 @@
     <string name="instructions_category_cable">Cavo</string>
     <string name="instructions_category_cable_description">Prima devi trovare un cavo per connettere il tuo dispositivo al Nintendo Switch. Per funzionare correttamente, il cavo dovrebbe essere progettato per trasmettere dati, non solo per ricarica.\n\nSi consiglia di usare un cavo da tipo A a tipo C ed un adattatore USB OTG.</string>
     <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">Nella categoria \"Payload\", tocca il pulsante \"+\" per selezionare un payload dalla memoria del tuo dispositivo. Altrimenti puoi semplicemente trasferire il tuo payload nella cartella Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nPuoi anche usare i payload pre-installati (SX Loader/ReiNX/Hekate/Fusee Primary).</string>
+    <string name="instructions_category_payload_description">Nella categoria \"Payload\", tocca il pulsante \"+\" per selezionare un payload dalla memoria del tuo dispositivo. Altrimenti puoi semplicemente trasferire il tuo payload nella cartella Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nPuoi anche usare i payload pre-installati (SX Loader/ReiNX/Hekate).</string>
     <string name="instructions_category_rcm_description">Avvia il tuo Nintendo Switch in modalità RCM con il metodo che preferisci.\n\nIl tuo Nintendo Switch si accenderà da solo una volta collegato, assicurati di tenere premuto VOLUME +.</string>
     <string name="instructions_category_final">Conclusione</string>
     <string name="instructions_category_final_description">Connetti il dispositivo al Nintendo Switch e permetti l\'accesso USB se richiesto. Attendi finchè la finestra di scelta del payload si apra e seleziona quello che vuoi caricare.</string>
@@ -41,7 +41,7 @@
     <string name="settings_payloads_remove_pre_installed_title">Nascondi pre-installati</string>
     <string name="settings_payloads_remove_pre_installed_summary">Nascondi tutti i payload pre-installati</string>
     <string name="settings_payloads_reset_title">Svuota</string>
-    <string name="settings_payloads_reset_summary">Rimuovi tutti i payload aggiunti eccetto i pre-installati (SX Loader/ReiNX/Hekate/Fusee Primary)</string>
+    <string name="settings_payloads_reset_summary">Rimuovi tutti i payload aggiunti eccetto i pre-installati (SX Loader/ReiNX/Hekate)</string>
     <string name="settings_category_appearance">Aspetto</string>
     <string name="settings_appearance_theme_title">Tema</string>
     <string name="settings_appearance_theme_summary">Tema principale dell\'applicazione</string>

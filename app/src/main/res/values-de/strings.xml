@@ -3,45 +3,45 @@
     <!-- Strings for Navigation -->
     <string name="navigation_payloads">Payloads</string>
     <string name="navigation_tools">Werkzeuge</string>
-    <string name="navigation_instructions">Anweisungen</string>
+    <string name="navigation_instructions">Anleitung</string>
     <string name="navigation_logs">Logs</string>
     <string name="navigation_about">Über Rekado</string>
     <string name="navigation_donate">Unterstütze die Entwicklung</string>
     <string name="navigation_settings">Einstellungen</string>
     <string name="navigation_serial_checker">Seriennummerprüfer</string>
-    <string name="navigation_translators">Übersetzungen</string>
+    <string name="navigation_translators">Übersetzer</string>
     <!-- Strings for About -->
     <string name="about_category_description">Beschreibung</string>
     <string name="about_category_developer">Entwickler</string>
-    <string name="about_information_description">Die App wurde in Kotlin und C++ geschrieben. Man kann sie benutzen um Payloads an die Nintendo Switch zu injizieren.</string>
+    <string name="about_information_description">Die App wurde in Kotlin und C++ geschrieben. Man kann sie benutzen um Payloads in die Nintendo Switch zu injizieren.</string>
     <string name="about_developer_personal_site">Meine Seite</string>
     <!-- Strings for Payloads -->
-    <string name="payloads_download_status_empty">Der Name oder URl sollten nicht leer sein!</string>
+    <string name="payloads_download_status_empty">Der Name oder die URL dürfen nicht leer sein!</string>
     <string name="payloads_download_status_success">"Erfolgreich den Payload %1$s runtergeladen! "</string>
     <string name="payloads_download_status_error">Ein Fehler ist während des runterladens von %1$s aufgetreten. Bitte überprüfe deine Verbindung und die URL.</string>
     <!-- Strings for Tools -->
     <string name="tools_serial_checker_title">Seriennummerprüfer</string>
-    <string name="tools_serial_checker_description">Überprüfe mit deiner Seriennummer , ob deine Nintendo Switch hackbar ist.</string>
+    <string name="tools_serial_checker_description">Überprüfe mit der Seriennummer, ob deine Nintendo Switch hackbar ist.</string>
     <!-- Strings for Instructions -->
     <string name="instructions_category_cable">Kabel</string>
-    <string name="instructions_category_cable_description">Zuerst musst du ein Kabel finden, welches du mit deiner Switch verbinden kannst. Damit es funktioniert sollte man damit Daten übertragen können.\n\nEs ist empfehlenswert ein A-zu-C Kabel und einen USB OTG Apdapter zu benutzen.</string>
+    <string name="instructions_category_cable_description">Zuerst brauchst du ein Kabel, mit dem du dein Gerät mit der Switch verbinden kannst. Damit es funktioniert, darf das kabel nicht auschließlich zum Laden konzipiert sein.\n\nEs ist empfehlenswert ein USB-C-Kabel und einen USB-OTG-Adapter zu verwenden.</string>
     <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">In der \"Payloads\" Kategorie, dr\u00fccke die \"+\" Taste um den zuletzt genutzen Payload aus dem Ger\u00e4tespeicher zu verwenden. Du kannst auch ganz einfach einen anderen Payload in den Rekado Ordner im Ger\u00e4tespeicher kopieren. Oder du kannst die vorinstallierten Payloads benutzen (SX Loader/ReiNX/Hekate/Fusee Primary)</string>
-    <string name="instructions_category_rcm_description">Setze deine Nintendo Switch in irgendeiner Weise in den RCM Modus.  Deine Nintendo Switch geht automatisch an, wenn sie eingesteckt wird, vergewisser dich das du Lautstärke + drückst.</string>
+    <string name="instructions_category_payload_description">In der \"Payloads\" Kategorie, dr\u00fccke die \"+\" Taste um den zuletzt genutzen Payload aus dem Ger\u00e4tespeicher zu verwenden. Du kannst auch ganz einfach einen anderen Payload in den Rekado Ordner im Ger\u00e4tespeicher kopieren. Oder du kannst die vorinstallierten Payloads benutzen (SX Loader/ReiNX/Hekate)</string>
+    <string name="instructions_category_rcm_description">Versetzte deine Nintendo Switch in den RCM-Modus.\n\nDie Nintendo Switch geht automatisch an, wenn sie angeschlossen wird. Vergewissere dich, dass du \"Lautstärke +\" drückst.</string>
     <string name="instructions_category_final">Letzter Schritt</string>
     <string name="instructions_category_final_description">Verbinde das Gerät mit der Nintendo Switch und akzeptiere die Berechtigung auf USB falls gefragt wird. Warte bis das Payload-Injektor Fenster geöffnet wird und wähle den Payload aus den du ausführen willst.</string>
     <!-- Strings for Donate -->
-    <string name="donate_description">Du kannst die Entwicklung der App unterstützen, wenn du mir einen Kaffee kaufst.</string>
+    <string name="donate_description">Du kannst die Entwicklung der App unterstützen, indem du mir einen Kaffee spendierst.</string>
     <!-- Strings for Settings -->
-    <string name="settings_category_auto_injector">Automatischer Injektor</string>
-    <string name="settings_auto_injector_status_title_disabled">Aktivieren den \"Auto Injektor\"</string>
-    <string name="settings_auto_injector_status_title_enabled">Deaktiviere den \"Auto Injektor\"</string>
+    <string name="settings_category_auto_injector">Autoinjektor</string>
+    <string name="settings_auto_injector_status_title_disabled">Aktivieren den Autoinjektor</string>
+    <string name="settings_auto_injector_status_title_enabled">Deaktiviere den Autoinjektor</string>
     <string name="settings_auto_injector_payload_title">Payload</string>
     <string name="settings_category_payloads">Payloads</string>
     <string name="settings_payloads_remove_pre_installed_title">Verstecke vorinstallierte</string>
     <string name="settings_payloads_remove_pre_installed_summary">Verstecke alle vorinstallierten Payloads</string>
     <string name="settings_payloads_reset_title">Löschen</string>
-    <string name="settings_payloads_reset_summary">Lösche alle Payloads bis auf die vorinstallierten (SX Loader/ReiNX/Hekate/Fusee Primary)</string>
+    <string name="settings_payloads_reset_summary">Lösche alle Payloads bis auf die vorinstallierten (SX Loader/ReiNX/Hekate)</string>
     <string name="settings_category_appearance">Erscheinungsbild</string>
     <string name="settings_appearance_theme_title">Motiv</string>
     <string name="settings_appearance_theme_summary">Hauptmotiv für die App</string>

@@ -26,7 +26,7 @@
     <string name="instructions_category_cable">Kabel</string>
     <string name="instructions_category_cable_description">Potrzebujesz kabla do połączenia urządzenia z Nintendo Switch. Kabel powinien być zaprojektowany z myślą o przenoszeniu danych.\n\nZaleca się użycie kabla USB-C do A i adaptera USB OTG.</string>
     <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">W kategorii \"Payloady\" wci\u015bnij przycisk \"+\", aby wybra\u0107 payload z pami\u0119ci urz\u0105dzenia. Mo\u017cesz te\u017c przenie\u015b\u0107 payload do folderu Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nMo\u017cesz te\u017c u\u017cy\u0107 wbudowanych payload\u00f3w (SX Loader/ReiNX/Hekate/Fusee Primary).</string>
+    <string name="instructions_category_payload_description">W kategorii \"Payloady\" wci\u015bnij przycisk \"+\", aby wybra\u0107 payload z pami\u0119ci urz\u0105dzenia. Mo\u017cesz te\u017c przenie\u015b\u0107 payload do folderu Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nMo\u017cesz te\u017c u\u017cy\u0107 wbudowanych payload\u00f3w (SX Loader/ReiNX/Hekate).</string>
     <string name="instructions_category_rcm_description">Uruchom Nintendo Switch w trybie RCM w najwygodniejszy sposób.\n\nKonsola włączy się sama po podłączeniu. Upewnij się, że trzymasz przycisk VOL+.</string>
     <string name="instructions_category_final">Koniec</string>
     <string name="instructions_category_final_description">Podłącz urządzenie do Nintendo Switch i zezwól na dostęp do USB. Zaczekaj aż pojawi się okno wyboru payloadu i wybierz payload do uruchomienia.</string>
@@ -41,7 +41,7 @@
     <string name="settings_payloads_remove_pre_installed_title">Ukryj wbudowane</string>
     <string name="settings_payloads_remove_pre_installed_summary">Ukryj wbudowane payloady</string>
     <string name="settings_payloads_reset_title">Wyczyść</string>
-    <string name="settings_payloads_reset_summary">Usuń wszystkie payloady oprócz wbudowanych (SX Loader/ReiNX/Hekate/Fusee Primary)</string>
+    <string name="settings_payloads_reset_summary">Usuń wszystkie payloady oprócz wbudowanych (SX Loader/ReiNX/Hekate)</string>
     <string name="settings_category_appearance">Wygląd</string>
     <string name="settings_appearance_theme_title">Motyw</string>
     <string name="settings_appearance_theme_summary">Główny motyw aplikacji</string>

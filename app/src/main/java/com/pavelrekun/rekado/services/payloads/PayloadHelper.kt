@@ -9,8 +9,8 @@ import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.Logger
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
@@ -64,42 +64,44 @@ object PayloadHelper {
     fun isNotBundledPayload(payload: Payload) = payload.name != BUNDLED_PAYLOAD_SX && payload.name != BUNDLED_PAYLOAD_REINX
             && payload.name != BUNDLED_PAYLOAD_HEKATE && payload.name != BUNDLED_PAYLOAD_FUSEE_PRIMARY
 
-    fun downloadPayload(activity: BaseActivity, name: String, url: String) = GlobalScope.launch(Dispatchers.Main) {
-        val properName = if (name.endsWith(".bin")) name else "$name.bin"
-        val httpClient = OkHttpClient()
+    fun downloadPayload(activity: BaseActivity, name: String, url: String) {
+        CoroutineScope(Dispatchers.Main).launch {
+            val properName = if (name.endsWith(".bin")) name else "$name.bin"
+            val httpClient = OkHttpClient()
 
-        try {
-            withContext(Dispatchers.Default) {
-                val request = Request.Builder().url(url).build()
+            try {
+                withContext(Dispatchers.Default) {
+                    val request = Request.Builder().url(url).build()
 
-                val response = httpClient.newCall(request).execute().body
+                    val response = httpClient.newCall(request).execute().body
 
-                val contentType = response?.contentType()?.subtype
+                    val contentType = response?.contentType()?.subtype
 
-                if (response != null && contentType != null && contentType == "octet-stream") {
-                    Logger.info("Downloading payload: $properName.")
+                    if (response != null && contentType != null && contentType == "octet-stream") {
+                        Logger.info("Downloading payload: $properName.")
 
-                    val targetPlace = File(getLocation(), properName)
+                        val targetPlace = File(getLocation(), properName)
 
-                    val sink = targetPlace.sink().buffer()
-                    sink.writeAll(response.source())
-                    sink.close()
+                        val sink = targetPlace.sink().buffer()
+                        sink.writeAll(response.source())
+                        sink.close()
 
-                    response.close()
+                        response.close()
 
-                    EventBus.getDefault().post(Events.PayloadDownloadedSuccessfully(properName))
-                } else {
-                    throw Exception()
+                        EventBus.getDefault().post(Events.PayloadDownloadedSuccessfully(properName))
+                    } else {
+                        throw Exception()
+                    }
+
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(activity, activity.getString(R.string.payloads_download_status_success, properName), Toast.LENGTH_SHORT).show()
+                    }
                 }
-
-                withContext(Dispatchers.Main) {
-                    Toast.makeText(activity, activity.getString(R.string.payloads_download_status_success, properName), Toast.LENGTH_SHORT).show()
-                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(activity, activity.getString(R.string.payloads_download_status_error, properName), Toast.LENGTH_SHORT).show()
+                Logger.error("Failed to download payload: $properName.")
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            Toast.makeText(activity, activity.getString(R.string.payloads_download_status_error, properName), Toast.LENGTH_SHORT).show()
-            Logger.error("Failed to download payload: $properName.")
         }
     }
 
