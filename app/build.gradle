@@ -11,7 +11,7 @@ android {
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
         versionCode 62
-        versionName "3.3.2"
+        versionName "3.3.3"
     }
 
     buildTypes {
@@ -61,16 +61,16 @@ dependencies {
     // Local
     implementation(name: 'penza', ext: 'aar')
 
-    // AndroidX: General
+    // Google: AndroidX
     implementation "androidx.recyclerview:recyclerview:$androidXRecyclerViewVersion"
     implementation "androidx.browser:browser:$androidXBrowserVersion"
     implementation "androidx.preference:preference:$androidXPreferencesVersion"
     implementation "androidx.constraintlayout:constraintlayout:$androidXConstraintLayoutVersion"
 
-    // AndroidX: KTX
+    // Google: AndroidX KTX
     implementation "androidx.core:core-ktx:$androidXCoreKTX"
 
-    // Design
+    // Google: Design
     implementation "com.google.android.material:material:$materialComponentsVersion"
     implementation "com.google.android:flexbox:$flexBoxLayoutVersion"
 

@@ -169,25 +169,6 @@
                         android:background="?attr/colorDivider" />
 
                     <TextView
-                        android:id="@+id/aboutDeveloperProductHunt"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:drawableStart="@drawable/ic_about_product_hunt"
-                        android:drawablePadding="16dp"
-                        android:focusable="true"
-                        android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:text="@string/about_developer_product_hunt"
-                        android:textColor="?android:attr/textColorPrimary" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="?attr/colorDivider" />
-
-                    <TextView
                         android:id="@+id/aboutDeveloperTwitter"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

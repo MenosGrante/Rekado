@@ -5,24 +5,30 @@
         <item>English</item> <!-- English -->
         <item>Русский</item> <!-- Russian -->
         <item>Українська</item> <!-- Ukrainian -->
-<!--        <item>Português (Brasil)</item> &lt;!&ndash; Brazilian &ndash;&gt;-->
-<!--        <item>Français</item> &lt;!&ndash; French &ndash;&gt;-->
+        <item>Deutsch</item> <!-- German -->
+        <item>Español</item> <!-- Spanish -->
+        <item>Português (Brasil)</item> <!-- Brazilian -->
+        <item>Français</item> <!-- French -->
         <item>Italiano</item> <!-- Italian -->
         <item>Polski</item> <!-- Polish -->
 <!--        <item>Türkçe</item> &lt;!&ndash; Turkish &ndash;&gt;-->
-<!--        <item>한국어</item> &lt;!&ndash; Korean &ndash;&gt;-->
+        <item>한국어</item> <!-- Korean -->
+        <item>简体中文</item> <!-- Chinese Simplified -->
     </string-array>
 
     <string-array name="translators_people" translatable="false">
         <item>Pavel Rekun (Menos)</item> <!-- English -->
         <item>Pavel Rekun (Menos)</item> <!-- Russian -->
         <item>Pavel Rekun (Menos)</item> <!-- Ukrainian -->
-<!--        <item>DavidOliM, zyz696</item> &lt;!&ndash; Brazilian &ndash;&gt;-->
-<!--        <item>tiliarou, gclotault</item> &lt;!&ndash; French &ndash;&gt;-->
-        <item>tiliarou, Francesco Ognibene</item> <!-- Italian -->
+        <item>D3viloper, lorenzosorrentino614, neugear</item> <!-- German -->
+        <item>tiliarou, marioandraderomero, elric200x</item> <!-- Spanish -->
+        <item>dd09david, zyz696, tisije</item> <!-- Brazilian -->
+        <item>tiliarou, gclotault, cntrlshft</item> <!-- French -->
+        <item>Francesco Ognibene</item> <!-- Italian -->
         <item>bandithedoge, mixon606</item> <!-- Polish -->
-<!--        <item>Mahmut Pekkara</item> &lt;!&ndash; Turkish &ndash;&gt;-->
-<!--        <item>DDinghoya</item> &lt;!&ndash; Korean &ndash;&gt;-->
+        <!--        <item>Türkçe</item> &lt;!&ndash; Turkish &ndash;&gt;-->
+        <item>DDinghoya</item> <!-- Korean -->
+        <item>407334897, CaRlChInA, sacrophagus79, wang93wei</item> <!-- Chinese Simplified -->
     </string-array>
 
 </resources>

@@ -15,9 +15,8 @@
     <!-- Strings for About -->
     <string name="about_category_description">Description</string>
     <string name="about_category_developer">Developer</string>
-    <string name="about_information_description">Application written in Kotlin and C++. It is used to inject payloads on the Nintendo Switch.</string>
+    <string name="about_information_description">Rekado is a Nintendo Switch toolkit application that includes payload injection, serial number checking, and other tools.</string>
     <string name="about_developer_personal_site">Personal site</string>
-    <string name="about_developer_product_hunt" translatable="false">Product Hunt</string>
     <string name="about_developer_github" translatable="false">GitHub</string>
     <string name="about_developer_twitter" translatable="false">Twitter</string>
 
@@ -77,11 +76,12 @@
     <string name="settings_picker_theme_themes_colorful_jungle">Jungle</string>
     <string name="settings_picker_theme_themes_colorful_pepper">Pepper</string>
     <string name="settings_picker_theme_themes_colorful_ocean">Ocean</string>
+    <string name="settings_picker_theme_themes_colorful_electricity">Electricity</string>
+    <string name="settings_picker_theme_themes_colorful_steel">Steel</string>
     <string name="settings_utils_restart_dialog_title">Settings changed</string>
     <string name="settings_utils_restart_dialog_message">Settings have been changed. Please, restart application for the change to take effect. \n\nRestart the app now?</string>
     <string name="settings_utils_restart_dialog_action_restart">Restart</string>
     <string name="settings_utils_restart_dialog_action_cancel">Cancel</string>
-
 
     <!-- Strings for DialogsShower -->
     <string name="dialog_loader_title">Choose payload</string>

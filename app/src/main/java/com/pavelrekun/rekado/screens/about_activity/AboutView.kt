@@ -31,7 +31,6 @@ class AboutView(private val activity: BaseActivity) : AboutContract.View {
         activity.aboutLinkGitHubProject.setOnClickListener { Utils.openLink(activity, Constants.GITHUB_PROJECT_LINK) }
         activity.aboutDeveloperPersonalSite.setOnClickListener { Utils.openLink(activity, Constants.PERSONAL_SITE_LINK) }
         activity.aboutDeveloperGitHub.setOnClickListener { Utils.openLink(activity, Constants.GITHUB_PROFILE_LINK) }
-        activity.aboutDeveloperProductHunt.setOnClickListener { Utils.openLink(activity, Constants.PRODUCT_HUNT_LINK) }
         activity.aboutDeveloperTwitter.setOnClickListener { Utils.openLink(activity, Constants.TWITTER_LINK) }
     }
 
