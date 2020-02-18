@@ -1,5 +1,7 @@
 <a href="https://www.buymeacoffee.com/pavelrekun" target="_blank"><img src="https://camo.githubusercontent.com/838540e144cb59933cd2dce03098e2e77b279163/68747470733a2f2f7777772e6275796d6561636f666665652e636f6d2f6173736574732f696d672f637573746f6d5f696d616765732f79656c6c6f775f696d672e706e67" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
+<a href="https://img.shields.io/github/stars/MenosGrante/Rekado"><img src="https://img.shields.io/github/stars/MenosGrante/Rekado">
+
 # Rekado
 Payload launcher written in Kotlin for Nintendo Switch.
 
