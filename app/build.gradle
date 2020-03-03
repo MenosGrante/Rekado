@@ -5,13 +5,14 @@ apply plugin: "com.github.ben-manes.versions"
 
 android {
     compileSdkVersion currentSDKVersion
+    ndkVersion NDKVersion
 
     defaultConfig {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 62
-        versionName "3.3.3"
+        versionCode 63
+        versionName "3.3.4"
     }
 
     buildTypes {
@@ -54,6 +55,7 @@ android {
     aaptOptions {
         noCompress 'bin'
     }
+
 }
 
 dependencies {

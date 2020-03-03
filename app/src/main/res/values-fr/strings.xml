@@ -66,6 +66,8 @@
     <string name="settings_picker_theme_themes_colorful_jungle">Jungle</string>
     <string name="settings_picker_theme_themes_colorful_pepper">Poivre</string>
     <string name="settings_picker_theme_themes_colorful_ocean">Océan</string>
+    <string name="settings_picker_theme_themes_colorful_electricity">Electricité</string>
+    <string name="settings_picker_theme_themes_colorful_steel">Acier</string>
     <string name="settings_utils_restart_dialog_title">Paramètres modifiés</string>
     <string name="settings_utils_restart_dialog_message">Les paramètres ont été modifiés. Veuillez redémarrer pour que les changements prennent effet.\n\nVoulez-vous redémarrer l\'application maintenant ?</string>
     <string name="settings_utils_restart_dialog_action_restart">Redémarrer</string>

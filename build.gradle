@@ -5,9 +5,9 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle:3.6.1'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61'
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.27.0'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.28.0'
     }
 }
 
@@ -25,6 +25,7 @@ allprojects {
 ext {
     currentSDKVersion = 29
     minimumSDKVersion = 21
+    NDKVersion = '21.0.6113669'
 
     // AndroidX: General
     androidXCompatVersion = '1.0.2'
