@@ -64,8 +64,10 @@
     <string name="settings_picker_color_title">Choose color</string>
     <string name="settings_picker_color_button_close">Close</string>
     <string name="settings_picker_theme_title">Choose theme</string>
-    <string name="settings_picker_theme_preview">Preview</string>
-    <string name="settings_picker_theme_category_themes">Themes</string>
+    <string name="settings_picker_theme_category_control">Control</string>
+    <string name="settings_picker_theme_control_manual">Manual</string>
+    <string name="settings_picker_theme_control_system_default">System default</string>
+    <string name="settings_picker_theme_control_battery_saver">Set by "Battery Saver"</string>
     <string name="settings_picker_theme_themes_general_white">White</string>
     <string name="settings_picker_theme_themes_general_dark">Dark</string>
     <string name="settings_picker_theme_themes_general_sepia">Sepia</string>

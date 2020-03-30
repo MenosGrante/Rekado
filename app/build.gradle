@@ -11,8 +11,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 63
-        versionName "3.3.4"
+        versionCode 64
+        versionName "3.4"
     }
 
     buildTypes {

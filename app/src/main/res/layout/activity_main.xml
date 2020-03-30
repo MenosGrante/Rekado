@@ -29,8 +29,8 @@
         android:layout_alignParentBottom="true"
         android:background="?attr/colorBackgroundSecondary"
         android:elevation="5dp"
-        app:itemIconTint="@drawable/state_navigation_item"
-        app:itemTextColor="@drawable/state_navigation_item"
+        app:itemIconTint="@drawable/state_navigation_default_icon"
+        app:itemTextColor="@drawable/state_navigation_default_text"
         app:menu="@menu/menu_bottom_navigation" />
 
 </RelativeLayout>

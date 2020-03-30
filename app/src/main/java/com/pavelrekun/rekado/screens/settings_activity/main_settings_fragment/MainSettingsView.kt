@@ -57,6 +57,7 @@ class MainSettingsView(private val activity: BaseActivity, private val fragment:
     override fun initAppearanceCategory() {
         val themePickerFragment = ThemePickerFragment().apply {
             setClickListener { openRestartDialog() }
+            setControlClickListener { openRestartDialog() }
         }
 
         appearanceTheme.setOnPreferenceClickListener {
