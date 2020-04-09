@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/primaryToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:elevation="3dp"
+        app:titleTextColor="?android:attr/textColorPrimary" />
+
+    <fragment
+        android:id="@+id/primaryContainer"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation_primary"
+        tools:ignore="FragmentTagUsage" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/primaryBottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?attr/colorBackgroundSecondary"
+        android:elevation="3dp"
+        app:itemIconTint="@drawable/state_navigation_default_icon"
+        app:itemTextColor="@drawable/state_navigation_default_text"
+        app:menu="@menu/menu_primary" />
+
+</LinearLayout>

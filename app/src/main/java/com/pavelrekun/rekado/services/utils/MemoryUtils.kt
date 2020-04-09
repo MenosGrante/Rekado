@@ -1,24 +1,42 @@
 package com.pavelrekun.rekado.services.utils
 
+import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.services.Events
+import com.pavelrekun.rekado.services.extensions.parseSchema
 import com.pavelrekun.rekado.services.extensions.toFile
-import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import org.greenrobot.eventbus.EventBus
+import java.io.File
+import java.io.InputStream
 
 object MemoryUtils {
 
-    fun copyBundledPayloads() {
-        copyAsset(PayloadHelper.BUNDLED_PAYLOAD_SX)
-        copyAsset(PayloadHelper.BUNDLED_PAYLOAD_REINX)
-        copyAsset(PayloadHelper.BUNDLED_PAYLOAD_HEKATE)
-        copyAsset(PayloadHelper.BUNDLED_PAYLOAD_FUSEE_PRIMARY)
+    private val resources = RekadoApplication.context.resources
+
+    fun parseBundledSchema() {
+        if (!PreferencesUtils.checkSchemaExists()) {
+            val schema = resources.openRawResource(R.raw.bundled_payloads).parseSchema()
+            PreferencesUtils.saveSchema(schema)
+            copyBundledPayloads()
+        }
+    }
+
+    fun copyPayload(inputStream: InputStream, file: String) {
+        inputStream.toFile("${getLocation().absolutePath}/$file")
+    }
+
+    fun getLocation(): File {
+        return RekadoApplication.context.getExternalFilesDir(null)
+                ?: RekadoApplication.context.filesDir
+    }
+
+    private fun copyBundledPayloads() {
+        copyPayload(resources.openRawResource(R.raw.fusee_primary), "fusee_primary.bin")
+        copyPayload(resources.openRawResource(R.raw.hekate), "hekate.bin")
+        copyPayload(resources.openRawResource(R.raw.sx_loader), "sx_loader.bin")
 
         EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
     }
 
-    private fun copyAsset(name: String) {
-        val assetsManager = RekadoApplication.context.assets
-        assetsManager.open(name).toFile("${PayloadHelper.getLocation().absolutePath}/$name")
-    }
+
 }

@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: "com.github.ben-manes.versions"
 
 android {
@@ -11,8 +10,10 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 64
-        versionName "3.4"
+        versionCode 70
+        versionName "4.0"
+
+        archivesBaseName = "[$versionName] Rekado [${versionCode}]"
     }
 
     buildTypes {
@@ -31,11 +32,6 @@ android {
         jvmTarget = "1.8"
     }
 
-    androidExtensions {
-        experimental = true
-        defaultCacheImplementation = "NONE"
-    }
-
     externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
@@ -46,14 +42,12 @@ android {
         abortOnError false
     }
 
-    android.applicationVariants.all { variant ->
-        variant.outputs.all { output ->
-            outputFileName = "[${versionName}] Rekado [${versionCode}].apk"
-        }
-    }
-
     aaptOptions {
         noCompress 'bin'
+    }
+
+    viewBinding {
+        enabled = true
     }
 
 }
@@ -68,6 +62,11 @@ dependencies {
     implementation "androidx.browser:browser:$androidXBrowserVersion"
     implementation "androidx.preference:preference:$androidXPreferencesVersion"
     implementation "androidx.constraintlayout:constraintlayout:$androidXConstraintLayoutVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidXLifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidXLifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$androidXLifecycleVersion"
+    implementation "androidx.navigation:navigation-fragment-ktx:$androixXNavigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$androixXNavigationVersion"
 
     // Google: AndroidX KTX
     implementation "androidx.core:core-ktx:$androidXCoreKTX"
@@ -79,7 +78,9 @@ dependencies {
     // Tools
     implementation "org.greenrobot:eventbus:$eventBusVersion"
     implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "ru.gildor.coroutines:kotlin-coroutines-okhttp:$okHttpCoroutinesVersion"
     implementation "com.journeyapps:zxing-android-embedded:$zxingVersion"
+    implementation "com.google.code.gson:gson:$gsonVersion"
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"

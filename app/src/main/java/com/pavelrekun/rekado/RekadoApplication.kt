@@ -3,12 +3,13 @@ package com.pavelrekun.rekado
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
-import com.pavelrekun.rekado.services.Logger
+import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.penza.Penza
 import com.pavelrekun.penza.data.Color
 import com.pavelrekun.penza.data.Theme
 import com.pavelrekun.penza.services.enums.Project
 import com.pavelrekun.penza.services.theme.PenzaTheme
+import com.pavelrekun.rekado.services.utils.MemoryUtils
 
 class RekadoApplication : Application() {
 
@@ -16,6 +17,8 @@ class RekadoApplication : Application() {
         super.onCreate()
 
         context = applicationContext
+
+        MemoryUtils.parseBundledSchema()
 
         configureInternalSystems()
         configureThemeEngine()
@@ -28,7 +31,7 @@ class RekadoApplication : Application() {
     }
 
     private fun configureInternalSystems() {
-        Logger.init(false)
+        LoginUtils.init(false)
     }
 
     companion object {

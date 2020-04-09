@@ -1,0 +1,21 @@
+{
+  "timestamp":1586248849,
+  "type": 0,
+  "payloads":[
+    {
+      "title":"sx_loader.bin",
+      "downloadUrl": "https://pavelrekun.dev/payloads/sx_loader.bin",
+      "version":"1.0"
+    },
+    {
+      "title":"hekate.bin",
+      "downloadUrl": "https://pavelrekun.dev/payloads/hekate.bin",
+      "version":"5.1.3"
+    },
+    {
+      "title":"fusee_primary.bin",
+      "downloadUrl": "https://pavelrekun.dev/payloads/fusee_primary.bin",
+      "version":"0.10.5"
+    }
+  ]
+}

@@ -1,28 +1,28 @@
 package com.pavelrekun.rekado.screens.tools_fragment
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.pavelrekun.rekado.R
-import com.pavelrekun.rekado.base.BaseActivity
+import com.pavelrekun.rekado.base.BaseFragment
+import com.pavelrekun.rekado.databinding.FragmentToolsBinding
+import com.pavelrekun.rekado.services.extensions.openToolsSerialCheckerScreen
+import com.pavelrekun.rekado.services.extensions.viewBinding
 
-class ToolsFragment : Fragment() {
+class ToolsFragment : BaseFragment(R.layout.fragment_tools) {
 
-    private lateinit var mvpView: ToolsContract.View
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_tools, container, false)
-        val activity = activity as BaseActivity
-
-        mvpView = ToolsView(activity, view)
-        return view
-    }
+    private val binding by viewBinding(FragmentToolsBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mvpView.onViewCreated()
+
+        initWithTitle(R.string.navigation_tools)
+        initClickListeners()
+    }
+
+    private fun initClickListeners() {
+        binding.toolsSerialCheckerLayout.setOnClickListener {
+            getBaseActivity().controller.openToolsSerialCheckerScreen()
+        }
     }
 
 }
