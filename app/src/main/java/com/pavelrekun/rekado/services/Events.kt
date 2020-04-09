@@ -8,6 +8,4 @@ class Events {
 
     class PayloadNotSelected
 
-    class PayloadDownloadedSuccessfully(val payloadName: String)
-
 }

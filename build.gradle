@@ -5,7 +5,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.1'
+        classpath 'com.android.tools.build:gradle:3.6.2'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.71'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.28.0'
     }
@@ -33,6 +33,8 @@ ext {
     androidXRecyclerViewVersion = '1.1.0'
     androidXPreferencesVersion = '1.1.0'
     androidXConstraintLayoutVersion = '2.0.0-beta4'
+    androidXLifecycleVersion = '2.2.0'
+    androixXNavigationVersion = '2.2.1'
 
     // AndroidX: KTX
     androidXCoreKTX = '1.2.0'
@@ -47,6 +49,8 @@ ext {
 
     // Tools
     eventBusVersion = '3.2.0'
-    okHttpVersion = '4.4.0'
+    okHttpVersion = '4.5.0'
+    okHttpCoroutinesVersion = '1.0'
     zxingVersion = '3.6.0'
+    gsonVersion = "2.8.6"
 }

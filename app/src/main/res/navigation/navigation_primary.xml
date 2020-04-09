@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/navigationInstructions">
+
+    <fragment
+        android:id="@+id/navigationInstructions"
+        android:name="com.pavelrekun.rekado.screens.instructions_fragment.InstructionsFragment"
+        android:label="InstructionsFragment" />
+
+    <fragment
+        android:id="@+id/navigationLogs"
+        android:name="com.pavelrekun.rekado.screens.logs_fragment.LogsFragment"
+        android:label="LogsFragment" />
+
+    <fragment
+        android:id="@+id/navigationPayloads"
+        android:name="com.pavelrekun.rekado.screens.payload_fragment.PayloadsFragment"
+        android:label="PayloadsFragment" />
+
+    <fragment
+        android:id="@+id/navigationTools"
+        android:name="com.pavelrekun.rekado.screens.tools_fragment.ToolsFragment"
+        android:label="ToolsFragment" />
+
+    <activity
+        android:id="@+id/navigationContainerSecondary"
+        android:name="com.pavelrekun.rekado.containers.SecondaryContainerActivity"
+        android:label="SecondaryContainerActivity" />
+
+</navigation>

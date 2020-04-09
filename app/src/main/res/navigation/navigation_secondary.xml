@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_secondary"
+    app:startDestination="@id/navigationAbout">
+
+    <fragment
+        android:id="@+id/navigationAbout"
+        android:name="com.pavelrekun.rekado.screens.about_fragment.AboutFragment"
+        android:label="AboutFragment" />
+
+    <fragment
+        android:id="@+id/navigationSettings"
+        android:name="com.pavelrekun.rekado.screens.settings_fragment.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_navigationSettings_to_navigationThemePicker"
+            app:destination="@id/navigationThemePicker"
+            app:popUpTo="@id/navigationSettings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationSerialChecker"
+        android:name="com.pavelrekun.rekado.screens.serial_checker_activity.SerialCheckerFragment"
+        android:label="SerialCheckerFragment" />
+
+    <fragment
+        android:id="@+id/navigationTranslators"
+        android:name="com.pavelrekun.rekado.screens.translators_fragment.TranslatorsFragment"
+        android:label="TranslatorsFragment" />
+
+    <fragment
+        android:id="@+id/navigationThemePicker"
+        android:name="com.pavelrekun.penza.pickers.theme.ThemePickerFragment"
+        android:label="ThemePickerFragment" />
+
+</navigation>

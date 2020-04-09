@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.pavelrekun.penza.widgets.ElevationScrollView
+        android:id="@+id/aboutLayoutScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="36dp"
+                android:contentDescription="@null"
+                android:src="@drawable/pic_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_medium"
+                android:text="@string/app_name"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/aboutVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/rubik_regular"
+                android:textColor="?android:attr/textColorSecondary"
+                tools:text="3.0 (50)" />
+
+            <TextView
+                android:id="@+id/aboutLinkGitHubProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="https://github.com/MenosGrante/Rekado"
+                android:textColor="?attr/colorAccent"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/colorDivider" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardBackgroundColor="?android:attr/windowBackground"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp"
+                app:strokeColor="?attr/colorStroke"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Penza.Widget.Text.Subtitle.Padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_category_description" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:lineSpacingMultiplier="1.3"
+                        android:text="@string/about_information_description"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="?android:attr/windowBackground"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp"
+                app:strokeColor="?attr/colorStroke"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Penza.Widget.Text.Subtitle.Padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_category_developer" />
+
+                    <TextView
+                        android:id="@+id/aboutDeveloperPersonalSite"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/ic_about_personal_site"
+                        android:drawablePadding="16dp"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/about_developer_personal_site"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?attr/colorDivider" />
+
+                    <TextView
+                        android:id="@+id/aboutDeveloperGitHub"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/ic_about_github"
+                        android:drawablePadding="16dp"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/about_developer_github"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?attr/colorDivider" />
+
+                    <TextView
+                        android:id="@+id/aboutDeveloperTwitter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/ic_about_twitter"
+                        android:drawablePadding="16dp"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/about_developer_twitter"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </com.pavelrekun.penza.widgets.ElevationScrollView>
+
+</LinearLayout>

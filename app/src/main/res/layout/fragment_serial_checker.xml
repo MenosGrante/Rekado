@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.pavelrekun.penza.widgets.ElevationScrollView
+        android:id="@+id/serialCheckerLayoutScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardBackgroundColor="?android:attr/windowBackground"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp"
+                app:strokeColor="?attr/colorStroke"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Penza.Widget.Text.Subtitle.Padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/serial_checker_category_checker" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/serialCheckerFieldOverflow"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="1"
+                            app:boxCornerRadiusBottomEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxStrokeColor="?attr/colorAccent"
+                            app:boxStrokeWidth="1dp"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="14"
+                            app:passwordToggleDrawable="@null">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/serialCheckerField"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/serial_checker_checker_serial_number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/serialCheckerScan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_serial_checker_scan" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/serialCheckerCheck"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/serial_checker_checker_button"
+                        android:textColor="?attr/colorAccent"
+                        app:cornerRadius="6dp" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="?android:attr/windowBackground"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp"
+                app:strokeColor="?attr/colorStroke"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Penza.Widget.Text.Subtitle.Padding"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/serial_checker_category_information" />
+
+                        <ImageView
+                            android:id="@+id/serialCheckerHelp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_weight="0"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:contentDescription="@null"
+                            android:focusable="true"
+                            android:padding="16dp"
+                            android:src="@drawable/ic_information_help" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/serialCheckerInformation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="16dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </com.pavelrekun.penza.widgets.ElevationScrollView>
+
+</LinearLayout>

@@ -3,9 +3,16 @@ package com.pavelrekun.rekado.services.extensions
 import android.net.Uri
 import android.provider.MediaStore
 import android.widget.EditText
+import com.google.gson.GsonBuilder
+import com.google.gson.reflect.TypeToken
+import com.google.gson.stream.JsonReader
 import com.pavelrekun.rekado.RekadoApplication
+import com.pavelrekun.rekado.data.Schema
 import java.io.File
 import java.io.InputStream
+import java.io.InputStreamReader
+
+private val SCHEMA_TYPE = object : TypeToken<Schema>() {}.type
 
 fun EditText.getString() = this.text.toString()
 
@@ -29,3 +36,5 @@ fun Uri.extractFileName(): String? {
 
     return null
 }
+
+fun InputStream.parseSchema(): Schema = GsonBuilder().create().fromJson(JsonReader(InputStreamReader(this)), SCHEMA_TYPE)

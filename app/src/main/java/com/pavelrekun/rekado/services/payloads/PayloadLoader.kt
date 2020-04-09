@@ -5,9 +5,11 @@ import android.hardware.usb.UsbDevice
 import android.hardware.usb.UsbDeviceConnection
 import android.hardware.usb.UsbInterface
 import android.hardware.usb.UsbManager
+import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.RekadoApplication
-import com.pavelrekun.rekado.services.Logger
 import com.pavelrekun.rekado.services.usb.USBHandler
+import com.pavelrekun.rekado.services.utils.LoginUtils
+import com.pavelrekun.rekado.services.utils.PreferencesUtils
 import com.pavelrekun.rekado.services.utils.Utils
 import java.io.FileInputStream
 import java.io.IOException
@@ -33,7 +35,7 @@ class PayloadLoader : USBHandler {
     private lateinit var usbInterface: UsbInterface
 
     override fun handleDevice(device: UsbDevice) {
-        Logger.info("Triggering selected payload!")
+        LoginUtils.info("Triggering selected payload!")
 
         val context = RekadoApplication.context
 
@@ -50,12 +52,12 @@ class PayloadLoader : USBHandler {
 
         val deviceID = ByteArray(16)
         if (usbConnection.bulkTransfer(startEndpoint, deviceID, deviceID.size, 999) != deviceID.size) {
-            Logger.error("Failed to get Device ID!")
+            LoginUtils.error("Failed to get Device ID!")
             return
         }
 
 
-        Logger.info("Device ID: ${Utils.bytesToHex(deviceID)}")
+        LoginUtils.info("Device ID: ${Utils.bytesToHex(deviceID)}")
 
         /* [2] - Building payload */
 
@@ -74,12 +76,12 @@ class PayloadLoader : USBHandler {
 
         val intermezzo: ByteArray
         try {
-            val intermezzoStream = context.assets.open("intermezzo.bin")
+            val intermezzoStream = RekadoApplication.context.resources.openRawResource(R.raw.intermezzo)
             intermezzo = ByteArray(intermezzoStream.available())
             intermezzoStream.read(intermezzo)
             intermezzoStream.close()
         } catch (e: IOException) {
-            Logger.error("Failed to read intermezzo: $e")
+            LoginUtils.error("Failed to read intermezzo: $e")
             return
         }
 
@@ -90,7 +92,7 @@ class PayloadLoader : USBHandler {
         try {
             payload.put(getPayload())
         } catch (e: IOException) {
-            Logger.error("Failed to read payload: $e")
+            LoginUtils.error("Failed to read payload: $e")
             return
         }
 
@@ -105,22 +107,22 @@ class PayloadLoader : USBHandler {
             payload.get(chunk)
 
             if (usbConnection.bulkTransfer(endEndpoint, chunk, chunk.size, 999) != chunk.size) {
-                Logger.error("Sending payload failed at offset $bytesSent")
+                LoginUtils.error("Sending payload failed at offset $bytesSent")
                 return
             }
             lowBuffer = lowBuffer xor true
             bytesSent += 0x1000
         }
 
-        Logger.info("Sent $bytesSent bytes")
+        LoginUtils.info("Sent $bytesSent bytes")
 
         // 0x7000 = STACK_END = high DMA buffer address
         when (nativeTriggerExploit(usbConnection.fileDescriptor, 0x7000)) {
-            0 -> Logger.info("Exploit triggered!")
-            -1 -> Logger.error("SUBMITURB failed!")
-            -2 -> Logger.error("DISCARDURB failed!")
-            -3 -> Logger.error("REAPURB failed!")
-            -4 -> Logger.error("Wrong URB reaped!  Maybe that doesn't matter?")
+            0 -> LoginUtils.info("Exploit triggered!")
+            -1 -> LoginUtils.error("SUBMITURB failed!")
+            -2 -> LoginUtils.error("DISCARDURB failed!")
+            -3 -> LoginUtils.error("REAPURB failed!")
+            -4 -> LoginUtils.error("Wrong URB reaped!  Maybe that doesn't matter?")
         }
     }
 
@@ -129,13 +131,13 @@ class PayloadLoader : USBHandler {
     }
 
     private fun getPayload(): ByteArray {
-        val chosenPayload = PayloadHelper.getChosen()
-        val chosenPayloadFile = FileInputStream(chosenPayload.path)
+        val chosenPayload = PreferencesUtils.getChosen()
+        val chosenPayloadFile = FileInputStream(chosenPayload.getPath())
 
-        Logger.info("Opening chosen payload: ${chosenPayload.name}")
+        LoginUtils.info("Opening chosen payload: ${chosenPayload.title}")
 
         val chosenPayloadData = ByteArray(chosenPayloadFile.available())
-        Logger.info("Read ${chosenPayloadFile.read(chosenPayloadData)} bytes from payload file!")
+        LoginUtils.info("Read ${chosenPayloadFile.read(chosenPayloadData)} bytes from payload file!")
 
         chosenPayloadFile.close()
         return chosenPayloadData

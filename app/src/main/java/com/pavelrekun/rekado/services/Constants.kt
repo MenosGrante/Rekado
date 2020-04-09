@@ -15,4 +15,12 @@ object Constants {
     const val MIME_BINARY = "application/octet-stream"
 
     const val KEY_OPEN_PAYLOAD = 123
+
+    const val PAYLOADS_EXTERNAL_SCHEMA = "https://pavelrekun.dev/payloads/payloads.json"
+
+    object Mimes {
+
+        val BINARY = listOf("octet-stream", "x-sega-cd-rom")
+
+    }
 }

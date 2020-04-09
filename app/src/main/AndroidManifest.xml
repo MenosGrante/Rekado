@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.pavelrekun.rekado">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.REORDER_TASKS" />
 
@@ -18,7 +19,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".screens.main_activity.MainActivity"
+            android:name=".containers.PrimaryContainerActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,27 +28,7 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".screens.about_activity.AboutActivity"
-            android:label="@string/navigation_about"
-            android:launchMode="singleTop" />
-
-        <activity
-            android:name=".screens.settings_activity.SettingsActivity"
-            android:label="@string/navigation_settings"
-            android:launchMode="singleTop" />
-
-        <activity
-            android:name=".screens.serial_checker_activity.SerialCheckerActivity"
-            android:label="@string/navigation_serial_checker"
-            android:launchMode="singleTop"
-            android:screenOrientation="fullSensor"
-            tools:replace="screenOrientation" />
-
-        <activity
-            android:name=".screens.translators_activity.TranslatorsActivity"
-            android:label="@string/navigation_translators"
-            android:launchMode="singleTop" />
+        <activity android:name=".containers.SecondaryContainerActivity" />
 
         <activity
             android:name=".services.usb.USBReceiver"
