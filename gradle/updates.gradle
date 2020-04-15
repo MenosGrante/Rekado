@@ -1,0 +1,21 @@
+apply plugin: "com.github.ben-manes.versions"
+
+dependencyUpdates.resolutionStrategy {
+    componentSelection { rules ->
+        rules.all { ComponentSelection selection ->
+            boolean allowed = ['firebase-crashlytics-gradle', 'firebase-crashlytics'].any { qualifier ->
+                selection.candidate.displayName.contains(qualifier)
+            }
+
+            boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm', 'M1'].any { qualifier ->
+                if (!allowed) {
+                    selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+                }
+            }
+
+            if (rejected) {
+                selection.reject('Not stable')
+            }
+        }
+    }
+}

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,12 +15,12 @@ import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentPayloadsBinding
 import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.Events
-import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.extensions.extractFileName
 import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.payloads.PayloadDownloadHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
+import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -29,6 +30,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
 
     private val binding by viewBinding(FragmentPayloadsBinding::bind)
     private val viewModel by lazy { ViewModelProvider(this).get(PayloadsViewModel::class.java) }
+//    private val viewModel: PayloadsViewModel by activityViewModels()
 
     private lateinit var adapter: PayloadsAdapter
 
@@ -41,6 +43,33 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
         initClickListeners()
         initDesign()
         initRefreshListener()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == Constants.KEY_OPEN_PAYLOAD) {
+            when (resultCode) {
+                Activity.RESULT_OK -> data?.data?.let {
+                    val name = it.extractFileName()
+                    if (name != null) {
+                        val inputStream = getBaseActivity().contentResolver.openInputStream(it)
+
+                        if (inputStream != null) {
+                            MemoryUtils.copyPayload(inputStream, name)
+                            EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
+                            LoginUtils.info("Added new payload: $name")
+                        } else {
+                            Toast.makeText(requireContext(), R.string.helper_error_adding_payload, Toast.LENGTH_SHORT).show()
+                            LoginUtils.error("Failed to add payload: $name")
+                        }
+                    } else {
+                        Toast.makeText(requireContext(), R.string.helper_error_adding_payload, Toast.LENGTH_SHORT).show()
+                        LoginUtils.error("Failed to add selected payload!")
+                    }
+                }
+            }
+        }
     }
 
     private fun initObservers() {
