@@ -1,0 +1,7 @@
+- Added: Ability to update pre-installed payloads. Just swipe from the top of the screen in the "Payloads" screen and it will notify you, if there are some updates.
+- Added: Versions to the pre-installed payloads.
+- Removed: Ability to hide pre-installed payloads (due to the low popularity of the function).
+- Updated: Some icons on all screens.
+- Updated: Code architecture to MVVM with Navigation Graph.
+- Removed: Pre-installed payload - "ReiNX".
+- Updated: Fusee-primary to 0.10.5 (which is the same as 0.10.4).

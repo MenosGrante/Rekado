@@ -1,0 +1,5 @@
+- Added: Ability to follow the theme of the system or set it based on the "Battery Saver" mode.
+- Improved: Color of icons in the "Rose" theme.
+- Improved: Color of text and icons in navigation bottom bar for all themes.
+- Updated: Hekate to 5.1.3.
+- Updated: Fusee-primary to 0.10.4.
