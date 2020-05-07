@@ -1,0 +1,11 @@
+- Added: Functionality to scan console's serial number from the barcode in the Serial Checker window.
+- Added: "Restart" dialog after every change of theme|color to properly initialize it.
+- Added: "Reset" option in the Appearance settings category to reset all appearance settings to default.
+- Updated: Default "Dark" theme colors.
+- Fixed: Cutting edges of colors in the "Color picker" dialog.
+- Updated: Gradle to 5.6.1.
+- Updated: Gradle Plugin to 3.5.0.
+- Updated: Kotlin to 1.3.50.
+- Updated: Kotlin Coroutines to 1.3.0.
+- Removed: Paper dependency.
+- Removed: Material Dialogs dependency.
