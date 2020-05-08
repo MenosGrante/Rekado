@@ -1,11 +1,11 @@
 package com.pavelrekun.rekado.services.payloads
 
-import com.pavelrekun.rekado.data.Schema
+import com.pavelrekun.rekado.data.Config
 import java.lang.Exception
 
 enum class Result {
     SUCCESS, ERROR;
 
-    lateinit var schema: Schema
+    lateinit var config: Config
     lateinit var exception: Exception
 }

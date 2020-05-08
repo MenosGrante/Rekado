@@ -15,6 +15,6 @@ interface PayloadDownloadAPI {
 
     @Streaming
     @GET("/payloads/payloads.json")
-    suspend fun fetchExternalSchema(): Response<ResponseBody>
+    suspend fun fetchExternalConfig(): Response<ResponseBody>
 
 }

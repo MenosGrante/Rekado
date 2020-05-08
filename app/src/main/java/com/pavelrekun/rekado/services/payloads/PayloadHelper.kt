@@ -8,7 +8,7 @@ object PayloadHelper {
 
     val BUNDLED_PAYLOADS = listOf("hekate.bin", "sx_loader.bin", "fusee_primary.bin", "reinx.bin")
 
-    fun getAllPayloads() = (PreferencesUtils.getCurrentSchema().payloads + getExternalPayloads()).toMutableList()
+    fun getAllPayloads() = (PreferencesUtils.getCurrentConfig().payloads + getExternalPayloads()).toMutableList()
 
     fun getTitles() = getAllPayloads().map { it.title }
 

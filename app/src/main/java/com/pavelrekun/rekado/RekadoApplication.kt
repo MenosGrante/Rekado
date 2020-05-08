@@ -18,7 +18,7 @@ class RekadoApplication : Application() {
 
         context = applicationContext
 
-        MemoryUtils.parseBundledSchema()
+        MemoryUtils.parseBundledConfig()
 
         configureInternalSystems()
         configureThemeEngine()

@@ -16,7 +16,7 @@ object Constants {
 
     const val KEY_OPEN_PAYLOAD = 123
 
-    const val BASE_URL_SCHEMA = "https://pavelrekun.dev"
+    const val BASE_URL_CONFIG = "https://pavelrekun.dev"
 
     object Mimes {
 

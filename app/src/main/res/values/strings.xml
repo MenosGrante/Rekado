@@ -93,8 +93,9 @@
     <string name="dialog_payload_download_url" translatable="false">URL</string>
     <string name="dialog_payload_download_button">Download</string>
     <string name="dialog_payload_update_title">Payloads updates</string>
-    <string name="dialog_payload_update_message">There is an update for some pre-installed payloads. Recommended upgrade.</string>
-    <string name="dialog_button_update">Update</string>
+    <string name="dialog_payload_update_message">There is an update for some pre-installed payloads. The update is recommended.</string>
+    <string name="dialog_payload_update_message_additional">A new update for the application is also available, you can download it from GitHub or F-Droid.</string>
+    <string name="dialog_button_update">Update payloads</string>
     <string name="dialog_button_positive" translatable="false">OK</string>
     <string name="dialog_button_negative">Close</string>
 
