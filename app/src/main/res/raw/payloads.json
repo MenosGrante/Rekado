@@ -1,6 +1,5 @@
 {
   "timestamp": 1588755094,
-  "type": 0,
   "payloads":[
     {
       "title":"sx_loader.bin",
@@ -16,6 +15,11 @@
       "title":"fusee_primary.bin",
       "downloadUrl": "https://pavelrekun.dev/payloads/fusee_primary.bin",
       "version":"0.12.0"
+    },
+    {
+      "title":"reinx.bin",
+      "downloadUrl": "https://pavelrekun.dev/payloads/reinx.bin",
+      "version":"3.0"
     }
   ]
 }

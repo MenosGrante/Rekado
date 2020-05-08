@@ -18,8 +18,8 @@ import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.extensions.extractFileName
 import com.pavelrekun.rekado.services.extensions.viewBinding
-import com.pavelrekun.rekado.services.payloads.PayloadDownloadHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
+import com.pavelrekun.rekado.services.payloads.Result
 import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.utils.MemoryUtils
 import org.greenrobot.eventbus.EventBus
@@ -29,8 +29,7 @@ import org.greenrobot.eventbus.ThreadMode
 class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
 
     private val binding by viewBinding(FragmentPayloadsBinding::bind)
-    private val viewModel by lazy { ViewModelProvider(this).get(PayloadsViewModel::class.java) }
-//    private val viewModel: PayloadsViewModel by activityViewModels()
+    private val viewModel by activityViewModels<PayloadsViewModel>()
 
     private lateinit var adapter: PayloadsAdapter
 
@@ -79,7 +78,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
 
         viewModel.fetchSchemaResult.observe(viewLifecycleOwner, Observer { result ->
             when (result) {
-                PayloadDownloadHelper.Result.SUCCESS -> {
+                Result.SUCCESS -> {
                     DialogsShower.showPayloadsUpdatesDialog(getBaseActivity(), result.schema, viewModel)
                 }
                 else -> {
@@ -89,7 +88,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
 
         viewModel.updatePayloadResult.observe(viewLifecycleOwner, Observer { result ->
             when (result) {
-                PayloadDownloadHelper.Result.SUCCESS -> {
+                Result.SUCCESS -> {
                     updateList()
                 }
                 else -> {
@@ -99,7 +98,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
 
         viewModel.downloadPayloadResult.observe(viewLifecycleOwner, Observer { result ->
             when (result) {
-                PayloadDownloadHelper.Result.SUCCESS -> {
+                Result.SUCCESS -> {
                     updateList()
                     LoginUtils.info("Payload downloaded successfully.")
                     Toast.makeText(getBaseActivity(), getString(R.string.payloads_download_status_success), Toast.LENGTH_SHORT).show()
@@ -110,33 +109,6 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
                 }
             }
         })
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == Constants.KEY_OPEN_PAYLOAD) {
-            when (resultCode) {
-                Activity.RESULT_OK -> data?.data?.let {
-                    val name = it.extractFileName()
-                    if (name != null) {
-                        val inputStream = getBaseActivity().contentResolver.openInputStream(it)
-
-                        if (inputStream != null) {
-                            MemoryUtils.copyPayload(inputStream, name)
-                            EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
-                            LoginUtils.info("Added new payload: $name")
-                        } else {
-                            Toast.makeText(requireContext(), R.string.helper_error_adding_payload, Toast.LENGTH_SHORT).show()
-                            LoginUtils.error("Failed to add payload: $name")
-                        }
-                    } else {
-                        Toast.makeText(requireContext(), R.string.helper_error_adding_payload, Toast.LENGTH_SHORT).show()
-                        LoginUtils.error("Failed to add selected payload!")
-                    }
-                }
-            }
-        }
     }
 
     private fun initList() {

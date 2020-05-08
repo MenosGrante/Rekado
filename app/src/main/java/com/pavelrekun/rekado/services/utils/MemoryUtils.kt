@@ -15,7 +15,7 @@ object MemoryUtils {
 
     fun parseBundledSchema() {
         if (!PreferencesUtils.checkSchemaExists()) {
-            val schema = resources.openRawResource(R.raw.bundled_payloads).parseSchema()
+            val schema = resources.openRawResource(R.raw.payloads).parseSchema()
             PreferencesUtils.saveSchema(schema)
             copyBundledPayloads()
         }
