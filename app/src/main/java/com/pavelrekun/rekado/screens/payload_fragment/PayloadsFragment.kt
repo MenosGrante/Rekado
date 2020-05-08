@@ -1,5 +1,6 @@
 package com.pavelrekun.rekado.screens.payload_fragment
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -15,6 +16,7 @@ import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
+import com.pavelrekun.rekado.services.extensions.extractFileName
 import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.payloads.PayloadDownloadHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
@@ -79,6 +81,33 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
                 }
             }
         })
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == Constants.KEY_OPEN_PAYLOAD) {
+            when (resultCode) {
+                Activity.RESULT_OK -> data?.data?.let {
+                    val name = it.extractFileName()
+                    if (name != null) {
+                        val inputStream = getBaseActivity().contentResolver.openInputStream(it)
+
+                        if (inputStream != null) {
+                            MemoryUtils.copyPayload(inputStream, name)
+                            EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
+                            LoginUtils.info("Added new payload: $name")
+                        } else {
+                            Toast.makeText(requireContext(), R.string.helper_error_adding_payload, Toast.LENGTH_SHORT).show()
+                            LoginUtils.error("Failed to add payload: $name")
+                        }
+                    } else {
+                        Toast.makeText(requireContext(), R.string.helper_error_adding_payload, Toast.LENGTH_SHORT).show()
+                        LoginUtils.error("Failed to add selected payload!")
+                    }
+                }
+            }
+        }
     }
 
     private fun initList() {

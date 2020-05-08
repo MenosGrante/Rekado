@@ -10,8 +10,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 70
-        versionName "4.0"
+        versionCode 71
+        versionName "4.0.1"
 
         archivesBaseName = "[$versionName] Rekado [${versionCode}]"
     }
