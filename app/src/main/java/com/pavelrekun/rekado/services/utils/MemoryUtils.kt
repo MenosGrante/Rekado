@@ -3,7 +3,7 @@ package com.pavelrekun.rekado.services.utils
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.services.Events
-import com.pavelrekun.rekado.services.extensions.parseSchema
+import com.pavelrekun.rekado.services.extensions.parseConfig
 import com.pavelrekun.rekado.services.extensions.toFile
 import org.greenrobot.eventbus.EventBus
 import java.io.File
@@ -13,10 +13,10 @@ object MemoryUtils {
 
     private val resources = RekadoApplication.context.resources
 
-    fun parseBundledSchema() {
-        if (!PreferencesUtils.checkSchemaExists()) {
-            val schema = resources.openRawResource(R.raw.payloads).parseSchema()
-            PreferencesUtils.saveSchema(schema)
+    fun parseBundledConfig() {
+        if (!PreferencesUtils.checkConfigExists()) {
+            val config = resources.openRawResource(R.raw.config).parseConfig()
+            PreferencesUtils.saveConfig(config)
             copyBundledPayloads()
         }
     }
@@ -34,6 +34,7 @@ object MemoryUtils {
         copyPayload(resources.openRawResource(R.raw.fusee_primary), "fusee_primary.bin")
         copyPayload(resources.openRawResource(R.raw.hekate), "hekate.bin")
         copyPayload(resources.openRawResource(R.raw.sx_loader), "sx_loader.bin")
+        copyPayload(resources.openRawResource(R.raw.reinx), "reinx.bin")
 
         EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
     }

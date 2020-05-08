@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pavelrekun.penza.services.extensions.tintContrast
 import com.pavelrekun.rekado.R
@@ -76,10 +75,10 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
             if (isShowing) showProgress() else hideProgress()
         })
 
-        viewModel.fetchSchemaResult.observe(viewLifecycleOwner, Observer { result ->
+        viewModel.fetchConfigResult.observe(viewLifecycleOwner, Observer { result ->
             when (result) {
                 Result.SUCCESS -> {
-                    DialogsShower.showPayloadsUpdatesDialog(getBaseActivity(), result.schema, viewModel)
+                    DialogsShower.showPayloadsUpdatesDialog(getBaseActivity(), result.config, viewModel)
                 }
                 else -> {
                 }
@@ -112,7 +111,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
     }
 
     private fun initList() {
-        MemoryUtils.parseBundledSchema()
+        MemoryUtils.parseBundledConfig()
 
         adapter = PayloadsAdapter(PayloadHelper.getAllPayloads())
 
@@ -161,7 +160,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
 
     private fun initRefreshListener() {
         binding.payloadsLayoutRefresh.setOnRefreshListener {
-            viewModel.fetchExternalSchema()
+            viewModel.fetchExternalConfig()
         }
     }
 
@@ -177,7 +176,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
             initList()
         }
 
-        viewModel.fetchExternalSchema()
+        viewModel.fetchExternalConfig()
     }
 
     override fun onStart() {

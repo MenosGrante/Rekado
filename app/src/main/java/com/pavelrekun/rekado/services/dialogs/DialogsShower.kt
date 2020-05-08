@@ -4,9 +4,10 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.pavelrekun.rekado.BuildConfig
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
-import com.pavelrekun.rekado.data.Schema
+import com.pavelrekun.rekado.data.Config
 import com.pavelrekun.rekado.databinding.DialogDonateBinding
 import com.pavelrekun.rekado.databinding.DialogPayloadDownloadBinding
 import com.pavelrekun.rekado.screens.payload_fragment.PayloadsViewModel
@@ -75,15 +76,21 @@ object DialogsShower {
 
     }
 
-    fun showPayloadsUpdatesDialog(activity: BaseActivity, updatedSchema: Schema, viewModel: PayloadsViewModel) {
+    fun showPayloadsUpdatesDialog(activity: BaseActivity, updatedConfig: Config, viewModel: PayloadsViewModel) {
         val builder = MaterialAlertDialogBuilder(activity)
 
+        val message = if (PreferencesUtils.getCurrentConfig().latestVersionCode > BuildConfig.VERSION_CODE) {
+            activity.getString(R.string.dialog_payload_update_message) + "\n\n" + activity.getString(R.string.dialog_payload_update_message_additional)
+        } else {
+            activity.getString(R.string.dialog_payload_update_message)
+        }
+
         builder.setTitle(R.string.dialog_payload_update_title)
-        builder.setMessage(R.string.dialog_payload_update_message)
+        builder.setMessage(message)
 
         builder.setNegativeButton(R.string.dialog_button_negative) { _, _ -> }
         builder.setPositiveButton(R.string.dialog_button_update) { _, _ ->
-            viewModel.updatePayloads(updatedSchema)
+            viewModel.updatePayloads(updatedConfig)
         }
 
         builder.create().apply { show() }

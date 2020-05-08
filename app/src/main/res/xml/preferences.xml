@@ -43,6 +43,11 @@
 
     <PreferenceCategory android:title="@string/settings_category_payloads" />
 
+    <CheckBoxPreference
+        android:icon="@drawable/ic_settings_auto_injector"
+        android:key="auto_injector_enable"
+        android:title="@string/settings_auto_injector_status_title_disabled" />
+
     <Preference
         android:icon="@drawable/ic_settings_payloads_clear"
         android:key="payloads_reset"
