@@ -17,7 +17,7 @@ object PreferencesUtils {
     private const val AUTO_INJECTOR_ENABLED = "auto_injector_enable"
     private const val AUTO_INJECTOR_PAYLOAD = "auto_injector_payload"
 
-    private const val CURRENT_SCHEMA = "CURRENT_SCHEMA"
+    private const val CURRENT_SCHEMA = "CURRENT_SCHEMA" + 1
 
     private const val CHOSEN_PAYLOAD = "CHOSEN_PAYLOAD"
 

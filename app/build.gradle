@@ -76,9 +76,7 @@ dependencies {
 
     // Tools
     implementation "org.greenrobot:eventbus:$eventBusVersion"
-    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
-    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
-    implementation "ru.gildor.coroutines:kotlin-coroutines-okhttp:$okHttpCoroutinesVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.journeyapps:zxing-android-embedded:$zxingVersion"
     implementation "com.google.code.gson:gson:$gsonVersion"
 

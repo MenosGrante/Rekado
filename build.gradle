@@ -34,7 +34,7 @@ ext {
     androidXBrowserVersion = '1.2.0'
     androidXRecyclerViewVersion = '1.1.0'
     androidXPreferencesVersion = '1.1.1'
-    androidXConstraintLayoutVersion = '2.0.0-beta4'
+    androidXConstraintLayoutVersion = '2.0.0-beta5'
     androidXLifecycleVersion = '2.2.0'
     androixXNavigationVersion = '2.2.2'
 
@@ -51,8 +51,7 @@ ext {
 
     // Tools
     eventBusVersion = '3.2.0'
-    okHttpVersion = '4.6.0'
-    okHttpCoroutinesVersion = '1.0'
+    retrofitVersion = '2.8.1'
     zxingVersion = '3.6.0'
     gsonVersion = "2.8.6"
 }
