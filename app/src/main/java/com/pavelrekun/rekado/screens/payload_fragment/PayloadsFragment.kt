@@ -21,6 +21,7 @@ import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.payloads.Result
 import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.utils.MemoryUtils
+import com.pavelrekun.rekado.services.utils.PreferencesUtils
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -111,8 +112,6 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
     }
 
     private fun initList() {
-        MemoryUtils.parseBundledConfig()
-
         adapter = PayloadsAdapter(PayloadHelper.getAllPayloads())
 
         binding.payloadsList.apply {
@@ -159,6 +158,10 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
     }
 
     private fun initRefreshListener() {
+        if (PreferencesUtils.checkHideBundledPayloadsEnabled()) {
+            binding.payloadsLayoutRefresh.isEnabled = false
+        }
+
         binding.payloadsLayoutRefresh.setOnRefreshListener {
             viewModel.fetchExternalConfig()
         }
@@ -176,7 +179,9 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
             initList()
         }
 
-        viewModel.fetchExternalConfig()
+        if (PreferencesUtils.checkHideBundledPayloadsEnabled()) {
+            viewModel.fetchExternalConfig()
+        }
     }
 
     override fun onStart() {
