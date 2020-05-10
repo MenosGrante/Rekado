@@ -43,7 +43,7 @@ ext {
 
     // Kotlin
     kotlinVersion = '1.3.72'
-    kotlinCoroutinesVersion = '1.3.5'
+    kotlinCoroutinesVersion = '1.3.6'
 
     // Design
     materialComponentsVersion = '1.1.0'
