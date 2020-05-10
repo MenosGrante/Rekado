@@ -13,9 +13,10 @@ import com.pavelrekun.penza.pickers.theme.ThemePickerFragment
 import com.pavelrekun.penza.services.helpers.SettingsDialogsHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
-import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
+import com.pavelrekun.rekado.services.utils.LoginUtils
+import com.pavelrekun.rekado.services.utils.PreferencesUtils
 import com.pavelrekun.rekado.services.utils.Utils
 
 class SettingsFragment : PreferenceFragmentCompat() {
@@ -30,6 +31,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
     private lateinit var autoInjectorEnable: CheckBoxPreference
     private lateinit var autoInjectorPayload: ListPreference
 
+    private lateinit var payloadsHidePreference: CheckBoxPreference
     private lateinit var payloadsResetPreference: Preference
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -49,6 +51,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
     }
 
     private fun preparePreferences() {
+        payloadsHidePreference = findPreference("payloads_hide")!!
         payloadsResetPreference = findPreference("payloads_reset")!!
 
         autoInjectorEnable = findPreference("auto_injector_enable")!!
@@ -94,29 +97,46 @@ class SettingsFragment : PreferenceFragmentCompat() {
     }
 
     private fun initAutoInjectorCategory() {
-        autoInjectorEnable.setTitle(if (autoInjectorEnable.isChecked) R.string.settings_auto_injector_status_title_enabled else R.string.settings_auto_injector_status_title_disabled)
+        if (!PayloadHelper.checkPayloadsExists()) {
+            autoInjectorEnable.isEnabled = false
+            autoInjectorEnable.isChecked = false
 
-        autoInjectorPayload.entryValues = PayloadHelper.getTitles().toTypedArray()
-        autoInjectorPayload.entries = PayloadHelper.getTitles().toTypedArray()
-        if (autoInjectorPayload.value == null && PayloadHelper.getTitles().isNotEmpty()) autoInjectorPayload.setValueIndex(0)
-        autoInjectorPayload.isEnabled = autoInjectorEnable.isChecked
+            autoInjectorPayload.isEnabled = false
+            autoInjectorPayload.value = null
+        } else {
+            autoInjectorEnable.isEnabled = true
+            autoInjectorPayload.isEnabled = true
 
-        autoInjectorEnable.setOnPreferenceChangeListener { _, newValue ->
-            autoInjectorPayload.isEnabled = newValue as Boolean
+            autoInjectorEnable.setTitle(if (autoInjectorEnable.isChecked) R.string.settings_auto_injector_status_title_enabled else R.string.settings_auto_injector_status_title_disabled)
 
-            if (newValue) {
-                LoginUtils.info("\"Auto injector\" enabled!")
-                autoInjectorEnable.setTitle(R.string.settings_auto_injector_status_title_enabled)
-            } else {
-                LoginUtils.info("\"Auto injector\" disabled!")
-                autoInjectorEnable.setTitle(R.string.settings_auto_injector_status_title_disabled)
+            autoInjectorPayload.entryValues = PayloadHelper.getTitles().toTypedArray()
+            autoInjectorPayload.entries = PayloadHelper.getTitles().toTypedArray()
+            if (autoInjectorPayload.value == null) autoInjectorPayload.setValueIndex(0)
+            autoInjectorPayload.isEnabled = autoInjectorEnable.isChecked
+
+            autoInjectorEnable.setOnPreferenceChangeListener { _, newValue ->
+                autoInjectorPayload.isEnabled = newValue as Boolean
+
+                if (newValue) {
+                    LoginUtils.info("\"Auto injector\" enabled!")
+                    autoInjectorEnable.setTitle(R.string.settings_auto_injector_status_title_enabled)
+                } else {
+                    LoginUtils.info("\"Auto injector\" disabled!")
+                    autoInjectorEnable.setTitle(R.string.settings_auto_injector_status_title_disabled)
+                }
+
+                true
             }
-
-            true
         }
     }
 
     private fun initPayloadsCategory() {
+        payloadsHidePreference.setOnPreferenceChangeListener { preference, newValue ->
+            PreferencesUtils.setHideBundledPayloadsEnabled(newValue as Boolean)
+            initAutoInjectorCategory()
+            true
+        }
+
         payloadsResetPreference.setOnPreferenceClickListener {
             val dialog = DialogsShower.showPayloadsResetDialog(activity)
 

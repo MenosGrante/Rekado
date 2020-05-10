@@ -42,6 +42,19 @@ object DialogsShower {
         return builder.create().apply { show() }
     }
 
+    fun showNoPayloadsDialog(activity: BaseActivity) {
+        val builder = MaterialAlertDialogBuilder(activity)
+
+        builder.setTitle(R.string.dialog_loader_no_payloads_title)
+        builder.setMessage(R.string.dialog_loader_no_payloads_description)
+
+        builder.setNegativeButton(R.string.dialog_button_negative) { _, _ ->
+            EventBus.getDefault().post(Events.PayloadNotSelected())
+        }
+
+        builder.create().apply { show() }
+    }
+
     fun showPayloadsResetDialog(activity: BaseActivity): AlertDialog {
         val builder = MaterialAlertDialogBuilder(activity)
 

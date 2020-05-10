@@ -37,7 +37,12 @@ class USBReceiver : BaseActivity() {
                 PreferencesUtils.putChosen(PayloadHelper.find(PreferencesUtils.getAutoInjectorPayload()!!))
                 injectPayload()
             } else {
-                payloadChooserDialog = DialogsShower.showPayloadsDialog(this)
+                if(PayloadHelper.checkPayloadsExists()) {
+                    payloadChooserDialog = DialogsShower.showPayloadsDialog(this)
+                } else {
+                    DialogsShower.showNoPayloadsDialog(this)
+                }
+
             }
         }
     }

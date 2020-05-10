@@ -5,8 +5,8 @@ import androidx.preference.PreferenceManager
 import com.google.gson.GsonBuilder
 import com.pavelrekun.penza.services.extensions.EMPTY_STRING
 import com.pavelrekun.rekado.RekadoApplication
-import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.data.Config
+import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.payloads.PayloadHelper.find
 
@@ -17,11 +17,17 @@ object PreferencesUtils {
     private const val AUTO_INJECTOR_ENABLED = "auto_injector_enable"
     private const val AUTO_INJECTOR_PAYLOAD = "auto_injector_payload"
 
+    private const val PAYLOADS_HIDE_ENABLED = "payloads_hide"
+
     private const val CURRENT_CONFIG = "CURRENT_CONFIG"
 
     private const val CHOSEN_PAYLOAD = "CHOSEN_PAYLOAD"
 
     fun checkAutoInjectorEnabled() = sharedPreferences.getBoolean(AUTO_INJECTOR_ENABLED, false)
+
+    fun setHideBundledPayloadsEnabled(enabled: Boolean) = sharedPreferences.edit { putBoolean(PAYLOADS_HIDE_ENABLED, enabled) }
+
+    fun checkHideBundledPayloadsEnabled() = sharedPreferences.getBoolean(PAYLOADS_HIDE_ENABLED, false)
 
     fun getAutoInjectorPayload() = sharedPreferences.getString(AUTO_INJECTOR_PAYLOAD, PayloadHelper.BUNDLED_PAYLOADS.first())
 
