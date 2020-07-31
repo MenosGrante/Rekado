@@ -97,7 +97,6 @@
     <string name="dialog_payload_download_button">Download</string>
     <string name="dialog_payload_update_title">Payloads updates</string>
     <string name="dialog_payload_update_message">There is an update for some bundled payloads. The update is recommended.</string>
-    <string name="dialog_payload_update_message_additional">A new update for the application is also available, you can download it from GitHub or F-Droid.</string>
     <string name="dialog_loader_no_payloads_title">No payloads</string>
     <string name="dialog_loader_no_payloads_description">It seems you did not add external payloads and hid the bundled ones. The injection is not possible.\n\nAdd your payloads or disable the hiding of bundled payloads in the "Settings" and try again.</string>
     <string name="dialog_button_update">Update payloads</string>

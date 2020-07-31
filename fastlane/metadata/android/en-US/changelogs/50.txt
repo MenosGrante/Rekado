@@ -1,5 +1,0 @@
-- Added: Check for the possibility of hacking the console by serial number.
-- Added: Ability to download payloads from Internet by direct URL (thanks to @ELY3M)
-- Improved: Design improvements.
-- Improved: List of translators moved inside application to toolbar's menu.
-- Improved: Localization process moved to OneSky to easily handle it.

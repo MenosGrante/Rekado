@@ -7,5 +7,4 @@ enum class Result {
     SUCCESS, ERROR;
 
     lateinit var config: Config
-    lateinit var exception: Exception
 }

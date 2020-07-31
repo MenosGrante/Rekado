@@ -22,10 +22,6 @@ fun InputStream.toFile(path: String) {
     File(path).outputStream().use { this.copyTo(it) }
 }
 
-fun String.extractName(): String {
-    return this.substringAfterLast("/")
-}
-
 fun Uri.extractFileName(): String? {
     val projection = arrayOf(MediaStore.MediaColumns.DISPLAY_NAME)
     RekadoApplication.context.contentResolver.query(this, projection, null, null, null)?.use {

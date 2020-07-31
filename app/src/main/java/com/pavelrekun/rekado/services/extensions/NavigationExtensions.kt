@@ -2,6 +2,7 @@ package com.pavelrekun.rekado.services.extensions
 
 import android.os.Bundle
 import androidx.navigation.NavController
+import androidx.navigation.NavOptions
 import com.pavelrekun.penza.services.extensions.asString
 import com.pavelrekun.rekado.R
 
@@ -32,6 +33,10 @@ fun NavController.openSettingsScreen() {
     this.navigate(R.id.navigationContainerSecondary, bundle)
 }
 
+fun NavController.openSettingsAppearanceThemesScreen() {
+    navigate(R.id.navigation_settings_appearance_themes, null, prepareAnimations())
+}
+
 fun NavController.openToolsSerialCheckerScreen() {
     val bundle = Bundle().apply {
         putInt(NAVIGATION_TYPE, NAVIGATION_DESTINATION_TOOLS_SERIAL_CHECKER)
@@ -48,4 +53,13 @@ fun NavController.openTranslatorsScreen() {
     }
 
     this.navigate(R.id.navigationContainerSecondary, bundle)
+}
+
+fun prepareAnimations(): NavOptions {
+    return NavOptions.Builder()
+            .setEnterAnim(R.anim.nav_default_enter_anim)
+            .setExitAnim(R.anim.nav_default_exit_anim)
+            .setPopEnterAnim(R.anim.nav_default_pop_enter_anim)
+            .setPopExitAnim(R.anim.nav_default_pop_exit_anim)
+            .build()
 }

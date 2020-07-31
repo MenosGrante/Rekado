@@ -74,4 +74,10 @@ class SecondaryContainerActivity : BaseActivity() {
         })
     }
 
+    override fun onBackPressed() {
+        if (!controller.popBackStack()) {
+            finish()
+        }
+    }
+
 }
