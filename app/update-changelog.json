@@ -1,0 +1,9 @@
+{
+  "latestVersion": "4.0.1",
+  "latestVersionCode": "71",
+  "url": "https://github.com/MenosGrante/Rekado/releases",
+  "releaseNotes": [
+    "- Fixed: Can't add payloads from internal storage.",
+    "- Updated: All bundled payloads to the latest versions."
+  ]
+}
