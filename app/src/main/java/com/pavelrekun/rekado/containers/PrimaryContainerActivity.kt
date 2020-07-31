@@ -40,12 +40,12 @@ class PrimaryContainerActivity : BaseActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.navigation_about -> {
-                controller.openAboutScreen()
+                openAboutScreen()
                 true
             }
 
             R.id.navigation_settings -> {
-                controller.openSettingsScreen()
+                openSettingsScreen()
                 true
             }
 
@@ -55,7 +55,7 @@ class PrimaryContainerActivity : BaseActivity() {
             }
 
             R.id.navigation_translators -> {
-                controller.openTranslatorsScreen()
+                openTranslatorsScreen()
                 true
             }
 

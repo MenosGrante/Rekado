@@ -109,7 +109,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp">
 
                     <TextView
                         style="@style/Widget.Text.Gilroy.Subtitle.Padding"
@@ -117,57 +118,213 @@
                         android:layout_height="wrap_content"
                         android:text="@string/about_category_developer" />
 
-                    <TextView
-                        android:id="@+id/aboutDeveloperPersonalSite"
+                    <LinearLayout
+                        android:id="@+id/aboutDeveloperPortfolio"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:drawableStart="@drawable/ic_about_personal_site"
-                        android:drawablePadding="16dp"
                         android:focusable="true"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:text="@string/about_developer_personal_site"
-                        android:textColor="?android:attr/textColorPrimary" />
+                        android:paddingEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:contentDescription="@string/about_developer_portfolio_title"
+                            android:src="@drawable/ic_about_portfolio" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineSpacingExtra="4dp"
+                                android:text="@string/about_developer_portfolio_title"
+                                android:textColor="?android:attr/textColorPrimary"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:lineSpacingExtra="4dp"
+                                android:text="@string/about_developer_portfolio_summary"
+                                android:textColor="?android:attr/textColorSecondary"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
                         android:background="?attr/colorDivider" />
 
-                    <TextView
-                        android:id="@+id/aboutDeveloperGitHub"
+                    <LinearLayout
+                        android:id="@+id/aboutDeveloperInstagram"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:drawableStart="@drawable/ic_about_github"
-                        android:drawablePadding="16dp"
                         android:focusable="true"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:text="@string/about_developer_github"
-                        android:textColor="?android:attr/textColorPrimary" />
+                        android:paddingEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:contentDescription="@string/about_developer_instagram_title"
+                            android:src="@drawable/ic_about_instagram" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/about_developer_instagram_title"
+                                android:textColor="?android:attr/textColorPrimary"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:lineSpacingExtra="4dp"
+                                android:text="@string/about_developer_instagram_summary"
+                                android:textColor="?android:attr/textColorSecondary"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
                         android:background="?attr/colorDivider" />
 
-                    <TextView
+                    <LinearLayout
+                        android:id="@+id/aboutDeveloperGithub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:paddingEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:contentDescription="@string/about_developer_github_title"
+                            android:src="@drawable/ic_about_github" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/about_developer_github_title"
+                                android:textColor="?android:attr/textColorPrimary"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:lineSpacingExtra="4dp"
+                                android:text="@string/about_developer_github_summary"
+                                android:textColor="?android:attr/textColorSecondary"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="?attr/colorDivider" />
+
+                    <LinearLayout
                         android:id="@+id/aboutDeveloperTwitter"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:drawableStart="@drawable/ic_about_twitter"
-                        android:drawablePadding="16dp"
                         android:focusable="true"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:text="@string/about_developer_twitter"
-                        android:textColor="?android:attr/textColorPrimary" />
+                        android:paddingEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:contentDescription="@string/about_developer_twitter_title"
+                            android:src="@drawable/ic_about_twitter" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/about_developer_twitter_title"
+                                android:textColor="?android:attr/textColorPrimary"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:lineSpacingExtra="4dp"
+                                android:text="@string/about_developer_twitter_summary"
+                                android:textColor="?android:attr/textColorSecondary"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

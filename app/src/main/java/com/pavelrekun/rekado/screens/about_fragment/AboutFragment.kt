@@ -2,6 +2,7 @@ package com.pavelrekun.rekado.screens.about_fragment
 
 import android.os.Bundle
 import android.view.View
+import com.pavelrekun.magta.constants.Links
 import com.pavelrekun.rekado.BuildConfig
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
@@ -30,10 +31,12 @@ class AboutFragment : BaseFragment(R.layout.fragment_about) {
     }
 
     private fun initClickListeners() {
-        binding.aboutLinkGitHubProject.setOnClickListener { Utils.openLink(getBaseActivity(), Constants.GITHUB_PROJECT_LINK) }
-        binding.aboutDeveloperPersonalSite.setOnClickListener { Utils.openLink(getBaseActivity(), Constants.PERSONAL_SITE_LINK) }
-        binding.aboutDeveloperGitHub.setOnClickListener { Utils.openLink(getBaseActivity(), Constants.GITHUB_PROFILE_LINK) }
-        binding.aboutDeveloperTwitter.setOnClickListener { Utils.openLink(getBaseActivity(), Constants.TWITTER_LINK) }
+        binding.aboutLinkGitHubProject.setOnClickListener { Utils.openLink(requireBaseActivity(), Constants.GITHUB_PROJECT_LINK) }
+
+        binding.aboutDeveloperPortfolio.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.PERSONAL_SITE_LINK) }
+        binding.aboutDeveloperInstagram.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.INSTAGRAM_DRONE_LINK) }
+        binding.aboutDeveloperGithub.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.GITHUB_LINK) }
+        binding.aboutDeveloperTwitter.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.TWITTER_LINK) }
     }
 
     private fun initEdgeToEdge() {

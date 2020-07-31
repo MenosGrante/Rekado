@@ -21,7 +21,7 @@ class ToolsFragment : BaseFragment(R.layout.fragment_tools) {
 
     private fun initClickListeners() {
         binding.toolsSerialCheckerLayout.setOnClickListener {
-            getBaseActivity().controller.openToolsSerialCheckerScreen()
+            requireBaseActivity().openToolsSerialCheckerScreen()
         }
     }
 

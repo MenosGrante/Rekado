@@ -52,7 +52,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
                 Activity.RESULT_OK -> data?.data?.let {
                     val name = it.extractFileName()
                     if (name != null) {
-                        val inputStream = getBaseActivity().contentResolver.openInputStream(it)
+                        val inputStream = requireBaseActivity().contentResolver.openInputStream(it)
 
                         if (inputStream != null) {
                             MemoryUtils.copyPayload(inputStream, name)
@@ -79,7 +79,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
         viewModel.fetchConfigResult.observe(viewLifecycleOwner, Observer { result ->
             when (result) {
                 Result.SUCCESS -> {
-                    DialogsShower.showPayloadsUpdatesDialog(getBaseActivity(), result.config, viewModel)
+                    DialogsShower.showPayloadsUpdatesDialog(requireBaseActivity(), result.config, viewModel)
                 }
                 else -> {
                 }
@@ -101,10 +101,10 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
                 Result.SUCCESS -> {
                     updateList()
                     LoginUtils.info("Payload downloaded successfully.")
-                    Toast.makeText(getBaseActivity(), getString(R.string.payloads_download_status_success), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireBaseActivity(), getString(R.string.payloads_download_status_success), Toast.LENGTH_SHORT).show()
                 }
                 else -> {
-                    Toast.makeText(getBaseActivity(), getString(R.string.payloads_download_status_error), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireBaseActivity(), getString(R.string.payloads_download_status_error), Toast.LENGTH_SHORT).show()
                     LoginUtils.error("Failed to download payload.")
                 }
             }
@@ -133,7 +133,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
     }
 
     private fun initClickListeners() {
-        binding.payloadsAddUrl.setOnClickListener { DialogsShower.showPayloadsDownloadDialog(getBaseActivity(), viewModel) }
+        binding.payloadsAddUrl.setOnClickListener { DialogsShower.showPayloadsDownloadDialog(requireBaseActivity(), viewModel) }
         binding.payloadsAdd.setOnClickListener { addPayload() }
     }
 

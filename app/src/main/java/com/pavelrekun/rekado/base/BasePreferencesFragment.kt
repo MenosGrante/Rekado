@@ -14,7 +14,7 @@ open class BasePreferencesFragment(private val preferencesLayoutId: Int, private
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        getBaseActivity().supportActionBar?.setTitle(titleResId)
+        requireBaseActivity().supportActionBar?.setTitle(titleResId)
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -33,9 +33,9 @@ open class BasePreferencesFragment(private val preferencesLayoutId: Int, private
                 super.onScrolled(recyclerView, dx, dy)
 
                 if (view.canScrollVertically(SCROLL_DIRECTION_UP)) {
-                    getBaseActivity().supportActionBar?.elevation = 3.convertPXToDP(getBaseActivity()).toFloat()
+                    requireBaseActivity().supportActionBar?.elevation = 3.convertPXToDP(requireBaseActivity()).toFloat()
                 } else {
-                    getBaseActivity().supportActionBar?.elevation = 0F
+                    requireBaseActivity().supportActionBar?.elevation = 0F
                 }
             }
 
@@ -44,7 +44,7 @@ open class BasePreferencesFragment(private val preferencesLayoutId: Int, private
         return view
     }
 
-    fun getBaseActivity() = activity as BaseActivity
+    fun requireBaseActivity() = activity as BaseActivity
 
     companion object {
         private const val SCROLL_DIRECTION_UP = -1

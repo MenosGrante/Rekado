@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<resources>
+    <!-- Strings for Navigation -->
+    <string name="navigation_payloads">Загрузчики</string>
+    <string name="navigation_tools">Инструменты</string>
+    <string name="navigation_instructions">Инструкция</string>
+    <string name="navigation_logs">Логи</string>
+    <string name="navigation_about">О Rekado</string>
+    <string name="navigation_donate">Поддержать разработку</string>
+    <string name="navigation_settings">Настройки</string>
+    <string name="navigation_serial_checker">Проверка по серийному номеру</string>
+    <string name="navigation_translators">Переводчики</string>
+    <!-- Strings for About -->
+    <string name="about_category_description">Описание</string>
+    <string name="about_category_developer">Разработчик</string>
+    <string name="about_information_description">Rekado - это набор инструментов для вашего Nintendo Switch, который включает в себя внедрение загрузчиков и проверку консоли на наличие уязвимостей по серийному номеру</string>
+    <string name="about_developer_portfolio_title">Портфолио</string>
+    <string name="about_developer_portfolio_summary">Вся информация о разработчике и блог с новостями</string>
+    <string name="about_developer_instagram_summary">Хобби профиль с фото с дрона</string>
+    <string name="about_developer_github_summary">Список приложений с открытым исходным кодом</string>
+    <string name="about_developer_twitter_summary">Персональный микро-блог</string>
+    <!-- Strings for Payloads -->
+    <string name="payloads_download_status_empty">Название или URL не должны быть пустыми!</string>
+    <string name="payloads_download_status_success">Загрузчик успешно загружен!</string>
+    <string name="payloads_download_status_error">Произошла ошибка во время скачивания загрузчика. Проверьте ваше интернет-соединение или опечатки в URL.</string>
+    <!-- Strings for Tools -->
+    <string name="tools_serial_checker_title">Проверка по серийному номеру</string>
+    <string name="tools_serial_checker_description">Проверьте, уязвим ли ваш Nintendo Switch, используя серийный номер вашего устройства</string>
+    <!-- Strings for Instructions -->
+    <string name="instructions_category_cable">Кабель</string>
+    <string name="instructions_category_cable_description">Во-первых, вам нужно найти кабель для подключения вашего устройства к Nintendo Switch. Для правильной работы это должен быть кабель, предназначенный для передачи данных, а не только для зарядки.\n\nРекомендуется использовать кабель A-to-C и адаптер USB OTG.</string>
+    <string name="instructions_category_payload">Загрузчик</string>
+    <string name="instructions_category_payload_description">\u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0434\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u0441\u0432\u043e\u0439 \u0437\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a \u0438\u0437 \u043f\u0430\u043c\u044f\u0442\u0438 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430 (\u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u043a\u043d\u043e\u043f\u043a\u0443 \u00ab+\u00bb), \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c \u0435\u0433\u043e \u043f\u043e \u043f\u0440\u044f\u043c\u043e\u0439 \u0441\u0441\u044b\u043b\u043a\u0435 (\u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u043a\u043d\u043e\u043f\u043a\u0443 \u0441\u043e \u0437\u043d\u0430\u0447\u043a\u043e\u043c \u00ab\u043e\u0431\u043b\u0430\u043a\u0430\u00bb) \u043d\u0430 \u044d\u043a\u0440\u0430\u043d\u0435 \u00ab\u0417\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a\u0438\u00bb \u0438\u043b\u0438 \u043f\u0440\u043e\u0441\u0442\u043e \u043f\u0435\u0440\u0435\u043c\u0435\u0441\u0442\u0438\u0442\u044c \u0432 \u043f\u0430\u043f\u043a\u0443 Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\n\u0412\u044b \u0442\u0430\u043a\u0436\u0435 \u043c\u043e\u0436\u0435\u0442\u0435 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c \u043e\u0434\u0438\u043d \u0438\u0437 \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u044b\u0445 \u0437\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a\u043e\u0432 (SX Loader/Hekate/Fusee Primary/ReiNX).</string>
+    <string name="instructions_category_rcm_description">Введите ваш Nintendo Switch в режим RCM любым удобным способом.\n\nВаш Nintendo Switch включается сам по себе, когда он подключен, обязательно удерживайте «VOLUME +».</string>
+    <string name="instructions_category_final">Заключение</string>
+    <string name="instructions_category_final_description">Подключите устройство к Nintendo Switch и при необходимости разрешите доступ к USB. Откроется диалоговое окно «Выбор загрузчика» и выберите, какой из них вы хотите загрузить.</string>
+    <!-- Strings for Donate -->
+    <string name="donate_description">Вы можете поддержать разработчика приложения, купив ему чашку кофе. Если ты хочешь, конечно.</string>
+    <!-- Strings for Settings -->
+    <string name="settings_category_auto_injector">Авто-инжектор</string>
+    <string name="settings_auto_injector_status_title_disabled">\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u00ab\u0410\u0432\u0442\u043e-\u0438\u043d\u0436\u0435\u043a\u0442\u043e\u0440\u00bb</string>
+    <string name="settings_auto_injector_status_title_enabled">\u0412\u044b\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u00ab\u0410\u0432\u0442\u043e-\u0438\u043d\u0436\u0435\u043a\u0442\u043e\u0440\u00bb</string>
+    <string name="settings_auto_injector_payload_title">Загрузчик</string>
+    <string name="settings_category_payloads">Загрузчики</string>
+    <string name="settings_payloads_hide_title">Скрыть предустановленные загрузчики</string>
+    <string name="settings_payloads_hide_summary">Скрыть все предустановленные загрузчики (SX Loader/Hekate/Fusee Primary/ReiNX)</string>
+    <string name="settings_payloads_reset_title">Очистка</string>
+    <string name="settings_payloads_reset_summary">Удалить все добавленные загрузчики, кроме предустановленных (SX Loader/Hekate/Fusee Primary/ReiNX)</string>
+    <string name="settings_category_appearance">Внешний вид</string>
+    <string name="settings_appearance_theme_title">Тема</string>
+    <string name="settings_appearance_theme_summary">Основная тема приложения</string>
+    <string name="settings_appearance_accent_color_title">Основной цвет</string>
+    <string name="settings_appearance_accent_color_summary">Цвет используемый для покраски элементов интерфейса</string>
+    <string name="settings_appearance_randomize_title">Случайный внешний вид</string>
+    <string name="settings_appearance_randomize_summary">Установить тему и цвет наугад</string>
+    <string name="settings_appearance_reset_title">Сбросить</string>
+    <string name="settings_appearance_reset_summary">Сброс настроек внешнего вида по умолчанию</string>
+    <string name="settings_picker_color_title">Выберите цвет</string>
+    <string name="settings_picker_color_button_close">Закрыть</string>
+    <string name="settings_picker_theme_title">Выберите тему</string>
+    <string name="settings_picker_theme_category_control">Управление</string>
+    <string name="settings_picker_theme_control_manual">Ручное</string>
+    <string name="settings_picker_theme_control_system_default">Системная по умолчанию</string>
+    <string name="settings_picker_theme_control_battery_saver">Задается «Battery Saver»</string>
+    <string name="settings_picker_theme_themes_general_white">Белая</string>
+    <string name="settings_picker_theme_themes_general_dark">Темная</string>
+    <string name="settings_picker_theme_themes_general_sepia">Сепия</string>
+    <string name="settings_picker_theme_themes_general_black">Черная</string>
+    <string name="settings_picker_theme_themes_general_rose">Роза</string>
+    <string name="settings_picker_theme_themes_general_serenity">Спокойность</string>
+    <string name="settings_picker_theme_themes_colorful_olive">Оливковая</string>
+    <string name="settings_picker_theme_themes_colorful_jungle">Джунгли</string>
+    <string name="settings_picker_theme_themes_colorful_pepper">Перец</string>
+    <string name="settings_picker_theme_themes_colorful_ocean">Океан</string>
+    <string name="settings_picker_theme_themes_colorful_electricity">Электричество</string>
+    <string name="settings_picker_theme_themes_colorful_steel">Сталь</string>
+    <string name="settings_utils_restart_dialog_title">Настройки изменены</string>
+    <string name="settings_utils_restart_dialog_message">Настройки были изменены. Пожалуйста, перезапустите приложение, чтобы изменения вступили в силу.\n\nПерезапустить приложение сейчас?</string>
+    <string name="settings_utils_restart_dialog_action_restart">Перезапустить</string>
+    <string name="settings_utils_restart_dialog_action_cancel">Отмена</string>
+    <!-- Strings for DialogsShower -->
+    <string name="dialog_loader_title">Выбрать загрузчик</string>
+    <string name="dialog_reset_payloads_title">Очистка</string>
+    <string name="dialog_reset_payloads_summary">Вы действительно хотите удалить все загрузчики?</string>
+    <string name="dialog_file_chooser_payload_title">Выбор загрузчика</string>
+    <string name="dialog_payload_download_title">Загрузить</string>
+    <string name="dialog_payload_download_name">Название</string>
+    <string name="dialog_payload_download_button">Загрузить</string>
+    <string name="dialog_payload_update_title">Обновления загрузчиков</string>
+    <string name="dialog_payload_update_message">Есть обновления для некоторых предустановленных загрузчиков. Рекомендуется обновление.</string>
+    <string name="dialog_loader_no_payloads_title">Загрузчиков нет</string>
+    <string name="dialog_loader_no_payloads_description">Похоже, вы не добавили свои загрузчики и скрыли предустановленные. Внедрение невозможно.\n\nДобавьте свои загрузчики или отключите скрытие предустановленных загрузчиков в «Настройках» и повторите попытку.</string>
+    <string name="dialog_button_update">Обновить загрузчики</string>
+    <string name="dialog_button_negative">Закрыть</string>
+    <!-- Strings for Serial Checker -->
+    <string name="serial_checker_category_checker">Проверка</string>
+    <string name="serial_checker_category_information">Информация</string>
+    <string name="serial_checker_checker_serial_number">Серийный номер</string>
+    <string name="serial_checker_checker_button">Проверить</string>
+    <string name="serial_checker_information_xaw1">Серийные номера, которые начинаются с XAW1\nXAW10000000000 - XAW10074000000: Не пропатчено\nXAW10075000000 - XAW10120000000: Возможно пропатчено\nXAW10120000000 и выше: Пропатчено\n\n</string>
+    <string name="serial_checker_information_xaw4">Серийные номера, которые начинаются с XAW4\nXAW40000000000 - XAW40011000000: Не пропатчено\nXAW40011000000 - XAW40012000000: Возможно пропатчено\nXAW40012000000 и выше: Пропатчено\n\n</string>
+    <string name="serial_checker_information_xaw7">Серийные номера, которые начинаются с XAW7\nXAW70000000000 - XAW70017800000: Не пропатчено\nXAW70017800000 - XAW70030000000: Возможно пропатчено\nXAW70030000000 и выше: Пропатчено\n\n</string>
+    <string name="serial_checker_information_xaj1">Серийные номера, которые начинаются с XAJ1\nXAJ10000000000 - XAJ10020000000: Не пропатчено\nXAJ10020000000 - XAJ10030000000: Возможно пропатчено\nXAJ10030000000 и выше: Пропатчено\n\n</string>
+    <string name="serial_checker_information_xaj4">Серийные номера, которые начинаются с XAJ4\nXAJ40000000000 - XAJ40046000000: Не пропатчено\nXAJ40046000000 - XAJ40060000000: Возможно пропатчено\nXAJ40060000000 и выше: Пропатчено\n\n</string>
+    <string name="serial_checker_information_xaj7">Серийные номера, которые начинаются с XAJ7\nXAJ70000000000 - XAJ70040000000: Не пропатчено\nXAJ70040000000 - XAJ70050000000: Возможно пропатчено\nXAJ70050000000 и выше: Пропатчено\n\n</string>
+    <string name="serial_checker_information_xaw9">Серийные номера, которые начинаются с XAW9\nВосстановленные приставки напрямую от Nintendo, информации нет, но вполне возможно, что все они пропатчены.\n\n</string>
+    <string name="serial_checker_information_xak">Серийные номера, которые начинаются с XAK\nИнформация отсутствует, так как они продаются только в Корее.</string>
+    <string name="serial_checker_status_not_patched">Не пропатчено</string>
+    <string name="serial_checker_status_patched">Пропатчено</string>
+    <string name="serial_checker_status_possibly_patched">Возможно пропатчено</string>
+    <string name="serial_checker_status_error">Невозможно проверить этот серийный номер!</string>
+    <string name="serial_checker_status_empty">Серийный номер не может быть пустым!</string>
+    <string name="serial_checker_status_too_long">Максимальная длина серийного номера 14 символов!</string>
+    <string name="serial_checker_status_scan_failed">Не удалось отсканировать штрих-код!</string>
+    <!-- Strings for Translators -->
+    <!-- Strings for Helper -->
+    <string name="helper_error_adding_payload">Выбранный загрузчик не может быть выбран!</string>
+</resources>

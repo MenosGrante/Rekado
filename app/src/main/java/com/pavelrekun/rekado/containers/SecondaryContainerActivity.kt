@@ -32,7 +32,7 @@ class SecondaryContainerActivity : BaseActivity() {
         prepareEdgeToEdge()
         prepareObservers()
 
-        if(savedInstanceState != null) {
+        if(savedInstanceState == null) {
             navigate()
         }
     }

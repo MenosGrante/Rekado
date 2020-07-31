@@ -22,7 +22,7 @@ class InstructionsFragment : BaseFragment(R.layout.fragment_instructions) {
     }
 
     private fun initClickListeners() {
-        binding.instructionsRCMHelp.setOnClickListener { Utils.openLink(getBaseActivity(), Constants.HELP_RCM) }
+        binding.instructionsRCMHelp.setOnClickListener { Utils.openLink(requireBaseActivity(), Constants.HELP_RCM) }
     }
 
 }

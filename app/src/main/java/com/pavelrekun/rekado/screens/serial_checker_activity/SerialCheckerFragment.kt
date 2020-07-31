@@ -50,7 +50,7 @@ class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
         }
 
         binding.serialCheckerHelp.setOnClickListener {
-            Utils.openLink(getBaseActivity(), Constants.HELP_SERIAL_CHECKER)
+            Utils.openLink(requireBaseActivity(), Constants.HELP_SERIAL_CHECKER)
         }
 
         binding.serialCheckerScan.setOnClickListener {

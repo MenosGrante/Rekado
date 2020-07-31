@@ -58,27 +58,27 @@ class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.nav
 
     private fun initAppearanceCategory() {
         appearanceTheme.setOnPreferenceClickListener {
-            getBaseActivity().controller.openSettingsAppearanceThemesScreen()
+            requireBaseActivity().openSettingsAppearanceThemesScreen()
             true
         }
 
         appearanceAccentColor.setOnPreferenceChangeListener { _, _ ->
-            DialogsShower.showSettingsRestartDialog(getBaseActivity())
+            DialogsShower.showSettingsRestartDialog(requireBaseActivity())
             true
         }
 
         appearanceRandomize.setOnPreferenceClickListener {
-            SettingsDialogsHelper.showSettingsRestartDialog(getBaseActivity()) {
+            SettingsDialogsHelper.showSettingsRestartDialog(requireBaseActivity()) {
                 Penza.randomizeTheme()
-                Utils.restartApplication(getBaseActivity())
+                Utils.restartApplication(requireBaseActivity())
             }
             true
         }
 
         appearanceReset.setOnPreferenceClickListener {
-            SettingsDialogsHelper.showSettingsRestartDialog(getBaseActivity()) {
+            SettingsDialogsHelper.showSettingsRestartDialog(requireBaseActivity()) {
                 Penza.reset()
-                Utils.restartApplication(getBaseActivity())
+                Utils.restartApplication(requireBaseActivity())
             }
             true
         }
@@ -126,7 +126,7 @@ class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.nav
         }
 
         payloadsResetPreference.setOnPreferenceClickListener {
-            val dialog = DialogsShower.showPayloadsResetDialog(getBaseActivity())
+            val dialog = DialogsShower.showPayloadsResetDialog(requireBaseActivity())
 
             dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                 PayloadHelper.deletePayloads()

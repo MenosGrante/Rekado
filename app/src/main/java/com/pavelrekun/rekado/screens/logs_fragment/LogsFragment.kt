@@ -40,7 +40,7 @@ class LogsFragment : BaseFragment(R.layout.fragment_logs) {
 
         binding.logsActionsList.apply {
             setHasFixedSize(true)
-            layoutManager = LinearLayoutManager(getBaseActivity())
+            layoutManager = LinearLayoutManager(requireBaseActivity())
             adapter = this@LogsFragment.adapter
 
             addOnScrollListener(object : RecyclerView.OnScrollListener() {

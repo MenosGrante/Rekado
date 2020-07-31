@@ -6,12 +6,12 @@ import com.pavelrekun.penza.widgets.ElevationScrollView
 
 open class BaseFragment(layoutRes: Int = 0) : Fragment(layoutRes) {
 
-    fun initWithTitle(resId: Int) = getBaseActivity().setTitle(resId)
+    fun initWithTitle(resId: Int) = requireBaseActivity().setTitle(resId)
 
-    fun getBaseActivity() = activity as BaseActivity
+    fun requireBaseActivity() = activity as BaseActivity
 
-    fun initScrollingBehaviour(scrollView: ElevationScrollView) = scrollView.setInstance(getBaseActivity())
+    fun initScrollingBehaviour(scrollView: ElevationScrollView) = scrollView.setInstance(requireBaseActivity())
 
-    fun initScrollingBehaviour(recyclerView: ElevationRecyclerView) = recyclerView.setInstance(getBaseActivity())
+    fun initScrollingBehaviour(recyclerView: ElevationRecyclerView) = recyclerView.setInstance(requireBaseActivity())
 
 }
