@@ -34,7 +34,7 @@ fun NavController.openSettingsScreen() {
 }
 
 fun NavController.openSettingsAppearanceThemesScreen() {
-    navigate(R.id.navigation_settings_appearance_themes, null, prepareAnimations())
+    navigate(R.id.navigationThemePicker, null, prepareAnimations())
 }
 
 fun NavController.openToolsSerialCheckerScreen() {

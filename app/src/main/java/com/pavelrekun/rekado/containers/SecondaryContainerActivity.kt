@@ -29,9 +29,12 @@ class SecondaryContainerActivity : BaseActivity() {
 
         prepareToolbar()
         prepareNavigation(R.id.secondaryLayoutContainer)
-        prepareDestination()
         prepareEdgeToEdge()
         prepareObservers()
+
+        if(savedInstanceState != null) {
+            navigate()
+        }
     }
 
     private fun prepareEdgeToEdge() {
@@ -48,12 +51,24 @@ class SecondaryContainerActivity : BaseActivity() {
         }
     }
 
-    private fun prepareDestination() {
-        when (intent.getIntExtra(NAVIGATION_TYPE, NAVIGATION_DESTINATION_UNKNOWN)) {
-            NAVIGATION_DESTINATION_SETTINGS -> controller.navigate(R.id.navigationSettings)
-            NAVIGATION_DESTINATION_ABOUT -> controller.navigate(R.id.navigationAbout)
-            NAVIGATION_DESTINATION_TRANSLATORS -> controller.navigate(R.id.navigationTranslators)
-            NAVIGATION_DESTINATION_TOOLS_SERIAL_CHECKER -> controller.navigate(R.id.navigationSerialChecker)
+    private fun navigate() {
+        val destination = prepareDestination()
+        navigateStartDestination(destination)
+    }
+
+    private fun navigateStartDestination(destination: Int) {
+        val graph = controller.navInflater.inflate(R.navigation.navigation_secondary)
+        graph.startDestination = destination
+        controller.setGraph(graph, intent.extras)
+    }
+
+    private fun prepareDestination(): Int {
+        return when (intent.getIntExtra(NAVIGATION_TYPE, NAVIGATION_DESTINATION_UNKNOWN)) {
+            NAVIGATION_DESTINATION_SETTINGS -> R.id.navigationSettings
+            NAVIGATION_DESTINATION_ABOUT -> R.id.navigationAbout
+            NAVIGATION_DESTINATION_TRANSLATORS -> R.id.navigationTranslators
+            NAVIGATION_DESTINATION_TOOLS_SERIAL_CHECKER -> R.id.navigationSerialChecker
+            else -> NAVIGATION_DESTINATION_UNKNOWN
         }
     }
 
