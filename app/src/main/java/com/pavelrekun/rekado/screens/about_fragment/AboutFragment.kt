@@ -9,6 +9,8 @@ import com.pavelrekun.rekado.databinding.FragmentAboutBinding
 import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.utils.Utils
+import de.halfbit.edgetoedge.Edge
+import de.halfbit.edgetoedge.edgeToEdge
 
 class AboutFragment : BaseFragment(R.layout.fragment_about) {
 
@@ -20,6 +22,7 @@ class AboutFragment : BaseFragment(R.layout.fragment_about) {
         initScrollingBehaviour(binding.aboutLayoutScroll)
         initVersion()
         initClickListeners()
+        initEdgeToEdge()
     }
 
     private fun initVersion() {
@@ -31,6 +34,12 @@ class AboutFragment : BaseFragment(R.layout.fragment_about) {
         binding.aboutDeveloperPersonalSite.setOnClickListener { Utils.openLink(getBaseActivity(), Constants.PERSONAL_SITE_LINK) }
         binding.aboutDeveloperGitHub.setOnClickListener { Utils.openLink(getBaseActivity(), Constants.GITHUB_PROFILE_LINK) }
         binding.aboutDeveloperTwitter.setOnClickListener { Utils.openLink(getBaseActivity(), Constants.TWITTER_LINK) }
+    }
+
+    private fun initEdgeToEdge() {
+        edgeToEdge {
+            binding.aboutLayoutDeveloper.fit { Edge.Bottom }
+        }
     }
 
 }

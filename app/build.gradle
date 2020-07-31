@@ -10,7 +10,7 @@ android {
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
         versionCode 72
-        versionName "4.1"
+        versionName "3.0"
 
         archivesBaseName = "[$versionName] Rekado [${versionCode}]"
     }
@@ -54,6 +54,7 @@ android {
 dependencies {
 
     // Local
+    implementation(name: 'magta', ext: 'aar')
     implementation(name: 'penza', ext: 'aar')
 
     // Google: AndroidX
@@ -74,11 +75,15 @@ dependencies {
     implementation "com.google.android.material:material:$materialComponentsVersion"
     implementation "com.google.android:flexbox:$flexBoxLayoutVersion"
 
+    // Design
+    implementation "de.halfbit:edge-to-edge:$edgeToEdgeVersion"
+
     // Tools
     implementation "org.greenrobot:eventbus:$eventBusVersion"
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.journeyapps:zxing-android-embedded:$zxingVersion"
     implementation "com.google.code.gson:gson:$gsonVersion"
+    implementation "com.github.javiersantos:AppUpdater:$appUpdaterVersion"
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"

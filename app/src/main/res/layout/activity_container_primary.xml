@@ -7,15 +7,17 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/primaryToolbar"
+        android:id="@+id/primaryLayoutToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:attr/windowBackground"
         android:elevation="3dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         app:titleTextColor="?android:attr/textColorPrimary" />
 
     <fragment
-        android:id="@+id/primaryContainer"
+        android:id="@+id/primaryLayoutContainer"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -25,7 +27,7 @@
         tools:ignore="FragmentTagUsage" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/primaryBottomNavigation"
+        android:id="@+id/primaryLayoutNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"

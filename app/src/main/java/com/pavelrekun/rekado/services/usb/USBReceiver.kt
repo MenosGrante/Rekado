@@ -6,10 +6,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.services.Events
-import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.payloads.PayloadLoader
+import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.utils.PreferencesUtils
 import com.pavelrekun.rekado.services.utils.Utils
 import org.greenrobot.eventbus.EventBus
@@ -29,7 +29,7 @@ class USBReceiver : BaseActivity() {
         super.onCreate(savedInstanceState)
 
         if (intent.action == UsbManager.ACTION_USB_DEVICE_ATTACHED) {
-            device = intent.getParcelableExtra(UsbManager.EXTRA_DEVICE)
+            device = intent.getParcelableExtra(UsbManager.EXTRA_DEVICE)!!
 
             LoginUtils.info("USB device connected: ${device.deviceName}")
 
@@ -37,7 +37,7 @@ class USBReceiver : BaseActivity() {
                 PreferencesUtils.putChosen(PayloadHelper.find(PreferencesUtils.getAutoInjectorPayload()!!))
                 injectPayload()
             } else {
-                if(PayloadHelper.checkPayloadsExists()) {
+                if (PayloadHelper.checkPayloadsExists()) {
                     payloadChooserDialog = DialogsShower.showPayloadsDialog(this)
                 } else {
                     DialogsShower.showNoPayloadsDialog(this)

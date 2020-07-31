@@ -14,6 +14,8 @@ import com.pavelrekun.rekado.services.extensions.getString
 import com.pavelrekun.rekado.services.extensions.isEmpty
 import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.utils.Utils
+import de.halfbit.edgetoedge.Edge
+import de.halfbit.edgetoedge.edgeToEdge
 
 class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
 
@@ -24,6 +26,8 @@ class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
 
         initScrollingBehaviour(binding.serialCheckerLayoutScroll)
         initClickListeners()
+        initEdgeToEdge()
+
         generateInformation()
     }
 
@@ -67,6 +71,12 @@ class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
                 getString(R.string.serial_checker_information_xaw9) +
                 getString(R.string.serial_checker_information_xak)
         binding.serialCheckerInformation.text = serialsInformation
+    }
+
+    private fun initEdgeToEdge() {
+        edgeToEdge {
+            binding.serialCheckerLayoutContainer.fit { Edge.Bottom }
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

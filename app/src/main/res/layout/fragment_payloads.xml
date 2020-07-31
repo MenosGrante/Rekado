@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/payloadsLayoutRefresh"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/payloadsLayoutRefresh"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -12,14 +11,13 @@
         android:orientation="vertical">
 
         <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Card.Filled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            app:cardBackgroundColor="?android:attr/windowBackground"
-            app:cardCornerRadius="6dp"
-            app:cardElevation="0dp"
-            app:strokeColor="?attr/colorStroke"
-            app:strokeWidth="1dp">
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -27,7 +25,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/Penza.Widget.Text.Subtitle.Padding"
+                    style="@style/Widget.Text.Gilroy.Subtitle.Padding"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/navigation_payloads" />

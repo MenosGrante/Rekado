@@ -7,14 +7,16 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/secondaryToolbar"
+        android:id="@+id/secondaryLayoutToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorBackground"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         app:navigationIcon="@drawable/ic_navigation_back" />
 
     <fragment
-        android:id="@+id/secondaryContainer"
+        android:id="@+id/secondaryLayoutContainer"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
