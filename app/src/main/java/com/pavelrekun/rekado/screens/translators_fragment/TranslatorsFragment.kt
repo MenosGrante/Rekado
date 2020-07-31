@@ -3,11 +3,14 @@ package com.pavelrekun.rekado.screens.translators_fragment
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.pavelrekun.rekado.screens.translators_fragment.adapters.TranslatorsAdapter
+import com.pavelrekun.magta.translators.Language
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
-import com.pavelrekun.rekado.data.Translator
 import com.pavelrekun.rekado.databinding.FragmentTranslatorsBinding
 import com.pavelrekun.rekado.services.extensions.viewBinding
+import de.halfbit.edgetoedge.Edge
+import de.halfbit.edgetoedge.edgeToEdge
 
 class TranslatorsFragment : BaseFragment(R.layout.fragment_translators) {
 
@@ -16,24 +19,26 @@ class TranslatorsFragment : BaseFragment(R.layout.fragment_translators) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initScrollingBehaviour(binding.translatorsList)
+        initScrollingBehaviour(binding.translatorsData)
         initList()
+        initEdgeToEdge()
     }
 
     private fun initList() {
-        val translatorsLanguages = resources.getStringArray(R.array.translators_languages)
-        val translatorsPeople = resources.getStringArray(R.array.translators_people)
+        val languagesList = arrayListOf<Language>()
 
-        val translatorsList = arrayListOf<Translator>()
+        languagesList.add(Language.english(R.string.translators_english))
 
-        for (i in translatorsLanguages.indices) {
-            translatorsList.add(Translator(translatorsPeople[i], translatorsLanguages[i]))
-        }
-
-        binding.translatorsList.apply {
+        binding.translatorsData.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(getBaseActivity())
-            adapter = TranslatorsAdapter(translatorsList)
+            adapter = TranslatorsAdapter(languagesList)
+        }
+    }
+
+    private fun initEdgeToEdge() {
+        edgeToEdge {
+            binding.translatorsData.fit { Edge.Bottom }
         }
     }
 

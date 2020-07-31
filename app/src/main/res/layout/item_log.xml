@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/itemLogRoot"
+    style="@style/Widget.Card.Filled"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
     android:layout_marginTop="8dp"
     android:layout_marginEnd="16dp"
-    android:layout_marginBottom="8dp"
-    app:cardBackgroundColor="?android:attr/windowBackground"
-    app:cardCornerRadius="6dp"
-    app:cardElevation="0dp"
-    app:strokeColor="?attr/colorStroke"
-    app:strokeWidth="1dp">
+    android:layout_marginBottom="8dp">
 
     <View
         android:id="@+id/itemLogType"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="4dp"
         tools:background="@color/colorGreen" />
 
     <TextView

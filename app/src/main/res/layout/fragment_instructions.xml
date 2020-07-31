@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -11,14 +10,13 @@
         android:orientation="vertical">
 
         <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Card.Filled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            app:cardBackgroundColor="?android:attr/windowBackground"
-            app:cardCornerRadius="6dp"
-            app:cardElevation="0dp"
-            app:strokeColor="?attr/colorStroke"
-            app:strokeWidth="1dp">
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -26,7 +24,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/Penza.Widget.Text.Subtitle.Padding"
+                    style="@style/Widget.Text.Gilroy.Subtitle.Padding"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/instructions_category_cable" />
@@ -46,16 +44,12 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Card.Filled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="?android:attr/windowBackground"
-            app:cardCornerRadius="6dp"
-            app:cardElevation="0dp"
-            app:strokeColor="?attr/colorStroke"
-            app:strokeWidth="1dp">
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -63,7 +57,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/Penza.Widget.Text.Subtitle.Padding"
+                    style="@style/Widget.Text.Gilroy.Subtitle.Padding"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/instructions_category_payload" />
@@ -83,16 +77,12 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Card.Filled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="?android:attr/windowBackground"
-            app:cardCornerRadius="6dp"
-            app:cardElevation="0dp"
-            app:strokeColor="?attr/colorStroke"
-            app:strokeWidth="1dp">
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -105,7 +95,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        style="@style/Penza.Widget.Text.Subtitle.Padding"
+                        style="@style/Widget.Text.Gilroy.Subtitle.Padding"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -142,16 +132,12 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Card.Filled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="?android:attr/windowBackground"
-            app:cardCornerRadius="6dp"
-            app:cardElevation="0dp"
-            app:strokeColor="?attr/colorStroke"
-            app:strokeWidth="1dp">
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -159,7 +145,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/Penza.Widget.Text.Subtitle.Padding"
+                    style="@style/Widget.Text.Gilroy.Subtitle.Padding"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/instructions_category_final" />

@@ -4,6 +4,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.pavelrekun.penza.services.helpers.SettingsDialogsHelper
 import com.pavelrekun.rekado.BuildConfig
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
@@ -120,6 +121,12 @@ object DialogsShower {
         builder.create().apply {
             setView(binding.root)
             show()
+        }
+    }
+
+    fun showSettingsRestartDialog(activity: BaseActivity) {
+        SettingsDialogsHelper.showSettingsRestartDialog(activity) {
+            Utils.restartApplication()
         }
     }
 
