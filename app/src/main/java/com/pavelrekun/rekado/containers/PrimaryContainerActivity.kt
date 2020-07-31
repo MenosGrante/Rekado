@@ -10,6 +10,7 @@ import com.github.javiersantos.appupdater.enums.UpdateFrom
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.databinding.ActivityContainerPrimaryBinding
+import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.extensions.openAboutScreen
 import com.pavelrekun.rekado.services.extensions.openSettingsScreen
@@ -28,6 +29,7 @@ class PrimaryContainerActivity : BaseActivity() {
 
         initToolbar()
         initBottomNavigation()
+        initUpdatesChecker()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -52,16 +54,6 @@ class PrimaryContainerActivity : BaseActivity() {
                 true
             }
 
-            R.id.navigation_check_for_updates -> {
-                AppUpdater(this)
-                        .setUpdateFrom(UpdateFrom.JSON)
-                        .setUpdateJSON("https://raw.githubusercontent.com/MenosGrante/Rekado/master/app/update-changelog.json")
-                        .setDisplay(Display.DIALOG)
-                        .showAppUpdated(true)
-                        .start()
-                true
-            }
-
             R.id.navigation_translators -> {
                 controller.openTranslatorsScreen()
                 true
@@ -77,5 +69,13 @@ class PrimaryContainerActivity : BaseActivity() {
 
     private fun initBottomNavigation() {
         binding.primaryLayoutNavigation.setupWithNavController(controller)
+    }
+
+    private fun initUpdatesChecker() {
+        AppUpdater(this)
+                .setUpdateFrom(UpdateFrom.JSON)
+                .setUpdateJSON(Constants.UPDATE_CHANGELOG_LINK)
+                .setDisplay(Display.NOTIFICATION)
+                .start()
     }
 }

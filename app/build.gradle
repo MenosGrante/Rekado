@@ -10,7 +10,7 @@ android {
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
         versionCode 72
-        versionName "3.0"
+        versionName "4.1"
 
         archivesBaseName = "[$versionName] Rekado [${versionCode}]"
     }

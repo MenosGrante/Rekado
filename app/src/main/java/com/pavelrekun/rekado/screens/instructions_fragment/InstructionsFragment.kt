@@ -16,6 +16,7 @@ class InstructionsFragment : BaseFragment(R.layout.fragment_instructions) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initScrollingBehaviour(binding.instructionsLayoutScroll)
         initWithTitle(R.string.navigation_instructions)
         initClickListeners()
     }

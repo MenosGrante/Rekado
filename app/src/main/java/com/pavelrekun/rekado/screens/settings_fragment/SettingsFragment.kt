@@ -11,6 +11,7 @@ import com.pavelrekun.penza.services.helpers.SettingsDialogsHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BasePreferencesFragment
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
+import com.pavelrekun.rekado.services.extensions.openSettingsAppearanceThemesScreen
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.utils.PreferencesUtils
@@ -57,7 +58,7 @@ class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.nav
 
     private fun initAppearanceCategory() {
         appearanceTheme.setOnPreferenceClickListener {
-            getBaseActivity().controller.navigate(R.id.navigationThemePicker)
+            getBaseActivity().controller.openSettingsAppearanceThemesScreen()
             true
         }
 
@@ -69,7 +70,7 @@ class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.nav
         appearanceRandomize.setOnPreferenceClickListener {
             SettingsDialogsHelper.showSettingsRestartDialog(getBaseActivity()) {
                 Penza.randomizeTheme()
-                Utils.restartApplication()
+                Utils.restartApplication(getBaseActivity())
             }
             true
         }
@@ -77,7 +78,7 @@ class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.nav
         appearanceReset.setOnPreferenceClickListener {
             SettingsDialogsHelper.showSettingsRestartDialog(getBaseActivity()) {
                 Penza.reset()
-                Utils.restartApplication()
+                Utils.restartApplication(getBaseActivity())
             }
             true
         }

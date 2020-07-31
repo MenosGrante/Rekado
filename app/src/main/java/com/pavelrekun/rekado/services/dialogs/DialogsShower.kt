@@ -87,20 +87,13 @@ object DialogsShower {
                 }
             }
         }
-
     }
 
     fun showPayloadsUpdatesDialog(activity: BaseActivity, updatedConfig: Config, viewModel: PayloadsViewModel) {
         val builder = MaterialAlertDialogBuilder(activity)
 
-        val message = if (PreferencesUtils.getCurrentConfig().latestVersionCode > BuildConfig.VERSION_CODE) {
-            activity.getString(R.string.dialog_payload_update_message) + "\n\n" + activity.getString(R.string.dialog_payload_update_message_additional)
-        } else {
-            activity.getString(R.string.dialog_payload_update_message)
-        }
-
         builder.setTitle(R.string.dialog_payload_update_title)
-        builder.setMessage(message)
+        builder.setMessage(R.string.dialog_payload_update_message)
 
         builder.setNegativeButton(R.string.dialog_button_negative) { _, _ -> }
         builder.setPositiveButton(R.string.dialog_button_update) { _, _ ->
@@ -126,7 +119,7 @@ object DialogsShower {
 
     fun showSettingsRestartDialog(activity: BaseActivity) {
         SettingsDialogsHelper.showSettingsRestartDialog(activity) {
-            Utils.restartApplication()
+            Utils.restartApplication(activity)
         }
     }
 

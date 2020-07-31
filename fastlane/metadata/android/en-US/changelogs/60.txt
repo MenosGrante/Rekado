@@ -1,2 +1,0 @@
-- Updated: Hekate to 5.1.0.
-- Updated: Gradle Plugin to 3.5.3.

@@ -20,6 +20,10 @@
     </fragment>
 
     <fragment
+        android:id="@+id/navigation_settings_appearance_themes"
+        android:name="com.pavelrekun.penza.pickers.theme.ThemePickerFragment" />
+
+    <fragment
         android:id="@+id/navigationSerialChecker"
         android:name="com.pavelrekun.rekado.screens.serial_checker_activity.SerialCheckerFragment"
         android:label="SerialCheckerFragment" />

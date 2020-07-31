@@ -20,6 +20,7 @@ class LogsFragment : BaseFragment(R.layout.fragment_logs) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initScrollingBehaviour(binding.logsActionsList)
         initWithTitle(R.string.navigation_logs)
         initList()
         initClickListeners()

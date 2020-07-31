@@ -14,10 +14,6 @@
         android:title="@string/navigation_donate" />
 
     <item
-        android:id="@+id/navigation_check_for_updates"
-        android:title="@string/navigation_check_for_updates" />
-
-    <item
         android:id="@+id/navigation_about"
         android:title="@string/navigation_about" />
 
