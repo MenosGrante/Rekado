@@ -132,6 +132,7 @@
     <string name="translators_english" translatable="false">Pavel Rekun (Menos)</string>
     <string name="translators_russian" translatable="false">Pavel Rekun (Menos)</string>
     <string name="translators_ukrainian" translatable="false">Pavel Rekun (Menos)</string>
+    <string name="translators_spanish" translatable="false">tiliarou, marioandraderomero, elric200x, zjairo45</string>
 
     <!-- Strings for Helper -->
     <string name="helper_error_adding_payload">Selected payload can not be added!</string>

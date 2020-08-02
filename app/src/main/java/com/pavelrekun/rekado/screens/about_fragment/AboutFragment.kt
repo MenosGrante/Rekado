@@ -41,7 +41,7 @@ class AboutFragment : BaseFragment(R.layout.fragment_about) {
 
     private fun initEdgeToEdge() {
         edgeToEdge {
-            binding.aboutLayoutDeveloper.fit { Edge.Bottom }
+            binding.aboutLayoutContainer.fit { Edge.Bottom }
         }
     }
 

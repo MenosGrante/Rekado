@@ -30,6 +30,7 @@ class TranslatorsFragment : BaseFragment(R.layout.fragment_translators) {
         languagesList.add(Language.english(R.string.translators_english))
         languagesList.add(Language.russian(R.string.translators_russian))
         languagesList.add(Language.ukrainian(R.string.translators_ukrainian))
+        languagesList.add(Language.spanish(R.string.translators_spanish))
 
         binding.translatorsData.apply {
             setHasFixedSize(true)
