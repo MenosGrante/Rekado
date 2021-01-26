@@ -7,9 +7,9 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.72'
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.29.0'
+        classpath 'com.android.tools.build:gradle:4.1.2'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.36.0'
     }
 }
 
@@ -30,27 +30,25 @@ ext {
     NDKVersion = '21.3.6528147'
 
     // Google: AndroidX
-    androidXCompatVersion = '1.0.2'
-    androidXBrowserVersion = '1.2.0'
+    androidXCoreVersion = '1.3.2'
+    androidXCompatVersion = '1.2.0'
+    androidXBrowserVersion = '1.3.0'
     androidXRecyclerViewVersion = '1.1.0'
     androidXPreferencesVersion = '1.1.1'
-    androidXConstraintLayoutVersion = '2.0.0-rc1'
+    androidXConstraintLayoutVersion = '2.0.4'
     androidXLifecycleVersion = '2.2.0'
-    androixXNavigationVersion = '2.3.0'
-
-    // Google: AndroidX KTX
-    androidXCoreKTX = '1.3.1'
+    androixXNavigationVersion = '2.3.2'
 
     // Google: Design
-    materialComponentsVersion = '1.1.0'
+    materialComponentsVersion = '1.2.1'
     flexBoxLayoutVersion = '2.0.1'
 
     // Kotlin
-    kotlinVersion = '1.3.72'
-    kotlinCoroutinesVersion = '1.3.8'
+    kotlinVersion = '1.4.21'
+    kotlinCoroutinesVersion = '1.4.2'
 
     // Design
-    edgeToEdgeVersion = '1.0-rc1'
+    insetterVersion = '0.4.0'
 
     // Tools
     eventBusVersion = '3.2.0'

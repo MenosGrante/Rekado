@@ -31,7 +31,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/Widget.Text.Gilroy.Subtitle.Padding"
+                        style="@style/Widget.Text.Subtitle.Padding"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/serial_checker_category_checker" />
@@ -118,7 +118,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            style="@style/Widget.Text.Gilroy.Subtitle.Padding"
+                            style="@style/Widget.Text.Subtitle.Padding"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"

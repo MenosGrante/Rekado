@@ -70,23 +70,12 @@
     <string name="settings_picker_color_button_close">Close</string>
     <string name="settings_picker_theme_title">Choose theme</string>
     <string name="settings_picker_theme_category_control">Control</string>
+    <string name="settings_picker_theme_category_themes">Themes</string>
     <string name="settings_picker_theme_control_manual">Manual</string>
     <string name="settings_picker_theme_control_system_default">System default</string>
-    <string name="settings_picker_theme_control_battery_saver">Set by "Battery Saver"</string>
-    <string name="settings_picker_theme_themes_general_white">White</string>
-    <string name="settings_picker_theme_themes_general_dark">Dark</string>
-    <string name="settings_picker_theme_themes_general_sepia">Sepia</string>
-    <string name="settings_picker_theme_themes_general_black">Black</string>
-    <string name="settings_picker_theme_themes_general_rose">Rose</string>
-    <string name="settings_picker_theme_themes_general_serenity">Serenity</string>
-    <string name="settings_picker_theme_themes_colorful_olive">Olive</string>
-    <string name="settings_picker_theme_themes_colorful_jungle">Jungle</string>
-    <string name="settings_picker_theme_themes_colorful_pepper">Pepper</string>
-    <string name="settings_picker_theme_themes_colorful_ocean">Ocean</string>
-    <string name="settings_picker_theme_themes_colorful_electricity">Electricity</string>
-    <string name="settings_picker_theme_themes_colorful_steel">Steel</string>
+    <string name="settings_picker_theme_control_battery_saver">Set by \"Battery Saver\"</string>
     <string name="settings_utils_restart_dialog_title">Settings changed</string>
-    <string name="settings_utils_restart_dialog_message">Settings have been changed. Please, restart the app for the change to take effect.\n\nRestart the app now?</string>
+    <string name="settings_utils_restart_dialog_message">Settings have been changed. Please, restart application for the change to take effect. \n\nRestart the app now?</string>
     <string name="settings_utils_restart_dialog_action_restart">Restart</string>
     <string name="settings_utils_restart_dialog_action_cancel">Cancel</string>
 
@@ -102,7 +91,7 @@
     <string name="dialog_payload_update_title">Payloads updates</string>
     <string name="dialog_payload_update_message">There is an update for some bundled payloads. The update is recommended.</string>
     <string name="dialog_loader_no_payloads_title">No payloads</string>
-    <string name="dialog_loader_no_payloads_description">It seems you did not add external payloads and hid the bundled ones. The injection is not possible.\n\nAdd your payloads or disable the hiding of bundled payloads in the "Settings" and try again.</string>
+    <string name="dialog_loader_no_payloads_description">It seems you did not add external payloads and hid the bundled ones. The injection is not possible.\n\nAdd your payloads or disable the hiding of bundled payloads in the \"Settings\" and try again.</string>
     <string name="dialog_button_update">Update payloads</string>
     <string name="dialog_button_positive" translatable="false">OK</string>
     <string name="dialog_button_negative">Close</string>

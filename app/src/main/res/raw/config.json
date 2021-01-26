@@ -1,5 +1,5 @@
 {
-  "timestamp": 1596360866,
+  "timestamp": 1611589130,
   "payloads":[
     {
       "title":"sx_loader.bin",
@@ -9,12 +9,12 @@
     {
       "title":"hekate.bin",
       "downloadUrl": "https://pavelrekun.dev/payloads/hekate.bin",
-      "version":"5.3.2"
+      "version":"5.5.3"
     },
     {
       "title":"fusee_primary.bin",
       "downloadUrl": "https://pavelrekun.dev/payloads/fusee_primary.bin",
-      "version":"0.14.0"
+      "version":"0.17.1"
     },
     {
       "title":"reinx.bin",

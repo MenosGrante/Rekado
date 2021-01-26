@@ -9,8 +9,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 73
-        versionName "4.1"
+        versionCode 74
+        versionName "4.1.1"
 
         archivesBaseName = "[$versionName] Rekado [${versionCode}]"
     }
@@ -45,22 +45,23 @@ android {
         noCompress 'bin'
     }
 
-    viewBinding {
-        enabled = true
+    buildFeatures {
+        viewBinding = true
     }
 
 }
 
 dependencies {
 
-    // Local
+    // Private libraries
     implementation(name: 'magta', ext: 'aar')
     implementation(name: 'penza', ext: 'aar')
 
     // Google: AndroidX
+    implementation "androidx.core:core-ktx:$androidXCoreVersion"
     implementation "androidx.recyclerview:recyclerview:$androidXRecyclerViewVersion"
     implementation "androidx.browser:browser:$androidXBrowserVersion"
-    implementation "androidx.preference:preference:$androidXPreferencesVersion"
+    implementation "androidx.preference:preference-ktx:$androidXPreferencesVersion"
     implementation "androidx.constraintlayout:constraintlayout:$androidXConstraintLayoutVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidXLifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidXLifecycleVersion"
@@ -68,15 +69,12 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$androixXNavigationVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$androixXNavigationVersion"
 
-    // Google: AndroidX KTX
-    implementation "androidx.core:core-ktx:$androidXCoreKTX"
-
     // Google: Design
     implementation "com.google.android.material:material:$materialComponentsVersion"
     implementation "com.google.android:flexbox:$flexBoxLayoutVersion"
 
     // Design
-    implementation "de.halfbit:edge-to-edge:$edgeToEdgeVersion"
+    implementation "dev.chrisbanes.insetter:insetter:$insetterVersion"
 
     // Tools
     implementation "org.greenrobot:eventbus:$eventBusVersion"

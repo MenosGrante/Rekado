@@ -9,8 +9,7 @@ import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentTranslatorsBinding
 import com.pavelrekun.rekado.screens.translators_fragment.adapters.TranslatorsAdapter
 import com.pavelrekun.rekado.services.extensions.viewBinding
-import de.halfbit.edgetoedge.Edge
-import de.halfbit.edgetoedge.edgeToEdge
+import dev.chrisbanes.insetter.applySystemWindowInsetsToPadding
 
 class TranslatorsFragment : BaseFragment(R.layout.fragment_translators) {
 
@@ -40,9 +39,7 @@ class TranslatorsFragment : BaseFragment(R.layout.fragment_translators) {
     }
 
     private fun initEdgeToEdge() {
-        edgeToEdge {
-            binding.translatorsData.fit { Edge.Bottom }
-        }
+        binding.translatorsData.applySystemWindowInsetsToPadding(bottom = true)
     }
 
 }

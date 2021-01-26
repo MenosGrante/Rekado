@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Strings for Navigation -->
     <string name="navigation_payloads">Загрузчики</string>
@@ -59,21 +59,10 @@
     <string name="settings_picker_color_button_close">Закрыть</string>
     <string name="settings_picker_theme_title">Выберите тему</string>
     <string name="settings_picker_theme_category_control">Управление</string>
+    <string name="settings_picker_theme_category_themes">Темы</string>
     <string name="settings_picker_theme_control_manual">Ручное</string>
     <string name="settings_picker_theme_control_system_default">Системная по умолчанию</string>
     <string name="settings_picker_theme_control_battery_saver">Задается «Battery Saver»</string>
-    <string name="settings_picker_theme_themes_general_white">Белая</string>
-    <string name="settings_picker_theme_themes_general_dark">Темная</string>
-    <string name="settings_picker_theme_themes_general_sepia">Сепия</string>
-    <string name="settings_picker_theme_themes_general_black">Черная</string>
-    <string name="settings_picker_theme_themes_general_rose">Роза</string>
-    <string name="settings_picker_theme_themes_general_serenity">Спокойность</string>
-    <string name="settings_picker_theme_themes_colorful_olive">Оливковая</string>
-    <string name="settings_picker_theme_themes_colorful_jungle">Джунгли</string>
-    <string name="settings_picker_theme_themes_colorful_pepper">Перец</string>
-    <string name="settings_picker_theme_themes_colorful_ocean">Океан</string>
-    <string name="settings_picker_theme_themes_colorful_electricity">Электричество</string>
-    <string name="settings_picker_theme_themes_colorful_steel">Сталь</string>
     <string name="settings_utils_restart_dialog_title">Настройки изменены</string>
     <string name="settings_utils_restart_dialog_message">Настройки были изменены. Пожалуйста, перезапустите приложение, чтобы изменения вступили в силу.\n\nПерезапустить приложение сейчас?</string>
     <string name="settings_utils_restart_dialog_action_restart">Перезапустить</string>

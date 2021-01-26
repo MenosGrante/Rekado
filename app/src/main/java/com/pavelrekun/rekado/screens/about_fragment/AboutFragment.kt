@@ -10,8 +10,7 @@ import com.pavelrekun.rekado.databinding.FragmentAboutBinding
 import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.utils.Utils
-import de.halfbit.edgetoedge.Edge
-import de.halfbit.edgetoedge.edgeToEdge
+import dev.chrisbanes.insetter.applySystemWindowInsetsToPadding
 
 class AboutFragment : BaseFragment(R.layout.fragment_about) {
 
@@ -40,9 +39,7 @@ class AboutFragment : BaseFragment(R.layout.fragment_about) {
     }
 
     private fun initEdgeToEdge() {
-        edgeToEdge {
-            binding.aboutLayoutContainer.fit { Edge.Bottom }
-        }
+        binding.aboutLayoutContainer.applySystemWindowInsetsToPadding(bottom = true)
     }
 
 }

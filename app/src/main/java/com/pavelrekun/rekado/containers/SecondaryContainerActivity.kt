@@ -13,8 +13,7 @@ import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.databinding.ActivityContainerSecondaryBinding
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.extensions.*
-import de.halfbit.edgetoedge.Edge
-import de.halfbit.edgetoedge.edgeToEdge
+import dev.chrisbanes.insetter.applySystemWindowInsetsToPadding
 
 class SecondaryContainerActivity : BaseActivity() {
 
@@ -46,9 +45,7 @@ class SecondaryContainerActivity : BaseActivity() {
             DesignHelper.tintNavigationBar(this, Color.TRANSPARENT)
         }
 
-        edgeToEdge {
-            binding.secondaryLayoutToolbar.fit { Edge.Top }
-        }
+        binding.secondaryLayoutToolbar.applySystemWindowInsetsToPadding(top = true)
     }
 
     private fun navigate() {

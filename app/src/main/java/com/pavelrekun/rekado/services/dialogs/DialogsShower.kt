@@ -4,10 +4,11 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.pavelrekun.magta.restartApp
 import com.pavelrekun.penza.services.helpers.SettingsDialogsHelper
-import com.pavelrekun.rekado.BuildConfig
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
+import com.pavelrekun.rekado.containers.PrimaryContainerActivity
 import com.pavelrekun.rekado.data.Config
 import com.pavelrekun.rekado.databinding.DialogDonateBinding
 import com.pavelrekun.rekado.databinding.DialogPayloadDownloadBinding
@@ -119,7 +120,7 @@ object DialogsShower {
 
     fun showSettingsRestartDialog(activity: BaseActivity) {
         SettingsDialogsHelper.showSettingsRestartDialog(activity) {
-            Utils.restartApplication(activity)
+            activity.restartApp(PrimaryContainerActivity::class)
         }
     }
 

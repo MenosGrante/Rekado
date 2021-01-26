@@ -9,13 +9,12 @@ import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentSerialCheckerBinding
 import com.pavelrekun.rekado.services.Constants
-import com.pavelrekun.rekado.services.utils.SerialUtils
 import com.pavelrekun.rekado.services.extensions.getString
 import com.pavelrekun.rekado.services.extensions.isEmpty
 import com.pavelrekun.rekado.services.extensions.viewBinding
+import com.pavelrekun.rekado.services.utils.SerialUtils
 import com.pavelrekun.rekado.services.utils.Utils
-import de.halfbit.edgetoedge.Edge
-import de.halfbit.edgetoedge.edgeToEdge
+import dev.chrisbanes.insetter.applySystemWindowInsetsToPadding
 
 class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
 
@@ -74,9 +73,7 @@ class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
     }
 
     private fun initEdgeToEdge() {
-        edgeToEdge {
-            binding.serialCheckerLayoutContainer.fit { Edge.Bottom }
-        }
+        binding.serialCheckerLayoutContainer.applySystemWindowInsetsToPadding(bottom = true)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

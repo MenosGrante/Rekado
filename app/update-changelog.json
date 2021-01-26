@@ -1,15 +1,13 @@
 {
-  "latestVersion": "4.1",
-  "latestVersionCode": "73",
+  "latestVersion": "4.1.1",
+  "latestVersionCode": "74",
   "url": "https://github.com/MenosGrante/Rekado/releases/",
   "releaseNotes": [
-    "- Added: ReiNX payload as bundled.",
-    "- Added: Ability to hide all bundled payloads.",
-    "- Added: Full support for the \"Edge-to-Edge\" navigation on Android 10 and newer.",
-    "- Added [73]: Spanish localization.",
-    "- Improved: Rekado now can let you know, when the update is available and will let you download it.",
-    "- Improved: Overhaul design.",
-    "- Fixed: Crash in the \"Payloads\" screen.",
-    "- Fixed [73]: Screen being cut-off in the \"About Rekado\" screen."
+    "- Updated: Localization center moved to the \"Crowdin\".",
+    "- Updated: \"Jungle\" theme replaced with \"Retro wave\" theme.",
+    "- Updated: All payloads to the up-to-date versions.",
+    "- Updated: Overhaul design of the \"Themes\" screen.",
+    "- Updated: Icons and padding in whole app.",
+    "- Fixed: Title and description cut off in the \"Tools\" screen."
   ]
 }

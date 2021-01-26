@@ -6,18 +6,19 @@ import android.view.View
 import androidx.preference.CheckBoxPreference
 import androidx.preference.ListPreference
 import androidx.preference.Preference
+import com.pavelrekun.magta.restartApp
 import com.pavelrekun.penza.Penza
 import com.pavelrekun.penza.services.helpers.SettingsDialogsHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BasePreferencesFragment
+import com.pavelrekun.rekado.containers.PrimaryContainerActivity
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.extensions.openSettingsAppearanceThemesScreen
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.utils.PreferencesUtils
 import com.pavelrekun.rekado.services.utils.Utils
-import de.halfbit.edgetoedge.Edge
-import de.halfbit.edgetoedge.edgeToEdge
+import dev.chrisbanes.insetter.applySystemWindowInsetsToPadding
 
 class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.navigation_settings) {
 
@@ -70,7 +71,7 @@ class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.nav
         appearanceRandomize.setOnPreferenceClickListener {
             SettingsDialogsHelper.showSettingsRestartDialog(requireBaseActivity()) {
                 Penza.randomizeTheme()
-                Utils.restartApplication(requireBaseActivity())
+                requireBaseActivity().restartApp(PrimaryContainerActivity::class)
             }
             true
         }
@@ -78,7 +79,7 @@ class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.nav
         appearanceReset.setOnPreferenceClickListener {
             SettingsDialogsHelper.showSettingsRestartDialog(requireBaseActivity()) {
                 Penza.reset()
-                Utils.restartApplication(requireBaseActivity())
+                requireBaseActivity().restartApp(PrimaryContainerActivity::class)
             }
             true
         }
@@ -140,9 +141,7 @@ class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.nav
 
 
     private fun initEdgeToEdge() {
-        edgeToEdge {
-            listView.fit { Edge.Bottom }
-        }
+        listView.applySystemWindowInsetsToPadding(bottom = true)
     }
 
 }

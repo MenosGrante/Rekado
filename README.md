@@ -38,7 +38,7 @@ This problem is in most cases not related to the used device, but to the cable o
 This problems occurs on device with old USB-controllers installed in their devices (EHCI/USB 2.0). This is device-only problem, that can be fixed with installing additional kernel patches, what is not recommended to do yourself. Only devices with xHCI (USB 3.0) controllers supported now.
 
 ## Localization
-All localization files moved to OneSky platform (which I am using for my other projects) and if you want to add/update/check any localization follow [this link](https://rekundevelopment.oneskyapp.com/collaboration/project?id=336657) to start. I will decline all pull requests with your localizations and will accept only OneSky versions, which I will manually add in new updates.
+All localization files moved to Crowdin platform (which I am using for my other projects) and if you want to add/update/check any localization follow [this link](https://crowdin.com/project/rekado) to start. I will decline all pull requests with your localizations and will accept only Crowdin versions, which I will manually add in new updates.
 
 ## FAQ
 **Does application require Root?**

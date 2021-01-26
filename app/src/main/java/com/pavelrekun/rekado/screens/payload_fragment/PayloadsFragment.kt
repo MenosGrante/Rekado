@@ -72,11 +72,11 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
     }
 
     private fun initObservers() {
-        viewModel.isProgressShowing.observe(viewLifecycleOwner, Observer { isShowing ->
+        viewModel.isProgressShowing.observe(viewLifecycleOwner, { isShowing ->
             if (isShowing) showProgress() else hideProgress()
         })
 
-        viewModel.fetchConfigResult.observe(viewLifecycleOwner, Observer { result ->
+        viewModel.fetchConfigResult.observe(viewLifecycleOwner, { result ->
             when (result) {
                 Result.SUCCESS -> {
                     DialogsShower.showPayloadsUpdatesDialog(requireBaseActivity(), result.config, viewModel)
@@ -86,7 +86,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
             }
         })
 
-        viewModel.updatePayloadResult.observe(viewLifecycleOwner, Observer { result ->
+        viewModel.updatePayloadResult.observe(viewLifecycleOwner, { result ->
             when (result) {
                 Result.SUCCESS -> {
                     updateList()
@@ -96,7 +96,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
             }
         })
 
-        viewModel.downloadPayloadResult.observe(viewLifecycleOwner, Observer { result ->
+        viewModel.downloadPayloadResult.observe(viewLifecycleOwner, { result ->
             when (result) {
                 Result.SUCCESS -> {
                     updateList()
