@@ -2,11 +2,11 @@ package com.pavelrekun.rekado.screens.instructions_fragment
 
 import android.os.Bundle
 import android.view.View
+import com.pavelrekun.magta.system.viewBinding
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentInstructionsBinding
 import com.pavelrekun.rekado.services.Constants
-import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.utils.Utils
 
 class InstructionsFragment : BaseFragment(R.layout.fragment_instructions) {

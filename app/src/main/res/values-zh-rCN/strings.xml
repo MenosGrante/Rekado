@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Strings for Navigation -->
+    <string name="navigation_payloads">注入文件</string>
+    <string name="navigation_tools">工具</string>
+    <string name="navigation_instructions">教程</string>
+    <string name="navigation_logs">日志</string>
+    <string name="navigation_about">关于 Rekado</string>
+    <string name="navigation_donate">支持开发者</string>
+    <string name="navigation_settings">设置</string>
+    <string name="navigation_serial_checker">序列号检查</string>
+    <!-- Strings for About -->
+    <string name="about_category_description">说明</string>
+    <string name="about_category_developer">开发者</string>
+    <string name="about_information_description">Rekado 是一个任天堂 Switch 工具应用，用于注入 payloads、检查序列号和其他工具。</string>
+    <string name="about_developer_portfolio_title">作品集</string>
+    <string name="about_developer_portfolio_summary">所有关于开发者的信息和新闻博客</string>
+    <string name="about_developer_instagram_summary">有航拍照片的爱好账户</string>
+    <string name="about_developer_github_summary">开源软件列表</string>
+    <string name="about_developer_twitter_summary">个人微博</string>
+    <!-- Strings for Payloads -->
+    <string name="payloads_download_status_empty">名称或者 URL 不能为空！</string>
+    <string name="payloads_download_status_success">已经成功下载 %1$s 注入文件！</string>
+    <string name="payloads_download_status_error">下载 %1$s payload 期间发生错误。检查您的连接或URL中的错别字。</string>
+    <!-- Strings for Tools -->
+    <string name="tools_serial_checker_title">序列号检查</string>
+    <string name="tools_serial_checker_description">通过你的任天堂 Switch 序列号来判断是否可以破解</string>
+    <!-- Strings for Instructions -->
+    <string name="instructions_category_cable">数据线</string>
+    <string name="instructions_category_cable_description">首先，你需要一根数据线来连接你的手机和任天堂 Switch。如果想要正常工作，这条数据线必须为了传输数据设计而不是只用来充电的。\n\n建议使用A-to-C电缆和USB OTG适配器。</string>
+    <string name="instructions_category_payload">注入文件</string>
+    <string name="instructions_category_payload_description">\u5728 \"\u6ce8\u5165\" \u5217\u8868\u4e2d, \u70b9\u51fb \"+\" \u6309\u94ae\u4ece\u4f60\u8bbe\u5907\u7684\u50a8\u5b58\u5361\u4e2d\u9009\u62e9\u9700\u8981\u52a0\u8f7d\u7684\u6ce8\u5165\u6587\u4ef6\u3002\u6216\u8005\u4f60\u53ef\u4ee5\u5c06\u6ce8\u5165\u6587\u4ef6 \u62f7\u8d1d\u5230\u8bbe\u5907\u5185\u5b58\u4e2d\u7684 Rekado \u6587\u4ef6\u5939\u4e2d(/sdcard/Android/data/com.pavelrekun.rekado/files/)\u3002\n\n\u6216\u8005\u4f7f\u7528\u81ea\u5e26\u7684\u6ce8\u5165\u6587\u4ef6 (ReiNX/Hekate/Fusee Primary)\u3002</string>
+    <string name="instructions_category_rcm_description">在任何时候让你的任天堂 Switch 进入 RCM 模式。 \n你的任天堂 Switch 需要按住音量+，然后再插入数据线就会开机。</string>
+    <string name="instructions_category_final">完成</string>
+    <string name="instructions_category_final_description">将设备连接到任天堂 Switch 并在有需要时允许 usb 访问权限。将打开 注入文件 选择对话框，并在对话框内选择需要加载的注入文件。</string>
+    <!-- Strings for Donate -->
+    <string name="donate_description">您可以通过 [buying me a coffee] 来支持应用程序的开发。</string>
+    <!-- Strings for Settings -->
+    <string name="settings_category_auto_injector">自动加载注入文件</string>
+    <string name="settings_auto_injector_status_title_disabled">\u542f\u7528 \"\u81ea\u52a8\u52a0\u8f7d\u6ce8\u5165\u6587\u4ef6\"</string>
+    <string name="settings_auto_injector_status_title_enabled">\u7981\u7528 \"\u81ea\u52a8\u52a0\u8f7d\u6ce8\u5165\u6587\u4ef6\"</string>
+    <string name="settings_auto_injector_payload_title">注入文件</string>
+    <string name="settings_category_payloads">注入文件</string>
+    <string name="settings_payloads_hide_title">隐藏自带注入文件</string>
+    <string name="settings_payloads_hide_summary">隐藏所有的自带注入文件（Hekate/Fusee Primary/ReiNX）</string>
+    <string name="settings_payloads_reset_title">清除</string>
+    <string name="settings_payloads_reset_summary">移除所有自带或添加的注入文件 (ReiNX/Hekate/Fusee Primary)</string>
+    <string name="settings_category_appearance">外观</string>
+    <string name="settings_appearance_theme_title">主题</string>
+    <string name="settings_appearance_theme_summary">应用程序主题</string>
+    <string name="settings_appearance_accent_color_title">强调色</string>
+    <string name="settings_appearance_accent_color_summary">用于淡色 UI 元素的颜色</string>
+    <string name="settings_appearance_randomize_title">随机样式</string>
+    <string name="settings_appearance_randomize_summary">随机设置主题和颜色</string>
+    <string name="settings_appearance_reset_title">重置</string>
+    <string name="settings_appearance_reset_summary">恢复主题设置为默认</string>
+    <string name="settings_picker_color_title">选择颜色</string>
+    <string name="settings_picker_color_button_close">关闭</string>
+    <string name="settings_picker_theme_title">选择主题</string>
+    <string name="settings_picker_theme_category_control">控制</string>
+    <string name="settings_picker_theme_category_themes">主题</string>
+    <string name="settings_picker_theme_control_manual">手动</string>
+    <string name="settings_picker_theme_control_system_default">系统默认</string>
+    <string name="settings_picker_theme_control_battery_saver">设置为“电量节省”</string>
+    <string name="settings_utils_restart_dialog_title">设置已更改</string>
+    <string name="settings_utils_restart_dialog_message">设置已更改。请重启应用查看改变。\n是否现在重启软件？</string>
+    <string name="settings_utils_restart_dialog_action_restart">注入文件</string>
+    <string name="settings_utils_restart_dialog_action_cancel">取消</string>
+    <!-- Strings for DialogsShower -->
+    <string name="dialog_loader_title">选择 注入文件</string>
+    <string name="dialog_reset_payloads_title">清除</string>
+    <string name="dialog_reset_payloads_summary">确定要删除 注入文件 吗？</string>
+    <string name="dialog_file_chooser_payload_title">选择 注入文件</string>
+    <string name="dialog_payload_download_title">下载</string>
+    <string name="dialog_payload_download_name">名称</string>
+    <string name="dialog_payload_download_button">下载</string>
+    <string name="dialog_payload_update_title">注入文件更新</string>
+    <string name="dialog_payload_update_message">检测到自带注入文件的更新版本。建议更新</string>
+    <string name="dialog_loader_no_payloads_title">没有可注入的文件</string>
+    <string name="dialog_loader_no_payloads_description">看上去你没有加入额外的文件而且把自带的隐藏了。注入无法进行。\n\n添加注入文件或通过“设置”取消自带文件的隐藏再尝试</string>
+    <string name="dialog_button_update">更新注入文件</string>
+    <string name="dialog_button_negative">关闭</string>
+    <!-- Strings for Serial Checker -->
+    <string name="serial_checker_category_checker">检查</string>
+    <string name="serial_checker_category_information">信息</string>
+    <string name="serial_checker_checker_serial_number">序列号</string>
+    <string name="serial_checker_checker_button">检查</string>
+    <string name="serial_checker_information_xaw1">序列号起始为 XAW1\nXAW10000000000 - XAW10074000000: 未修复漏洞\nXAW10075000000 - XAW10120000000: 可能未修复漏洞\nXAW10120000000 以及更高: 已修复漏洞\n\n</string>
+    <string name="serial_checker_information_xaw4">序列号起始为 XAW4\nXAW40000000000 - XAW40011000000: 未修复漏洞\nXAW40011000000 - XAW40012000000: 可能未修复漏洞\nXAW40012000000 以及更高: 已修复漏洞\n\n</string>
+    <string name="serial_checker_information_xaw7">序列号起始为 XAW7\nXAW70000000000 - XAW70017800000: 未修复漏洞\nXAW70017800000 - XAW70030000000: 可能未修复漏洞\nXAW70030000000 以及更高: 已修复漏洞\n\n</string>
+    <string name="serial_checker_information_xaj1">序列号起始为 XAJ1\nXAJ10000000000 - XAJ10020000000: 未修复漏洞\nXAJ10020000000 - XAJ10030000000: 可能未修复漏洞\nXAJ10030000000 以及更高: 已修复漏洞\n\n</string>
+    <string name="serial_checker_information_xaj4">序列号起始为 XAJ4\nXAJ40000000000 - XAJ40046000000: 未修复漏洞\nXAJ40046000000 - XAJ40060000000: 可能未修复漏洞\nXAJ40060000000 以及更高: 已修复漏洞\n</string>
+    <string name="serial_checker_information_xaj7">序列号起始为 XAJ7\nXAJ70000000000 - XAJ70040000000: 未修复漏洞\nXAJ70040000000 - XAJ70050000000: 可能未修复漏洞\nXAJ70050000000 以及更高: 已修复漏洞\n\n</string>
+    <string name="serial_checker_information_xaw9">序列号起始为 XAW9\n任天堂官方翻新机，没有太多消息，但是几乎都已经修复漏洞。\n</string>
+    <string name="serial_checker_information_xak">序列号起始为 XAK\n没有太多消息，因为这些只在韩国销售。</string>
+    <string name="serial_checker_status_not_patched">未修复漏洞</string>
+    <string name="serial_checker_status_patched">已修复漏洞</string>
+    <string name="serial_checker_status_possibly_patched">可能已修复漏洞</string>
+    <string name="serial_checker_status_error">不能检查这个序列号！</string>
+    <string name="serial_checker_status_empty">序列号不能为空！</string>
+    <string name="serial_checker_status_too_long">序列号的最大长度为14个字符！</string>
+    <string name="serial_checker_status_scan_failed">扫描二维码失败！</string>
+    <!-- Strings for Helper -->
+    <string name="helper_error_adding_payload">选择的 payload 不能够被添加！</string>
+</resources>

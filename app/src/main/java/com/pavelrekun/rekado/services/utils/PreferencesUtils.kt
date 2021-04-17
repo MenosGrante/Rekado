@@ -3,7 +3,7 @@ package com.pavelrekun.rekado.services.utils
 import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 import com.google.gson.GsonBuilder
-import com.pavelrekun.penza.services.extensions.EMPTY_STRING
+import com.pavelrekun.magta.system.EMPTY_STRING
 import com.pavelrekun.rekado.RekadoApplication
 import com.pavelrekun.rekado.data.Config
 import com.pavelrekun.rekado.data.Payload

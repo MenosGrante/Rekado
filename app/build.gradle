@@ -9,8 +9,8 @@ android {
         applicationId "com.pavelrekun.rekado"
         minSdkVersion minimumSDKVersion
         targetSdkVersion currentSDKVersion
-        versionCode 74
-        versionName "4.1.1"
+        versionCode appVersionCode
+        versionName appVersionName
 
         archivesBaseName = "[$versionName] Rekado [${versionCode}]"
     }
@@ -66,8 +66,9 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidXLifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidXLifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-common-java8:$androidXLifecycleVersion"
-    implementation "androidx.navigation:navigation-fragment-ktx:$androixXNavigationVersion"
-    implementation "androidx.navigation:navigation-ui-ktx:$androixXNavigationVersion"
+    implementation "androidx.navigation:navigation-fragment-ktx:$androidXNavigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$androidXNavigationVersion"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$androidXSwipeToRefreshLayoutVersion"
 
     // Google: Design
     implementation "com.google.android.material:material:$materialComponentsVersion"

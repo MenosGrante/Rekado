@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.pavelrekun.penza.services.extensions.convertPXToDP
+import com.pavelrekun.magta.design.px
 
 open class BasePreferencesFragment(private val preferencesLayoutId: Int, private val titleResId: Int) : PreferenceFragmentCompat() {
 
@@ -33,7 +33,7 @@ open class BasePreferencesFragment(private val preferencesLayoutId: Int, private
                 super.onScrolled(recyclerView, dx, dy)
 
                 if (view.canScrollVertically(SCROLL_DIRECTION_UP)) {
-                    requireBaseActivity().supportActionBar?.elevation = 3.convertPXToDP(requireBaseActivity()).toFloat()
+                    requireBaseActivity().supportActionBar?.elevation = 3.px.toFloat()
                 } else {
                     requireBaseActivity().supportActionBar?.elevation = 0F
                 }

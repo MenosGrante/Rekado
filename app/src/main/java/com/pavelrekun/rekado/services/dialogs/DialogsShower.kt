@@ -4,6 +4,8 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.pavelrekun.magta.design.getString
+import com.pavelrekun.magta.design.isEmpty
 import com.pavelrekun.magta.restartApp
 import com.pavelrekun.penza.services.helpers.SettingsDialogsHelper
 import com.pavelrekun.rekado.R
@@ -15,8 +17,6 @@ import com.pavelrekun.rekado.databinding.DialogPayloadDownloadBinding
 import com.pavelrekun.rekado.screens.payload_fragment.PayloadsViewModel
 import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.Events
-import com.pavelrekun.rekado.services.extensions.getString
-import com.pavelrekun.rekado.services.extensions.isEmpty
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.PreferencesUtils
 import com.pavelrekun.rekado.services.utils.Utils

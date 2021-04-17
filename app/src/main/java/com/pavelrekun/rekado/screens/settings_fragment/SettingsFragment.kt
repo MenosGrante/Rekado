@@ -18,6 +18,7 @@ import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.utils.PreferencesUtils
 import com.pavelrekun.rekado.services.utils.Utils
+import dev.chrisbanes.insetter.applyInsetter
 import dev.chrisbanes.insetter.applySystemWindowInsetsToPadding
 
 class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.navigation_settings) {
@@ -120,7 +121,7 @@ class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.nav
     }
 
     private fun initPayloadsCategory() {
-        payloadsHidePreference.setOnPreferenceChangeListener { preference, newValue ->
+        payloadsHidePreference.setOnPreferenceChangeListener { _, newValue ->
             PreferencesUtils.setHideBundledPayloadsEnabled(newValue as Boolean)
             initAutoInjectorCategory()
             true
@@ -141,7 +142,11 @@ class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.nav
 
 
     private fun initEdgeToEdge() {
-        listView.applySystemWindowInsetsToPadding(bottom = true)
+        listView.applyInsetter {
+            type(navigationBars = true) {
+                padding()
+            }
+        }
     }
 
 }

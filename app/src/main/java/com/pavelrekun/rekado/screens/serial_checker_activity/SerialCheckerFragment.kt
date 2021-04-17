@@ -5,15 +5,16 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.google.zxing.integration.android.IntentIntegrator
+import com.pavelrekun.magta.design.getString
+import com.pavelrekun.magta.design.isEmpty
+import com.pavelrekun.magta.system.viewBinding
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentSerialCheckerBinding
 import com.pavelrekun.rekado.services.Constants
-import com.pavelrekun.rekado.services.extensions.getString
-import com.pavelrekun.rekado.services.extensions.isEmpty
-import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.utils.SerialUtils
 import com.pavelrekun.rekado.services.utils.Utils
+import dev.chrisbanes.insetter.applyInsetter
 import dev.chrisbanes.insetter.applySystemWindowInsetsToPadding
 
 class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
@@ -73,7 +74,11 @@ class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
     }
 
     private fun initEdgeToEdge() {
-        binding.serialCheckerLayoutContainer.applySystemWindowInsetsToPadding(bottom = true)
+        binding.serialCheckerLayoutContainer.applyInsetter {
+            type(navigationBars = true) {
+                padding()
+            }
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

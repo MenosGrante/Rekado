@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.pavelrekun.penza.services.extensions.tintContrast
+import com.pavelrekun.magta.design.tintContrast
+import com.pavelrekun.magta.system.viewBinding
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentLogsBinding
 import com.pavelrekun.rekado.services.utils.LoginUtils
-import com.pavelrekun.rekado.services.extensions.viewBinding
 
 class LogsFragment : BaseFragment(R.layout.fragment_logs) {
 

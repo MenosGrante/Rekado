@@ -4,15 +4,15 @@ import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.lifecycle.Observer
-import com.pavelrekun.magta.isGesturalNavigationEnabled
+import com.pavelrekun.magta.design.tintNavigationBar
+import com.pavelrekun.magta.system.isGesturalNavigationEnabled
 import com.pavelrekun.penza.pickers.theme.ThemePickerViewModel
-import com.pavelrekun.penza.services.helpers.DesignHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
 import com.pavelrekun.rekado.databinding.ActivityContainerSecondaryBinding
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.extensions.*
+import dev.chrisbanes.insetter.applyInsetter
 import dev.chrisbanes.insetter.applySystemWindowInsetsToPadding
 
 class SecondaryContainerActivity : BaseActivity() {
@@ -31,7 +31,7 @@ class SecondaryContainerActivity : BaseActivity() {
         prepareEdgeToEdge()
         prepareObservers()
 
-        if(savedInstanceState == null) {
+        if (savedInstanceState == null) {
             navigate()
         }
     }
@@ -42,10 +42,14 @@ class SecondaryContainerActivity : BaseActivity() {
                 window.setDecorFitsSystemWindows(false)
             }
 
-            DesignHelper.tintNavigationBar(this, Color.TRANSPARENT)
+            tintNavigationBar(Color.TRANSPARENT)
         }
 
-        binding.secondaryLayoutToolbar.applySystemWindowInsetsToPadding(top = true)
+        binding.secondaryLayoutToolbar.applyInsetter {
+            type(statusBars = true) {
+                padding()
+            }
+        }
     }
 
     private fun navigate() {
@@ -63,7 +67,6 @@ class SecondaryContainerActivity : BaseActivity() {
         return when (intent.getIntExtra(NAVIGATION_TYPE, NAVIGATION_DESTINATION_UNKNOWN)) {
             NAVIGATION_DESTINATION_SETTINGS -> R.id.navigationSettings
             NAVIGATION_DESTINATION_ABOUT -> R.id.navigationAbout
-            NAVIGATION_DESTINATION_TRANSLATORS -> R.id.navigationTranslators
             NAVIGATION_DESTINATION_TOOLS_SERIAL_CHECKER -> R.id.navigationSerialChecker
             else -> NAVIGATION_DESTINATION_UNKNOWN
         }
@@ -77,11 +80,11 @@ class SecondaryContainerActivity : BaseActivity() {
     }
 
     private fun prepareObservers() {
-        themesPickerViewModel.selectionResult.observe(this, Observer {
+        themesPickerViewModel.selectionResult.observe(this, {
             DialogsShower.showSettingsRestartDialog(this)
         })
 
-        themesPickerViewModel.controlResult.observe(this, Observer {
+        themesPickerViewModel.controlResult.observe(this, {
             DialogsShower.showSettingsRestartDialog(this)
         })
     }

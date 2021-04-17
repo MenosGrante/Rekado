@@ -11,12 +11,12 @@ Payload launcher written in Kotlin for Nintendo Switch.
 
 **Application doesn't require Root on your device.**
 
-[SX Loader](https://sx.xecuter.com/), [ReiNX](https://reinx.guide/), [Fusee Primary](https://github.com/Atmosphere-NX/Atmosphere) and [Hekate](https://github.com/CTCaer/hekate) payloads bundled as default.
+[ReiNX](https://reinx.guide/), [Fusee Primary](https://github.com/Atmosphere-NX/Atmosphere) and [Hekate](https://github.com/CTCaer/hekate) payloads bundled as default.
 
 ## Usage
 * Launch application.
 * Find a cable to connect your device to the Nintendo Switch. For proper work, this should be a cable that is designed for data transmission, not just for charging. It is advisable to use an **A-to-C** cable and an **USB OTG** adapter.
-* In the **"Payloads"** category, click the **"+"** button to select preloaded payload from your device's storage. Or simply transfer your payload to the Rekado folder in the device's memory. Or you can use the bundled payloads (**SX Loader/ReiNX/Hekate/Fusee Primary**).
+* In the **"Payloads"** category, click the **"+"** button to select preloaded payload from your device's storage. Or simply transfer your payload to the Rekado folder in the device's memory. Or you can use the bundled payloads (**ReiNX/Hekate/Fusee Primary**).
 * Enter your Nintendo Switch into **RCM** mode in any convenient way. Your Nintendo Switch will power on by itself when plugged in, be sure to hold **VOLUME +**.
 * Connect the device to the Nintendo Switch and allow permission for the **USB** access if necessary. Wait unit payloads chooser dialog will be opened and select which one you want to load.
 * Wait for payload to finish loading on your console.

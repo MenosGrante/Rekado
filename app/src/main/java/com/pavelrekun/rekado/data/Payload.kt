@@ -1,7 +1,7 @@
 package com.pavelrekun.rekado.data
 
 import com.google.gson.annotations.SerializedName
-import com.pavelrekun.penza.services.extensions.EMPTY_STRING
+import com.pavelrekun.magta.system.EMPTY_STRING
 import com.pavelrekun.rekado.services.utils.MemoryUtils.getLocation
 
 data class Payload(

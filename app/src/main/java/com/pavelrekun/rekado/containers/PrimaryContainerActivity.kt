@@ -14,7 +14,6 @@ import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
 import com.pavelrekun.rekado.services.extensions.openAboutScreen
 import com.pavelrekun.rekado.services.extensions.openSettingsScreen
-import com.pavelrekun.rekado.services.extensions.openTranslatorsScreen
 
 class PrimaryContainerActivity : BaseActivity() {
 
@@ -51,11 +50,6 @@ class PrimaryContainerActivity : BaseActivity() {
 
             R.id.navigation_donate -> {
                 DialogsShower.showDonateDialog(this)
-                true
-            }
-
-            R.id.navigation_translators -> {
-                openTranslatorsScreen()
                 true
             }
 

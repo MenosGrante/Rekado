@@ -9,4 +9,4 @@
     android:paddingEnd="24dp"
     android:textColor="?android:attr/textColorPrimary"
     android:textSize="16sp"
-    tools:text="SXLoader" />
+    tools:text="Hekate" />

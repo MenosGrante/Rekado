@@ -13,8 +13,7 @@ const val NAVIGATION_TITLE = "NAVIGATION_TITLE"
 const val NAVIGATION_DESTINATION_UNKNOWN = -1
 const val NAVIGATION_DESTINATION_ABOUT = 0
 const val NAVIGATION_DESTINATION_SETTINGS = 1
-const val NAVIGATION_DESTINATION_TRANSLATORS = 2
-const val NAVIGATION_DESTINATION_TOOLS_SERIAL_CHECKER = 3
+const val NAVIGATION_DESTINATION_TOOLS_SERIAL_CHECKER = 2
 
 fun BaseActivity.openAboutScreen() {
     val bundle = Bundle().apply {
@@ -42,15 +41,6 @@ fun BaseActivity.openToolsSerialCheckerScreen() {
     val bundle = Bundle().apply {
         putInt(NAVIGATION_TYPE, NAVIGATION_DESTINATION_TOOLS_SERIAL_CHECKER)
         putString(NAVIGATION_TITLE, R.string.navigation_serial_checker.asString())
-    }
-
-    controller.navigate(R.id.navigationContainerSecondary, bundle)
-}
-
-fun BaseActivity.openTranslatorsScreen() {
-    val bundle = Bundle().apply {
-        putInt(NAVIGATION_TYPE, NAVIGATION_DESTINATION_TRANSLATORS)
-        putString(NAVIGATION_TITLE, R.string.navigation_translators.asString())
     }
 
     controller.navigate(R.id.navigationContainerSecondary, bundle)

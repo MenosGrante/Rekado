@@ -1,13 +1,8 @@
 {
-  "latestVersion": "4.1.1",
-  "latestVersionCode": "74",
+  "latestVersion": "4.1.2",
+  "latestVersionCode": "75",
   "url": "https://github.com/MenosGrante/Rekado/releases/",
   "releaseNotes": [
-    "- Updated: Localization center moved to the \"Crowdin\".",
-    "- Updated: \"Jungle\" theme replaced with \"Retro wave\" theme.",
-    "- Updated: All payloads to the up-to-date versions.",
-    "- Updated: Overhaul design of the \"Themes\" screen.",
-    "- Updated: Icons and padding in whole app.",
-    "- Fixed: Title and description cut off in the \"Tools\" screen."
+    "- Updated: Added all finished localizations from Crowdin."
   ]
 }

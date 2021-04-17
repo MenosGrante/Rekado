@@ -6,17 +6,16 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.pavelrekun.penza.services.extensions.tintContrast
+import com.pavelrekun.magta.design.tintContrast
+import com.pavelrekun.magta.system.extractFileName
+import com.pavelrekun.magta.system.viewBinding
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentPayloadsBinding
 import com.pavelrekun.rekado.services.Constants
 import com.pavelrekun.rekado.services.Events
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
-import com.pavelrekun.rekado.services.extensions.extractFileName
-import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.payloads.Result
 import com.pavelrekun.rekado.services.utils.LoginUtils
@@ -50,7 +49,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
         if (requestCode == Constants.KEY_OPEN_PAYLOAD) {
             when (resultCode) {
                 Activity.RESULT_OK -> data?.data?.let {
-                    val name = it.extractFileName()
+                    val name = it.extractFileName(requireContext())
                     if (name != null) {
                         val inputStream = requireBaseActivity().contentResolver.openInputStream(it)
 

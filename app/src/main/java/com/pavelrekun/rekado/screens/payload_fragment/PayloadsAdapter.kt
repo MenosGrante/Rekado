@@ -4,12 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.pavelrekun.penza.services.extensions.EMPTY_STRING
+import com.pavelrekun.magta.system.EMPTY_STRING
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.databinding.ItemPayloadBinding
 import com.pavelrekun.rekado.services.Events
-import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
+import com.pavelrekun.rekado.services.utils.LoginUtils
 import org.greenrobot.eventbus.EventBus
 import java.io.File
 

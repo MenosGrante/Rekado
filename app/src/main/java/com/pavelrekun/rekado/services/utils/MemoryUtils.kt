@@ -33,7 +33,6 @@ object MemoryUtils {
     private fun copyBundledPayloads() {
         copyPayload(resources.openRawResource(R.raw.fusee_primary), "fusee_primary.bin")
         copyPayload(resources.openRawResource(R.raw.hekate), "hekate.bin")
-        copyPayload(resources.openRawResource(R.raw.sx_loader), "sx_loader.bin")
         copyPayload(resources.openRawResource(R.raw.reinx), "reinx.bin")
 
         EventBus.getDefault().post(Events.UpdatePayloadsListEvent())

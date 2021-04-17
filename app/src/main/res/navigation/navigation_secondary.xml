@@ -20,8 +20,4 @@
         android:id="@+id/navigationSerialChecker"
         android:name="com.pavelrekun.rekado.screens.serial_checker_activity.SerialCheckerFragment" />
 
-    <fragment
-        android:id="@+id/navigationTranslators"
-        android:name="com.pavelrekun.rekado.screens.translators_fragment.TranslatorsFragment" />
-
 </navigation>

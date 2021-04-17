@@ -27,7 +27,7 @@ class PayloadsViewModel : ViewModel() {
     val downloadPayloadResult = MutableLiveData<Result>()
 
     fun fetchExternalConfig() {
-        val errorsHandler = CoroutineExceptionHandler { _, exception ->
+        val errorsHandler = CoroutineExceptionHandler { _, _ ->
             fetchConfigResult.value = Result.ERROR
             isProgressShowing.value = false
         }

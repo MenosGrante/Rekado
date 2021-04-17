@@ -14,7 +14,7 @@
         android:paddingBottom="8dp"
         android:paddingTop="8dp"
         android:textColor="?android:attr/textColorPrimary"
-        tools:text="SX OS" />
+        tools:text="Hekate" />
 
     <ImageView
         android:id="@+id/itemPayloadRemove"
