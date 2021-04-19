@@ -1,8 +1,8 @@
 {
-  "latestVersion": "4.1.2",
-  "latestVersionCode": "75",
+  "latestVersion": "4.1.3",
+  "latestVersionCode": "76",
   "url": "https://github.com/MenosGrante/Rekado/releases/",
   "releaseNotes": [
-    "- Updated: Added all finished localizations from Crowdin."
+    "- Fixed: Crash on the app's startup."
   ]
 }
