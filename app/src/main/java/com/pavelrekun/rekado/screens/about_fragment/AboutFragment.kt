@@ -3,12 +3,12 @@ package com.pavelrekun.rekado.screens.about_fragment
 import android.os.Bundle
 import android.view.View
 import com.pavelrekun.magta.services.constants.Links
-import com.pavelrekun.magta.system.viewBinding
 import com.pavelrekun.rekado.BuildConfig
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentAboutBinding
 import com.pavelrekun.rekado.services.Constants
+import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.utils.Utils
 import dev.chrisbanes.insetter.applyInsetter
 

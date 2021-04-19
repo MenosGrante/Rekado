@@ -3,10 +3,8 @@ apply plugin: "com.github.ben-manes.versions"
 dependencyUpdates.resolutionStrategy {
     componentSelection { rules ->
         rules.all { ComponentSelection selection ->
-            boolean rejected = ['alpha', 'beta', 'cr', 'm', 'M1'].any { qualifier ->
-                if (!allowed) {
-                    selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
-                }
+            boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm', 'M1'].any { qualifier ->
+                selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
             }
 
             if (rejected) {

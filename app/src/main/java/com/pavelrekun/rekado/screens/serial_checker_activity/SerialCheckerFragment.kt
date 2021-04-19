@@ -7,7 +7,7 @@ import android.widget.Toast
 import com.google.zxing.integration.android.IntentIntegrator
 import com.pavelrekun.magta.design.getString
 import com.pavelrekun.magta.design.isEmpty
-import com.pavelrekun.magta.system.viewBinding
+import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentSerialCheckerBinding

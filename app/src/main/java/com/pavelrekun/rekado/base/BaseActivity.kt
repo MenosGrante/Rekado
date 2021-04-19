@@ -9,7 +9,6 @@ import com.pavelrekun.magta.design.resolveColorAttribute
 import com.pavelrekun.magta.design.tintNavigationBar
 import com.pavelrekun.magta.design.tintTaskDescription
 import com.pavelrekun.penza.base.PenzaActivity
-import com.pavelrekun.penza.services.helpers.ColorsHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.containers.PrimaryContainerActivity
 

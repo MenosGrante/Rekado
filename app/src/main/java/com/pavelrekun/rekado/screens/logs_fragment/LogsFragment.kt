@@ -5,7 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.pavelrekun.magta.design.tintContrast
-import com.pavelrekun.magta.system.viewBinding
+import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentLogsBinding

@@ -59,7 +59,7 @@ class USBReceiver : BaseActivity() {
         finishReceiver()
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
+/*    @Subscribe(threadMode = ThreadMode.MAIN)
     fun onEvent(event: Events.PayloadSelected) {
         injectPayload()
     }
@@ -77,7 +77,7 @@ class USBReceiver : BaseActivity() {
     override fun onStop() {
         EventBus.getDefault().unregister(this)
         super.onStop()
-    }
+    }*/
 
     private fun finishReceiver() {
         if (this::payloadChooserDialog.isInitialized && payloadChooserDialog.isShowing) {

@@ -9,7 +9,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pavelrekun.magta.design.tintContrast
 import com.pavelrekun.magta.system.extractFileName
-import com.pavelrekun.magta.system.viewBinding
+import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentPayloadsBinding
@@ -166,10 +166,10 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
         }
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
+/*    @Subscribe(threadMode = ThreadMode.MAIN)
     fun onEvent(event: Events.UpdatePayloadsListEvent) {
         updateList()
-    }
+    }*/
 
     override fun onResume() {
         super.onResume()
@@ -183,7 +183,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
         }
     }
 
-    override fun onStart() {
+/*    override fun onStart() {
         super.onStart()
         EventBus.getDefault().register(this)
     }
@@ -191,6 +191,6 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
     override fun onStop() {
         super.onStop()
         EventBus.getDefault().unregister(this)
-    }
+    }*/
 
 }
