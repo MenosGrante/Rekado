@@ -1,8 +1,7 @@
 ### The application has already received all the functionality that I planned to lay in it, so I will only fix defects and add localizations in the future. [More details here.](https://pavelrekun.dev/blog/news_25.08.2020/)
 
-<br />
 
-<a href="https://www.buymeacoffee.com/pavelrekun" target="_blank"><img src="https://camo.githubusercontent.com/838540e144cb59933cd2dce03098e2e77b279163/68747470733a2f2f7777772e6275796d6561636f666665652e636f6d2f6173736574732f696d672f637573746f6d5f696d616765732f79656c6c6f775f696d672e706e67" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+<a href="https://www.patreon.com/bePatron?u=29011893" target="_blank"><img src="https://i.imgur.com/U7uMymh.png" alt="Become my Patron" height="60"></a>
 
 [![Crowdin](https://badges.crowdin.net/rekado/localized.svg)](https://crowdin.com/project/rekado) [![Stars](https://img.shields.io/github/stars/MenosGrante/Rekado)](https://github.com/MenosGrante/Rekado/stargazers) [![License](https://img.shields.io/github/license/MenosGrante/Rekado)](https://github.com/MenosGrante/Rekado/blob/master/LICENSE) [![Releases](https://img.shields.io/github/downloads/MenosGrante/Rekado/total.svg)](https://github.com/MenosGrante/Rekado/releases/latest)
 
@@ -55,4 +54,4 @@ This should not happen when using the "correct" payloads. But I am not responsib
 * [ELY3M](https://github.com/ELY3M) for contributing in this project.
 
 ## Donate
-I have created and supporting this application in my free time, so if you want to support me, follow my <a href="https://www.buymeacoffee.com/pavelrekun" target="_blank">"Buy me coffee"</a> link :)
+I have created and supporting this application in my free time, so if you want to support me, you can become my patron at <a href="https://www.patreon.com/bePatron?u=29011893" target="_blank">"Patreon"</a> and get exclusive news and early look at all my apps!
