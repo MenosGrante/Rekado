@@ -17,9 +17,7 @@ import com.pavelrekun.rekado.services.extensions.openSettingsAppearanceThemesScr
 import com.pavelrekun.rekado.services.payloads.PayloadHelper
 import com.pavelrekun.rekado.services.utils.LoginUtils
 import com.pavelrekun.rekado.services.utils.PreferencesUtils
-import com.pavelrekun.rekado.services.utils.Utils
 import dev.chrisbanes.insetter.applyInsetter
-import dev.chrisbanes.insetter.applySystemWindowInsetsToPadding
 
 class SettingsFragment : BasePreferencesFragment(R.xml.preferences, R.string.navigation_settings) {
 

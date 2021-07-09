@@ -7,15 +7,14 @@ import android.widget.Toast
 import com.google.zxing.integration.android.IntentIntegrator
 import com.pavelrekun.magta.design.getString
 import com.pavelrekun.magta.design.isEmpty
-import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentSerialCheckerBinding
 import com.pavelrekun.rekado.services.Constants
+import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.utils.SerialUtils
 import com.pavelrekun.rekado.services.utils.Utils
 import dev.chrisbanes.insetter.applyInsetter
-import dev.chrisbanes.insetter.applySystemWindowInsetsToPadding
 
 class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
 

@@ -44,7 +44,8 @@
     <string name="instructions_category_final_description">Connect the device to the Nintendo Switch and allow permission for the USB access, if necessary. Wait unit payloads chooser dialog will be opened and select which one you want to load.</string>
 
     <!-- Strings for Donate -->
-    <string name="donate_description">You can support the app developer by buying him a cup of coffee. If you want, of course.</string>
+    <string name="donate_description">Would you like to support the development of this and all other apps even more? Then you can become my \"Patreon\"! :)</string>
+    <string name="donate_button">Become a Patreon</string>
 
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Auto-injector</string>

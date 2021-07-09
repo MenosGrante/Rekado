@@ -1,15 +1,15 @@
 {
-  "timestamp": 1618692915,
+  "timestamp": 1625835635,
   "payloads":[
     {
       "title":"hekate.bin",
       "downloadUrl": "https://pavelrekun.dev/payloads/hekate.bin",
-      "version":"5.5.5"
+      "version":"5.5.8"
     },
     {
       "title":"fusee_primary.bin",
       "downloadUrl": "https://pavelrekun.dev/payloads/fusee_primary.bin",
-      "version":"0.19.1"
+      "version":"0.19.5"
     },
     {
       "title":"reinx.bin",

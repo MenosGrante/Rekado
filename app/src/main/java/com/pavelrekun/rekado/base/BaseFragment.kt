@@ -1,8 +1,8 @@
 package com.pavelrekun.rekado.base
 
 import androidx.fragment.app.Fragment
-import com.pavelrekun.penza.widgets.ElevationRecyclerView
-import com.pavelrekun.penza.widgets.ElevationScrollView
+import com.pavelrekun.magta.views.ElevationRecyclerView
+import com.pavelrekun.magta.views.ElevationScrollView
 
 open class BaseFragment(layoutRes: Int = 0) : Fragment(layoutRes) {
 

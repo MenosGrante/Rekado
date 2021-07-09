@@ -7,6 +7,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.pavelrekun.magta.design.getString
 import com.pavelrekun.magta.design.isEmpty
 import com.pavelrekun.magta.restartApp
+import com.pavelrekun.magta.services.constants.Links
 import com.pavelrekun.penza.services.helpers.SettingsDialogsHelper
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseActivity
@@ -108,7 +109,7 @@ object DialogsShower {
         val binding = DialogDonateBinding.inflate(activity.layoutInflater)
         val builder = MaterialAlertDialogBuilder(activity)
 
-        binding.donateBuyMeCoffee.setOnClickListener { Utils.openLink(activity, Constants.DONATE_LINK) }
+        binding.aboutPatreonButton.setOnClickListener { Utils.openLink(activity, Links.PATREON_LINK) }
 
         builder.setTitle(R.string.navigation_donate)
 

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.pavelrekun.penza.widgets.ElevationScrollView
+    <com.pavelrekun.magta.views.ElevationScrollView
         android:id="@+id/serialCheckerLayoutScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -152,6 +152,6 @@
 
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
-    </com.pavelrekun.penza.widgets.ElevationScrollView>
+    </com.pavelrekun.magta.views.ElevationScrollView>
 
 </LinearLayout>
