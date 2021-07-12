@@ -51,7 +51,6 @@ This should not happen when using the "correct" payloads. But I am not responsib
 ## Credits
 * [DavidBuchanan314](https://github.com/DavidBuchanan314) for creating NXLoader.
 * [ealfonso93](https://github.com/ealfonso93) for contributing in this project.
-* [ELY3M](https://github.com/ELY3M) for contributing in this project.
 
 ## Donate
 I have created and supporting this application in my free time, so if you want to support me, you can become my patron at <a href="https://www.patreon.com/bePatron?u=29011893" target="_blank">"Patreon"</a> and get exclusive news and early look at all my apps!
