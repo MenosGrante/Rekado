@@ -29,12 +29,12 @@
     <string name="instructions_category_cable">傳輸線</string>
     <string name="instructions_category_cable_description">首先，你需要事先準備一條專用的傳輸線將你的裝置與Nintendo Switch連接。為了確保資料傳輸過程順利，這條線必須是專為傳輸資料所設計的，而非僅能提供充電使用。\n\n建議挑選符合你的行動裝置接口的線材，像是 type A-to-C、type C-to-C等等，以及注意是否需要額外添購USB OTG轉接頭。</string>
     <string name="instructions_category_payload">注入檔案</string>
-    <string name="instructions_category_payload_description">在\u0022注入檔案\u0022頁面中點擊雲朵圖示按鈕並使用連結下載指定的檔案後，你可以點擊 \u0022+\u0022 按鈕從裝置的下載管理器來增加注入檔案，或直接將檔案移動到Rekado的資料夾內 (/sdcard/Android/data/com.pavelrekun.rekado/files/)。\n\n你也可以直接使用內建的四種注入檔案 (Hekate/Fusee Primary/ReiNX)。</string>
+    <string name="instructions_category_payload_description">在\u0022注入檔案\u0022頁面中點擊雲朵圖示按鈕並使用連結下載指定的檔案後，你可以點擊 \u0022+\u0022 按鈕從裝置的下載管理器來增加注入檔案，或直接將檔案移動到Rekado的資料夾內 (/sdcard/Android/data/com.pavelrekun.rekado/files/)。\n\n你也可以直接使用內建的注入檔案 (Hekate/Fusee Primary/ReiNX)。</string>
     <string name="instructions_category_rcm_description">請讓你的Nintendo Switch進入RCM模式。\n\n當裝置與你的Nintendo Switch連接時，此時主機會開機，請持續長按 \"音量鍵 +\"。</string>
     <string name="instructions_category_final">完成</string>
     <string name="instructions_category_final_description">將裝置與Nintendo Switch連接後，如果出現系統通知詢問請求裝置取得USB連接設備的權限，請按指示允許。接著螢幕會列出所有注入的檔案項目，然後請選取你要注入的檔案。</string>
     <!-- Strings for Donate -->
-    <string name="donate_description">如果想要贊助作者開發，你可以點擊\"buying him a cup of coffee\"來進行小額贊助</string>
+    <string name="donate_button">成為贊助者</string>
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">自動注入器</string>
     <string name="settings_auto_injector_status_title_disabled">啟用 \u0022自動注入器\u0022</string>

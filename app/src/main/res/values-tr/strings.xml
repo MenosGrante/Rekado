@@ -34,7 +34,6 @@
     <string name="instructions_category_final">Son</string>
     <string name="instructions_category_final_description">Cihazınızı Nintendo Switch\'e bağlayın ve eğer gerekirse USB erişim iznini verin. Payload seçme diyaloğu gelene kadar bekleyin ve istediğinizi seçin.</string>
     <!-- Strings for Donate -->
-    <string name="donate_description">Geliştirici ona bir kupa kahve alarak destekleyebilirsiniz, isterseniz tabiki.</string>
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Oto-injektör</string>
     <string name="settings_auto_injector_status_title_disabled">\"Oto-inject\u00f6r\"\u00fc etkinle\u015ftir</string>

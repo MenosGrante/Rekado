@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Strings for Navigation -->
+    <string name="navigation_payloads">Cargas</string>
     <string name="navigation_tools">Herramientas</string>
     <string name="navigation_instructions">Instrucciones</string>
     <string name="navigation_logs">Registros</string>
@@ -25,16 +26,21 @@
     <string name="tools_serial_checker_title">Verificador de Serial</string>
     <string name="tools_serial_checker_description">Verifica si tu Nintendo Switch es vulnerable usando el numero de serie de tu unidad</string>
     <!-- Strings for Instructions -->
+    <string name="instructions_category_cable">Cable</string>
     <string name="instructions_category_cable_description">Primero, necesitas buscar un cable para conectar tu dispositivo a la Nintendo Switch. Para un uso adecuado, tiene que ser un cable apto para la transmisión de datos, no solo para la carga.\n\nEs aconsejable usar un cable tipo A-C y un Adaptador OTG USB.</string>
+    <string name="instructions_category_payload">Carga</string>
     <string name="instructions_category_payload_description">Puedes a\u00f1adir tu payload desde la memoria de tu dispositivo (haciendo click en el bot\u00f3n \"+\"), descargarlo directamente desde un link (haciendo click en el bot\u00f3n con el icono de \"nube\") en la pantalla de \"payloads\" o simplemente mu\u00e9velo a la carpeta de Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nO puedes usar los payloads preinstalados (Hekate/Fusee Primary/ReiNX).</string>
     <string name="instructions_category_rcm_description">Coloca tu Nintendo Switch en modo RCM de una forma correcta. \n\nTu Nintendo Switch se encenderá cuando la enchufes, asegurate de mantener oprimido \"VOLUMEN +\".</string>
+    <string name="instructions_category_final">Final</string>
     <string name="instructions_category_final_description">Conecta tu dispositivo a la Nintendo Switch y da permisos de acceso a USB si es necesario. Espera hasta que el dialogo del selector de payloads se abra y selecciona el que quieras cargar.</string>
     <!-- Strings for Donate -->
-    <string name="donate_description">Puedes apoyar al desarrollador de esta aplicación comprando un café. Si tu quieres, por supuesto.</string>
+    <string name="donate_button">Conviértete en un \"Patreon\"</string>
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Auto-inyector</string>
     <string name="settings_auto_injector_status_title_disabled">Activar \"Auto-injector\"</string>
     <string name="settings_auto_injector_status_title_enabled">Desactivar \"Auto-injector\"</string>
+    <string name="settings_auto_injector_payload_title">Payload</string>
+    <string name="settings_category_payloads">Payloads</string>
     <string name="settings_payloads_hide_title">No mostrar payloads incluidos</string>
     <string name="settings_payloads_hide_summary">No mostrar todas los payloads incluidos (Hekate/Fusee Primary/ReiNX)</string>
     <string name="settings_payloads_reset_title">Limpiar</string>
@@ -51,6 +57,9 @@
     <string name="settings_picker_color_title">Elegir color</string>
     <string name="settings_picker_color_button_close">Cerrar</string>
     <string name="settings_picker_theme_title">Elegir tema</string>
+    <string name="settings_picker_theme_category_control">Control</string>
+    <string name="settings_picker_theme_category_themes">Temas</string>
+    <string name="settings_picker_theme_control_manual">Manual</string>
     <string name="settings_picker_theme_control_system_default">Por defecto</string>
     <string name="settings_picker_theme_control_battery_saver">Escoger \"Ahorrador de batería\"</string>
     <string name="settings_utils_restart_dialog_title">Ajustes cambiados</string>

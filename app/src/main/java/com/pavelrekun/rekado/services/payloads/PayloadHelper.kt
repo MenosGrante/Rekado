@@ -6,7 +6,7 @@ import com.pavelrekun.rekado.services.utils.PreferencesUtils
 
 object PayloadHelper {
 
-    val BUNDLED_PAYLOADS = listOf("hekate.bin", "fusee_primary.bin", "reinx.bin")
+    val BUNDLED_PAYLOADS = listOf("hekate.bin", "fusee.bin", "reinx.bin")
 
     fun getAllPayloads(): MutableList<Payload> {
         return if (PreferencesUtils.checkHideBundledPayloadsEnabled()) {

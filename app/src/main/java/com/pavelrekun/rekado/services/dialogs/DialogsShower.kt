@@ -109,7 +109,7 @@ object DialogsShower {
         val binding = DialogDonateBinding.inflate(activity.layoutInflater)
         val builder = MaterialAlertDialogBuilder(activity)
 
-        binding.aboutPatreonButton.setOnClickListener { Utils.openLink(activity, Links.PATREON_LINK) }
+        binding.donateButton.setOnClickListener { Utils.openLink(activity, Links.BUY_ME_COFFEE_LINK) }
 
         builder.setTitle(R.string.navigation_donate)
 

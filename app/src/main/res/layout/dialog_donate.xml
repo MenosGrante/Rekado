@@ -13,25 +13,15 @@
         android:textColor="?android:attr/textColorSecondary"
         android:textSize="16sp" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/aboutPatreonButton"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/donateButton"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/gilroy_medium"
-        android:paddingStart="16dp"
-        android:paddingTop="8dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="8dp"
-        android:text="@string/donate_button"
-        android:textColor="@color/colorWhite"
-        android:textSize="12sp"
-        app:backgroundTint="#FF424D"
-        app:cornerRadius="24dp"
-        app:icon="@drawable/ic_donate_patreon"
-        app:iconPadding="8dp"
-        app:iconTint="@color/colorWhite" />
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        app:srcCompat="@drawable/pic_donate" />
 
 </LinearLayout>

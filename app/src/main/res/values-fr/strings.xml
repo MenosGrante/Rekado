@@ -34,7 +34,7 @@
     <string name="instructions_category_final">Finalement</string>
     <string name="instructions_category_final_description">Connectez votre appareil à la Switch et autorisez la permission pour l\'accès USB si nécessaire. Attendez que l\'application ouvre le menu de choix de payload et sélectionner celui que vous voulez injecter.</string>
     <!-- Strings for Donate -->
-    <string name="donate_description">Vous pouvez soutenir le développement de l\'application en m\'achetant un café. Si vous le voulez bien sûr.</string>
+    <string name="donate_button">Devenir un Patreon</string>
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Injection automatique</string>
     <string name="settings_auto_injector_status_title_disabled">Activer l\'injection automatique</string>

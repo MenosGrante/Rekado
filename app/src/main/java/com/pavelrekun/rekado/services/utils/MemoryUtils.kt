@@ -14,7 +14,15 @@ object MemoryUtils {
     private val resources = RekadoApplication.context.resources
 
     fun parseBundledConfig() {
-        if (!PreferencesUtils.checkConfigExists()) {
+        if (PreferencesUtils.checkConfigExists()) {
+            val currentConfig = PreferencesUtils.getCurrentConfig()
+            val bundledConfig = resources.openRawResource(R.raw.config).parseConfig()
+
+            if (bundledConfig.timestamp > currentConfig.timestamp) {
+                PreferencesUtils.saveConfig(bundledConfig)
+                copyBundledPayloads()
+            }
+        } else {
             val config = resources.openRawResource(R.raw.config).parseConfig()
             PreferencesUtils.saveConfig(config)
             copyBundledPayloads()
@@ -31,7 +39,7 @@ object MemoryUtils {
     }
 
     private fun copyBundledPayloads() {
-        copyPayload(resources.openRawResource(R.raw.fusee_primary), "fusee_primary.bin")
+        copyPayload(resources.openRawResource(R.raw.fusee), "fusee.bin")
         copyPayload(resources.openRawResource(R.raw.hekate), "hekate.bin")
         copyPayload(resources.openRawResource(R.raw.reinx), "reinx.bin")
 

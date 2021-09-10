@@ -13,7 +13,7 @@ object SerialUtils {
     private const val STATUS_ERROR = 3
 
     fun defineConsoleStatus(serialNumber: String): Int {
-        return when (defineConsoleStatusInternal(serialNumber.toUpperCase(Locale.ROOT))) {
+        return when (defineConsoleStatusInternal(serialNumber.uppercase(Locale.ROOT))) {
             STATUS_NOT_PATCHED -> R.string.serial_checker_status_not_patched
             STATUS_PATCHED -> R.string.serial_checker_status_patched
             STATUS_POSSIBLY_PATCHED -> R.string.serial_checker_status_possibly_patched

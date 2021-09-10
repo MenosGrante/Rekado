@@ -34,7 +34,7 @@
     <string name="instructions_category_final">Conclusione</string>
     <string name="instructions_category_final_description">Connetti il dispositivo al Nintendo Switch e permetti l\'accesso USB, se richiesto. Attendi finchè la finestra di scelta del payload si apra e seleziona quello che vuoi caricare.</string>
     <!-- Strings for Donate -->
-    <string name="donate_description">Puoi sostenere lo sviluppatore dell\'app offrendogli un caffè. Se vuoi, ovviamente.</string>
+    <string name="donate_button">Diventa un Patreon</string>
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Iniezione automatica</string>
     <string name="settings_auto_injector_status_title_disabled">Attiva l\'iniezione automatica</string>

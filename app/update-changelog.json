@@ -1,9 +1,9 @@
 {
-  "latestVersion": "4.1.4",
-  "latestVersionCode": "77",
+  "latestVersion": "4.2",
+  "latestVersionCode": "80",
   "url": "https://github.com/MenosGrante/Rekado/releases/",
   "releaseNotes": [
-    "- Added: All finished localisations from Crowdin.",
-    "- Fixed: Payloads are not getting loaded to the console."
+    "- Added: Support for Android 12.",
+    "- Updated: fusee-primary replaced buy fusee."
   ]
 }

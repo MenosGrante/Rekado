@@ -34,7 +34,6 @@
     <string name="instructions_category_final">Final</string>
     <string name="instructions_category_final_description">Conecte o smartphone ao Nintendo Switch e permita o acesso USB se for solicitado pelo smartphone. Espere até a caixa de diálogo aparecer e escolha o payload que deseja injetar.</string>
     <!-- Strings for Donate -->
-    <string name="donate_description">Você pode ajudar o desenvolvimento do aplicativo fazendo uma pequena doação.</string>
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Injetor automático</string>
     <string name="settings_auto_injector_status_title_disabled">Ativar \"Injetor autom\u00e1tico\"</string>

@@ -34,7 +34,8 @@
     <string name="instructions_category_final">Закінчення</string>
     <string name="instructions_category_final_description">Підключіть пристрій до Nintendo Switch і при необхідності дозвольте доступ до USB. Відкриється діалогове вікно «Вибір завантажувача» і виберіть, який з них ви хочете завантажити.</string>
     <!-- Strings for Donate -->
-    <string name="donate_description">Ви можете підтримати розробника програми, купивши йому чашку кави. Якщо ти, звісно, хочеш.</string>
+    <string name="donate_description">Ви хотіли б підтримати розробку цього та інших додатків? Тоді ви можете задонатити мені на моїй сторінці \"Buy me a coffee\" :)</string>
+    <string name="donate_button">Стати Patreon\'ом</string>
     <!-- Strings for Settings -->
     <string name="settings_category_auto_injector">Авто-інжектор</string>
     <string name="settings_auto_injector_status_title_disabled">\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u0438 \u00ab\u0410\u0432\u0442\u043e-\u0456\u043d\u0436\u0435\u043a\u0442\u043e\u0440\u00bb</string>
