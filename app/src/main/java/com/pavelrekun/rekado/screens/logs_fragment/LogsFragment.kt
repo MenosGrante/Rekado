@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.pavelrekun.magta.design.tintContrast
-import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentLogsBinding
+import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.utils.LoginUtils
 
 class LogsFragment : BaseFragment(R.layout.fragment_logs) {
@@ -20,23 +19,21 @@ class LogsFragment : BaseFragment(R.layout.fragment_logs) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initScrollingBehaviour(binding.logsActionsList)
-        initWithTitle(R.string.navigation_logs)
         initList()
         initClickListeners()
-        initDesign()
     }
 
     override fun onResume() {
         super.onResume()
 
         if (this::adapter.isInitialized) {
-            adapter.updateList()
+            adapter.submitList(LoginUtils.getLogs())
         }
     }
 
     private fun initList() {
-        adapter = LogsAdapter(LoginUtils.getLogs())
+        adapter = LogsAdapter()
+        adapter.submitList(LoginUtils.getLogs())
 
         binding.logsActionsList.apply {
             setHasFixedSize(true)
@@ -57,13 +54,9 @@ class LogsFragment : BaseFragment(R.layout.fragment_logs) {
             LoginUtils.clearLogs()
 
             if (this::adapter.isInitialized) {
-                adapter.updateList()
+                adapter.submitList(LoginUtils.getLogs())
             }
         }
-    }
-
-    private fun initDesign() {
-        binding.logsClearButton.tintContrast()
     }
 
 }

@@ -9,36 +9,25 @@
         android:summary="@string/settings_appearance_theme_summary"
         android:title="@string/settings_appearance_theme_title" />
 
-    <com.pavelrekun.penza.pickers.color.ColorPickerPreference
-        android:icon="@drawable/ic_settings_appearance_accent"
-        android:key="appearance_accent_color"
-        android:summary="@string/settings_appearance_accent_color_summary"
-        android:title="@string/settings_appearance_accent_color_title" />
-
-    <Preference
-        android:icon="@drawable/ic_settings_appearance_random"
-        android:key="appearance_randomize"
-        android:summary="@string/settings_appearance_randomize_summary"
-        android:title="@string/settings_appearance_randomize_title" />
-
-    <Preference
-        android:icon="@drawable/ic_settings_reset"
-        android:key="appearance_reset"
-        android:summary="@string/settings_appearance_reset_summary"
-        android:title="@string/settings_appearance_reset_title" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_settings_appearance_dynamic_colors"
+        android:key="appearance_dynamic_colors"
+        android:defaultValue="true"
+        android:summary="@string/settings_appearance_dynamic_colors_summary"
+        android:title="@string/settings_appearance_dynamic_colors_title" />
 
     <PreferenceCategory android:title="@string/settings_category_auto_injector" />
 
     <CheckBoxPreference
         android:icon="@drawable/ic_settings_auto_injector"
         android:key="auto_injector_enable"
-        android:title="@string/settings_auto_injector_status_title_disabled" />
+        android:summary="@string/settings_auto_injector_status_summary"
+        android:title="@string/settings_auto_injector_status_title" />
 
-    <ListPreference
+    <Preference
         android:enabled="false"
         android:icon="@drawable/ic_settings_payload"
         android:key="auto_injector_payload"
-        android:summary="%s"
         android:title="@string/settings_auto_injector_payload_title" />
 
     <PreferenceCategory android:title="@string/settings_category_payloads" />
@@ -46,13 +35,11 @@
     <CheckBoxPreference
         android:icon="@drawable/ic_settings_payloads_hide"
         android:key="payloads_hide"
-        android:summary="@string/settings_payloads_hide_summary"
         android:title="@string/settings_payloads_hide_title" />
 
     <Preference
         android:icon="@drawable/ic_settings_payloads_clear"
         android:key="payloads_reset"
-        android:summary="@string/settings_payloads_reset_summary"
         android:title="@string/settings_payloads_reset_title" />
 
 </PreferenceScreen>

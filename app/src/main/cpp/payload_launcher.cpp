@@ -7,7 +7,7 @@
 
 extern "C" JNIEXPORT jint
 JNICALL
-Java_com_pavelrekun_rekado_services_payloads_PayloadLoader_nativeTriggerExploit(
+Java_com_pavelrekun_rekado_services_usb_USBPayloadLoader_nativeTriggerExploit(
         JNIEnv *env,
         jobject /* this */,
         jint fd,

@@ -2,12 +2,11 @@ package com.pavelrekun.rekado.screens.about_fragment
 
 import android.os.Bundle
 import android.view.View
-import com.pavelrekun.magta.services.constants.Links
 import com.pavelrekun.rekado.BuildConfig
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentAboutBinding
-import com.pavelrekun.rekado.services.Constants
+import com.pavelrekun.rekado.services.constants.Links
 import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.utils.Utils
 import dev.chrisbanes.insetter.applyInsetter
@@ -19,7 +18,6 @@ class AboutFragment : BaseFragment(R.layout.fragment_about) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initScrollingBehaviour(binding.aboutLayoutScroll)
         initVersion()
         initClickListeners()
         initEdgeToEdge()
@@ -30,12 +28,12 @@ class AboutFragment : BaseFragment(R.layout.fragment_about) {
     }
 
     private fun initClickListeners() {
-        binding.aboutLinkGitHubProject.setOnClickListener { Utils.openLink(requireBaseActivity(), Constants.GITHUB_PROJECT_LINK) }
+        binding.aboutLinkGitHubProject.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.GITHUB_PROJECT) }
 
-        binding.aboutDeveloperPortfolio.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.PERSONAL_SITE_LINK) }
-        binding.aboutDeveloperInstagram.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.INSTAGRAM_DRONE_LINK) }
-        binding.aboutDeveloperGithub.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.GITHUB_LINK) }
-        binding.aboutDeveloperTwitter.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.TWITTER_LINK) }
+        binding.aboutDeveloperPortfolio.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.PERSONAL_SITE) }
+        binding.aboutDeveloperInstagram.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.INSTAGRAM) }
+        binding.aboutDeveloperGithub.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.GITHUB) }
+        binding.aboutDeveloperTwitter.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.TWITTER) }
     }
 
     private fun initEdgeToEdge() {

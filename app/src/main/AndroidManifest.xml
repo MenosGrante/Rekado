@@ -7,8 +7,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.REORDER_TASKS" />
 
+    <!-- hardwareAccelerated required by ZXing-->
     <application
-        android:name=".RekadoApplication"
+        android:name=".Rekado"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +20,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".containers.PrimaryContainerActivity"
+            android:name=".screens.navigation_activity.NavigationActivity"
             android:exported="true"
             android:launchMode="singleTop">
             <intent-filter>
@@ -29,13 +30,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".containers.SecondaryContainerActivity" />
-
         <activity
             android:name=".services.usb.USBReceiver"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:label="@string/app_name"
             android:noHistory="true"
             android:taskAffinity="com.example.taskAffinityUsbEventReceiver"
             android:theme="@style/Theme.Rekado.Invisible">

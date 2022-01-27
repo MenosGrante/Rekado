@@ -20,7 +20,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="24dp"
         android:clickable="true"
-        android:contentDescription="@null"
+        android:contentDescription="@string/donate_button"
         android:focusable="true"
         app:srcCompat="@drawable/pic_donate" />
 

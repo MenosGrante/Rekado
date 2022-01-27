@@ -1,9 +1,9 @@
 package com.pavelrekun.rekado.services.utils
 
+import android.content.Context
 import android.hardware.usb.UsbDevice
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
-import com.pavelrekun.rekado.base.BaseActivity
 
 object Utils {
 
@@ -12,12 +12,12 @@ object Utils {
 
     private val hexArray = "0123456789ABCDEF".toCharArray()
 
-    fun openLink(activity: BaseActivity, url: String) {
+    fun openLink(context: Context, url: String) {
         val builder = CustomTabsIntent.Builder()
         builder.setShowTitle(true)
 
         val customTabsIntent = builder.build()
-        customTabsIntent.launchUrl(activity, Uri.parse(url))
+        customTabsIntent.launchUrl(context, Uri.parse(url))
     }
 
     fun bytesToHex(bytes: ByteArray): String {

@@ -1,7 +1,9 @@
 plugins {
     id("com.android.application")
+    id("dagger.hilt.android.plugin")
 
     kotlin("android")
+    kotlin("kapt")
 }
 
 android {
@@ -25,12 +27,14 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        isCoreLibraryDesugaringEnabled = true
+
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     lint {
-        isAbortOnError = false
+        abortOnError = false
     }
 
     androidResources {
@@ -48,15 +52,17 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
+    }
+
+    // Allow references to generated code
+    kapt {
+        correctErrorTypes = true
     }
 
 }
 
 dependencies {
-
-    // Private
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
 
     // AndroidX
     implementation(Libraries.AndroidX.Core)
@@ -69,6 +75,8 @@ dependencies {
     implementation(Libraries.AndroidX.LifecycleCommon)
     implementation(Libraries.AndroidX.NavigationFragment)
     implementation(Libraries.AndroidX.NavigationUI)
+    implementation(Libraries.AndroidX.SwipeRefreshLayout)
+    implementation(Libraries.AndroidX.Hilt)
 
     // Design
     implementation(Libraries.Design.MaterialComponents)
@@ -76,14 +84,21 @@ dependencies {
     implementation(Libraries.Design.Insetter)
 
     // Tools
-    implementation(Libraries.Tools.EventBus)
     implementation(Libraries.Tools.Retrofit)
+    implementation(Libraries.Tools.RetrofitMoshi)
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3")
     implementation(Libraries.Tools.Zxing)
-    implementation(Libraries.Tools.Gson)
-    implementation(Libraries.Tools.AppUpdater)
+    implementation(Libraries.Tools.Moshi)
 
     // Kotlin
     implementation(Libraries.Kotlin.Kotlin)
     implementation(Libraries.Kotlin.Coroutines)
+
+    // Compilers
+    kapt(Libraries.Compilers.Hilt)
+    kapt(Libraries.Compilers.Moshi)
+
+    // Other
+    coreLibraryDesugaring(Libraries.Other.Desugaring)
 
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="settings_appearance_theme">
+        <item>@string/settings_appearance_theme_light</item>
+        <item>@string/settings_appearance_theme_dark</item>
+        <item>@string/settings_appearance_theme_system_default</item>
+    </string-array>
+
+</resources>

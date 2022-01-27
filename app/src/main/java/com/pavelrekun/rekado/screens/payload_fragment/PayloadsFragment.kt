@@ -1,196 +1,135 @@
 package com.pavelrekun.rekado.screens.payload_fragment
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.fragment.app.activityViewModels
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.pavelrekun.magta.design.tintContrast
-import com.pavelrekun.magta.system.extractFileName
-import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentPayloadsBinding
-import com.pavelrekun.rekado.services.Constants
-import com.pavelrekun.rekado.services.Events
+import com.pavelrekun.rekado.services.constants.Mimes
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
-import com.pavelrekun.rekado.services.payloads.PayloadHelper
-import com.pavelrekun.rekado.services.payloads.Result
+import com.pavelrekun.rekado.services.extensions.extractFileName
+import com.pavelrekun.rekado.services.extensions.viewBinding
+import com.pavelrekun.rekado.services.handlers.PayloadsHandler
+import com.pavelrekun.rekado.services.handlers.PreferencesHandler
+import com.pavelrekun.rekado.services.handlers.StorageHandler
 import com.pavelrekun.rekado.services.utils.LoginUtils
-import com.pavelrekun.rekado.services.utils.MemoryUtils
-import com.pavelrekun.rekado.services.utils.PreferencesUtils
-import org.greenrobot.eventbus.EventBus
-import org.greenrobot.eventbus.Subscribe
-import org.greenrobot.eventbus.ThreadMode
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
 
+    @Inject
+    lateinit var preferencesHandler: PreferencesHandler
+
+    @Inject
+    lateinit var storageHandler: StorageHandler
+
+    @Inject
+    lateinit var payloadsHandler: PayloadsHandler
+
     private val binding by viewBinding(FragmentPayloadsBinding::bind)
-    private val viewModel by activityViewModels<PayloadsViewModel>()
+    private val viewModel: PayloadsViewModel by viewModels()
 
     private lateinit var adapter: PayloadsAdapter
+
+    private val addPayloadContract = registerForActivityResult(ActivityResultContracts.OpenDocument()) { data ->
+        val name = data.extractFileName(requireContext())
+        if (name != null) {
+            val inputStream = requireBaseActivity().contentResolver.openInputStream(data)
+
+            if (inputStream != null) {
+                storageHandler.copyPayload(inputStream, name)
+                viewModel.updatePayloads()
+                LoginUtils.info("Added new payload: $name")
+            } else {
+                Toast.makeText(requireContext(), R.string.payloads_add_external_error, Toast.LENGTH_SHORT).show()
+                LoginUtils.error("Failed to add payload: $name")
+            }
+        } else {
+            Toast.makeText(requireContext(), R.string.payloads_add_external_error, Toast.LENGTH_SHORT).show()
+            LoginUtils.error("Failed to add selected payload!")
+        }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initWithTitle(R.string.navigation_payloads)
         initObservers()
-        initList()
+        initData()
+        initUpdates()
         initClickListeners()
-        initDesign()
-        initRefreshListener()
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == Constants.KEY_OPEN_PAYLOAD) {
-            when (resultCode) {
-                Activity.RESULT_OK -> data?.data?.let {
-                    val name = it.extractFileName(requireContext())
-                    if (name != null) {
-                        val inputStream = requireBaseActivity().contentResolver.openInputStream(it)
-
-                        if (inputStream != null) {
-                            MemoryUtils.copyPayload(inputStream, name)
-                            EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
-                            LoginUtils.info("Added new payload: $name")
-                        } else {
-                            Toast.makeText(requireContext(), R.string.helper_error_adding_payload, Toast.LENGTH_SHORT).show()
-                            LoginUtils.error("Failed to add payload: $name")
-                        }
-                    } else {
-                        Toast.makeText(requireContext(), R.string.helper_error_adding_payload, Toast.LENGTH_SHORT).show()
-                        LoginUtils.error("Failed to add selected payload!")
-                    }
-                }
-            }
-        }
     }
 
     private fun initObservers() {
-        viewModel.isProgressShowing.observe(viewLifecycleOwner, { isShowing ->
+        viewModel.isProgressShowing.observe(viewLifecycleOwner) { isShowing ->
             if (isShowing) showProgress() else hideProgress()
-        })
+        }
 
-        viewModel.fetchConfigResult.observe(viewLifecycleOwner, { result ->
-            when (result) {
-                Result.SUCCESS -> {
-                    DialogsShower.showPayloadsUpdatesDialog(requireBaseActivity(), result.config, viewModel)
-                }
-                else -> {
-                }
-            }
-        })
+        viewModel.errorResult.observe(viewLifecycleOwner) {
+            DialogsShower.showPayloadsNetworkErrorDialog(requireContext(), it.message)
+            LoginUtils.error("Error occurred: ${it.message}")
 
-        viewModel.updatePayloadResult.observe(viewLifecycleOwner, { result ->
-            when (result) {
-                Result.SUCCESS -> {
-                    updateList()
-                }
-                else -> {
-                }
-            }
-        })
+            it.printStackTrace()
+        }
 
-        viewModel.downloadPayloadResult.observe(viewLifecycleOwner, { result ->
-            when (result) {
-                Result.SUCCESS -> {
-                    updateList()
-                    LoginUtils.info("Payload downloaded successfully.")
-                    Toast.makeText(requireBaseActivity(), getString(R.string.payloads_download_status_success), Toast.LENGTH_SHORT).show()
+        viewModel.configFetchSuccess.observe(viewLifecycleOwner) { newConfig ->
+            val currentConfig = preferencesHandler.getCurrentConfig()
+
+            if (newConfig.revision > currentConfig.revision) {
+                DialogsShower.showPayloadsUpdatesDialog(requireContext()) {
+                    viewModel.updatePayloads(newConfig, currentConfig)
                 }
-                else -> {
-                    Toast.makeText(requireBaseActivity(), getString(R.string.payloads_download_status_error), Toast.LENGTH_SHORT).show()
-                    LoginUtils.error("Failed to download payload.")
-                }
+            } else {
+                DialogsShower.showPayloadsNoUpdatesDialog(requireContext())
             }
-        })
+        }
+
+        viewModel.downloadSuccess.observe(viewLifecycleOwner) { payloadTitle ->
+            val message = getString(R.string.payloads_download_status_success, payloadTitle)
+            Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+            LoginUtils.info(message)
+        }
+
+        viewModel.updateList.observe(viewLifecycleOwner) { updatePayloads() }
     }
 
-    private fun initList() {
-        adapter = PayloadsAdapter(PayloadHelper.getAllPayloads())
+    private fun initData() {
+        adapter = PayloadsAdapter(payloadsHandler) { payloadToRemove ->
+            storageHandler.removePayload(payloadToRemove)
+            updatePayloads()
+        }
+
+        updatePayloads()
 
         binding.payloadsList.apply {
-            setHasFixedSize(true)
             layoutManager = LinearLayoutManager(activity)
             adapter = this@PayloadsFragment.adapter
         }
     }
 
-    private fun initDesign() {
-        binding.payloadsAddUrl.tintContrast()
-        binding.payloadsAdd.tintContrast()
-    }
+    private fun initUpdates() {
+        binding.payloadsLayoutUpdate.visibility = if (preferencesHandler.checkHideBundledPayloadsEnabled()) View.GONE else View.VISIBLE
+        binding.payloadsUpdateDescription.text = getString(R.string.payloads_update_bundled_description, getString(R.string.helper_bundled_payloads))
 
-    private fun updateList() {
-        if (this::adapter.isInitialized) {
-            adapter.updateList()
+        binding.payloadsUpdateCheck.setOnClickListener {
+            viewModel.fetchExternalConfig()
         }
     }
 
     private fun initClickListeners() {
-        binding.payloadsAddUrl.setOnClickListener { DialogsShower.showPayloadsDownloadDialog(requireBaseActivity(), viewModel) }
-        binding.payloadsAdd.setOnClickListener { addPayload() }
+        binding.payloadsDownload.setOnClickListener { DialogsShower.showPayloadsDownloadDialog(requireContext(), viewModel) }
+        binding.payloadsAdd.setOnClickListener { addPayloadContract.launch(Mimes.BINARY.toTypedArray()) }
     }
 
-    private fun addPayload() {
-        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
-        intent.addCategory(Intent.CATEGORY_OPENABLE)
-        intent.type = Constants.MIME_BINARY
-        intent.putExtra(Intent.EXTRA_TITLE, R.string.dialog_file_chooser_payload_title)
-        startActivityForResult(intent, Constants.KEY_OPEN_PAYLOAD)
-    }
-
-    private fun showProgress() {
-        if (!binding.payloadsLayoutRefresh.isRefreshing) {
-            binding.payloadsLayoutRefresh.isRefreshing = true
-        }
-    }
-
-    private fun hideProgress() {
-        if (binding.payloadsLayoutRefresh.isRefreshing) {
-            binding.payloadsLayoutRefresh.isRefreshing = false
-        }
-    }
-
-    private fun initRefreshListener() {
-        if (PreferencesUtils.checkHideBundledPayloadsEnabled()) {
-            binding.payloadsLayoutRefresh.isEnabled = false
-        }
-
-        binding.payloadsLayoutRefresh.setOnRefreshListener {
-            viewModel.fetchExternalConfig()
-        }
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onEvent(event: Events.UpdatePayloadsListEvent) {
-        updateList()
-    }
-
-    override fun onResume() {
-        super.onResume()
-
+    private fun updatePayloads() {
         if (this::adapter.isInitialized) {
-            initList()
+            adapter.submitList(payloadsHandler.getAllPayloads())
         }
-
-        if (PreferencesUtils.checkHideBundledPayloadsEnabled()) {
-            viewModel.fetchExternalConfig()
-        }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        EventBus.getDefault().register(this)
-    }
-
-    override fun onStop() {
-        super.onStop()
-        EventBus.getDefault().unregister(this)
     }
 
 }

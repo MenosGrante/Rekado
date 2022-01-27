@@ -7,15 +7,14 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/toolsSerialCheckerLayout"
+        style="?attr/materialCardViewFilledStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
-        app:cardBackgroundColor="#3949ab"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="3dp">
+        app:cardBackgroundColor="?attr/colorPrimary">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,9 +29,9 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="6dp"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="@font/ibm_plex_semi_bold"
                 android:text="@string/tools_serial_checker_title"
-                android:textColor="@color/colorWhite"
+                android:textColor="?attr/colorOnPrimarySurface"
                 android:textSize="22sp" />
 
             <TextView
@@ -44,7 +43,7 @@
                 android:layout_marginBottom="24dp"
                 android:alpha="0.6"
                 android:text="@string/tools_serial_checker_description"
-                android:textColor="@color/colorWhite"
+                android:textColor="?attr/colorOnPrimarySurface"
                 android:textSize="14sp" />
 
         </LinearLayout>

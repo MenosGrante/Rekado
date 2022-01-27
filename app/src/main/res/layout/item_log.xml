@@ -2,7 +2,7 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/itemLogRoot"
-    style="@style/Widget.Card.Filled"
+    style="?attr/materialCardViewOutlinedStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="24dp"
@@ -13,8 +13,7 @@
     <View
         android:id="@+id/itemLogType"
         android:layout_width="match_parent"
-        android:layout_height="4dp"
-        tools:background="@color/colorGreen" />
+        android:layout_height="4dp" />
 
     <TextView
         android:id="@+id/itemLogName"

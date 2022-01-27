@@ -11,8 +11,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:paddingBottom="8dp"
         android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:textColor="?android:attr/textColorPrimary"
         tools:text="Hekate" />
 
@@ -23,8 +23,8 @@
         android:layout_marginStart="16dp"
         android:background="?android:attr/selectableItemBackgroundBorderless"
         android:clickable="true"
-        android:contentDescription="@null"
+        android:contentDescription="@string/payloads_remove"
         android:focusable="true"
-        android:src="@drawable/ic_remove" />
+        android:src="@drawable/ic_payloads_remove" />
 
 </LinearLayout>

@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.pavelrekun.magta.views.ElevationRecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/logsActionsList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="8dp"
         android:clipToPadding="false"
+        android:paddingTop="8dp"
         android:paddingBottom="8dp"
         tools:listitem="@layout/item_log" />
 
@@ -22,6 +22,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:contentDescription="@string/logs_clear"
         android:src="@drawable/ic_logs_clear" />
 
 </RelativeLayout>

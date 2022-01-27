@@ -3,46 +3,52 @@ package com.pavelrekun.rekado.screens.payload_fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.pavelrekun.magta.system.EMPTY_STRING
 import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.databinding.ItemPayloadBinding
-import com.pavelrekun.rekado.services.Events
-import com.pavelrekun.rekado.services.payloads.PayloadHelper
-import com.pavelrekun.rekado.services.utils.LoginUtils
-import org.greenrobot.eventbus.EventBus
-import java.io.File
+import com.pavelrekun.rekado.services.handlers.PayloadsHandler
 
-class PayloadsAdapter(var data: MutableList<Payload>) : RecyclerView.Adapter<PayloadsAdapter.ViewHolder>() {
-
-    override fun getItemCount() = data.size
-
-    fun updateList() {
-        this.data = PayloadHelper.getAllPayloads()
-
-        notifyDataSetChanged()
-    }
+class PayloadsAdapter(private val payloadsHandler: PayloadsHandler,
+                      private val removeClickListener: (Payload) -> Unit)
+    : ListAdapter<Payload, PayloadsAdapter.ViewHolder>(DIFF_CALLBACK) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(data[position])
+        holder.bind(getItem(position))
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemPayloadBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ViewHolder(binding)
+        val viewHolder = ViewHolder(binding, payloadsHandler)
+
+        binding.itemPayloadRemove.setOnClickListener {
+            val payloadToRemove = getItem(viewHolder.bindingAdapterPosition)
+            removeClickListener.invoke(payloadToRemove)
+        }
+
+        return viewHolder
     }
 
-    class ViewHolder(private val binding: ItemPayloadBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(private val binding: ItemPayloadBinding,
+                     private val payloadsHandler: PayloadsHandler) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(payload: Payload) {
-            binding.itemPayloadName.text = if (payload.version != EMPTY_STRING) "${payload.title} [${payload.version}]" else payload.title
+            binding.itemPayloadName.text = if (!payload.version.isNullOrEmpty()) "${payload.title} [${payload.version}]" else payload.title
+            binding.itemPayloadRemove.visibility = if (payloadsHandler.isBundled(payload.title)) View.GONE else View.VISIBLE
+        }
 
-            binding.itemPayloadRemove.visibility = if (PayloadHelper.isBundled(payload.title)) View.GONE else View.VISIBLE
+    }
 
-            binding.itemPayloadRemove.setOnClickListener {
-                File(payload.getPath()).delete()
-                EventBus.getDefault().post(Events.UpdatePayloadsListEvent())
-                LoginUtils.info("Payload ${payload.title} deleted!")
+    companion object {
+
+        val DIFF_CALLBACK: DiffUtil.ItemCallback<Payload> = object : DiffUtil.ItemCallback<Payload>() {
+            override fun areItemsTheSame(oldItem: Payload, newItem: Payload): Boolean {
+                return oldItem.title == newItem.title
+            }
+
+            override fun areContentsTheSame(oldItem: Payload, newItem: Payload): Boolean {
+                return oldItem == newItem
             }
         }
 

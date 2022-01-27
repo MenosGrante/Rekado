@@ -1,29 +1,44 @@
 package com.pavelrekun.rekado.screens.serial_checker_activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.google.zxing.integration.android.IntentIntegrator
-import com.pavelrekun.magta.design.getString
-import com.pavelrekun.magta.design.isEmpty
+import androidx.core.text.HtmlCompat
+import com.journeyapps.barcodescanner.ScanContract
+import com.journeyapps.barcodescanner.ScanOptions
 import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
 import com.pavelrekun.rekado.databinding.FragmentSerialCheckerBinding
-import com.pavelrekun.rekado.services.Constants
+import com.pavelrekun.rekado.services.constants.Links
+import com.pavelrekun.rekado.services.extensions.getString
+import com.pavelrekun.rekado.services.extensions.isEmpty
 import com.pavelrekun.rekado.services.extensions.viewBinding
-import com.pavelrekun.rekado.services.utils.SerialUtils
+import com.pavelrekun.rekado.services.handlers.SerialNumberHandler
 import com.pavelrekun.rekado.services.utils.Utils
+import dagger.hilt.android.AndroidEntryPoint
 import dev.chrisbanes.insetter.applyInsetter
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
 
+    @Inject
+    lateinit var serialNumberHandler: SerialNumberHandler
+
     private val binding by viewBinding(FragmentSerialCheckerBinding::bind)
+
+    private val barcodeScannerLauncher = registerForActivityResult(ScanContract()) { result ->
+        if (result.contents != null) {
+            binding.serialCheckerField.setText(result.contents)
+            binding.serialCheckerField.requestFocus()
+        } else {
+            Toast.makeText(activity, R.string.serial_checker_status_scan_failed, Toast.LENGTH_SHORT).show()
+        }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initScrollingBehaviour(binding.serialCheckerLayoutScroll)
         initClickListeners()
         initEdgeToEdge()
 
@@ -35,7 +50,7 @@ class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
             if (binding.serialCheckerField.length() <= 14) {
                 if (!binding.serialCheckerField.isEmpty()) {
                     try {
-                        val text = SerialUtils.defineConsoleStatus(binding.serialCheckerField.getString())
+                        val text = serialNumberHandler.defineConsoleStatus(binding.serialCheckerField.getString())
                         Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()
                     } catch (e: Exception) {
                         Toast.makeText(activity, R.string.serial_checker_status_error, Toast.LENGTH_SHORT).show()
@@ -49,14 +64,17 @@ class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
         }
 
         binding.serialCheckerHelp.setOnClickListener {
-            Utils.openLink(requireBaseActivity(), Constants.HELP_SERIAL_CHECKER)
+            Utils.openLink(requireBaseActivity(), Links.HELP_SERIAL_CHECKER)
         }
 
         binding.serialCheckerScan.setOnClickListener {
-            IntentIntegrator(activity).apply {
+            val scanOptions = ScanOptions().apply {
+                setDesiredBarcodeFormats(ScanOptions.ONE_D_CODE_TYPES)
                 setOrientationLocked(false)
                 setBeepEnabled(false)
-            }.initiateScan()
+            }
+
+            barcodeScannerLauncher.launch(scanOptions)
         }
     }
 
@@ -69,7 +87,8 @@ class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
                 getString(R.string.serial_checker_information_xaj7) +
                 getString(R.string.serial_checker_information_xaw9) +
                 getString(R.string.serial_checker_information_xak)
-        binding.serialCheckerInformation.text = serialsInformation
+
+        binding.serialCheckerInformation.text = HtmlCompat.fromHtml(serialsInformation, HtmlCompat.FROM_HTML_MODE_LEGACY)
     }
 
     private fun initEdgeToEdge() {
@@ -80,15 +99,5 @@ class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
-
-        if (result.contents != null) {
-            binding.serialCheckerField.setText(result.contents)
-            binding.serialCheckerField.requestFocus()
-        } else {
-            Toast.makeText(activity, R.string.serial_checker_status_scan_failed, Toast.LENGTH_SHORT).show()
-        }
-    }
 
 }

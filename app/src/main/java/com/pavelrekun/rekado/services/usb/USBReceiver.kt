@@ -4,24 +4,29 @@ import android.hardware.usb.UsbDevice
 import android.hardware.usb.UsbManager
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
-import com.pavelrekun.rekado.base.BaseActivity
-import com.pavelrekun.rekado.services.Events
+import androidx.appcompat.app.AppCompatActivity
+import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.services.dialogs.DialogsShower
-import com.pavelrekun.rekado.services.payloads.PayloadHelper
-import com.pavelrekun.rekado.services.payloads.PayloadLoader
+import com.pavelrekun.rekado.services.handlers.PayloadsHandler
+import com.pavelrekun.rekado.services.handlers.PreferencesHandler
 import com.pavelrekun.rekado.services.utils.LoginUtils
-import com.pavelrekun.rekado.services.utils.PreferencesUtils
 import com.pavelrekun.rekado.services.utils.Utils
-import org.greenrobot.eventbus.EventBus
-import org.greenrobot.eventbus.Subscribe
-import org.greenrobot.eventbus.ThreadMode
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
+class USBReceiver : AppCompatActivity() {
 
-class USBReceiver : BaseActivity() {
+    @Inject
+    lateinit var usbPayloadLoader: USBPayloadLoader
+
+    @Inject
+    lateinit var preferencesHandler: PreferencesHandler
+
+    @Inject
+    lateinit var payloadsHandler: PayloadsHandler
 
     private lateinit var device: UsbDevice
-
-    private var usbHandler: USBHandler? = null
 
     private lateinit var payloadChooserDialog: AlertDialog
 
@@ -33,50 +38,29 @@ class USBReceiver : BaseActivity() {
 
             LoginUtils.info("USB device connected: ${device.deviceName}")
 
-            if (PreferencesUtils.checkAutoInjectorEnabled()) {
-                PreferencesUtils.putChosen(PayloadHelper.find(PreferencesUtils.getAutoInjectorPayload()!!))
-                injectPayload()
+            if (preferencesHandler.checkAutoInjectorEnabled()) {
+                val defaultPayload = payloadsHandler.getAllPayloads().first().title
+                injectPayload(payloadsHandler.find(preferencesHandler.getAutoInjectorPayload(defaultPayload)))
             } else {
-                if (PayloadHelper.checkPayloadsExists()) {
-                    payloadChooserDialog = DialogsShower.showPayloadsDialog(this)
+                if (payloadsHandler.checkPayloadsExists()) {
+                    payloadChooserDialog = DialogsShower.showPayloadsDialog(this, payloadsHandler, ::injectPayload, ::finishReceiver)
                 } else {
-                    DialogsShower.showNoPayloadsDialog(this)
+                    DialogsShower.showNoPayloadsDialog(this, ::finishReceiver)
                 }
 
             }
         }
     }
 
-    private fun injectPayload() {
+    private fun injectPayload(payload: Payload) {
         if (Utils.isRCM(device)) {
-            usbHandler = PayloadLoader()
+            usbPayloadLoader.handleDevice(payload, device)
+            LoginUtils.info("Payload loading finished for device: ${device.deviceName}")
+        } else {
+            LoginUtils.info("${device.deviceName} is not RCM device! Aborting injection.")
         }
 
-        usbHandler?.handleDevice(device)
-
-        LoginUtils.info("Payload loading finished for device: ${device.deviceName}")
-
         finishReceiver()
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onEvent(event: Events.PayloadSelected) {
-        injectPayload()
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onEvent(event: Events.PayloadNotSelected) {
-        finishReceiver()
-    }
-
-    override fun onStart() {
-        super.onStart()
-        EventBus.getDefault().register(this)
-    }
-
-    override fun onStop() {
-        EventBus.getDefault().unregister(this)
-        super.onStop()
     }
 
     private fun finishReceiver() {
@@ -84,8 +68,7 @@ class USBReceiver : BaseActivity() {
             payloadChooserDialog.dismiss()
         }
 
-        usbHandler?.releaseDevice()
-        usbHandler = null
+        usbPayloadLoader.releaseDevice()
         finish()
     }
 }

@@ -1,10 +1,9 @@
 package com.pavelrekun.rekado.data
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.JsonClass
 
+@JsonClass(generateAdapter = true)
 data class Config(
-        @SerializedName("payloads")
         val payloads: MutableList<Payload>,
-        @SerializedName("timestamp")
-        val timestamp: Int
+        val revision: Int
 )

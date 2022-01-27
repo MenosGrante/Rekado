@@ -1,4 +1,8 @@
-apply(from = rootProject.file("gradle/updates.gradle"))
+import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
+
+plugins {
+    id("com.github.ben-manes.versions") version Versions.Gradle.Updates
+}
 
 buildscript {
 
@@ -10,8 +14,8 @@ buildscript {
 
     dependencies {
         classpath (Plugins.GradlePlugin)
-        classpath (Plugins.GradleUpdates)
         classpath (Plugins.Kotlin)
+        classpath (Plugins.Hilt)
     }
 
 }
@@ -22,13 +26,19 @@ allprojects {
         mavenCentral()
 
         maven { url = uri("https://jitpack.io") }
-
-        flatDir {
-            dir("libs")
-        }
     }
 }
 
 tasks.register("clean", Delete::class) {
     delete(rootProject.buildDir)
+}
+
+// Task to check update for all dependencies (libraries/plugins/gradle version)
+tasks.named<DependencyUpdatesTask>("dependencyUpdates").configure {
+
+    // Don't disable "Jacoco" updates | Don't display "non-stable" dependencies updates
+    rejectVersionIf {
+        candidate.module == "org.jacoco.ant" || candidate.version.isDependencyNonStable()
+    }
+
 }

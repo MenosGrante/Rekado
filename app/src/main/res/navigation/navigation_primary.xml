@@ -6,27 +6,80 @@
 
     <fragment
         android:id="@+id/navigationInstructions"
-        android:name="com.pavelrekun.rekado.screens.instructions_fragment.InstructionsFragment"
-        android:label="InstructionsFragment" />
+        android:name="com.pavelrekun.rekado.screens.instructions_fragment.InstructionsFragment">
+
+        <argument
+            android:name="NAVIGATION_TITLE"
+            android:defaultValue="@string/navigation_instructions"
+            app:argType="reference" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigationLogs"
-        android:name="com.pavelrekun.rekado.screens.logs_fragment.LogsFragment"
-        android:label="LogsFragment" />
+        android:name="com.pavelrekun.rekado.screens.logs_fragment.LogsFragment">
+
+        <argument
+            android:name="NAVIGATION_TITLE"
+            android:defaultValue="@string/navigation_logs"
+            app:argType="reference" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigationPayloads"
-        android:name="com.pavelrekun.rekado.screens.payload_fragment.PayloadsFragment"
-        android:label="PayloadsFragment" />
+        android:name="com.pavelrekun.rekado.screens.payload_fragment.PayloadsFragment">
+
+        <argument
+            android:name="NAVIGATION_TITLE"
+            android:defaultValue="@string/navigation_payloads"
+            app:argType="reference" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigationTools"
-        android:name="com.pavelrekun.rekado.screens.tools_fragment.ToolsFragment"
-        android:label="ToolsFragment" />
+        android:name="com.pavelrekun.rekado.screens.tools_fragment.ToolsFragment">
 
-    <activity
-        android:id="@+id/navigationContainerSecondary"
-        android:name="com.pavelrekun.rekado.containers.SecondaryContainerActivity"
-        android:label="SecondaryContainerActivity" />
+        <argument
+            android:name="NAVIGATION_TITLE"
+            android:defaultValue="@string/navigation_tools"
+            app:argType="reference" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationAbout"
+        android:name="com.pavelrekun.rekado.screens.about_fragment.AboutFragment">
+
+        <argument
+            android:name="NAVIGATION_TITLE"
+            android:defaultValue="@string/navigation_about"
+            app:argType="reference" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationSettings"
+        android:name="com.pavelrekun.rekado.screens.settings_fragment.SettingsFragment">
+
+        <argument
+            android:name="NAVIGATION_TITLE"
+            android:defaultValue="@string/navigation_settings"
+            app:argType="reference" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigationSerialChecker"
+        android:name="com.pavelrekun.rekado.screens.serial_checker_activity.SerialCheckerFragment">
+
+        <argument
+            android:name="NAVIGATION_TITLE"
+            android:defaultValue="@string/navigation_serial_checker"
+            app:argType="reference" />
+
+    </fragment>
 
 </navigation>

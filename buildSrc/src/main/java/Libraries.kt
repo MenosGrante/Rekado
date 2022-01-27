@@ -11,6 +11,8 @@ object Libraries {
         val LifecycleCommon by lazy { "androidx.lifecycle:lifecycle-common-java8:${Versions.AndroidX.Lifecycle}" }
         val NavigationFragment by lazy { "androidx.navigation:navigation-fragment-ktx:${Versions.AndroidX.Navigation}" }
         val NavigationUI by lazy { "androidx.navigation:navigation-ui-ktx:${Versions.AndroidX.Navigation}" }
+        val SwipeRefreshLayout by lazy { "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.AndroidX.SwipeRefreshLayout}" }
+        val Hilt by lazy { "com.google.dagger:hilt-android:${Versions.AndroidX.Hilt}" }
     }
 
     object Design {
@@ -20,16 +22,24 @@ object Libraries {
     }
 
     object Tools {
-        val EventBus by lazy { "org.greenrobot:eventbus:${Versions.Tools.EventBus}" }
-        val Gson by lazy { "com.google.code.gson:gson:${Versions.Tools.Gson}" }
+        val Moshi by lazy { "com.squareup.moshi:moshi-kotlin:${Versions.Tools.Moshi}" }
         val Retrofit by lazy { "com.squareup.retrofit2:retrofit:${Versions.Tools.Retrofit}" }
+        val RetrofitMoshi by lazy { "com.squareup.retrofit2:converter-moshi:${Versions.Tools.Retrofit}" }
         val Zxing by lazy { "com.journeyapps:zxing-android-embedded:${Versions.Tools.Zxing}" }
-        val AppUpdater by lazy { "com.github.javiersantos:AppUpdater:${Versions.Tools.AppUpdater}" }
     }
 
     object Kotlin {
         val Kotlin by lazy { "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.Kotlin.Kotlin}" }
         val Coroutines by lazy { "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.Kotlin.Coroutines}" }
+    }
+
+    object Compilers {
+        val Hilt by lazy { "com.google.dagger:hilt-android-compiler:${Versions.AndroidX.Hilt}" }
+        val Moshi by lazy { "com.squareup.moshi:moshi-kotlin-codegen:${Versions.Tools.Moshi}" }
+    }
+
+    object Other {
+        val Desugaring by lazy { "com.android.tools:desugar_jdk_libs:${Versions.Other.Desugaring}" }
     }
 
 }
