@@ -27,6 +27,7 @@ object Versions {
         const val Moshi = "1.13.0"
         const val Retrofit = "2.9.0"
         const val Zxing = "4.3.0"
+        const val OkHttpLogging = "4.9.3"
     }
 
     object Kotlin {

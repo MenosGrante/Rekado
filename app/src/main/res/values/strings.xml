@@ -34,7 +34,7 @@
     <string name="payloads_add">Add own payload</string>
     <string name="payloads_remove">Remove payload</string>
     <string name="payloads_download_status_empty">The name or URL should not be empty!</string>
-    <string name="payloads_download_status_success">Payload %1$s downloaded successfully! </string>
+    <string name="payloads_download_status_success">Payload %1$s downloaded successfully!</string>
     <string name="payloads_add_external_error">Selected payload can not be added!</string>
     <!-- endregion -->
 
@@ -121,7 +121,7 @@
     <string name="serial_checker_information_xaj4"><![CDATA["<b>Serials beginning with XAJ4</b><br />XAJ40000000000 - XAJ40046000000: Not patched<br />XAJ40046000000 - XAJ40060000000: Possibly patched<br />XAJ40060000000 and higher: Patched<br /><br />]]></string>
     <string name="serial_checker_information_xaj7"><![CDATA["<b>Serials beginning with XAJ7</b><br />XAJ70000000000 - XAJ70040000000: Not patched<br />XAJ70040000000 - XAJ70050000000: Possibly patched<br />XAJ70050000000 and higher: Patched<br /><br />]]></string>
     <string name="serial_checker_information_xaw9"><![CDATA["<b>Serials beginning with XAW9</b><br />Refurbished units directly from Nintendo, no information, but very possible all of them are patched.<br /><br />]]></string>
-    <string name="serial_checker_information_xak"><![CDATA["<b>Serials beginning with XAK</b><br />No information available, since those are only sold in Korea.]]></string>
+    <string name="serial_checker_information_xak"><![CDATA["<b>Serials beginning with XAK</b><br />No information is available, since those are only sold in Korea.]]></string>
     <string name="serial_checker_scan_barcode">Scan barcode</string>
     <string name="serial_checker_help">Help</string>
     <string name="serial_checker_status_not_patched">Not patched</string>
@@ -134,6 +134,6 @@
     <!-- endregion -->
 
     <!-- region: Helper -->
-    <string name="helper_bundled_payloads">Fusee &amp; Hekate</string>
+    <string name="helper_bundled_payloads" translatable="false">Fusee &amp; Hekate</string>
     <!-- endregion -->
 </resources>

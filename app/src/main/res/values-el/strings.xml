@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- region: Navigation -->
+    <string name="navigation_payloads">Payloads</string>
+    <string name="navigation_tools">Εργαλεία</string>
+    <string name="navigation_instructions">Οδηγίες</string>
+    <string name="navigation_logs">Καταγραφή Σφαλμάτων</string>
+    <string name="navigation_about">Πληροφορίες για το Rekado</string>
+    <string name="navigation_donate">Υποστήριξη προγραμματιστή</string>
+    <string name="navigation_settings">Ρυθμίσεις</string>
+    <string name="navigation_serial_checker">Έλεγχος σειριακού αριθμού</string>
+    <!-- endregion -->
+    <!-- region: About -->
+    <string name="about_category_description">Περιγραφή</string>
+    <string name="about_category_developer">Προγραμματιστής</string>
+    <string name="about_information_description">Το Rekado είναι μια εφαρμογή - εργαλειοθήκη για το Nintendo Switch σας που ελέγχει αν η κονσόλα σας είναι ευάλωτη, στην εισαγωγή payload, μέσω του σειριακού αριθμού της</string>
+    <string name="about_developer_portfolio_title">Επαγγελματικό προφίλ</string>
+    <string name="about_developer_portfolio_summary">Όλες οι πληροφορίες σχετικές με εμένα (τον προγραμματιστή) και σελίδα με τα νέα μου</string>
+    <string name="about_developer_instagram_summary">Προφίλ με φωτογραφίες από το χόμπι μου με τα drone</string>
+    <string name="about_developer_github_summary">Λίστα εφαρμογών μου ανοικτού κώδικα</string>
+    <string name="about_developer_twitter_summary">Προσωπική σελίδα με τα νέα μου</string>
+    <!-- endregion -->
+    <!-- region: Payloads -->
+    <string name="payloads_update_bundled_title">Ενημέρωση ενσωματωμένων payload</string>
+    <string name="payloads_update_bundled_description">Έλεγχος για ενημερώσεις για τα ενσωματωμένα payload - %1$s.</string>
+    <string name="payloads_update_bundled_button_update">Έλεγχος για ενημερώσεις</string>
+    <string name="payloads_download">Λήψη payload</string>
+    <string name="payloads_add">Προσθήκη δικού σας payload</string>
+    <string name="payloads_remove">Αφαίρεση payload</string>
+    <string name="payloads_download_status_empty">Το όνομα ή ο σύνδεσμος δεν πρέπει να είναι κενά!</string>
+    <string name="payloads_download_status_success">Η λήψη του %1$s payload ολοκληρώθηκε επιτυχώς! </string>
+    <string name="payloads_add_external_error">Επιλέξατε payload που δεν μπορεί να προστεθεί!</string>
+    <!-- endregion -->
+    <!-- region: Logs -->
+    <string name="logs_clear">Εκκαθάριση</string>
+    <!-- endregion -->
+    <!-- region: Tools -->
+    <string name="tools_serial_checker_title">Έλεγχος σειριακού αριθμού</string>
+    <string name="tools_serial_checker_description">Ελέγξτε εάν το Nintendo Switch σας είναι ευάλωτο, χρησιμοποιώντας τον μοναδικό σειριακό αριθμό του</string>
+    <!-- endregion -->
+    <!-- region: Instructions -->
+    <string name="instructions_category_cable">Καλώδιο</string>
+    <string name="instructions_category_cable_description">Πρώτα απ\'όλα, πρέπει να βρείτε ένα καλώδιο για να συνδέσετε την συσκευή σας με το Nintendo Switch. Για να λειτουργήσει σωστά, πρέπει να είναι καλώδιο μεταφοράς δεδομένων, και όχι μόνο για φόρτιση.\n\nΠροτείνεται χρήση ενός καλωδίου από USB A σε USB C και ένας αντάπτορας USB OTG (συμβατός με το κινητό σας).</string>
+    <string name="instructions_category_payload">Payload</string>
+    <string name="instructions_category_payload_description">Μπορείτε να προσθέσετε δικά σας payload από τον αποθηκευτικό χώρο της συσκευής σας (πατώντας το εικονίδιο «+»), μπορείτε να το κατεβάσετε μέσω απευθείας συνδέσμου (πατώντας το εικονίδιο «σύννεφο») στην οθόνη με τα Payloads ή απλά να το μετακινήστε στο φάκελο του Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nΜπορείτε επίσης να χρησιμοποιήσετε ένα από τα συνηθισμένα ενσωματωμένα payload - %1$s.</string>
+    <string name="instructions_category_rcm_help">Βοήθεια</string>
+    <string name="instructions_category_rcm_description">Βάλτε το Nintendo Switch σας σε λειτουργία RCM με όποιο τρόπο σας βολεύει.\n\nΤο Nintendo Switch σας ανοίγει μόνο του μόλις συνδεθεί μέσω USB, απλώς σιγουρευτείτε κατά την σύνδεση, ότι κρατάτε πατημένο το κουμπί αύξησης έντασης «+».</string>
+    <string name="instructions_category_final">Τελικό βήμα</string>
+    <string name="instructions_category_final_description">Συνδέστε τη συσκευή σας με το Nintendo Switch και αποδεχτείτε την άδεια πρόσβασης USB, εάν σας ζητηθεί. Περιμένετε μέχρι να εμφανιστεί η οθόνη επιλογής payload και επιλέξτε το payload που θέλετε να φορτώσει.</string>
+    <!-- endregion -->
+    <!-- region: Donate -->
+    <string name="donate_description">Θα θέλατε να βοηθήσετε περισσότερο στην ανάπτυξη αυτής και όλων των υπολοίπων εφαρμογών μου; Εάν ναι, δείτε τη σελίδα \"Buy me a coffee\" :)</string>
+    <string name="donate_button">Υποστήριξη στο «Buy me a coffee»</string>
+    <!-- endregion -->
+    <!-- region: Settings -->
+    <string name="settings_category_auto_injector">Αυτόματη φόρτωση</string>
+    <string name="settings_auto_injector_status_title">Αυτόματη φόρτωση</string>
+    <string name="settings_auto_injector_status_summary">Αυτόματη φόρτωση του επιλεγμένου payload χωρίς κάποια επιβεβαίωση</string>
+    <string name="settings_auto_injector_payload_title">Payload</string>
+    <string name="settings_category_payloads">Payloads</string>
+    <string name="settings_payloads_hide_title">Απόκρυψη ενσωματωμένων payload</string>
+    <string name="settings_payloads_hide_summary">Απόκρυψη όλων των ενσωματωμένων payload (%1$s)</string>
+    <string name="settings_payloads_reset_title">Εκκαθάριση</string>
+    <string name="settings_payloads_reset_summary">Αφαίρεση όλων των payload που προσθέσατε εκτός των ενσωματωμένων (%1$s)</string>
+    <string name="settings_category_appearance">Εμφάνιση</string>
+    <string name="settings_appearance_theme_title">Θέμα</string>
+    <string name="settings_appearance_theme_summary">Το κύριο θέμα της εφαρμογής</string>
+    <string name="settings_appearance_theme_light">Ανοικτό</string>
+    <string name="settings_appearance_theme_dark">Σκούρο</string>
+    <string name="settings_appearance_theme_system_default">Προεπιλογή συστήματος</string>
+    <string name="settings_appearance_dynamic_colors_title">Χρήση δυναμικών χρωμάτων</string>
+    <string name="settings_appearance_dynamic_colors_summary">Χρήση δυναμικών χρωμάτων ανάλογα με το φόντο της συσκευής σας (Android 12 και άνω)</string>
+    <!-- endregion -->
+    <!-- region: DialogsShower -->
+    <string name="dialog_loader_title">Επιλέξτε payload</string>
+    <string name="dialog_reset_payloads_title">Εκκαθάριση</string>
+    <string name="dialog_reset_payloads_summary">Σίγουρα θέλετε να διαγράψετε τα payload;</string>
+    <string name="dialog_payload_download_title">Λήψη payload</string>
+    <string name="dialog_payload_download_field_title">Όνομα</string>
+    <string name="dialog_payload_update_title">Ενημερώσεις payload</string>
+    <string name="dialog_payload_update_message">Υπάρχει διαθέσιμη ενημέρωση για κάποια από τα ενσωματωμένα payload. Προτείνεται η ενημέρωση τους.</string>
+    <string name="dialog_payload_no_updates_title">Δεν υπάρχουν ενημερώσεις</string>
+    <string name="dialog_payload_no_updates_message">Δε βρέθηκαν ενημερώσεις. Χρησιμοποιείτε τα τελευταία ενσωματωμένα payload.</string>
+    <string name="dialog_payload_network_error_title">Παρουσιάστηκε σφάλμα</string>
+    <string name="dialog_payload_network_error_message">Παρουσιάστηκε μη αναμενόμενο σφάλμα. Παρακαλώ ξαναδοκιμάστε αργότερα.</string>
+    <string name="dialog_loader_no_payloads_title">Δεν υπάρχουν payloads</string>
+    <string name="dialog_loader_no_payloads_description">Φαίνεται πως δεν προσθέσατε κάποιο εξωτερικό payload και αποκρύψατε τα ενσωματωμένα payload. Η φόρτωση payload δεν είναι δυνατή.\n\nΠροσθέστε τα payloads σας ή απενεργοποιήστε την «Απόκρυψη ενσωματωμένων payload» στις ρυθμίσεις και προσπαθήστε ξανά.</string>
+    <string name="dialog_settings_appearance_theme_title">Θέμα</string>
+    <string name="dialog_settings_auto_injector_payload_title">Αυτόματη φόρτωση payload</string>
+    <string name="dialog_button_download">Λήψη</string>
+    <string name="dialog_button_update">Ενημέρωση payload</string>
+    <string name="dialog_button_negative_close">Κλείσιμο</string>
+    <string name="dialog_button_negative_cancel">Ακύρωση</string>
+    <!-- endregion -->
+    <!-- region: Serial Checker -->
+    <string name="serial_checker_category_checker">Έλεγχος σειριακού αριθμού</string>
+    <string name="serial_checker_category_information">Πληροφορίες</string>
+    <string name="serial_checker_checker_serial_number">Σειριακός αριθμός</string>
+    <string name="serial_checker_checker_button">Έλεγχος</string>
+    <string name="serial_checker_information_xaw1"><![CDATA["<b>Σειριακοί αριθμοί κονσολών με αρχικά XAW1</b><br />XAW10000000000 - XAW10074000000: Ευάλωτα<br />XAW10075000000 - XAW10120000000: Μάλλον μη ευάλωτα<br />από XAW10120000000 και άνω: μη ευάλωτα<br /><br />]]></string>
+    <string name="serial_checker_information_xaw4"><![CDATA["<b>Σειριακοί αριθμοί κονσολών με αρχικά XAW4</b><br />XAW40000000000 - XAW40011000000: Ευάλωτα<br />XAW40011000000 - XAW40012000000: Μάλλον μη ευάλωτα<br />από XAW40012000000 και άνω: μη ευάλωτα<br /><br />]]></string>
+    <string name="serial_checker_information_xaw7"><![CDATA["<b>Σειριακοί αριθμοί κονσολών με αρχικά XAW7</b><br />XAW70000000000 - XAW70017800000: Ευάλωτα<br />XAW70017800000 - XAW70030000000: Μάλλον μη ευάλωτα<br />από XAW70030000000 και άνω: μη ευάλωτα<br /><br />]]></string>
+    <string name="serial_checker_information_xaj1"><![CDATA["<b>Σειριακοί αριθμοί κονσολών με αρχικά XAJ1</b><br />XAJ10000000000 - XAJ10020000000: Ευάλωτα<br />XAJ10020000000 - XAJ10030000000: Μάλλον μη ευάλωτα<br />από XAJ10030000000 και άνω: μη ευάλωτα<br /><br />]]></string>
+    <string name="serial_checker_information_xaj4"><![CDATA["<b>Σειριακοί αριθμοί κονσολών με αρχικά XAJ4</b><br />XAJ40000000000 - XAJ40046000000: Ευάλωτα<br />XAJ40046000000 - XAJ40060000000: Μάλλον μη ευάλωτα<br />από XAJ40060000000 και άνω: μη ευάλωτα<br /><br />]]></string>
+    <string name="serial_checker_information_xaj7"><![CDATA["<b>Σειριακοί αριθμοί κονσολών με αρχικά XAJ7</b><br />XAJ70000000000 - XAJ70040000000: Ευάλωτα<br />XAJ70040000000 - XAJ70050000000: Μάλλον μη ευάλωτα<br />από XAJ70050000000 και άνω: μη ευάλωτα<br /><br />]]></string>
+    <string name="serial_checker_information_xaw9"><![CDATA["<b> Σειριακοί με αρχικά XAW9</b><br /> Επισκευασμένες κονσόλες απευθείας από το εργοστάσιο της Nintendo, δεν υπάρχουν πληροφορίες, αλλά πολύ πιθανόν να είναι όλες μη ευάλωτες.<br /><br />]]></string>
+    <string name="serial_checker_information_xak"><![CDATA["<b>Σειριακοί με αρχικά XAK</b><br />Δεν υπάρχουν διαθέσιμες πληροφορίες, επειδή αυτές οι κονσόλες πωλούνται μόνο στην Κορέα.]]></string>
+    <string name="serial_checker_scan_barcode">Σάρωση barcode</string>
+    <string name="serial_checker_help">Βοήθεια</string>
+    <string name="serial_checker_status_not_patched">Ευάλωτη κονσόλα</string>
+    <string name="serial_checker_status_patched">Μη ευάλωτη κονσόλα</string>
+    <string name="serial_checker_status_possibly_patched">Μάλλον, μη ευάλωτη κονσόλα</string>
+    <string name="serial_checker_status_error">Αδυναμία ελέγχου αυτού του σειριακού αριθμού!</string>
+    <string name="serial_checker_status_empty">Ο σειριακός αριθμός δε γίνεται να είναι κενός!</string>
+    <string name="serial_checker_status_too_long">Το μέγιστο μήκος σειριακού αριθμού είναι 14 χαρακτήρες!</string>
+    <string name="serial_checker_status_scan_failed">Αδυναμία σάρωσης barcode!</string>
+    <!-- endregion -->
+    <!-- region: Helper -->
+    <!-- endregion -->
+</resources>

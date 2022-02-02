@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- region: Navigation -->
+    <string name="navigation_payloads">Payloads</string>
+    <string name="navigation_tools">Outils</string>
+    <string name="navigation_instructions">Instructions</string>
+    <string name="navigation_logs">Logs</string>
+    <string name="navigation_about">À propos de Rekado</string>
+    <string name="navigation_donate">Soutenir le développement</string>
+    <string name="navigation_settings">Paramètres</string>
+    <string name="navigation_serial_checker">Vérificateur de numéro de série</string>
+    <!-- endregion -->
+    <!-- region: About -->
+    <string name="about_category_description">Description</string>
+    <string name="about_category_developer">Développeur</string>
+    <string name="about_information_description">Rekado est une appli boîte à outils pour la Nintendo Switch incluant un injecteur de payloads et permettant de vérifier si la console est vulnérable avec le numéro de série.</string>
+    <string name="about_developer_portfolio_title">Portfolio</string>
+    <string name="about_developer_portfolio_summary">Toutes les informations sur le développeur et le blog avec des nouvelles</string>
+    <string name="about_developer_instagram_summary">Profile sur les hobbies et photo de drone</string>
+    <string name="about_developer_github_summary">Liste des applis open source</string>
+    <string name="about_developer_twitter_summary">Micro-blog personnel</string>
+    <!-- endregion -->
+    <!-- region: Payloads -->
+    <string name="payloads_update_bundled_title">Mettre à jour les payloads empaquetés</string>
+    <string name="payloads_update_bundled_description">Vérifier les mises à jour pour tous les payloads intégrés - %1$s.</string>
+    <string name="payloads_update_bundled_button_update">Vérifier les mises à jour</string>
+    <string name="payloads_download">Télécharger le payload</string>
+    <string name="payloads_add">Ajouter un payload spécifique</string>
+    <string name="payloads_remove">Retirer le payload</string>
+    <string name="payloads_download_status_empty">Le nom ou l\'URL ne devraient pas être vides !</string>
+    <string name="payloads_download_status_success">Payload %1$s téléchargé avec succès ! </string>
+    <string name="payloads_add_external_error">Le payload sélectionné ne peut pas être ajouté !</string>
+    <!-- endregion -->
+    <!-- region: Logs -->
+    <string name="logs_clear">Effacer</string>
+    <!-- endregion -->
+    <!-- region: Tools -->
+    <string name="tools_serial_checker_title">Vérificateur de numéro de série</string>
+    <string name="tools_serial_checker_description">Vérifiez si votre Nintendo Switch est vulnérable en utilisant le vérificateur de numéro de série</string>
+    <!-- endregion -->
+    <!-- region: Instructions -->
+    <string name="instructions_category_cable">Câble</string>
+    <string name="instructions_category_cable_description">Pour commencer, vous devez avoir un câble pour connecter votre appareil à la Switch. Pour un bon fonctionnement, le câble doit permettre la transmission de données, pas seulement charger la batterie.\n\nIl est conseillé d\'utiliser un câble USB type A vers type C et un adaptateur USB OTG.</string>
+    <string name="instructions_category_payload">Payload</string>
+    <string name="instructions_category_payload_description">Vous pouvez ajouter votre payload à partir de la mémoire de l\'appareil (cliquez sur le bouton \"+\"), téléchargez-le via un lien direct (cliquez sur le bouton avec l\'icône en forme de nuage) sur l\'écran \"Payloads\" ou simplement déplacez-le dans le dossier Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nVous pouvez également utiliser l\'un des payloads intégrés - %1$s.</string>
+    <string name="instructions_category_rcm_help">Aide</string>
+    <string name="instructions_category_rcm_description">Mettez votre Switch en mode RCM par la méthode de votre choix. \n\nVotre Switch démarrera automatiquement lorsque vous brancherez le câble, veuillez vous assurer que vous appuyez sur le bouton VOLUME + de la Switch avant le branchement.</string>
+    <string name="instructions_category_final">Finalement</string>
+    <string name="instructions_category_final_description">Connectez votre appareil à la Switch et autorisez la permission pour l\'accès USB si nécessaire. Attendez que l\'application ouvre le menu de choix de payload et sélectionner celui que vous voulez injecter.</string>
+    <!-- endregion -->
+    <!-- region: Donate -->
+    <string name="donate_description">Vous voulez soutenir le développement de cette application et de toutes les autres encore plus ? Alors vous pouvez devenir mon \"Patreon\" ! :)</string>
+    <string name="donate_button">Me soutenir en \"achetant un café\"</string>
+    <!-- endregion -->
+    <!-- region: Settings -->
+    <string name="settings_category_auto_injector">Injection automatique</string>
+    <string name="settings_auto_injector_status_title">Injection automatique</string>
+    <string name="settings_auto_injector_status_summary">Injection automatique de payloads sans confirmation en utilisant le payload sélectionné</string>
+    <string name="settings_auto_injector_payload_title">Payload</string>
+    <string name="settings_category_payloads">Payloads</string>
+    <string name="settings_payloads_hide_title">Masquer les payloads incluses avec l\'appli</string>
+    <string name="settings_payloads_hide_summary">Masquer tous les payloads préintégrés (%1$s)</string>
+    <string name="settings_payloads_reset_title">Effacer</string>
+    <string name="settings_payloads_reset_summary">Retirer tous les payloads sauf ceux préchargés (%1$s)</string>
+    <string name="settings_category_appearance">Apparence</string>
+    <string name="settings_appearance_theme_title">Thème</string>
+    <string name="settings_appearance_theme_summary">Thème principal de l\'application</string>
+    <string name="settings_appearance_theme_light">Clair</string>
+    <string name="settings_appearance_theme_dark">Foncé</string>
+    <string name="settings_appearance_theme_system_default">Par défaut</string>
+    <string name="settings_appearance_dynamic_colors_title">Utiliser des couleurs dynamiques</string>
+    <string name="settings_appearance_dynamic_colors_summary">Utilisez des couleurs dynamiques à partir des fonds d\'écran sur Android 12 et supérieur</string>
+    <!-- endregion -->
+    <!-- region: DialogsShower -->
+    <string name="dialog_loader_title">Choisir un payload</string>
+    <string name="dialog_reset_payloads_title">Effacer</string>
+    <string name="dialog_reset_payloads_summary">Êtes-vous sur de vouloir effacer ce payload ?</string>
+    <string name="dialog_payload_download_title">Télécharger</string>
+    <string name="dialog_payload_download_field_title">Nom</string>
+    <string name="dialog_payload_update_title">Mises à jour des payloads</string>
+    <string name="dialog_payload_update_message">Il y a une mise à jour pour certaines des payloads incluses. La mise à jour est recommandée.</string>
+    <string name="dialog_payload_no_updates_title">Aucune mise à jour</string>
+    <string name="dialog_payload_no_updates_message">Aucune mise à jour n\'a été trouvée. Vous utilisez le payload intégré le plus récent.</string>
+    <string name="dialog_payload_network_error_title">Une erreur est survenue</string>
+    <string name="dialog_payload_network_error_message">Une erreur inattendue s\'est produite. Veuillez réessayer plus tard.</string>
+    <string name="dialog_loader_no_payloads_title">Pas de payload</string>
+    <string name="dialog_loader_no_payloads_description">Il semblerait que vous n\'avez pas ajouter de payload externe et avez caché les payloads incluses. L\'injection est impossible.\n\nAjoutez vos payloads ou désactivez l\'option pour cacher les payloads incluses dans les options, puis réessayez.</string>
+    <string name="dialog_settings_appearance_theme_title">Thème</string>
+    <string name="dialog_settings_auto_injector_payload_title">Injecteur automatique de payload</string>
+    <string name="dialog_button_download">Télécharger</string>
+    <string name="dialog_button_update">Mettre à jour les payloads.</string>
+    <string name="dialog_button_negative_close">Fermer</string>
+    <string name="dialog_button_negative_cancel">Annuler</string>
+    <!-- endregion -->
+    <!-- region: Serial Checker -->
+    <string name="serial_checker_category_checker">Vérificateur</string>
+    <string name="serial_checker_category_information">Information</string>
+    <string name="serial_checker_checker_serial_number">Vérificateur de numéro de série</string>
+    <string name="serial_checker_checker_button">Vérifier</string>
+    <string name="serial_checker_information_xaw1"><![CDATA["<b>Numéro de série débutant par XAW1</b><br />XAW10000000000 - XAW10074000000 : Non patché<br />XAW10075000000 - XAW10120000000 : Possiblement patché<br />XAW10120000000 et supérieur : Patché<br /><br />]]></string>
+    <string name="serial_checker_information_xaw4"><![CDATA["<b>Numéro de série débutant par XAW4</b><br />XAW40000000000 - XAW40011000000 : Non patché<br />XAW40011000000 - XAW40012000000 : Possiblement patché<br />XAW40012000000 et supérieur : Patché<br /><br />]]></string>
+    <string name="serial_checker_information_xaw7"><![CDATA["<b>Numéro de série débutant par XAW7</b><br />XAW70000000000 - XAW70017800000 : Non patchés<br />XAW70017800000 - XAW70030000000 : Possiblement patché<br />XAW70030000000 et supérieur : Patché<br /><br />]]></string>
+    <string name="serial_checker_information_xaj1"><![CDATA["<b>Numéro de série débutant par XAJ1</b><br />XAJ10000000000 - XAJ10020000000 : Non patché<br />XAJ10020000000 - XAJ10030000000 : Possiblement patché<br />XAJ10030000000 et supérieur : Patché<br /><br />]]></string>
+    <string name="serial_checker_information_xaj4"><![CDATA["<b>Numéro de série débutant par XAJ4</b><br />XAJ40000000000 - XAJ40046000000 : Non patché<br />XAJ40046000000 - XAJ40060000000 : Possiblement patché<br />XAJ40060000000 et supérieur : Patché<br /><br />]]></string>
+    <string name="serial_checker_information_xaj7"><![CDATA["<b>Numéro de série débutant par XAJ7</b><br />XAJ70000000000 - XAJ70040000000 : Non patché<br />XAJ70040000000 - XAJ70050000000 : Possiblement patché<br />XAJ70050000000 et supérieur : Patché<br /><br />]]></string>
+    <string name="serial_checker_information_xaw9"><![CDATA["<b>Numéro de série débutant par XAW9</b><br />Unités reconditionnées directement par Nintendo, pas d'information, fort possible qu'elles ont toutes été patchées.<br /><br />]]></string>
+    <string name="serial_checker_information_xak"><![CDATA["<b>Numéro de série débutant par XAK</b><br />Aucune information disponible, puisque vendues uniquement en Corée.]]></string>
+    <string name="serial_checker_scan_barcode">Scanner le code-barres</string>
+    <string name="serial_checker_help">Aide</string>
+    <string name="serial_checker_status_not_patched">Non patchée</string>
+    <string name="serial_checker_status_patched">Patchée</string>
+    <string name="serial_checker_status_possibly_patched">Peut être patchée</string>
+    <string name="serial_checker_status_error">Impossible de vérifier ce numéro de série !</string>
+    <string name="serial_checker_status_empty">Le numéro de série ne peut pas être vide !</string>
+    <string name="serial_checker_status_too_long">La taille maximale du numéro de série est de 14 caractères.</string>
+    <string name="serial_checker_status_scan_failed">Echec du scan du code barre !</string>
+    <!-- endregion -->
+    <!-- region: Helper -->
+    <!-- endregion -->
+</resources>

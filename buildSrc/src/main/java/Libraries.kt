@@ -26,6 +26,7 @@ object Libraries {
         val Retrofit by lazy { "com.squareup.retrofit2:retrofit:${Versions.Tools.Retrofit}" }
         val RetrofitMoshi by lazy { "com.squareup.retrofit2:converter-moshi:${Versions.Tools.Retrofit}" }
         val Zxing by lazy { "com.journeyapps:zxing-android-embedded:${Versions.Tools.Zxing}" }
+        val OkHttpLogging by lazy { "com.squareup.okhttp3:logging-interceptor:${Versions.Tools.OkHttpLogging}" }
     }
 
     object Kotlin {

@@ -13,6 +13,14 @@ class StorageHandler(private val context: Context,
                      private val preferencesHandler: PreferencesHandler) {
 
     fun parseBundledConfig() {
+        val currentConfigRaw = preferencesHandler.getCurrentConfigRaw()
+
+        // Define if user coming from pre-5.0 version config
+        // and if yes, erase previously saved config
+        if (!currentConfigRaw.isNullOrEmpty() && currentConfigRaw.contains("timestamp")) {
+            preferencesHandler.eraseCurrentConfig()
+        }
+
         if (preferencesHandler.checkConfigExists()) {
             val currentConfig = preferencesHandler.getCurrentConfig()
             val bundledConfig = context.resources.readConfig(R.raw.config)

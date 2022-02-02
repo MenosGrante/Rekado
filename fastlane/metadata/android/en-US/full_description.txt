@@ -1,0 +1,28 @@
+Payload launcher and serial number checker for Nintendo Switch
+
+<i>Application doesn't require Root on your device.</i>
+
+<b>Usage</b>
+
+<ul>
+<li>Launch application.</li>
+<li>Find a cable to connect your device to the Nintendo Switch. For proper work, this should be a cable that is designed for data transmission, not just for charging. It is advisable to use an A-to-C cable and an USB OTG adapter.</li>
+<li>In the "Payloads" category, click the "+" button to select preloaded payload from your device's storage. Or simply transfer your payload to the Rekado folder in the device's memory. Or you can use the bundled payloads (Hekate/Fusee).</li>
+<li>Enter your Nintendo Switch into RCM mode in any convenient way. Your Nintendo Switch will power on by itself when plugged in, be sure to hold VOLUME +.</li>
+<li>Connect the device to the Nintendo Switch and allow permission for the USB access if necessary. Wait unit payloads chooser dialog will be opened and select which one you want to load.</li>
+<li>Wait for payload to finish loading on your console.</li>
+</ul>
+
+<b>Known issues</b>
+
+<i>Nothing happens after connecting Nintendo Switch</i>
+
+In most cases this problems occurs if your device doesn't not support OTG connection or it could be just disabled by default (e.g. OnePlus devices). Try to check if your device supports it and check if it is enabled and try again.
+
+<i>Sending payload failed at offset</i>
+
+This problem is in most cases not related to the used device, but to the cable or adapter. It occurs most often due to cables that are not designed to transfer large amounts of data. Try to use another cable or adapter.
+
+<i>SUBMITURB</i>
+
+This problems occurs on device with old USB-controllers installed in their devices (EHCI/USB 2.0). This is device-only problem, that can be fixed with installing additional kernel patches, what is not recommended to do yourself. Only devices with xHCI (USB 3.0) controllers supported now.

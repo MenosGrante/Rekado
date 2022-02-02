@@ -60,6 +60,10 @@ android {
         correctErrorTypes = true
     }
 
+    base {
+        archivesName.set("[${Config.versionName}] Rekado (${Config.versionCode})")
+    }
+
 }
 
 dependencies {
@@ -86,7 +90,7 @@ dependencies {
     // Tools
     implementation(Libraries.Tools.Retrofit)
     implementation(Libraries.Tools.RetrofitMoshi)
-    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3")
+    implementation(Libraries.Tools.OkHttpLogging)
     implementation(Libraries.Tools.Zxing)
     implementation(Libraries.Tools.Moshi)
 

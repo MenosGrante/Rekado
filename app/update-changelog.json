@@ -1,9 +1,0 @@
-{
-  "latestVersion": "4.2",
-  "latestVersionCode": "80",
-  "url": "https://github.com/MenosGrante/Rekado/releases/",
-  "releaseNotes": [
-    "- Added: Support for Android 12.",
-    "- Updated: fusee-primary replaced buy fusee."
-  ]
-}

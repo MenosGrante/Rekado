@@ -3,7 +3,6 @@ package com.pavelrekun.rekado.services.handlers
 import android.content.SharedPreferences
 import androidx.core.content.edit
 import com.pavelrekun.rekado.data.Config
-import com.pavelrekun.rekado.data.Payload
 import com.pavelrekun.rekado.data.base.Theme
 import com.pavelrekun.rekado.services.extensions.toConfig
 import com.pavelrekun.rekado.services.extensions.toJson
@@ -46,6 +45,10 @@ class PreferencesHandler(private val sharedPreferences: SharedPreferences) {
         val savedConfig = sharedPreferences.getString(CURRENT_CONFIG, "")
         return savedConfig?.toConfig() as Config
     }
+
+    fun getCurrentConfigRaw() = sharedPreferences.getString(CURRENT_CONFIG, "")
+
+    fun eraseCurrentConfig() = sharedPreferences.edit { remove(CURRENT_CONFIG) }
 
     fun checkConfigExists() = sharedPreferences.contains(CURRENT_CONFIG)
 
