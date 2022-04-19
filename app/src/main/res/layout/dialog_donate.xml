@@ -14,14 +14,26 @@
         android:textSize="16sp" />
 
     <ImageView
-        android:id="@+id/donateButton"
+        android:id="@+id/donateButtonBuyMeCoffee"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/donate_button_buy_me_coffee"
+        android:focusable="true"
+        android:visibility="gone"
+        app:srcCompat="@drawable/pic_donate_buy_me_coffee" />
+
+    <ImageView
+        android:id="@+id/donateButtonPayPal"
         android:layout_width="180dp"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="24dp"
         android:clickable="true"
-        android:contentDescription="@string/donate_button"
+        android:contentDescription="@string/donate_button_paypal"
         android:focusable="true"
-        app:srcCompat="@drawable/pic_donate" />
+        app:srcCompat="@drawable/pic_donate_paypal" />
 
 </LinearLayout>

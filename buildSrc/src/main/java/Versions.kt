@@ -1,8 +1,8 @@
 object Versions {
 
     object Gradle {
-        const val Plugin = "7.1.0"
-        const val Updates = "0.41.0"
+        const val Plugin = "7.1.3"
+        const val Updates = "0.42.0"
     }
 
     object AndroidX {
@@ -11,10 +11,10 @@ object Versions {
         const val Browser = "1.4.0"
         const val Preferences = "1.2.0"
         const val ConstraintLayout = "2.1.3"
-        const val Lifecycle = "2.4.0"
-        const val Navigation = "2.4.0"
+        const val Lifecycle = "2.4.1"
+        const val Navigation = "2.4.2"
         const val SwipeRefreshLayout = "1.1.0"
-        const val Hilt = "2.40.5"
+        const val Hilt = "2.41"
     }
 
     object Design {
@@ -31,8 +31,8 @@ object Versions {
     }
 
     object Kotlin {
-        const val Kotlin = "1.6.10"
-        const val Coroutines = "1.6.0"
+        const val Kotlin = "1.6.20"
+        const val Coroutines = "1.6.1"
     }
 
     object Other {

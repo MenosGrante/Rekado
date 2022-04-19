@@ -49,8 +49,9 @@
     <string name="instructions_category_final_description">將裝置與Nintendo Switch連接後，如果出現系統通知詢問請求裝置取得USB連接設備的權限，請按指示允許。接著螢幕會列出所有注入的檔案項目，然後請選取你要注入的檔案。</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">想支援Rekado及其他應用程式的開發嗎？請看看我 “Buy me a coffee” 頁面 :)</string>
-    <string name="donate_button">在 \"Buy me a coffee\" 上贊助</string>
+    <string name="donate_description">您是否想要支持Rekado及其他程式的開發維護？如果願意，請前往我的\"PayPal\"贊助頁面！ :)</string>
+    <string name="donate_button_buy_me_coffee">透過 \"Buy me a coffee\" 贊助我</string>
+    <string name="donate_button_paypal">透過 \"PayPal\" 贊助我</string>
     <!-- endregion -->
     <!-- region: Settings -->
     <string name="settings_category_auto_injector">自動注入器</string>
@@ -86,6 +87,7 @@
     <string name="dialog_loader_no_payloads_title">沒有注入的檔案</string>
     <string name="dialog_loader_no_payloads_description">發生錯誤，可能由於尚未新增其他的注入檔案，同時又隱藏了內建的注入檔案，導致無法進行注入程序\n\n請手動新增注入的檔案，或在\"設定\"內將隱藏內建的注入檔案項目取消勾選</string>
     <string name="dialog_settings_appearance_theme_title">主題</string>
+    <string name="dialog_settings_auto_injector_payload_title">自動注入的檔案</string>
     <string name="dialog_button_download">下載</string>
     <string name="dialog_button_update">更新注入檔案</string>
     <string name="dialog_button_negative_close">關閉</string>

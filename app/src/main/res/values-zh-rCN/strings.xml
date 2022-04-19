@@ -49,8 +49,9 @@
     <string name="instructions_category_final_description">将设备连接到任天堂 Switch 并在有需要时允许 usb 访问权限。将打开 注入文件 选择对话框，并在对话框内选择需要加载的注入文件。</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">你愿意进一步支持这个应用和我的所有其他应用的开发吗? 如果是，请查看我的“请我喝咖啡”页面:)</string>
-    <string name="donate_button">在 “Buy me a coffee” 网站上捐款</string>
+    <string name="donate_description">您想进一步支持此应用程序和所有其他应用程序的开发吗？ 请查看我的“PayPal”捐赠页面：)</string>
+    <string name="donate_button_buy_me_coffee">在 “Buy me a coffee” 网站上捐款</string>
+    <string name="donate_button_paypal">在 \"PayPal \" 上捐款</string>
     <!-- endregion -->
     <!-- region: Settings -->
     <string name="settings_category_auto_injector">自动加载注入文件</string>

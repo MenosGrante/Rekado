@@ -60,8 +60,9 @@
     <!-- endregion -->
 
     <!-- region: Donate -->
-    <string name="donate_description">Would you like to support the development of this and all other apps even more? Then check my \"Buy me a coffee\" page :)</string>
-    <string name="donate_button">Support on \"Buy me a coffee\"</string>
+    <string name="donate_description">Would you like to support the development of this and all other apps even more? Then check my \"PayPal\" donation page :)</string>
+    <string name="donate_button_buy_me_coffee">Support on \"Buy me a coffee\"</string>
+    <string name="donate_button_paypal">Support on \"PayPal\"</string>
     <!-- endregion -->
 
     <!-- region: Settings -->

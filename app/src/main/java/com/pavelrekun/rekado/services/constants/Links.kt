@@ -2,7 +2,8 @@ package com.pavelrekun.rekado.services.constants
 
 object Links {
 
-    const val DONATION = "https://www.buymeacoffee.com/pavelrekun"
+    const val DONATION_BUY_ME_COFFEE = "https://www.buymeacoffee.com/pavelrekun"
+    const val DONATION_PAY_PAL = "https://www.paypal.com/donate/?hosted_button_id=NRGW3HHUNPBVQ"
     const val GITHUB_PROJECT = "https://github.com/MenosGrante/Rekado"
 
     const val HELP_RCM = "https://gbatemp.net/threads/the-ultimate-list-of-mods-to-enter-rcm.502145/"
