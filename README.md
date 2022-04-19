@@ -1,7 +1,7 @@
 ### The application has already received all the functionality that I planned to lay in it, so I will only fix defects and add localizations in the future. [More details here.](https://pavelrekun.dev/blog/news_25.08.2020/)
 
 
-<a href="https://www.buymeacoffee.com/pavelrekun" target="_blank"><img src="https://i.imgur.com/yAojiF0.png" alt="Buy me a coffee" height="60"></a>
+<a href="https://www.paypal.com/donate/?hosted_button_id=NRGW3HHUNPBVQ" target="_blank"><img src="https://i.imgur.com/TlWFXAN.png" alt="PayPal" height="60"></a>
 
 [![Crowdin](https://badges.crowdin.net/rekado/localized.svg)](https://crowdin.com/project/rekado) [![Stars](https://img.shields.io/github/stars/MenosGrante/Rekado)](https://github.com/MenosGrante/Rekado/stargazers) [![License](https://img.shields.io/github/license/MenosGrante/Rekado)](https://github.com/MenosGrante/Rekado/blob/master/LICENSE) [![Releases](https://img.shields.io/github/downloads/MenosGrante/Rekado/total.svg)](https://github.com/MenosGrante/Rekado/releases/latest)
 
@@ -53,4 +53,4 @@ This should not happen when using the "correct" payloads. But I am not responsib
 * [ealfonso93](https://github.com/ealfonso93) for contributing in this project.
 
 ## Donate
-I have created and supported this application in my free time, so if you want to support me, visit my <a href="https://www.buymeacoffee.com/pavelrekun" target="_blank">"Buy me a coffee"</a> page to support me and my projects!
+I have created and supporting this and other my apps in my free time, so if you would like to support me, check my <a href="https://www.paypal.com/donate/?hosted_button_id=NRGW3HHUNPBVQ" target="_blank">"PayPal"</a> page to support me and my projects.
