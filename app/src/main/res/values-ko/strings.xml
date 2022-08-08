@@ -51,7 +51,7 @@
     <string name="instructions_category_cable">케이블</string>
     <string name="instructions_category_cable_description">먼저 닌텐도 스위치에 장치를 연결하는 케이블을 찾아야 합니다. 제대로 작동하려면 충전용이 아닌 데이터 전송용으로 설계된 케이블이어야 합니다.\n\nA-to-C 케이블과 USB OTG 어댑터를 사용하는 것이 좋습니다.</string>
     <string name="instructions_category_payload">페이로드</string>
-    <string name="instructions_category_payload_description">장치의 메모리에서 페이로드를 추가하거나(\"+\" 버튼 클릭), "페이로드\" 화면에서 직접 링크를 통해 다운로드(\"구름\" 아이콘이 있는 버튼 클릭)하거나 Rekado 폴더 (/sdcard/Android/data/com.pavelrekun.rekado/files/)로 간단히 이동할 수 있습니다.\n\n번들 페이로드 중 하나를 사용할 수도 있습니다 - %1$s.</string>
+    <string name="instructions_category_payload_description">장치의 메모리에서 페이로드를 추가하거나(\"+\" 버튼 클릭), \"페이로드\" 화면에서 직접 링크를 통해 다운로드(\"구름\" 아이콘이 있는 버튼 클릭)하거나 Rekado 폴더 (/sdcard/Android/data/com.pavelrekun.rekado/files/)로 간단히 이동할 수 있습니다.\n\n번들 페이로드 중 하나를 사용할 수도 있습니다 - %1$s.</string>
     <string name="instructions_category_rcm" translatable="false">RCM</string>
     <string name="instructions_category_rcm_help">도움말</string>
     <string name="instructions_category_rcm_description">편리한 방법으로 닌텐도 스위치를 RCM 모드로 전환하세요. \n\n닌텐도 스위치를 연결하면 자동으로 전원이 켜집니다. \"VOLUME +\"를 누르고 있어야 합니다.</string>
