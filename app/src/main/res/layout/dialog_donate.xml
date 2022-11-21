@@ -22,7 +22,7 @@
         android:clickable="true"
         android:contentDescription="@string/donate_button_buy_me_coffee"
         android:focusable="true"
-        android:visibility="gone"
+        android:visibility="visible"
         app:srcCompat="@drawable/pic_donate_buy_me_coffee" />
 
     <ImageView
@@ -32,6 +32,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="24dp"
         android:clickable="true"
+        android:visibility="gone"
         android:contentDescription="@string/donate_button_paypal"
         android:focusable="true"
         app:srcCompat="@drawable/pic_donate_paypal" />

@@ -49,7 +49,7 @@
     <string name="instructions_category_final_description">Подключите устройство к Nintendo Switch и при необходимости разрешите доступ к USB. Откроется диалоговое окно «Выбор загрузчика» и выберите, какой из них вы хотите загрузить.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">Хотели бы вы еще больше поддержать разработку этого и всех других приложений? Тогда проверьте мою страницу пожертвований «PayPal» :)</string>
+    <string name="donate_description">Хотели бы вы еще больше поддержать разработку этого и всех других приложений? Тогда проверьте мою страницу пожертвований «Buy Me A Coffee» :)</string>
     <string name="donate_button_buy_me_coffee">Поддержать на «Buy me a coffee»</string>
     <string name="donate_button_paypal">Поддержать на «PayPal»</string>
     <!-- endregion -->

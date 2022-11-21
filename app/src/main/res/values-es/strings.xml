@@ -49,7 +49,7 @@
     <string name="instructions_category_final_description">Conecta tu dispositivo a la Nintendo Switch y da permisos de acceso a USB si es necesario. Espera hasta que el dialogo del selector de payloads se abra y selecciona el que quieras cargar.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">¿Te gustaría ayudar al desarrollo de esta y otras aplicaciones aún más? Entonces visita mi página de donación de \"PayPal\" :)</string>
+    <string name="donate_description">¿Te gustaría ayudar al desarrollo de esta y otras aplicaciones aún más? Entonces visita mi página de donación de \"Buy Me A Coffee\" :)</string>
     <string name="donate_button_buy_me_coffee">Ayuda en \"Buy me a coffee\"</string>
     <string name="donate_button_paypal">Ayuda en \"PayPal\"</string>
     <!-- endregion -->

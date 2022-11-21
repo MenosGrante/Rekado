@@ -2,7 +2,7 @@ package com.pavelrekun.rekado.services.constants
 
 object Links {
 
-    const val DONATION_BUY_ME_COFFEE = "https://www.buymeacoffee.com/pavelrekun"
+    const val DONATION_BUY_ME_COFFEE = "https://www.buymeacoffee.com/pavlorekun"
     const val DONATION_PAY_PAL = "https://www.paypal.com/donate/?hosted_button_id=NRGW3HHUNPBVQ"
     const val GITHUB_PROJECT = "https://github.com/MenosGrante/Rekado"
 

@@ -177,7 +177,7 @@ object DialogsShower {
         val binding = DialogDonateBinding.inflate(LayoutInflater.from(context), null, false)
         val builder = MaterialAlertDialogBuilder(context)
 
-        binding.donateButtonPayPal.setOnClickListener { Utils.openLink(context, Links.DONATION_PAY_PAL) }
+        binding.donateButtonPayPal.setOnClickListener { Utils.openLink(context, Links.DONATION_BUY_ME_COFFEE) }
 
         builder.setTitle(R.string.navigation_donate)
 

@@ -49,7 +49,7 @@
     <string name="instructions_category_final_description">Verbinde das Gerät mit der Nintendo Switch, und falls berechtigungs-anfragen zum verwalten des USB gerätes auftauchen, bestätige diese. Warte bis sich das Payload-Injektor Fenster öffnet und wähle dann die Payload aus die gestartet werden soll.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">Willst Du die Entwicklung dieser und aller anderen Apps noch mehr unterstützen? Dann öffne meine \"PayPal\" Spendenseite :)</string>
+    <string name="donate_description">Willst Du die Entwicklung dieser und aller anderen Apps noch mehr unterstützen? Dann öffne meine \"Buy Me A Coffee\" Spendenseite :)</string>
     <string name="donate_button_buy_me_coffee">Unterstützung auf \"Buy me a coffee\"</string>
     <string name="donate_button_paypal">Unterstützung mich auf \"PayPal\"</string>
     <!-- endregion -->
