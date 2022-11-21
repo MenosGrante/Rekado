@@ -13,22 +13,22 @@
     <!-- region: About -->
     <string name="about_category_description">Description</string>
     <string name="about_category_developer">Développeur</string>
-    <string name="about_information_description">Rekado est une appli boîte à outils pour la Nintendo Switch incluant un injecteur de payloads et permettant de vérifier si la console est vulnérable avec le numéro de série.</string>
+    <string name="about_information_description">Rekado est une application multifonction pour la Nintendo Switch incluant un injecteur de payloads et permettant de vérifier la vulnérabilité d\'une console a partir de son numéro de série</string>
     <string name="about_developer_portfolio_title">Portfolio</string>
-    <string name="about_developer_portfolio_summary">Toutes les informations sur le développeur et le blog avec des nouvelles</string>
-    <string name="about_developer_instagram_summary">Profile sur les hobbies et photo de drone</string>
+    <string name="about_developer_portfolio_summary">Toutes les informations du développeur et les nouvelles</string>
+    <string name="about_developer_instagram_summary">Hobbies et photo de drone</string>
     <string name="about_developer_github_summary">Liste des applis open source</string>
     <string name="about_developer_twitter_summary">Micro-blog personnel</string>
     <!-- endregion -->
     <!-- region: Payloads -->
-    <string name="payloads_update_bundled_title">Mettre à jour les payloads empaquetés</string>
+    <string name="payloads_update_bundled_title">Mettre à jour les payloads intégrés</string>
     <string name="payloads_update_bundled_description">Vérifier les mises à jour pour tous les payloads intégrés - %1$s.</string>
     <string name="payloads_update_bundled_button_update">Vérifier les mises à jour</string>
     <string name="payloads_download">Télécharger le payload</string>
     <string name="payloads_add">Ajouter un payload spécifique</string>
     <string name="payloads_remove">Retirer le payload</string>
-    <string name="payloads_download_status_empty">Le nom ou l\'URL ne devraient pas être vides !</string>
-    <string name="payloads_download_status_success">Payload %1$s téléchargé avec succès ! </string>
+    <string name="payloads_download_status_empty">Le nom ou l\'URL ne doivent pas être vides !</string>
+    <string name="payloads_download_status_success">Payload %1$s téléchargé avec succès !</string>
     <string name="payloads_add_external_error">Le payload sélectionné ne peut pas être ajouté !</string>
     <!-- endregion -->
     <!-- region: Logs -->

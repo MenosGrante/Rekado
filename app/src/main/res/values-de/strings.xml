@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- region: Navigation -->
+    <string name="navigation_payloads">Payloads</string>
+    <string name="navigation_tools">Werkzeuge</string>
+    <string name="navigation_instructions">Anleitung</string>
+    <string name="navigation_logs">Protokolle</string>
+    <string name="navigation_about">Über Rekado</string>
+    <string name="navigation_donate">Unterstütze die Entwicklung</string>
+    <string name="navigation_settings">Einstellungen</string>
+    <string name="navigation_serial_checker">Seriennummerprüfer</string>
+    <!-- endregion -->
+    <!-- region: About -->
+    <string name="about_category_description">Beschreibung</string>
+    <string name="about_category_developer">Entwickler</string>
+    <string name="about_information_description">Rekado ist eine App für deine Nintendo Switch, welche die Injektion von Payloads, überprüfen von Seriennummern nach initiierbaren Konsolen und weitere Funktionen, welche bald kommen, unterstützt.</string>
+    <string name="about_developer_portfolio_title">Portfolio</string>
+    <string name="about_developer_portfolio_summary">Alle Infos über den Entwickler und ein Blog mit Neuigkeiten</string>
+    <string name="about_developer_instagram_summary">Hobby-Profil mit Drohnen-Foto</string>
+    <string name="about_developer_github_summary">Liste der Open-Source Anwendungen</string>
+    <string name="about_developer_twitter_summary">Persönlicher Micro-Blog</string>
+    <!-- endregion -->
+    <!-- region: Payloads -->
+    <string name="payloads_update_bundled_title">Gebündelte Payloads ausblenden</string>
+    <string name="payloads_update_bundled_description">Prüfen Sie nach Updates für alle eingebauten Payloads - %1$s.</string>
+    <string name="payloads_update_bundled_button_update">Nach Updates suchen</string>
+    <string name="payloads_download">Payload herunterladen</string>
+    <string name="payloads_add">Eigenen Payload hinzufügen</string>
+    <string name="payloads_remove">Payload entfernen</string>
+    <string name="payloads_download_status_empty">Der Name oder die URL darf nicht leer sein!</string>
+    <string name="payloads_download_status_success">Payload %1$s wurde erfolgreich heruntergeladen!</string>
+    <string name="payloads_add_external_error">Die ausgewählte Payload kann nicht hinzugefügt werden!</string>
+    <!-- endregion -->
+    <!-- region: Logs -->
+    <string name="logs_clear">Zurücksetzen</string>
+    <!-- endregion -->
+    <!-- region: Tools -->
+    <string name="tools_serial_checker_title">Seriennummerprüfer</string>
+    <string name="tools_serial_checker_description">Überprüfe mit der Seriennummer, ob deine Nintendo Switch hackbar ist.</string>
+    <!-- endregion -->
+    <!-- region: Instructions -->
+    <string name="instructions_category_cable">Kabel</string>
+    <string name="instructions_category_cable_description">Zuerst brauchst du ein Kabel, mit dem du dein Gerät mit der Switch verbinden kannst. Damit es funktioniert, darf das kabel nicht auschließlich zum Laden konzipiert sein.\n\nEs ist empfehlenswert ein USB-C-Kabel und einen USB-OTG-Adapter zu verwenden.</string>
+    <string name="instructions_category_payload">Payload</string>
+    <string name="instructions_category_payload_description">Du kannst deinen Payload vom Gerätespeicher hinzufügen (drücke den \"+\" Knopf), oder einen von einem direktem Link herunterladen (drücke den Knopf mit dem \"cloud\" symbol) auf der \"Payloads\" Seite oder verschieb sie einfach in den Rekado Ordner (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nDu kannst auch einen der gebündelten Payloads verwenden - %1$s.</string>
+    <string name="instructions_category_rcm_help">Hilfe</string>
+    <string name="instructions_category_rcm_description">Versetzte deine Nintendo Switch in den RCM-Modus.\n\nDie Nintendo Switch fährt automatisch hoch, wenn sie angeschlossen wird. Vergewissere dich, dass du währenddessen \"Lautstärke +\" drückt hältst.</string>
+    <string name="instructions_category_final">Letzter Schritt</string>
+    <string name="instructions_category_final_description">Verbinde das Gerät mit der Nintendo Switch, und falls berechtigungs-anfragen zum verwalten des USB gerätes auftauchen, bestätige diese. Warte bis sich das Payload-Injektor Fenster öffnet und wähle dann die Payload aus die gestartet werden soll.</string>
+    <!-- endregion -->
+    <!-- region: Donate -->
+    <string name="donate_description">Willst Du die Entwicklung dieser und aller anderen Apps noch mehr unterstützen? Dann öffne meine \"PayPal\" Spendenseite :)</string>
+    <string name="donate_button_buy_me_coffee">Unterstützung auf \"Buy me a coffee\"</string>
+    <string name="donate_button_paypal">Unterstützung mich auf \"PayPal\"</string>
+    <!-- endregion -->
+    <!-- region: Settings -->
+    <string name="settings_category_auto_injector">Autoinjektor</string>
+    <string name="settings_auto_injector_status_title">Auto-Injektor</string>
+    <string name="settings_auto_injector_status_summary">Automatisches injecten von Payloads ohne Ihre Bestätigung mit dem gewählten Payload</string>
+    <string name="settings_auto_injector_payload_title">Payload</string>
+    <string name="settings_category_payloads">Payloads</string>
+    <string name="settings_payloads_hide_title">Gebündelte Payloads ausblenden</string>
+    <string name="settings_payloads_hide_summary">Alle gebündelten Payloads ausblenden (%1$s)</string>
+    <string name="settings_payloads_reset_title">Löschen</string>
+    <string name="settings_payloads_reset_summary">Entferne alle nicht gebündelten hinzugefügten Payloads (%1$s)</string>
+    <string name="settings_category_appearance">Erscheinungsbild</string>
+    <string name="settings_appearance_theme_title">Aussehen</string>
+    <string name="settings_appearance_theme_summary">Aussehen der App</string>
+    <string name="settings_appearance_theme_light">Hell</string>
+    <string name="settings_appearance_theme_dark">Dunkel</string>
+    <string name="settings_appearance_theme_system_default">Systemstandard</string>
+    <string name="settings_appearance_dynamic_colors_title">Benutze dynamische Farben</string>
+    <string name="settings_appearance_dynamic_colors_summary">Dynamische Farben basierend auf Hintergrundbildern auf Android 12 und neuer verwenden</string>
+    <!-- endregion -->
+    <!-- region: DialogsShower -->
+    <string name="dialog_loader_title">Payload auswählen</string>
+    <string name="dialog_reset_payloads_title">Löschen</string>
+    <string name="dialog_reset_payloads_summary">Bist du dir sicher das du die Payload löschen willst?</string>
+    <string name="dialog_payload_download_title">Herunterladen</string>
+    <string name="dialog_payload_download_field_title">Name</string>
+    <string name="dialog_payload_update_title">Payloads-Updates</string>
+    <string name="dialog_payload_update_message">Es gibt ein Update für einige gebündelte Payloads. Ein Update wird empfohlen.</string>
+    <string name="dialog_payload_no_updates_title">Keine Updates</string>
+    <string name="dialog_payload_no_updates_message">Es wurden keine Updates gefunden. Sie verwenden die neuesten eingebauten Payloads.</string>
+    <string name="dialog_payload_network_error_title">Ein Fehler ist aufgetreten</string>
+    <string name="dialog_payload_network_error_message">Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es später erneut.</string>
+    <string name="dialog_loader_no_payloads_title">Keine Payloads</string>
+    <string name="dialog_loader_no_payloads_description">Es scheint, als hättest du keine externen Payloads hinzugefügt und die Gebündelten versteckt. Das Senden ist nicht möglich.\n\nFüge deine Payloads hinzu oder deaktiviere das Verstecken von gebündelten Payloads in den \"Einstellungen\" und versuche es erneut.</string>
+    <string name="dialog_settings_appearance_theme_title">Thema</string>
+    <string name="dialog_settings_auto_injector_payload_title">Auto-Injektor-Payload</string>
+    <string name="dialog_button_download">Herunterladen</string>
+    <string name="dialog_button_update">Payloads aktualisieren</string>
+    <string name="dialog_button_negative_close">Schließen</string>
+    <string name="dialog_button_negative_cancel">Abbrechen</string>
+    <!-- endregion -->
+    <!-- region: Serial Checker -->
+    <string name="serial_checker_category_checker">Überprüfer</string>
+    <string name="serial_checker_category_information">Informationen</string>
+    <string name="serial_checker_checker_serial_number">Seriennummer</string>
+    <string name="serial_checker_checker_button">Überprüfung</string>
+    <string name="serial_checker_information_xaw1"><![CDATA["<b>Seriennummern die mit XAW1</b><br />XAW10000000000 - XAW10074000000 abfangen: Nicht gepatcht<br />XAW10075000000 - XAW10120000000: Vielleicht gepatcht<br />XAW10120000000 und höher: Gepatcht<br /><br />]]></string>
+    <string name="serial_checker_information_xaw4"><![CDATA["<b>Seriennummern die mit XAW4</b><br />XAW40000000000 - XAW40011000000 anfangen: Nicht gepatcht<br />XAW40011000000 - XAW40012000000: Vielleicht gepatcht<br />XAW40012000000 und höher: Gepatcht<br /><br />]]></string>
+    <string name="serial_checker_information_xaw7"><![CDATA["<b>Seriennummern die mit XAW7</b><br />XAW70000000000 - XAW70017800000 anfangen: Nicht gepatcht<br />XAW70017800000 - XAW70030000000: Vielleicht gepatcht<br />XAW70030000000 und höher: gepatcht<br /><br />]]></string>
+    <string name="serial_checker_information_xaj1"><![CDATA["<b>Seriennummern die mit XAJ1</b><br />XAJ10000000000 - XAJ10020000000 anfangen: Nicht gepatcht<br />XAJ10020000000 - XAJ10030000000: Vielleicht gepatcht<br />XAJ10030000000 und höher: gepatcht<br /><br />]]></string>
+    <string name="serial_checker_information_xaj4"><![CDATA["<b>Seriennummern die mit XAJ4</b><br />XAJ40000000000 - XAJ40046000000 anfangen: Nicht gepatcht<br />XAJ40046000000 - XAJ40060000000: Vielleicht gepatcht<br />XAJ40060000000 und höher: gepatcht<br /><br />]]></string>
+    <string name="serial_checker_information_xaj7"><![CDATA["<b>Seriennummern die mit XAJ7</b><br />XAJ70000000000 - XAJ70040000000 anfangen: Nicht gepatcht<br />XAJ70040000000 - XAJ70050000000: Vielleicht gepatcht<br />XAJ70050000000 und höher: gepatcht<br /><br />]]></string>
+    <string name="serial_checker_information_xaw9"><![CDATA["<b>Seriennummern die mit XAW9 anfangen</b><br />Generalüberholte Geräte direkt von Nintendo, sehr wahrscheinlich alle gepatcht.<br /><br />]]></string>
+    <string name="serial_checker_information_xak"><![CDATA["<b>Seriennummern die mit XAK anfangen</b><br />Keine Informationen vorhanden, da diese nur in Korea verkauft werden.]]></string>
+    <string name="serial_checker_scan_barcode">Barcode scannen</string>
+    <string name="serial_checker_help">Hilfe</string>
+    <string name="serial_checker_status_not_patched">Nicht gepatched</string>
+    <string name="serial_checker_status_patched">Gepatched</string>
+    <string name="serial_checker_status_possibly_patched">Möglicherweise gepatched</string>
+    <string name="serial_checker_status_error">Seriennummer kann nicht überprüft werden!</string>
+    <string name="serial_checker_status_empty">Seriennummer darf nicht leer sein!</string>
+    <string name="serial_checker_status_too_long">Die maximale Länge der Seriennummer ist 14 Zeichen!</string>
+    <string name="serial_checker_status_scan_failed">Das scannen des Barcodes ist fehlgeschlagen!</string>
+    <!-- endregion -->
+    <!-- region: Helper -->
+    <!-- endregion -->
+</resources>

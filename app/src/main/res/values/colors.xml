@@ -1,5 +1,7 @@
 <resources>
 
+    <color name="colorIcon">#424242</color>
+
     <!-- region: Rekado theme -->
     <color name="md_theme_light_primary">#006494</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
@@ -58,6 +60,10 @@
     <!-- region: Logs -->
     <color name="colorLogSuccess">#8bc34a</color>
     <color name="colorLogError">#d32f2f</color>
+    <!-- endregion -->
+
+    <!-- region: Tools -->
+    <color name="colorToolsSerialChecker">#006494</color>
     <!-- endregion -->
 
 </resources>

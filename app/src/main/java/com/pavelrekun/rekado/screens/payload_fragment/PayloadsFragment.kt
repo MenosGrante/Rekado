@@ -38,7 +38,7 @@ class PayloadsFragment : BaseFragment(R.layout.fragment_payloads) {
     private lateinit var adapter: PayloadsAdapter
 
     private val addPayloadContract = registerForActivityResult(ActivityResultContracts.OpenDocument()) { data ->
-        val name = data.extractFileName(requireContext())
+        val name = data?.extractFileName(requireContext())
         if (name != null) {
             val inputStream = requireBaseActivity().contentResolver.openInputStream(data)
 
