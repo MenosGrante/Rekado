@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- region: Navigation -->
+    <string name="navigation_payloads">Payloads</string>
+    <string name="navigation_tools">Nástroje</string>
+    <string name="navigation_instructions">Instrukce</string>
+    <string name="navigation_logs">Logy</string>
+    <string name="navigation_about">O Rekado</string>
+    <string name="navigation_donate">Podpořit vývoj</string>
+    <string name="navigation_settings">Nastavení</string>
+    <string name="navigation_serial_checker">Kontrola sériových čísel</string>
+    <!-- endregion -->
+    <!-- region: About -->
+    <string name="about_category_description">Popis</string>
+    <string name="about_category_developer">Vývojář</string>
+    <string name="about_information_description">Rekado je aplikace pro Váš Nintendo Switch, která obsahuje funkci odesílání payload a kontrolu zranitelnosti konzolí podle sériového čísla</string>
+    <string name="about_developer_portfolio_title">Portfolio</string>
+    <string name="about_developer_portfolio_summary">Všechny informace o vývojáři a blog s novinkami</string>
+    <string name="about_developer_instagram_summary">Hobby profil s fotkami z dronu</string>
+    <string name="about_developer_github_summary">Seznam open source aplikací</string>
+    <string name="about_developer_twitter_summary">Osobní mikroblog</string>
+    <!-- endregion -->
+    <!-- region: Payloads -->
+    <string name="payloads_update_bundled_title">Aktualizovat přiložené payloads</string>
+    <string name="payloads_update_bundled_description">Zkontrolovat aktualizace všech přiložených payloads - %1$s.</string>
+    <string name="payloads_update_bundled_button_update">Vyhledat aktualizace</string>
+    <string name="payloads_download">Stáhnout payload</string>
+    <string name="payloads_add">Přidat vlastní payload</string>
+    <string name="payloads_remove">Odstranit payload</string>
+    <string name="payloads_download_status_empty">Název nebo adresa URL by neměly být prázdné!</string>
+    <string name="payloads_download_status_success">Payload %1$s byl úspěšně stažen!</string>
+    <string name="payloads_add_external_error">Vybraný payload nelze přidat!</string>
+    <!-- endregion -->
+    <!-- region: Logs -->
+    <string name="logs_clear">Vymazat</string>
+    <!-- endregion -->
+    <!-- region: Tools -->
+    <string name="tools_serial_checker_title">Kontrola sériových čísel</string>
+    <string name="tools_serial_checker_description">Zkontrolujte si, zdali je Váš Nintendo Switch zranitelný pomocí sériového čísla vaší konzole</string>
+    <!-- endregion -->
+    <!-- region: Instructions -->
+    <string name="instructions_category_cable">Kabel</string>
+    <string name="instructions_category_cable_description">Nejprve musíte najít kabel pro připojení vašeho zařízení k Nintendo Switch. Pro správnou funkčnost by to měl být kabel, který je navržen pro přenos dat a ne jen pro nabíjení.\n\nJe vhodné použít USB kabel A-C a USB OTG adaptér.</string>
+    <string name="instructions_category_payload">Payload</string>
+    <string name="instructions_category_payload_description">Můžete přidat váš payload z paměti zařízení (klepněte na tlačítko \"+\"), stáhnout skrze přímý odkaz (klepněte na tlačítko s iknokou \"mráčku\") na obrazovce \"Payloads\", nebo jej jednoduše přesuňte do složky Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nMůžete také využít jeden s přiložených payloads - %1$s.</string>
+    <string name="instructions_category_rcm_help">Nápověda</string>
+    <string name="instructions_category_rcm_description">Uveďte váš Nintendo Switch obvyklým způsobem do RCM režimu. \n\nVáš Nintendo Switch se po zapojení sám zapne, ujistěte se, že držíte tlačítko \"HLASITOST +\".</string>
+    <string name="instructions_category_final">Nakonec</string>
+    <string name="instructions_category_final_description">Připojte zařízení do Nintendo Switch a, pokud to bude nutné, potvrďte oprávnění pro přístup k USB. Počkejte dokud se neotevře nabídka výběru payloads a vyberte ten, který chcete nahrát.</string>
+    <!-- endregion -->
+    <!-- region: Donate -->
+    <string name="donate_description">Chcete ještě více podpořit vývoj této a všech dalších aplikací? Pak se podívejte na moji \"PayPal\" dárcovskou stránku :)</string>
+    <string name="donate_button_buy_me_coffee">Podpora na \"Buy me a coffee\"</string>
+    <string name="donate_button_paypal">Podpora na \"PayPal\"</string>
+    <!-- endregion -->
+    <!-- region: Settings -->
+    <string name="settings_category_auto_injector">Auto-odesílač</string>
+    <string name="settings_auto_injector_status_title">Auto-odesílač</string>
+    <string name="settings_auto_injector_status_summary">Automatické odeslání payloads bez potvrzování, použitím vybraného payload</string>
+    <string name="settings_auto_injector_payload_title">Payload</string>
+    <string name="settings_category_payloads">Payloads</string>
+    <string name="settings_payloads_hide_title">Skrýt přiložené payloads</string>
+    <string name="settings_payloads_hide_summary">Skryje všechny přiložené payloads (%1$s)</string>
+    <string name="settings_payloads_reset_title">Vymazat</string>
+    <string name="settings_payloads_reset_summary">Odstraní všechny přidané payloads kromě přiložených (%1$s)</string>
+    <string name="settings_category_appearance">Vzhled</string>
+    <string name="settings_appearance_theme_title">Téma</string>
+    <string name="settings_appearance_theme_summary">Hlavní téma aplikace</string>
+    <string name="settings_appearance_theme_light">Světlé</string>
+    <string name="settings_appearance_theme_dark">Tmavé</string>
+    <string name="settings_appearance_theme_system_default">Podle systému</string>
+    <string name="settings_appearance_dynamic_colors_title">Použít dynamické barvy</string>
+    <string name="settings_appearance_dynamic_colors_summary">Použít dynamické barvy podle tapety na Android 12 a novějším</string>
+    <!-- endregion -->
+    <!-- region: DialogsShower -->
+    <string name="dialog_loader_title">Vybrat payload</string>
+    <string name="dialog_reset_payloads_title">Vymazat</string>
+    <string name="dialog_reset_payloads_summary">Opravdu chcete vymazat payloads?</string>
+    <string name="dialog_payload_download_title">Stáhnout</string>
+    <string name="dialog_payload_download_field_title">Název</string>
+    <string name="dialog_payload_update_title">Aktualizace payloads</string>
+    <string name="dialog_payload_update_message">Pro některé přiložené payloads existuje aktualizace. Je doporučena jejich aktualizace.</string>
+    <string name="dialog_payload_no_updates_title">Žádné aktualizace</string>
+    <string name="dialog_payload_no_updates_message">Nebyly nalezeny žádné aktualizace. Používáte nejnovější přiložené payloads.</string>
+    <string name="dialog_payload_network_error_title">Vyskytla se chyba</string>
+    <string name="dialog_payload_network_error_message">Vyskytla se neočekávaná chyba. Prosím zkuste to znovu.</string>
+    <string name="dialog_loader_no_payloads_title">Žádné payloads</string>
+    <string name="dialog_loader_no_payloads_description">Zdá se, že jste nepřidali žádné externí payloads a skryli jste ty přiložené. Odeslání není možné.\n\nPřidejte vaše payloads nebo v \"Nastavení\" vypněte skrytí přiložených a zkuste to znovu.</string>
+    <string name="dialog_settings_appearance_theme_title">Téma</string>
+    <string name="dialog_settings_auto_injector_payload_title">Auto-odesílač payload</string>
+    <string name="dialog_button_download">Stáhnout</string>
+    <string name="dialog_button_update">Aktualizovat payloads</string>
+    <string name="dialog_button_negative_close">Zavřít</string>
+    <string name="dialog_button_negative_cancel">Zrušit</string>
+    <!-- endregion -->
+    <!-- region: Serial Checker -->
+    <string name="serial_checker_category_checker">Kontrolor</string>
+    <string name="serial_checker_category_information">Informace</string>
+    <string name="serial_checker_checker_serial_number">Sériové číslo</string>
+    <string name="serial_checker_checker_button">Kontrola</string>
+    <string name="serial_checker_information_xaw1"><![CDATA["<b>Sériová čísla začínající na XAW1</b><br />XAW10000000000 - XAW10074000000: Nejsou patchnutá<br />XAW10075000000 - XAW10120000000: Pravděpodobně patchnutá<br />XAW10120000000 a vyšší: Patchnutá<br /><br />]]></string>
+    <string name="serial_checker_information_xaw4"><![CDATA["<b>Sériová čísla začínající na XAW4</b><br />XAW40000000000 - XAW40011000000: Nejsou patchnutá<br />XAW40011000000 - XAW40012000000: Pravděpodobně patchnutá<br />XAW40012000000 a vyšší: Patchnutá<br /><br />]]></string>
+    <string name="serial_checker_information_xaw7"><![CDATA["<b>Sériová čísla začínající na XAW7</b><br />XAW70000000000 - XAW70017800000: Nejsou patchnutá<br />XAW70017800000 - XAW70030000000: Pravděpodobně patchnutá<br />XAW70030000000 a vyšší: Patchnutá<br /><br />]]></string>
+    <string name="serial_checker_information_xaj1"><![CDATA["<b>Sériová čísla začínající na XAJ1</b><br />XAJ10000000000 - XAJ10020000000: Nejsou patchnutá<br />XAJ10020000000 - XAJ10030000000: Pravděpodobně patchnutá<br />XAJ10030000000 a vyšší: Patchnutá<br /><br />]]></string>
+    <string name="serial_checker_information_xaj4"><![CDATA["<b>Sériová čísla začínající na XAJ4</b><br />XAJ40000000000 - XAJ40046000000: Nejsou patchnutá<br />XAJ40046000000 - XAJ40060000000: Pravděpodobně patchnutá<br />XAJ40060000000 a vyšší: Patchnutá<br /><br />]]></string>
+    <string name="serial_checker_information_xaj7"><![CDATA["<b>Sériová čísla začínající na XAJ7</b><br />XAJ70000000000 - XAJ70040000000: Nejsou patchnutá<br />XAJ70040000000 - XAJ70050000000: Pravděpodobně patchnutá<br />XAJ70050000000 a vyšší: Patchnutá<br /><br />]]></string>
+    <string name="serial_checker_information_xaw9"><![CDATA["<b>Sériová čísla začínající na XAW9</b><br />Opravené jednotky přímo od Nintendo, žádné informace, ale pravděpodobně jsou všechny patchnuté.<br /><br />]]></string>
+    <string name="serial_checker_information_xak"><![CDATA["<b>Sériová čísla začínající na XAK</b><br />Nejsou dostupné žádné informace, jelikož se tyto jednotky prodávají pouze v Koreji.]]></string>
+    <string name="serial_checker_scan_barcode">Skenovat čárový kód</string>
+    <string name="serial_checker_help">Nápověda</string>
+    <string name="serial_checker_status_not_patched">Nepatchnuté</string>
+    <string name="serial_checker_status_patched">Patchnuté</string>
+    <string name="serial_checker_status_possibly_patched">Pravděpodobně patchnuté</string>
+    <string name="serial_checker_status_error">Nelze zkontrolovat sériové číslo!</string>
+    <string name="serial_checker_status_empty">Sériové číslo nemůže být prázdné!</string>
+    <string name="serial_checker_status_too_long">Maximální délka sériového čísla je 14 znaků!</string>
+    <string name="serial_checker_status_scan_failed">Skenování čárového kódu neúspěšné!</string>
+    <!-- endregion -->
+    <!-- region: Helper -->
+    <!-- endregion -->
+</resources>

@@ -49,7 +49,7 @@
     <string name="instructions_category_final_description">Підключіть пристрій до Nintendo Switch і при необхідності дозвольте доступ до USB. Відкриється діалогове вікно «Вибір завантажувача» і виберіть, який з них ви хочете завантажити.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">Чи хотіли б ви ще більше підтримати розробку цього та всіх інших програм? Тоді перевірте мою сторінку пожертв «Buy Me A Coffee» :)</string>
+    <string name="donate_description">Чи хотіли б ви ще більше підтримати розробку цього та всіх інших програм? Тоді перевірте мою сторінку пожертв «PayPal» :)</string>
     <string name="donate_button_buy_me_coffee">Підтримати мене на «Buy me a coffee»</string>
     <string name="donate_button_paypal">Підтримка на «PayPal»</string>
     <!-- endregion -->

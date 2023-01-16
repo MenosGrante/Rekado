@@ -1,10 +1,10 @@
 {
-  "revision": 8,
+  "revision": 10,
   "payloads":[
     {
       "title":"hekate.bin",
       "downloadUrl": "https://pavelrekun.dev/payloads/hekate.bin",
-      "version":"5.9.0"
+      "version":"6.0.1"
     },
     {
       "title":"fusee.bin",

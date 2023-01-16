@@ -1,7 +1,7 @@
 object Versions {
 
     object Gradle {
-        const val Plugin = "7.3.1"
+        const val Plugin = "7.4.0"
         const val Updates = "0.44.0"
     }
 
@@ -31,12 +31,12 @@ object Versions {
     }
 
     object Kotlin {
-        const val Kotlin = "1.7.21"
+        const val Kotlin = "1.8.0"
         const val Coroutines = "1.6.4"
     }
 
     object Other {
-        const val Desugaring = "1.2.2"
+        const val Desugaring = "2.0.0"
     }
 
 

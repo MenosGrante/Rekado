@@ -49,7 +49,7 @@
     <string name="instructions_category_final_description">Συνδέστε τη συσκευή σας με το Nintendo Switch και αποδεχτείτε την άδεια πρόσβασης USB, εάν σας ζητηθεί. Περιμένετε μέχρι να εμφανιστεί η οθόνη επιλογής payload και επιλέξτε το payload που θέλετε να φορτώσει.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">Θα θέλατε να βοηθήσετε στην ανάπτυξη αυτής και όλων των υπολοίπων εφαρμογών μου; Εάν ναι, δείτε την σελίδα δωρεών μου της «Buy Me A Coffee» :)</string>
+    <string name="donate_description">Θα θέλατε να βοηθήσετε στην ανάπτυξη αυτής και όλων των υπολοίπων εφαρμογών μου; Εάν ναι, δείτε την σελίδα δωρεών μου της «PayPal» :)</string>
     <string name="donate_button_buy_me_coffee">Υποστήριξη στο «Buy me a coffee»</string>
     <string name="donate_button_paypal">Υποστήριξη στη «PayPal»</string>
     <!-- endregion -->

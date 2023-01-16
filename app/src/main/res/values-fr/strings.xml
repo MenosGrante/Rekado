@@ -49,7 +49,7 @@
     <string name="instructions_category_final_description">Connectez votre appareil à la Switch et autorisez la permission pour l\'accès USB si nécessaire. Attendez que l\'application ouvre le menu de choix de payload et sélectionner celui que vous voulez injecter.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">Vous voulez soutenir davantage le développement de cette application et de toutes les autres ? Rendez-vous sur ma page de donations \"Buy Me A Coffee\" :)</string>
+    <string name="donate_description">Vous voulez soutenir davantage le développement de cette application et de toutes les autres ? Rendez-vous sur ma page de donations \"PayPal\" :)</string>
     <string name="donate_button_buy_me_coffee">Me soutenir en \"achetant un café\"</string>
     <string name="donate_button_paypal">Faire un don avec \"Paypal\"</string>
     <!-- endregion -->
