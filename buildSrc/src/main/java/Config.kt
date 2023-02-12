@@ -5,7 +5,7 @@ object Config {
     const val compileSDKVersion = 33
     const val NDKVersion = "23.1.7779620"
 
-    const val versionCode = 96
+    const val versionCode = 97
     const val versionName = "5.1.1"
 
 }

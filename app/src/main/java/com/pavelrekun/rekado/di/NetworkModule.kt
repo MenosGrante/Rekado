@@ -16,7 +16,7 @@ import javax.inject.Singleton
 object NetworkModule {
 
     @Provides
-    fun provideBaseUrl() = "https://pavelrekun.dev"
+    fun provideBaseUrl() = "https://pavlorekun.dev"
 
     @Provides
     @Singleton

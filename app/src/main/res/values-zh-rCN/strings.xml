@@ -5,7 +5,7 @@
     <string name="navigation_tools">工具</string>
     <string name="navigation_instructions">教程</string>
     <string name="navigation_logs">日志</string>
-    <string name="navigation_about">关于 Rekado</string>
+    <string name="navigation_about">关于Rekado</string>
     <string name="navigation_donate">支持开发者</string>
     <string name="navigation_settings">设置</string>
     <string name="navigation_serial_checker">序列号检查</string>
@@ -13,41 +13,41 @@
     <!-- region: About -->
     <string name="about_category_description">说明</string>
     <string name="about_category_developer">开发者</string>
-    <string name="about_information_description">Rekado 是一个任天堂 Switch 工具应用，用于注入 payload、检查序列号和其他工具。</string>
+    <string name="about_information_description">Rekado 是一个任天堂 Switch 工具软件，用于注入 Payload、检查序列号和其他工具。</string>
     <string name="about_developer_portfolio_title">作品集</string>
     <string name="about_developer_portfolio_summary">我的博客，有我所有的新闻和信息</string>
-    <string name="about_developer_instagram_summary">有航拍照片的爱好账户</string>
+    <string name="about_developer_instagram_summary">我的ins，爱好航拍</string>
     <string name="about_developer_github_summary">个人GitHub主页</string>
     <string name="about_developer_twitter_summary">个人Twitter</string>
     <!-- endregion -->
     <!-- region: Payloads -->
-    <string name="payloads_update_bundled_title">更新Rekado自带的payload</string>
-    <string name="payloads_update_bundled_description">检查Rekado自带payload的更新。
-%1$s</string>
+    <string name="payloads_update_bundled_title">更新Rekado自带的Payload</string>
+    <string name="payloads_update_bundled_description">检查Rekado自带Payload的更新。
+\n%1$s</string>
     <string name="payloads_update_bundled_button_update">检查更新</string>
-    <string name="payloads_download">下载payload</string>
-    <string name="payloads_add">添加自己的payload</string>
-    <string name="payloads_remove">删除payload</string>
+    <string name="payloads_download">下载Payload</string>
+    <string name="payloads_add">添加自己的Payload</string>
+    <string name="payloads_remove">删除Payload</string>
     <string name="payloads_download_status_empty">名称或者 URL 不能为空！</string>
     <string name="payloads_download_status_success"> %1$s 下载成功！</string>
-    <string name="payloads_add_external_error">无法添加选定的payload！</string>
+    <string name="payloads_add_external_error">无法添加选定的Payload！</string>
     <!-- endregion -->
     <!-- region: Logs -->
     <string name="logs_clear">清除</string>
     <!-- endregion -->
     <!-- region: Tools -->
     <string name="tools_serial_checker_title">序列号检查</string>
-    <string name="tools_serial_checker_description">通过你的任天堂 Switch 序列号来判断是否可以破解</string>
+    <string name="tools_serial_checker_description">通过任天堂 Switch 序列号来判断是否可以破解</string>
     <!-- endregion -->
     <!-- region: Instructions -->
     <string name="instructions_category_cable">数据线</string>
     <string name="instructions_category_cable_description">首先，你需要一根数据线来连接你的手机和 Switch。请确保这条线必须可以传输数据而不是只能用来充电。\n\n建议使用OTG+A2C线缆的组合。</string>
-    <string name="instructions_category_payload">注入payload</string>
-    <string name="instructions_category_payload_description">你可以在“注入”页面点击“＋”来从设备存储器添加 payload；你也可以在页面上点击“云”图标来从直链下载 payload，或者将已下载的 payload 手动移动到 Rekado 的文件夹：\n(/sdcard/Android/data/com.pavelrekun.rekado/files/)\n\n你也可以使用 Rekado 自带的 payload：%1$s。</string>
+    <string name="instructions_category_payload">添加Payload</string>
+    <string name="instructions_category_payload_description">你可以在“注入”页面点击“＋”来从设备存储器添加 Payload；你也可以在页面上点击“云”图标来从直链下载 Payload，或者将已下载的 Payload 手动移动到 Rekado 的文件夹：\n(/sdcard/Android/data/com.pavelrekun.rekado/files/)\n\n你也可以使用 Rekado 自带的 Payload：%1$s。</string>
     <string name="instructions_category_rcm_help">帮助</string>
-    <string name="instructions_category_rcm_description">要让你的 Switch 进入 RCM 模式，需要在右滑轨插入短接器后按住 Switch 主机上的 音量+ 和 电源键 至少一秒，然后使用数据线连接手机，选择 payload 后即可开机。</string>
-    <string name="instructions_category_final">完成</string>
-    <string name="instructions_category_final_description">连接到任天堂 Switch 时，若设备需要 USB 访问权限，请允许。稍后将会打开 选择payload 界面，并在选择框内选择需要的 payload 。</string>
+    <string name="instructions_category_rcm_description">要让你的 Switch 进入 RCM 模式，需要在右滑轨插入短接器后按住 Switch 主机上的 音量+ 和 电源键 至少一秒，然后使用数据线将 Switch 连接到手机</string>
+    <string name="instructions_category_final">注入Payload</string>
+    <string name="instructions_category_final_description">若设备在连接到 Switch 时需要 USB 访问权限，请允许。稍后将会自动打开 选择Payload 界面，请在选择框内选择需要的 Payload 。</string>
     <!-- endregion -->
     <!-- region: Donate -->
     <string name="donate_description">想进一步支持我的开发吗？
@@ -58,13 +58,13 @@
     <!-- region: Settings -->
     <string name="settings_category_auto_injector">自动注入</string>
     <string name="settings_auto_injector_status_title">自动注入器</string>
-    <string name="settings_auto_injector_status_summary">无需确认自动注入所选的payload</string>
+    <string name="settings_auto_injector_status_summary">无需确认自动注入所选的Payload</string>
     <string name="settings_auto_injector_payload_title">注入文件</string>
-    <string name="settings_category_payloads">注入文件</string>
-    <string name="settings_payloads_hide_title">隐藏自带的payload</string>
+    <string name="settings_category_payloads">Payload</string>
+    <string name="settings_payloads_hide_title">隐藏自带的Payload</string>
     <string name="settings_payloads_hide_summary">隐藏所有自带的payload: %1$s</string>
     <string name="settings_payloads_reset_title">清除</string>
-    <string name="settings_payloads_reset_summary">删除所有已添加的payload (不包括自带的%1$s)</string>
+    <string name="settings_payloads_reset_summary">删除所有已添加的Payload (不包括自带的%1$s)</string>
     <string name="settings_category_appearance">外观</string>
     <string name="settings_appearance_theme_title">主题</string>
     <string name="settings_appearance_theme_summary">应用程序主题</string>
@@ -75,46 +75,46 @@
     <string name="settings_appearance_dynamic_colors_summary">在 Android 12 及更高版本系统上使用基于壁纸的动态颜色</string>
     <!-- endregion -->
     <!-- region: DialogsShower -->
-    <string name="dialog_loader_title">选择 payload</string>
+    <string name="dialog_loader_title">选择Payload</string>
     <string name="dialog_reset_payloads_title">清除</string>
-    <string name="dialog_reset_payloads_summary">你确定要删除自己添加的所有 payload 吗？</string>
+    <string name="dialog_reset_payloads_summary">你确定要删除自己添加的所有 Payload 吗？</string>
     <string name="dialog_payload_download_title">下载</string>
     <string name="dialog_payload_download_field_title">名称</string>
-    <string name="dialog_payload_update_title">Payload 更新</string>
-    <string name="dialog_payload_update_message">检测到自带payload的新版本。
+    <string name="dialog_payload_update_title">更新 Payload</string>
+    <string name="dialog_payload_update_message">检测到自带Payload的新版本。
 \n建议更新</string>
     <string name="dialog_payload_no_updates_title">暂无更新</string>
     <string name="dialog_payload_no_updates_message">未找到可用更新。
-\n你的 payload 已是最新。</string>
+\n你的Payload已是最新。</string>
     <string name="dialog_payload_network_error_title">发生错误</string>
     <string name="dialog_payload_network_error_message">发生意外错误，请稍后重试。</string>
-    <string name="dialog_loader_no_payloads_title">没有可用的 payload</string>
-    <string name="dialog_loader_no_payloads_description">看上去你并没有加入其他的 payload，而且还把自带的 payload 隐藏了。\n无法进行注入。\n\n请添加可用的 payload 或通过 设置 页面取消隐藏自带文件再试一下</string>
+    <string name="dialog_loader_no_payloads_title">没有可用的Payload</string>
+    <string name="dialog_loader_no_payloads_description">看上去你并没有添加其他的 Payload，而且还隐藏了自带的 Payload。\n无法进行注入。\n请添加可用的 Payload 或通过 设置 页面取消隐藏自带文件并再试一次</string>
     <string name="dialog_settings_appearance_theme_title">主题</string>
-    <string name="dialog_settings_auto_injector_payload_title">自动注入payload</string>
+    <string name="dialog_settings_auto_injector_payload_title">自动注入Payload</string>
     <string name="dialog_button_download">下载</string>
-    <string name="dialog_button_update">更新注入文件</string>
+    <string name="dialog_button_update">更新Payload</string>
     <string name="dialog_button_negative_close">关闭</string>
     <string name="dialog_button_negative_cancel">取消</string>
     <!-- endregion -->
     <!-- region: Serial Checker -->
     <string name="serial_checker_category_checker">检查</string>
-    <string name="serial_checker_category_information">信息</string>
+    <string name="serial_checker_category_information">序列号信息</string>
     <string name="serial_checker_checker_serial_number">序列号</string>
     <string name="serial_checker_checker_button">检查</string>
     <string name="serial_checker_information_xaw1"><![CDATA[<b>序列号开头为 XAW1</b><br />XAW10000000 - XAW100740000: 未打补丁<br />XAW1007500000 - XAW10120000000: 可能打了补丁<br />XAW10120000000 及以上: 已打补丁<br /><br />]]></string>
-    <string name="serial_checker_information_xaw4"><![CDATA[<b>序列号开头为 XAW4</b><br />XAW40000000 - XAW400110000：未打补丁<br />XAW400110000-XAW400120000：可能打了补丁<br />XAW400120000及以上：已打补丁<br /><br />]]></string>
+    <string name="serial_checker_information_xaw4"><![CDATA[<b>序列号开头为 XAW4</b><br />XAW40000000 - XAW400110000：未打补丁<br />XAW400110000 - XAW400120000：可能打了补丁<br />XAW400120000及以上：已打补丁<br /><br />]]></string>
     <string name="serial_checker_information_xaw7"><![CDATA[<b>序列号开头为 XAW7</b><br />XAW70000000 - XAW70017800000: 未打补丁<br />XAW70017800000 - XAW70030000000: 可能打了补丁<br />XAW70030000000 及以上: 已打补丁<br /><br />]]></string>
     <string name="serial_checker_information_xaj1"><![CDATA[<b>序列号开头为 XAJ1</b><br />XAJ10000000 - XAJ10020000000: 未打补丁<br />XAJ10020000000 - XAJ10030000000: 可能打了补丁<br />XAJ10030000000 及以上: 已打补丁<br /><br />]]></string>
     <string name="serial_checker_information_xaj4"><![CDATA[<b>序列号开头为 XAJ4</b><br />XAJ40000000 - XAJ40046000000: 未打补丁<br />XAJ400460000000 - XAJ40060000000: 可能打了补丁<br />XAJ40060000000 以上: 已打补丁<br /><br />]]></string>
     <string name="serial_checker_information_xaj7"><![CDATA[<b>序列号开头为 XAJ7</b><br />XAJ7000000000 - XAJ70040000000: 未打补丁<br />XAJ70040000000 - XAJ70050000000: 可能打了补丁<br />XAJ70050050000000 及以上: 已打补丁<br /><br />]]></string>
-    <string name="serial_checker_information_xaw9"><![CDATA[<b>序列号开头为 XAW9</b><br />从任天堂直接翻新的设备，没有任何信息，但很可能所有的都打了补丁。<br /><br />]]></string>
-    <string name="serial_checker_information_xak"><![CDATA[<b>序列号开头为 XAK</b><br />没有可用信息，因为这些只在韩国销售。]]></string>
+    <string name="serial_checker_information_xaw9"><![CDATA[<b>序列号开头为 XAW9</b><br />任天堂直接翻新的机器，没有任何信息，但很可能全部都打了补丁。<br /><br />]]></string>
+    <string name="serial_checker_information_xak"><![CDATA[<b>序列号开头为 XAK</b><br />没有可用信息，因为这些机器只在韩国销售。]]></string>
     <string name="serial_checker_scan_barcode">扫描条形码</string>
     <string name="serial_checker_help">帮助</string>
-    <string name="serial_checker_status_not_patched">可注入payload！</string>
+    <string name="serial_checker_status_not_patched">可注入Payload！</string>
     <string name="serial_checker_status_patched">补丁机，不可注入</string>
-    <string name="serial_checker_status_possibly_patched">可能是补丁机，请尝试注入payload</string>
+    <string name="serial_checker_status_possibly_patched">可能是补丁机，请尝试注入Payload</string>
     <string name="serial_checker_status_error">你在干什么？没法检查这个啊……</string>
     <string name="serial_checker_status_empty">序列号不能为空！</string>
     <string name="serial_checker_status_too_long">序列号的最大长度为14个字符！</string>

@@ -1,4 +1,4 @@
-### The application has already received all the functionality that I planned to lay in it, so I will only fix defects and add localizations in the future. [More details here.](https://pavelrekun.dev/blog/news_25.08.2020/)
+### The application has already received all the functionality that I planned to lay in it, so I will only fix defects and add localizations in the future. [More details here.](https://pavlorekun.dev/blog/news_25.08.2020/)
 
 <a href="https://www.buymeacoffee.com/pavlorekun" target="_blank"><img src="https://i.imgur.com/5PiChJC.png" alt="BMC" height="60"></a>
 
