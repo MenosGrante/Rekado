@@ -1,15 +1,15 @@
 {
-  "revision": 13,
+  "revision": 15,
   "payloads":[
     {
       "title":"hekate.bin",
       "downloadUrl": "https://pavlorekun.dev/payloads/hekate.bin",
-      "version":"6.0.1"
+      "version":"6.0.2"
     },
     {
       "title":"fusee.bin",
       "downloadUrl": "https://pavlorekun.dev/payloads/fusee.bin",
-      "version":"1.4.1"
+      "version":"1.5.0"
     }
   ]
 }

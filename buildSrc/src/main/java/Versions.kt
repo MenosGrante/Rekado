@@ -1,17 +1,17 @@
 object Versions {
 
     object Gradle {
-        const val Plugin = "7.4.1"
-        const val Updates = "0.45.0"
+        const val Plugin = "7.4.2"
+        const val Updates = "0.46.0"
     }
 
     object AndroidX {
         const val Core = "1.9.0"
-        const val RecyclerView = "1.2.1"
+        const val RecyclerView = "1.3.0"
         const val Browser = "1.5.0"
         const val Preferences = "1.2.0"
         const val ConstraintLayout = "2.1.4"
-        const val Lifecycle = "2.5.1"
+        const val Lifecycle = "2.6.0"
         const val Navigation = "2.5.3"
         const val SwipeRefreshLayout = "1.1.0"
         const val Hilt = "2.45"
