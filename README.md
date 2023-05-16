@@ -52,4 +52,4 @@ This should not happen when using the "correct" payloads. But I am not responsib
 * [ealfonso93](https://github.com/ealfonso93) for contributing in this project.
 
 ## Donate
-I have created and supporting this and other my apps in my free time, so if you would like to support me, check my <a href="https://www.paypal.com/donate/?hosted_button_id=NRGW3HHUNPBVQ" target="_blank">"PayPal"</a> page to support me and my projects.
+I have created and supporting this and other my apps in my free time, so if you would like to support me, check my <a href="https://www.buymeacoffee.com/pavlorekun" target="_blank">"Buy Me A Coffee"</a> page to support me and my projects.
