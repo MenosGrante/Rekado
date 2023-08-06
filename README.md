@@ -1,4 +1,11 @@
-### The application has already received all the functionality that I planned to lay in it, so I will only fix defects and add localizations in the future. [More details here.](https://pavlorekun.dev/blog/news_25.08.2020/)
+> 🇺🇦 UKRAINE [IS BEING ATTACKED](https://war.ukraine.ua/) BY RUSSIAN ARMY. CIVILIANS ARE GETTING KILLED. RESIDENTIAL AREAS ARE GETTING BOMBED.
+> - Help Ukraine via:
+>   - [Serhiy Prytula Charity Foundation](https://prytulafoundation.org/en/)
+>   - [Come Back Alive Charity Foundation](https://savelife.in.ua/en/donate-en/)
+>   - [National Bank of Ukraine](https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi)
+> - More info on [war.ukraine.ua](https://war.ukraine.ua/) and [MFA of Ukraine](https://twitter.com/MFA_Ukraine)
+
+<hr/>
 
 <a href="https://www.buymeacoffee.com/pavlorekun" target="_blank"><img src="https://i.imgur.com/5PiChJC.png" alt="BMC" height="60"></a>
 
