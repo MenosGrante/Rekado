@@ -4,12 +4,12 @@
     {
       "title":"hekate.bin",
       "downloadUrl": "https://pavlorekun.dev/payloads/hekate.bin",
-      "version":"6.0.2"
+      "version":"6.0.6"
     },
     {
       "title":"fusee.bin",
       "downloadUrl": "https://pavlorekun.dev/payloads/fusee.bin",
-      "version":"1.5.0"
+      "version":"1.5.5"
     }
   ]
 }
