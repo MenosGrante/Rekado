@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- region: Navigation -->
+    <string name="navigation_payloads">מטענים</string>
+    <string name="navigation_tools">כלים</string>
+    <string name="navigation_instructions">הוראות</string>
+    <string name="navigation_logs">רישומים</string>
+    <string name="navigation_about">אודות Rekado</string>
+    <string name="navigation_donate">תמיכה בפיתוח</string>
+    <string name="navigation_settings">הגדרות</string>
+    <string name="navigation_serial_checker">בודק סיריאלי</string>
+    <!-- endregion -->
+    <!-- region: About -->
+    <string name="about_category_description">תיאור</string>
+    <string name="about_category_developer">מפתח</string>
+    <string name="about_information_description">Rekado היא ערכת כלים עבור הNintendo Switch שלכם שכוללת הזרקת מטענים ובדיקת קונסולות לפגיעות על בסיס מספר סיריאלי</string>
+    <string name="about_developer_portfolio_title">תיק עבודות</string>
+    <string name="about_developer_portfolio_summary">כל המידע לגבי המפתח והבלוג עם החדשות</string>
+    <string name="about_developer_instagram_summary">פרופיל תחביב עם תמונת רחפן</string>
+    <string name="about_developer_github_summary">רשימת התוכנות בקוד פתוח</string>
+    <string name="about_developer_twitter_summary">מיקרו בלוג פרטי</string>
+    <!-- endregion -->
+    <!-- region: Payloads -->
+    <string name="payloads_update_bundled_title">עדכן מטענים שהגיעו עם האפליקציה</string>
+    <string name="payloads_update_bundled_description">בדוק עדכונים עבור מטענים שהגיעו עם האפליקציה - %1$s.</string>
+    <string name="payloads_update_bundled_button_update">בדוק עדכונים</string>
+    <string name="payloads_download">הורד מטען</string>
+    <string name="payloads_add">הוסף מטען</string>
+    <string name="payloads_remove">הסר מטען</string>
+    <string name="payloads_download_status_empty">השם או הקישור לא יכולים להיות ריקים!</string>
+    <string name="payloads_download_status_success">הורדת מטען %1$s הסתיימה בהצלחה!</string>
+    <string name="payloads_add_external_error">לא ניתן להוסיף את הpayload הנבחר!</string>
+    <!-- endregion -->
+    <!-- region: Logs -->
+    <string name="logs_clear">נקה</string>
+    <!-- endregion -->
+    <!-- region: Tools -->
+    <string name="tools_serial_checker_title">בודק סיריאלי</string>
+    <string name="tools_serial_checker_description">בדקו אם הNintendo Switch שלכם פגיע באמצעות המספר הסיריאלי שלו</string>
+    <!-- endregion -->
+    <!-- region: Instructions -->
+    <string name="instructions_category_cable">כבל</string>
+    <string name="instructions_category_cable_description">ראשית, תצטרכו למצוא כבל בשביל לחבר את המכשיר שלכם לNintendo Switch. על מנת שזה יעבוד כראוי, זה צריך להיות כבל שמתוכנן להעברת מידע ולא רק לטעינה. \n\n מומלץ להשתמש בכבל A לC ומתאם USB OTG.</string>
+    <string name="instructions_category_payload">מטען</string>
+    <string name="instructions_category_payload_description">תוכלו להוסיף מטענים מהזכרון של המכשיר (לחצו על \"+\"), על ידי הורדה שלהם דרך לינק ישיר (לחצו על הכפתור עם האייקון של הענן) במסך המטענים\n\n או פשוט העבירו אותו לתיקיה Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).. תוכלו גם להשתמש באחד מהמטענים שהגיעו עם האפליקציה - %1$s.</string>
+    <string name="instructions_category_rcm_help">עזרה</string>
+    <string name="instructions_category_rcm_description">הכניסו את הNintendo Switch שלכם למצב RCM בכל דרך שנוחה לכם. \n\n הNintendo Switch שלכם ידליק את עצמו כשתחברו אותו, אז ודאו שאתם מחזיקים את \u0022VOLUME +\u0022.</string>
+    <string name="instructions_category_final">סופי</string>
+    <string name="instructions_category_final_description">חברו את המכשיר לNintendo Switch ואפשרו גישה לUSB, אם נדרשת. המתינו עד שחלון בחירת המטענים יפתח ובחרו את זה שתרצו להפעיל.</string>
+    <!-- endregion -->
+    <!-- region: Donate -->
+    <string name="donate_description">תרצו לתמוך בפיתוח של זה ושל שאר האפליקציות אפילו יותר? אז בדקו את עמוד ה\"PayPal\" שלי! :)</string>
+    <string name="donate_button_buy_me_coffee">תמיכה דרך \"Buy me a coffee\"</string>
+    <string name="donate_button_paypal">תמיכה דרך \"PayPal\"</string>
+    <!-- endregion -->
+    <!-- region: Settings -->
+    <string name="settings_category_auto_injector">מזריק אוטומטי</string>
+    <string name="settings_auto_injector_status_title">מזריק אוטומטי</string>
+    <string name="settings_auto_injector_status_summary">הזרקה אוטומטית של המטען המסומן ללא צורך באישור</string>
+    <string name="settings_auto_injector_payload_title">מטען</string>
+    <string name="settings_category_payloads">מטענים</string>
+    <string name="settings_payloads_hide_title">הסתר מטענים שהגיעו עם האפליקציה</string>
+    <string name="settings_payloads_hide_summary">הסתר את כל המטענים שהגיעו עם האפליקציה (%1$s)</string>
+    <string name="settings_payloads_reset_title">נקה</string>
+    <string name="settings_payloads_reset_summary">מחר את כל המטענים מלבד אלו שהגיעו עם האפליקציה (%1$s)</string>
+    <string name="settings_category_appearance">מראה</string>
+    <string name="settings_appearance_theme_title">ערכת נושא</string>
+    <string name="settings_appearance_theme_summary">ערכת הנושא הראשית של האפליקציה</string>
+    <string name="settings_appearance_theme_light">בהיר</string>
+    <string name="settings_appearance_theme_dark">כהה</string>
+    <string name="settings_appearance_theme_system_default">ברירת המחדל של המערכת</string>
+    <string name="settings_appearance_dynamic_colors_title">השתמש בצבעים דינמיים</string>
+    <string name="settings_appearance_dynamic_colors_summary">השתמש בצבעים דינמיים בהתבסס על הרקעים באנדרואיד 12 או חדש יותר</string>
+    <!-- endregion -->
+    <!-- region: DialogsShower -->
+    <string name="dialog_loader_title">בחר מטען</string>
+    <string name="dialog_reset_payloads_title">נקה</string>
+    <string name="dialog_reset_payloads_summary">האם אתה בטוח שברצונך למחוק את המטענים?</string>
+    <string name="dialog_payload_download_title">הורדה</string>
+    <string name="dialog_payload_download_field_title">שם</string>
+    <string name="dialog_payload_update_title">עדכוני מטענים</string>
+    <string name="dialog_payload_update_message">יש עדכון עבור חלק מהמטענים שהגיעו עם האפליקציה. עדכון זה מומלץ.</string>
+    <string name="dialog_payload_no_updates_title">אין עדכונים</string>
+    <string name="dialog_payload_no_updates_message">לא נמצאו עדכונים. אתם משתמשים בגרסה האחרונה של המטענים שהגיעו עם האפליקציה.</string>
+    <string name="dialog_payload_network_error_title">אירעה שגיאה</string>
+    <string name="dialog_payload_network_error_message">אירעה שגיאה לא צפויה. אנא נסה שוב מאוחר יותר.</string>
+    <string name="dialog_loader_no_payloads_title">אין מטענים</string>
+    <string name="dialog_loader_no_payloads_description">נראה שלא הוספתם מטענים חיצוניים והסתרתם את אלו שהגיעו עם האפליקציה. ההזרקה לא אפשרית.\n\nהוסיפו את המטענים שלכם או בטלו את ההסתרה של המטענים שהגיעו עם האפליקציה ב\"הגדרות\" ונסו שנית.</string>
+    <string name="dialog_settings_appearance_theme_title">ערכת נושא</string>
+    <string name="dialog_settings_auto_injector_payload_title">מטען להזרקה אוטומטית</string>
+    <string name="dialog_button_download">הורדה</string>
+    <string name="dialog_button_update">עדכן מטענים</string>
+    <string name="dialog_button_negative_close">סגור</string>
+    <string name="dialog_button_negative_cancel">בטל</string>
+    <!-- endregion -->
+    <!-- region: Serial Checker -->
+    <string name="serial_checker_category_checker">בודק</string>
+    <string name="serial_checker_category_information">מידע</string>
+    <string name="serial_checker_checker_serial_number">מספר סיריאלי</string>
+    <string name="serial_checker_checker_button">בדוק</string>
+    <string name="serial_checker_information_xaw1"><![CDATA["<b>סיריאליים המתחילים בXAW1</b><br />XAW10000000000 - XAW10074000000: לא תוקנו<br />XAW10075000000 - XAW10120000000: ייתכן ותוקנו<br />XAW10120000000 ומעלה: תוקנה<br /><br />]]></string>
+    <string name="serial_checker_information_xak"><![CDATA["<b>סיריאלים המתחילים בKAK</b><br /> מאחר והם נמכרים רק בקוריאה, אין מידע לגביהם.]]></string>
+    <string name="serial_checker_scan_barcode">סרוק ברקוד</string>
+    <string name="serial_checker_help">עזרה</string>
+    <string name="serial_checker_status_not_patched">ללא תיקון</string>
+    <string name="serial_checker_status_patched">תוקנו</string>
+    <string name="serial_checker_status_possibly_patched">ייתכן ותוקנו</string>
+    <string name="serial_checker_status_error">לא ניתן לבדוק את המספר הסיריאלי הזה!</string>
+    <string name="serial_checker_status_empty">המספר הסיריאלי לא יכול להיות ריק!</string>
+    <string name="serial_checker_status_too_long">האורך המירבי של המספר הסיריאלי הוא 14 תווים!</string>
+    <string name="serial_checker_status_scan_failed">סריקת הברקוד נכשלה!</string>
+    <!-- endregion -->
+    <!-- region: Helper -->
+    <!-- endregion -->
+</resources>

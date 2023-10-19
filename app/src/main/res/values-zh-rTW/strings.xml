@@ -69,7 +69,7 @@
     <string name="settings_appearance_theme_light">淺色</string>
     <string name="settings_appearance_theme_dark">深色</string>
     <string name="settings_appearance_theme_system_default">系統預設</string>
-    <string name="settings_appearance_dynamic_colors_title">使用動態顏色</string>
+    <string name="settings_appearance_dynamic_colors_title">使用動態配色</string>
     <string name="settings_appearance_dynamic_colors_summary">在 Android 12 及更新版本使用基於壁紙的動態顏色</string>
     <!-- endregion -->
     <!-- region: DialogsShower -->

@@ -9,10 +9,9 @@ plugins {
 android {
     compileSdk = Config.compileSDKVersion
     ndkVersion = Config.NDKVersion
+    namespace = Config.namespace
 
     defaultConfig {
-        applicationId = "com.pavelrekun.rekado"
-
         minSdk = Config.minimumSDKVersion
         targetSdk = Config.targetSDKVersion
         versionCode = Config.versionCode
@@ -29,8 +28,8 @@ android {
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
 
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     lint {
@@ -52,7 +51,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 
     // Allow references to generated code
