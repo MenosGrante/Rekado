@@ -3,11 +3,11 @@
 >   - [Serhiy Prytula Charity Foundation](https://prytulafoundation.org/en/)
 >   - [Come Back Alive Charity Foundation](https://savelife.in.ua/en/donate-en/)
 >   - [National Bank of Ukraine](https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi)
-> - More info on [war.ukraine.ua](https://war.ukraine.ua/) and [MFA of Ukraine](https://twitter.com/MFA_Ukraine)
+> - More info on [war.ukraine.ua](https://war.ukraine.ua/) and [MFA of Ukraine](https://X.com/MFA_Ukraine)
 
 <hr/>
 
-<a href="https://www.buymeacoffee.com/pavlorekun" target="_blank"><img src="https://i.imgur.com/5PiChJC.png" alt="BMC" height="60"></a>
+<a href="https://www.paypal.com/donate/?hosted_button_id=NRGW3HHUNPBVQ" target="_blank"><img src="https://i.imgur.com/2gMwDaG.png" alt="BMC" height="90"></a>
 
 [![Crowdin](https://badges.crowdin.net/rekado/localized.svg)](https://crowdin.com/project/rekado) [![Stars](https://img.shields.io/github/stars/MenosGrante/Rekado)](https://github.com/MenosGrante/Rekado/stargazers) [![License](https://img.shields.io/github/license/MenosGrante/Rekado)](https://github.com/MenosGrante/Rekado/blob/master/LICENSE) [![Releases](https://img.shields.io/github/downloads/MenosGrante/Rekado/total.svg)](https://github.com/MenosGrante/Rekado/releases/latest)
 
@@ -59,4 +59,4 @@ This should not happen when using the "correct" payloads. But I am not responsib
 * [ealfonso93](https://github.com/ealfonso93) for contributing in this project.
 
 ## Donate
-I have created and supporting this and other my apps in my free time, so if you would like to support me, check my <a href="https://www.buymeacoffee.com/pavlorekun" target="_blank">"Buy Me A Coffee"</a> page to support me and my projects.
+I have created and supporting this and other my apps in my free time, so if you would like to support me, you can donate by ["PayPal"](https://www.paypal.com/donate/?hosted_button_id=NRGW3HHUNPBVQ) and support me and my projects.
