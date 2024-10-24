@@ -265,7 +265,7 @@
                 app:dividerInsetStart="16dp" />
 
             <LinearLayout
-                android:id="@+id/aboutDeveloperTwitter"
+                android:id="@+id/about_developer_x"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
@@ -279,8 +279,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="24dp"
-                    android:contentDescription="@string/about_developer_twitter_title"
-                    android:src="@drawable/ic_about_twitter" />
+                    android:contentDescription="@string/about_developer_x_title"
+                    android:src="@drawable/ic_about_x" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -292,7 +292,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/about_developer_twitter_title"
+                        android:text="@string/about_developer_x_title"
                         android:textColor="?android:attr/textColorPrimary"
                         android:textSize="16sp" />
 
@@ -301,7 +301,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:lineSpacingExtra="4dp"
-                        android:text="@string/about_developer_twitter_summary"
+                        android:text="@string/about_developer_x_summary"
                         android:textColor="?android:attr/textColorSecondary"
                         android:textSize="14sp" />
 

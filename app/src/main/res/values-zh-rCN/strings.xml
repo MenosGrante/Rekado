@@ -16,9 +16,9 @@
     <string name="about_information_description">Rekado 是一个任天堂 Switch 工具软件，用于注入 Payload、检查序列号和其他工具。</string>
     <string name="about_developer_portfolio_title">作品集</string>
     <string name="about_developer_portfolio_summary">我的博客，有我所有的新闻和信息</string>
-    <string name="about_developer_instagram_summary">我的ins，爱好航拍</string>
+    <string name="about_developer_instagram_summary">个人页面</string>
     <string name="about_developer_github_summary">个人GitHub主页</string>
-    <string name="about_developer_twitter_summary">个人Twitter</string>
+    <string name="about_developer_x_summary">个人微博</string>
     <!-- endregion -->
     <!-- region: Payloads -->
     <string name="payloads_update_bundled_title">更新Rekado自带的Payload</string>
@@ -50,9 +50,7 @@
     <string name="instructions_category_final_description">若设备在连接到 Switch 时需要 USB 访问权限，请允许。稍后将会自动打开 选择Payload 界面，请在选择框内选择需要的 Payload 。</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">想进一步支持我的开发吗？
-\n请查看我的“PayPal”捐赠页面：)</string>
-    <string name="donate_button_buy_me_coffee">在 “Buy me a coffee” 网站上捐赠</string>
+    <string name="donate_description">我利用业余时间创建并支持这个应用程序和我的其他应用程序。如果您想支持我，可以通过 PayPal 捐款，以帮助支持我和我的项目。</string>
     <string name="donate_button_paypal">在 “PayPal” 上捐赠</string>
     <!-- endregion -->
     <!-- region: Settings -->

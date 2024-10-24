@@ -18,7 +18,7 @@
     <string name="about_developer_portfolio_summary">Вся информация о разработчике и блог с новостями</string>
     <string name="about_developer_instagram_summary">Хобби профиль с фото с дрона</string>
     <string name="about_developer_github_summary">Список приложений с открытым исходным кодом</string>
-    <string name="about_developer_twitter_summary">Персональный микро-блог</string>
+    <string name="about_developer_x_summary">Персональный микро-блог</string>
     <!-- endregion -->
     <!-- region: Payloads -->
     <string name="payloads_update_bundled_title">Обновить встроенные загрузчики</string>

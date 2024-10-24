@@ -16,9 +16,9 @@
     <string name="about_information_description">Rekado es una aplicación de herramientas para tu Nintendo Switch que incluye la inyección de payloads y la comprobación de vulnerabilidad por número de serie</string>
     <string name="about_developer_portfolio_title">Portafolio</string>
     <string name="about_developer_portfolio_summary">Toda la información sobre el desarrollador y el blog con noticias</string>
-    <string name="about_developer_instagram_summary">Perfil de hobby con foto en dron</string>
+    <string name="about_developer_instagram_summary">Página personal</string>
     <string name="about_developer_github_summary">Lista de aplicaciones de código abierto</string>
-    <string name="about_developer_twitter_summary">Micro-Blog Personal</string>
+    <string name="about_developer_x_summary">Microblog personal</string>
     <!-- endregion -->
     <!-- region: Payloads -->
     <string name="payloads_update_bundled_title">Actualizar payloads incluidos</string>
@@ -42,15 +42,14 @@
     <string name="instructions_category_cable">Cable</string>
     <string name="instructions_category_cable_description">Primero, necesitas buscar un cable para conectar tu dispositivo a la Nintendo Switch. Para un uso adecuado, tiene que ser un cable apto para la transmisión de datos, no solo para la carga.\n\nEs aconsejable usar un cable tipo A-C y un Adaptador OTG USB.</string>
     <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">Puedes añadir tu propio payload desde la memoria del dispositivo (haz click en el botón de \"+\"), descargarlo desde un link directo (haz click en el botón de la \"nube\") en la pantalla de \"Payloads\" o simplemente puedes moverlo a la carpeta de Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nTambien puedes usar uno de los payloads incluidos - %1$s.</string>
+    <string name="instructions_category_payload_description">%1$sPuedes añadir tu propio payload desde la memoria del dispositivo (haz click en el botón de \"+\"), descargarlo desde un link directo (haz click en el botón de la \"nube\") en la pantalla de \"Payloads\" o simplemente puedes moverlo a la carpeta de Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nTambien puedes usar uno de los payloads incluidos - %1$s.</string>
     <string name="instructions_category_rcm_help">Ayuda</string>
     <string name="instructions_category_rcm_description">Coloca tu Nintendo Switch en modo RCM de una forma correcta. \n\nTu Nintendo Switch se encenderá cuando la enchufes, asegurate de mantener oprimido \"VOLUMEN +\".</string>
     <string name="instructions_category_final">Final</string>
     <string name="instructions_category_final_description">Conecta tu dispositivo a la Nintendo Switch y da permisos de acceso a USB si es necesario. Espera hasta que el dialogo del selector de payloads se abra y selecciona el que quieras cargar.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">¿Te gustaría ayudar al desarrollo de esta y otras aplicaciones aún más? Entonces visita mi página de donación de \"PayPal\" :)</string>
-    <string name="donate_button_buy_me_coffee">Ayuda en \"Buy me a coffee\"</string>
+    <string name="donate_description">He creado y estoy apoyando esta y mis otras aplicaciones en mi tiempo libre. Si quieres apoyarme, puedes donar a través de PayPal para ayudarme a mí y a mis proyectos.</string>
     <string name="donate_button_paypal">Ayuda en \"PayPal\"</string>
     <!-- endregion -->
     <!-- region: Settings -->

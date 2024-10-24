@@ -16,9 +16,9 @@
     <string name="about_information_description">Rekado ist eine App für deine Nintendo Switch, welche die Injektion von Payloads, überprüfen von Seriennummern nach initiierbaren Konsolen und weitere Funktionen, welche bald kommen, unterstützt.</string>
     <string name="about_developer_portfolio_title">Portfolio</string>
     <string name="about_developer_portfolio_summary">Alle Infos über den Entwickler und ein Blog mit Neuigkeiten</string>
-    <string name="about_developer_instagram_summary">Hobby-Profil mit Drohnen-Foto</string>
+    <string name="about_developer_instagram_summary">Persönliche Seite</string>
     <string name="about_developer_github_summary">Liste der Open-Source Anwendungen</string>
-    <string name="about_developer_twitter_summary">Persönlicher Micro-Blog</string>
+    <string name="about_developer_x_summary">Persönlicher Mikro-Blog</string>
     <!-- endregion -->
     <!-- region: Payloads -->
     <string name="payloads_update_bundled_title">Gebündelte Payloads ausblenden</string>
@@ -49,8 +49,7 @@
     <string name="instructions_category_final_description">Verbinde das Gerät mit der Nintendo Switch, und falls berechtigungs-anfragen zum verwalten des USB gerätes auftauchen, bestätige diese. Warte bis sich das Payload-Injektor Fenster öffnet und wähle dann die Payload aus die gestartet werden soll.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">Willst Du die Entwicklung dieser und aller anderen Apps noch mehr unterstützen? Dann öffne meine \"PayPal\" Spendenseite :)</string>
-    <string name="donate_button_buy_me_coffee">Unterstützung auf \"Buy me a coffee\"</string>
+    <string name="donate_description">Ich habe diese und meine anderen Apps in meiner Freizeit erstellt und unterstütze sie. Wenn Sie mich unterstützen möchten, können Sie über PayPal spenden, um mich und meine Projekte zu unterstützen.</string>
     <string name="donate_button_paypal">Unterstützung mich auf \"PayPal\"</string>
     <!-- endregion -->
     <!-- region: Settings -->

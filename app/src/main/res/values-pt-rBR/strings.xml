@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- region: Navigation -->
-    <string name="navigation_payloads">Cargas</string>
+    <string name="navigation_payloads">Payloads</string>
     <string name="navigation_tools">Ferramentas</string>
     <string name="navigation_instructions">Instruções</string>
     <string name="navigation_logs">Registros</string>
@@ -16,9 +16,9 @@
     <string name="about_information_description">Rekado é um conjunto de ferramentas para Nintendo Switch que inclui injeção de payload, verificação de número de série e outras funcionalidades.</string>
     <string name="about_developer_portfolio_title">Porfólio</string>
     <string name="about_developer_portfolio_summary">Todas as informações sobre o desenvolvedor e o blog com as notícias</string>
-    <string name="about_developer_instagram_summary">Perfil Hobby com foto de drone</string>
+    <string name="about_developer_instagram_summary">Página pessoal</string>
     <string name="about_developer_github_summary">Lista de aplicativos de código aberto</string>
-    <string name="about_developer_twitter_summary">Micro-blog pessoal</string>
+    <string name="about_developer_x_summary">Microblog pessoal</string>
     <!-- endregion -->
     <!-- region: Payloads -->
     <string name="payloads_update_bundled_title">Atualizar payloads incorporadas</string>
@@ -41,7 +41,7 @@
     <!-- region: Instructions -->
     <string name="instructions_category_cable">Cabo</string>
     <string name="instructions_category_cable_description">Você precisará de um cabo USB-C para ligar o smartphone ao Nintendo Switch. É preciso um cabo que sirva para transferência de dados e não apenas para recarregar a bateria.\n\nUm cabo USB-A para C e um adaptador OTG são recomendados.</string>
-    <string name="instructions_category_payload">Carga</string>
+    <string name="instructions_category_payload">Payload</string>
     <string name="instructions_category_payload_description">Você pode adicionar sua payload da memória do dispositivo (clique no botão \"+\"), baixá-la através de um link direto (clique no botão com o ícone de \"nuvem\") na tela \"Payloads\" ou simplesmente movê-la para a pasta Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nVocê também pode usar uma das payloads incorporadas - %1$s.</string>
     <string name="instructions_category_rcm_help">Ajuda</string>
     <string name="instructions_category_rcm_description">Ligue o Nintendo Switch no modo RCM. Com o console totalmente desligado, insira o jig no trilho do JoyCon direito, mantenha pressionado o botão VOLUME + e em seguida pressione o botão POWER.</string>
@@ -49,16 +49,15 @@
     <string name="instructions_category_final_description">Conecte o smartphone ao Nintendo Switch e permita o acesso USB se for solicitado pelo smartphone. Espere até a caixa de diálogo aparecer e escolha o payload que deseja injetar.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">Gostaria de apoiar ainda mais o desenvolvimento deste e de todos os outros aplicativos? Então, confira minha página de doações no \"PayPal\" :)</string>
-    <string name="donate_button_buy_me_coffee">Apoie no \"Compre um café\"</string>
+    <string name="donate_description">Criei e mantenho este e meus outros aplicativos em meu tempo livre. Se quiser me apoiar, você pode fazer uma doação via PayPal para ajudar a apoiar a mim e a meus projetos.</string>
     <string name="donate_button_paypal">Apoie no \"PayPal\"</string>
     <!-- endregion -->
     <!-- region: Settings -->
     <string name="settings_category_auto_injector">Injetor automático</string>
     <string name="settings_auto_injector_status_title">Auto--injetor</string>
     <string name="settings_auto_injector_status_summary">Injeção automática de payloads sem a sua confirmação usando a payload selecionada</string>
-    <string name="settings_auto_injector_payload_title">Carga</string>
-    <string name="settings_category_payloads">Cargas</string>
+    <string name="settings_auto_injector_payload_title">Payload</string>
+    <string name="settings_category_payloads">Payloads</string>
     <string name="settings_payloads_hide_title">Esconder payloads pré-instalados</string>
     <string name="settings_payloads_hide_summary">Ocultar todas as payloads incorporadas (%1$s)</string>
     <string name="settings_payloads_reset_title">Limpar</string>

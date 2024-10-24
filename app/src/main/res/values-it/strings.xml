@@ -16,9 +16,9 @@
     <string name="about_information_description">Rekado è uno strumento per Nintendo Switch che include l\'iniezione di payload e un controllo di vulnerabilità della console tramite numero seriale</string>
     <string name="about_developer_portfolio_title">Portfolio</string>
     <string name="about_developer_portfolio_summary">Tutte le informazioni sullo sviluppatore e il blog con le notizie</string>
-    <string name="about_developer_instagram_summary">Profilo di hobby con foto di un drone</string>
+    <string name="about_developer_instagram_summary">Pagina personale</string>
     <string name="about_developer_github_summary">Lista delle applicazioni a sorgente aperto</string>
-    <string name="about_developer_twitter_summary">Micro-blog personale</string>
+    <string name="about_developer_x_summary">Micro-blog personale</string>
     <!-- endregion -->
     <!-- region: Payloads -->
     <string name="payloads_update_bundled_title">Aggiorna i payload integrati</string>
@@ -49,8 +49,7 @@
     <string name="instructions_category_final_description">Connetti il dispositivo al Nintendo Switch e permetti l\'accesso USB, se richiesto. Attendi finchè la finestra di scelta del payload si apra e seleziona quello che vuoi caricare.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">Vuoi sostenere lo sviluppo di questa e di tutte le altre app ancora di più? Allora controlla la mia pagina di donazione \"PayPal\" :)</string>
-    <string name="donate_button_buy_me_coffee">Supporto su \"Buy me a coffee\"</string>
+    <string name="donate_description">Ho creato e sostengo questa e le altre applicazioni nel mio tempo libero. Se volete sostenermi, potete fare una donazione tramite PayPal per contribuire a sostenere me e i miei progetti.</string>
     <string name="donate_button_paypal">Supporto su \"PayPal\"</string>
     <!-- endregion -->
     <!-- region: Settings -->

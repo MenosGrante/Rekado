@@ -16,9 +16,9 @@
     <string name="about_information_description">Rekado - це набір інструментів для вашого Nintendo Switch, який включає в себе ін\'єкцію завантажуваців і перевірку консолі на наявність вразливостей за серійним номером</string>
     <string name="about_developer_portfolio_title">Портфоліо</string>
     <string name="about_developer_portfolio_summary">Вся інформація про розробника та блог з новинами</string>
-    <string name="about_developer_instagram_summary">Хобі профіль з фото з дрона</string>
+    <string name="about_developer_instagram_summary">Персональна сторінка</string>
     <string name="about_developer_github_summary">Список додатків з відкритим вихідним кодом</string>
-    <string name="about_developer_twitter_summary">Персональний мікро-блог</string>
+    <string name="about_developer_x_summary">Особистий мікроблог</string>
     <!-- endregion -->
     <!-- region: Payloads -->
     <string name="payloads_update_bundled_title">Оновити вбудовані завантажувачі</string>
@@ -49,8 +49,7 @@
     <string name="instructions_category_final_description">Підключіть пристрій до Nintendo Switch і при необхідності дозвольте доступ до USB. Відкриється діалогове вікно «Вибір завантажувача» і виберіть, який з них ви хочете завантажити.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">Чи хотіли б ви ще більше підтримати розробку цього та всіх інших програм? Тоді перевірте мою сторінку пожертв «PayPal» :)</string>
-    <string name="donate_button_buy_me_coffee">Підтримати мене на «Buy me a coffee»</string>
+    <string name="donate_description">Я створив і підтримую цей та інші свої додатки у вільний час. Якщо ви хочете підтримати мене, ви можете зробити пожертву через PayPal, щоб допомогти мені та моїм проектам.</string>
     <string name="donate_button_paypal">Підтримка на «PayPal»</string>
     <!-- endregion -->
     <!-- region: Settings -->

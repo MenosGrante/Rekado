@@ -33,7 +33,7 @@ class AboutFragment : BaseFragment(R.layout.fragment_about) {
         binding.aboutDeveloperPortfolio.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.PERSONAL_SITE) }
         binding.aboutDeveloperInstagram.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.INSTAGRAM) }
         binding.aboutDeveloperGithub.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.GITHUB) }
-        binding.aboutDeveloperTwitter.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.TWITTER) }
+        binding.aboutDeveloperX.setOnClickListener { Utils.openLink(requireBaseActivity(), Links.X) }
     }
 
     private fun initEdgeToEdge() {

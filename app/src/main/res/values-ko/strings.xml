@@ -16,9 +16,9 @@
     <string name="about_information_description">Kotlin 및 C ++로 작성된 응용 프로그램. 닌텐도 스위치에 페이로드를 주입하는 데 사용됩니다</string>
     <string name="about_developer_portfolio_title">포트폴리오</string>
     <string name="about_developer_portfolio_summary">블로그와 뉴스를 포함한 개발자의 모든 정보</string>
-    <string name="about_developer_instagram_summary">드론 사진을 포함한 취미 프로필</string>
+    <string name="about_developer_instagram_summary">개인 페이지</string>
     <string name="about_developer_github_summary">오픈 소스 정보</string>
-    <string name="about_developer_twitter_summary">개인 마이크로 블로그</string>
+    <string name="about_developer_x_summary">개인 마이크로 블로그</string>
     <!-- endregion -->
     <!-- region: Payloads -->
     <string name="payloads_update_bundled_title">번들 페이로드 업데이트</string>
@@ -49,8 +49,7 @@
     <string name="instructions_category_final_description">장치를 닌텐도 스위치에 연결하고 필요한 경우 USB 접속 권한을 허용하십시오. 대기 장치 페이로드 선택기 대화 상자가 열리고 로드 할 것을 선택하십시오</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">이 앱과 다른 모든 앱의 개발을 더욱 지원하겠습니까? 그렇다면 나의 \"페이팔\" 기부 페이지를 확인하세요 :)</string>
-    <string name="donate_button_buy_me_coffee">\"커피 사주세요\" 지원</string>
+    <string name="donate_description">저는 여가 시간에 이 앱과 다른 앱을 만들고 지원하고 있습니다. 저를 후원하고 싶으시다면 PayPal을 통해 기부하여 저와 제 프로젝트를 지원할 수 있습니다.</string>
     <string name="donate_button_paypal">Paypal로 후원</string>
     <!-- endregion -->
     <!-- region: Settings -->

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- region: Navigation -->
+    <string name="navigation_payloads">ペイロード</string>
+    <string name="navigation_tools">ツール</string>
+    <string name="navigation_instructions">説明</string>
+    <string name="navigation_logs">ログ</string>
+    <string name="navigation_about">Rekadoについて</string>
+    <string name="navigation_donate">開発を支援</string>
+    <string name="navigation_settings">設定</string>
+    <string name="navigation_serial_checker">シリアルチェッカー</string>
+    <!-- endregion -->
+    <!-- region: About -->
+    <string name="about_category_description">説明</string>
+    <string name="about_category_developer">開発者</string>
+    <string name="about_information_description">Rekado は Nintendo Switch 向けのツールキットです。シリアル番号により対策機かを確認し、ペイロードを送信できます。</string>
+    <string name="about_developer_portfolio_title">ポートフォリオ</string>
+    <string name="about_developer_portfolio_summary">開発者に関するすべての情報とニュース付きブログ</string>
+    <string name="about_developer_instagram_summary">個人ページ</string>
+    <string name="about_developer_github_summary">オープンソースアプリのリスト</string>
+    <string name="about_developer_x_summary">個人のマイクロブログ</string>
+    <!-- endregion -->
+    <!-- region: Payloads -->
+    <string name="payloads_update_bundled_title">付属されているペイロードの更新</string>
+    <string name="payloads_update_bundled_description">すべての付属ペイロードの更新を確認する - %1$s.</string>
+    <string name="payloads_update_bundled_button_update">アップデートを確認</string>
+    <string name="payloads_download">ペイロードをダウンロード</string>
+    <string name="payloads_add">外部のペイロードを追加</string>
+    <string name="payloads_remove">ペイロードを削除</string>
+    <string name="payloads_download_status_empty">名前またはURLを空欄にしないでください！</string>
+    <string name="payloads_download_status_success">ペイロード %1$s は正常にダウンロードされました！</string>
+    <string name="payloads_add_external_error">選択されたペイロードは追加できません！</string>
+    <!-- endregion -->
+    <!-- region: Logs -->
+    <string name="logs_clear">クリア</string>
+    <!-- endregion -->
+    <!-- region: Tools -->
+    <string name="tools_serial_checker_title">シリアルチェッカー</string>
+    <string name="tools_serial_checker_description">シリアルナンバーからNintendo Switchの脆弱性をチェックします</string>
+    <!-- endregion -->
+    <!-- region: Instructions -->
+    <string name="instructions_category_cable">ケーブル</string>
+    <string name="instructions_category_cable_description">まず、Nintendo Switchに端末を接続するケーブルを見つける必要があります。 動作させるためには、充電だけでなく、データ転送用のケーブルである必要があります。\n\nUSB A-CケーブルとUSB OTGアダプタを使用することをお勧めします。</string>
+    <string name="instructions_category_payload">ペイロード</string>
+    <string name="instructions_category_payload_description">「ペイロード」画面で、デバイスのファイルからペイロードを追加するか（「+」ボタンをタップ）、直リンクからダウンロードするか（「雲」アイコンのボタンをタップ）、または単純にRekadoフォルダ（/sdcard/Android/data/com.pavelrekun.rekado/files/）にペイロードファイルを移動します。\n\n付属のペイロードを使用することもできます。 - %1$s.</string>
+    <string name="instructions_category_rcm_help">ヘルプ</string>
+    <string name="instructions_category_rcm_description">Nintendo Switchを任意の方法でRCMモードにします。 \n\n「音量+」ボタンを押しながら電源ボタンを押してください。</string>
+    <string name="instructions_category_final">最後に</string>
+    <string name="instructions_category_final_description">デバイスをNintendo Switchに接続し、必要に応じてUSBアクセスを許可します。 単位ペイロードセレクターダイアログが開き、読み込む単位を選択します。</string>
+    <!-- endregion -->
+    <!-- region: Donate -->
+    <string name="donate_description">私は自由な時間にこのアプリと他のアプリを作成し、サポートしています。PayPalで寄付をすることができます。</string>
+    <string name="donate_button_paypal">\"PayPal\"でサポート</string>
+    <!-- endregion -->
+    <!-- region: Settings -->
+    <string name="settings_category_auto_injector">自動送信</string>
+    <string name="settings_auto_injector_status_title">自動送信</string>
+    <string name="settings_auto_injector_status_summary">選択したペイロードを使用して確認無しで自動的に送信します</string>
+    <string name="settings_auto_injector_payload_title">ペイロード</string>
+    <string name="settings_category_payloads">ペイロード</string>
+    <string name="settings_payloads_hide_title">付属されているペイロードの非表示</string>
+    <string name="settings_payloads_hide_summary">付属されているすべてのペイロードを隠します (%1$s)</string>
+    <string name="settings_payloads_reset_title">クリア</string>
+    <string name="settings_payloads_reset_summary">付属以外の追加されたすべてのペイロードを削除する (%1$s)</string>
+    <string name="settings_category_appearance">外観</string>
+    <string name="settings_appearance_theme_title">テーマ</string>
+    <string name="settings_appearance_theme_summary">アプリのメインテーマ</string>
+    <string name="settings_appearance_theme_light">ライト</string>
+    <string name="settings_appearance_theme_dark">ダーク</string>
+    <string name="settings_appearance_theme_system_default">システム設定に従う</string>
+    <string name="settings_appearance_dynamic_colors_title">ダイナミックカラーを使用</string>
+    <string name="settings_appearance_dynamic_colors_summary">Android 12以降の壁紙に基づいて動的な色を使用する</string>
+    <!-- endregion -->
+    <!-- region: DialogsShower -->
+    <string name="dialog_loader_title">ペイロードを選択</string>
+    <string name="dialog_reset_payloads_title">クリア</string>
+    <string name="dialog_reset_payloads_summary">ペイロードを削除しますか？</string>
+    <string name="dialog_payload_download_title">ダウンロード</string>
+    <string name="dialog_payload_download_field_title">Name</string>
+    <string name="dialog_payload_update_title">ペイロードの更新</string>
+    <string name="dialog_payload_update_message">いくつかの付属のペイロードのアップデートがあります。（アップデート推奨）</string>
+    <string name="dialog_payload_no_updates_title">更新はありません</string>
+    <string name="dialog_payload_no_updates_message">更新は見つかりませんでした。最新のビルトインペイロードを使用しています。</string>
+    <string name="dialog_payload_network_error_title">エラーが発生しました</string>
+    <string name="dialog_payload_network_error_message">予期せぬエラーが発生しました。しばらくたってからもう一度お試しください。</string>
+    <string name="dialog_loader_no_payloads_title">ペイロードがありません</string>
+    <string name="dialog_loader_no_payloads_description">ペイロードが見つかりません。付属されているペイロードが非表示になっています。\n\nペイロードを追加するか、「設定」で「付属されているペイロードの非表示」を無効にして、もう一度やり直してください。</string>
+    <string name="dialog_settings_appearance_theme_title">テーマ</string>
+    <string name="dialog_settings_auto_injector_payload_title">自動送信するペイロード</string>
+    <string name="dialog_button_download">ダウンロード</string>
+    <string name="dialog_button_update">ペイロードを更新</string>
+    <string name="dialog_button_negative_close">閉じる</string>
+    <string name="dialog_button_negative_cancel">キャンセル</string>
+    <!-- endregion -->
+    <!-- region: Serial Checker -->
+    <string name="serial_checker_category_checker">チェッカー</string>
+    <string name="serial_checker_category_information">インフォメーション</string>
+    <string name="serial_checker_checker_serial_number">シリアルナンバー</string>
+    <string name="serial_checker_checker_button">チェック</string>
+    <string name="serial_checker_information_xaw1"><![CDATA["<b>シリアルナンバーの上4桁: XAW1</b><br />XAW10000000000 - XAW10074000000: 未対策<br />XAW10075000000 - XAW10120000000: おそらく対策済み<br />XAW10120000000 以上: 対策済み<br /><br />]]></string>
+    <string name="serial_checker_information_xaw4"><![CDATA["<b>シリアルナンバーの上4桁: XAW4</b><br />XAW40000000000 - XAW40011000000: 未対策<br />XAW40011000000 - XAW40012000000: おそらく対策済み<br />XAW40012000000 以上: 対策済み<br /><br />]]></string>
+    <string name="serial_checker_information_xaw7"><![CDATA["<b>シリアルナンバーの上4桁: XAW7</b><br />XAW70000000000 - XAW70017800000: 未対策<br />XAW70017800000 - XAW70030000000: おそらく対策済み<br />XAW70030000000 以上: 対策済み<br /><br />]]></string>
+    <string name="serial_checker_information_xaj1"><![CDATA["<b>シリアルナンバーの上4桁: XAJ1</b><br />XAJ10000000000 - XAJ10020000000: 未対策<br />XAJ10020000000 - XAJ10030000000: おそらく対策済み<br />XAJ10030000000 以上: 対策済み<br /><br />]]></string>
+    <string name="serial_checker_information_xaj4"><![CDATA["<b>シリアルナンバーの上4桁: XAJ4</b><br />XAJ40000000000 - XAJ40046000000: 未対策<br />XAJ40046000000 - XAJ40060000000: おそらく対策済み<br />XAJ40060000000 以上: 対策済み<br /><br />]]></string>
+    <string name="serial_checker_information_xaj7"><![CDATA["<b>シリアルナンバーの上4桁: XAJ7</b><br />XAJ70000000000 - XAJ70040000000: 未対策<br />XAJ70040000000 - XAJ70050000000: おそらく対策済み<br />XAJ70050000000 以上: 対策済み<br /><br />]]></string>
+    <string name="serial_checker_information_xaw9"><![CDATA["<b>シリアルナンバーの上4桁: XAW9</b><br />任天堂による再整備品。 情報はないが、すべて対策済みの可能性が高いです。<br /><br />]]></string>
+    <string name="serial_checker_information_xak"><![CDATA["<b>シリアルナンバーの上4桁: XAK</b><br />韓国でのみ販売されているので、情報がありません。]]></string>
+    <string name="serial_checker_scan_barcode">バーコード読取</string>
+    <string name="serial_checker_help">ヘルプ</string>
+    <string name="serial_checker_status_not_patched">未対策</string>
+    <string name="serial_checker_status_patched">対策済み</string>
+    <string name="serial_checker_status_possibly_patched">おそらく対策済み</string>
+    <string name="serial_checker_status_error">このシリアルナンバーは確認できません！</string>
+    <string name="serial_checker_status_empty">シリアルナンバーは空欄にできません！</string>
+    <string name="serial_checker_status_too_long">シリアルナンバーは最長14桁です!</string>
+    <string name="serial_checker_status_scan_failed">バーコードのスキャンに失敗しました！</string>
+    <!-- endregion -->
+    <!-- region: Helper -->
+    <!-- endregion -->
+</resources>

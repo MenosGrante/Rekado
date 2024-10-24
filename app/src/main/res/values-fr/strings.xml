@@ -16,9 +16,9 @@
     <string name="about_information_description">Rekado est une application multifonction pour la Nintendo Switch incluant un injecteur de payloads et permettant de vérifier la vulnérabilité d\'une console a partir de son numéro de série</string>
     <string name="about_developer_portfolio_title">Portfolio</string>
     <string name="about_developer_portfolio_summary">Toutes les informations du développeur et les nouvelles</string>
-    <string name="about_developer_instagram_summary">Hobbies et photo de drone</string>
+    <string name="about_developer_instagram_summary">Page personnelle</string>
     <string name="about_developer_github_summary">Liste des applis open source</string>
-    <string name="about_developer_twitter_summary">Micro-blog personnel</string>
+    <string name="about_developer_x_summary">Micro-blog personnel</string>
     <!-- endregion -->
     <!-- region: Payloads -->
     <string name="payloads_update_bundled_title">Mettre à jour les payloads intégrés</string>
@@ -45,12 +45,11 @@
     <string name="instructions_category_payload_description">Vous pouvez ajouter votre payload à partir de la mémoire de l\'appareil (cliquez sur le bouton \"+\"), téléchargez-le via un lien direct (cliquez sur le bouton avec l\'icône en forme de nuage) sur l\'écran \"Payloads\" ou simplement déplacez-le dans le dossier Rekado (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nVous pouvez également utiliser l\'un des payloads intégrés - %1$s.</string>
     <string name="instructions_category_rcm_help">Aide</string>
     <string name="instructions_category_rcm_description">Mettez votre Switch en mode RCM par la méthode de votre choix. \n\nVotre Switch démarrera automatiquement lorsque vous brancherez le câble, veuillez vous assurer que vous appuyez sur le bouton VOLUME + de la Switch avant le branchement.</string>
-    <string name="instructions_category_final">Finalement</string>
+    <string name="instructions_category_final">Final</string>
     <string name="instructions_category_final_description">Connectez votre appareil à la Switch et autorisez la permission pour l\'accès USB si nécessaire. Attendez que l\'application ouvre le menu de choix de payload et sélectionner celui que vous voulez injecter.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">Vous voulez soutenir davantage le développement de cette application et de toutes les autres ? Rendez-vous sur ma page de donations \"PayPal\" :)</string>
-    <string name="donate_button_buy_me_coffee">Me soutenir en \"achetant un café\"</string>
+    <string name="donate_description">J\'ai créé et je soutiens cette application et mes autres applications pendant mon temps libre. Si vous souhaitez me soutenir, vous pouvez faire un don via PayPal pour m\'aider à soutenir mes projets.</string>
     <string name="donate_button_paypal">Faire un don avec \"Paypal\"</string>
     <!-- endregion -->
     <!-- region: Settings -->

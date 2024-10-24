@@ -16,9 +16,9 @@
     <string name="about_information_description">Το Rekado είναι μια εφαρμογή - εργαλειοθήκη για το Nintendo Switch σας που ελέγχει αν η κονσόλα σας είναι ευάλωτη, στην εισαγωγή payload, μέσω του σειριακού αριθμού της</string>
     <string name="about_developer_portfolio_title">Επαγγελματικό προφίλ</string>
     <string name="about_developer_portfolio_summary">Όλες οι πληροφορίες σχετικές με εμένα (τον προγραμματιστή) και σελίδα με τα νέα μου</string>
-    <string name="about_developer_instagram_summary">Προφίλ με φωτογραφίες από το χόμπι μου με τα drone</string>
+    <string name="about_developer_instagram_summary">Προσωπική σελίδα</string>
     <string name="about_developer_github_summary">Λίστα εφαρμογών μου ανοικτού κώδικα</string>
-    <string name="about_developer_twitter_summary">Προσωπική σελίδα με τα νέα μου</string>
+    <string name="about_developer_x_summary">Προσωπικό micro-blog</string>
     <!-- endregion -->
     <!-- region: Payloads -->
     <string name="payloads_update_bundled_title">Ενημέρωση ενσωματωμένων payload</string>
@@ -49,8 +49,7 @@
     <string name="instructions_category_final_description">Συνδέστε τη συσκευή σας με το Nintendo Switch και αποδεχτείτε την άδεια πρόσβασης USB, εάν σας ζητηθεί. Περιμένετε μέχρι να εμφανιστεί η οθόνη επιλογής payload και επιλέξτε το payload που θέλετε να φορτώσει.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">Θα θέλατε να βοηθήσετε στην ανάπτυξη αυτής και όλων των υπολοίπων εφαρμογών μου; Εάν ναι, δείτε την σελίδα δωρεών μου της «PayPal» :)</string>
-    <string name="donate_button_buy_me_coffee">Υποστήριξη στο «Buy me a coffee»</string>
+    <string name="donate_description">Δημιούργησα και υποστηρίζω αυτή και τις άλλες εφαρμογές μου στον ελεύθερο χρόνο μου. Αν θέλετε να με υποστηρίξετε, μπορείτε να κάνετε δωρεά μέσω PayPal για να βοηθήσετε να στηρίξετε εμένα και τα έργα μου.</string>
     <string name="donate_button_paypal">Υποστήριξη στη «PayPal»</string>
     <!-- endregion -->
     <!-- region: Settings -->

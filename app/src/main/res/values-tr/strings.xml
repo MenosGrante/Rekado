@@ -16,9 +16,9 @@
     <string name="about_information_description">Rekado Nintendo Switch\'iniz için payload yerleştirme, konsolların seri numarasından açık testipi yapabilen ve daha fazla özellikler yakında gelecek olan bir araçtır.</string>
     <string name="about_developer_portfolio_title">Portföy</string>
     <string name="about_developer_portfolio_summary">Geliştirici ve haber içeren blog hakkında tüm bilgiler</string>
-    <string name="about_developer_instagram_summary">Dron fotoğraflı hobi profili</string>
+    <string name="about_developer_instagram_summary">Kişisel sayfa</string>
     <string name="about_developer_github_summary">Açık kaynaklı uygulamaların listesi</string>
-    <string name="about_developer_twitter_summary">Kişisel mikro-blog</string>
+    <string name="about_developer_x_summary">Kişisel mikro blog</string>
     <!-- endregion -->
     <!-- region: Payloads -->
     <string name="payloads_update_bundled_title">Paketlenmiş payloadları güncelle</string>
@@ -49,8 +49,7 @@
     <string name="instructions_category_final_description">Cihazınızı Nintendo Switch\'e bağlayın ve eğer gerekirse USB erişim iznini verin. Payload seçme diyaloğu gelene kadar bekleyin ve istediğinizi seçin.</string>
     <!-- endregion -->
     <!-- region: Donate -->
-    <string name="donate_description">Bunun ve diğer tüm uygulamaların geliştirilmesini daha da fazla desteklemek ister misiniz? O zaman \"PayPal\" bağış sayfasına göz atabilirsin! :)</string>
-    <string name="donate_button_buy_me_coffee">\"Bana bir kahve ısmarla\" üzerinden destekle</string>
+    <string name="donate_description">Bu ve diğer uygulamalarımı boş zamanlarımda oluşturdum ve destekliyorum. Beni desteklemek isterseniz, beni ve projelerimi desteklemeye yardımcı olmak için PayPal üzerinden bağışta bulunabilirsiniz.</string>
     <string name="donate_button_paypal">\"PayPal\" üzerinden destekle</string>
     <!-- endregion -->
     <!-- region: Settings -->
