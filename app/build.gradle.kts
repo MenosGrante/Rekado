@@ -1,9 +1,11 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("com.android.application")
     id("dagger.hilt.android.plugin")
+    id("com.google.devtools.ksp")
 
     kotlin("android")
-    kotlin("kapt")
 }
 
 android {
@@ -42,6 +44,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 
     externalNativeBuild {
@@ -50,13 +53,10 @@ android {
         }
     }
 
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-
-    // Allow references to generated code
-    kapt {
-        correctErrorTypes = true
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_17)
+        }
     }
 
     base {
@@ -90,7 +90,7 @@ dependencies {
     implementation(Libraries.Tools.Retrofit)
     implementation(Libraries.Tools.RetrofitMoshi)
     implementation(Libraries.Tools.OkHttpLogging)
-    implementation(Libraries.Tools.Zxing)
+//    implementation(Libraries.Tools.Zxing)
     implementation(Libraries.Tools.Moshi)
 
     // Kotlin
@@ -98,8 +98,8 @@ dependencies {
     implementation(Libraries.Kotlin.Coroutines)
 
     // Compilers
-    kapt(Libraries.Compilers.Hilt)
-    kapt(Libraries.Compilers.Moshi)
+    ksp(Libraries.Compilers.Hilt)
+    ksp(Libraries.Compilers.Moshi)
 
     // Other
     coreLibraryDesugaring(Libraries.Other.Desugaring)

@@ -2,6 +2,7 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
     id("com.github.ben-manes.versions") version Versions.Gradle.Updates
+    id("com.google.devtools.ksp") version Versions.Kotlin.KSP
 }
 
 buildscript {
@@ -27,10 +28,6 @@ allprojects {
 
         maven { url = uri("https://jitpack.io") }
     }
-}
-
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
 }
 
 // Task to check update for all dependencies (libraries/plugins/gradle version)

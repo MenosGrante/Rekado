@@ -7,11 +7,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.REORDER_TASKS" />
 
-    <!-- hardwareAccelerated required by ZXing-->
     <application
         android:name=".Rekado"
         android:allowBackup="true"
-        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
