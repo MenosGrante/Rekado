@@ -7,11 +7,10 @@ import android.net.Uri
 import android.provider.MediaStore
 import androidx.annotation.RawRes
 import com.pavelrekun.rekado.data.Config
-import com.pavelrekun.rekado.data.ConfigJsonAdapter
 import com.pavelrekun.rekado.data.base.ResultWrapper
-import com.squareup.moshi.Moshi
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.json.Json
 import retrofit2.HttpException
 import java.io.File
 import java.io.InputStream
@@ -21,15 +20,15 @@ fun InputStream.toFile(path: String) {
 }
 
 fun String.toConfig(): Config? {
-    val moshi = Moshi.Builder().build()
-    val adapter = ConfigJsonAdapter(moshi)
-    return adapter.fromJson(this)
+    return try {
+        Json.decodeFromString<Config>(this)
+    } catch (e: Exception) {
+        null
+    }
 }
 
 fun Config.toJson(): String {
-    val moshi = Moshi.Builder().build()
-    val adapter = ConfigJsonAdapter(moshi)
-    return adapter.toJson(this)
+    return Json.encodeToString(this)
 }
 
 fun Resources.readConfig(@RawRes configId: Int): Config {

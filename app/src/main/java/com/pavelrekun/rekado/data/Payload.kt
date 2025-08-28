@@ -1,8 +1,8 @@
 package com.pavelrekun.rekado.data
 
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.Serializable
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class Payload(
         val title: String,
         val version: String?,

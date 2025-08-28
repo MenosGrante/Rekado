@@ -1,23 +1,18 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
-    id("com.android.application")
-    id("dagger.hilt.android.plugin")
-    id("com.google.devtools.ksp")
-
-    kotlin("android")
+    alias(libs.plugins.rekado.android.application)
+    alias(libs.plugins.rekado.android.application.compose)
+    alias(libs.plugins.rekado.hilt)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
-    compileSdk = Config.compileSDKVersion
-    ndkVersion = Config.NDKVersion
-    namespace = Config.namespace
+    namespace = libs.versions.namespace.get()
+    ndkVersion = libs.versions.ndk.get()
 
     defaultConfig {
-        minSdk = Config.minimumSDKVersion
-        targetSdk = Config.targetSDKVersion
-        versionCode = Config.versionCode
-        versionName = Config.versionName
+        applicationId = libs.versions.namespace.get()
+        versionCode = libs.versions.versionCode.get().toInt()
+        versionName = libs.versions.versionName.get()
     }
 
     buildTypes {
@@ -27,21 +22,11 @@ android {
         }
     }
 
-    compileOptions {
-        isCoreLibraryDesugaringEnabled = true
-
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    lint {
-        abortOnError = false
-    }
-
     androidResources {
         noCompress.add("bin")
     }
 
+    // FIXME: Remove
     buildFeatures {
         viewBinding = true
         buildConfig = true
@@ -53,55 +38,46 @@ android {
         }
     }
 
-    kotlin {
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_17)
-        }
-    }
 
     base {
-        archivesName.set("[${Config.versionName}] Rekado (${Config.versionCode})")
+        val versionName = libs.versions.versionName.get()
+        val versionCode = libs.versions.versionCode.get().toString().toInt()
+        archivesName.set("[$versionName] Rekado ($versionCode)")
     }
 
+    packaging {
+        resources {
+            excludes.add("/META-INF/{AL2.0,LGPL2.1}")
+        }
+    }
 }
 
 dependencies {
 
     // AndroidX
-    implementation(Libraries.AndroidX.Core)
-    implementation(Libraries.AndroidX.RecyclerView)
-    implementation(Libraries.AndroidX.Browser)
-    implementation(Libraries.AndroidX.Preferences)
-    implementation(Libraries.AndroidX.ConstraintLayout)
-    implementation(Libraries.AndroidX.LifecycleViewModel)
-    implementation(Libraries.AndroidX.LifecycleLiveData)
-    implementation(Libraries.AndroidX.LifecycleCommon)
-    implementation(Libraries.AndroidX.NavigationFragment)
-    implementation(Libraries.AndroidX.NavigationUI)
-    implementation(Libraries.AndroidX.SwipeRefreshLayout)
-    implementation(Libraries.AndroidX.Hilt)
+    implementation(libs.androidx.core)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.browser)
+    implementation(libs.androidx.preferences)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.lifecycle.viewmodel)
+    implementation(libs.androidx.lifecycle.livedata)
+    implementation(libs.androidx.lifecycle.common)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+    implementation(libs.androidx.swiperefreshlayout)
+
 
     // Design
-    implementation(Libraries.Design.MaterialComponents)
-    implementation(Libraries.Design.FlexboxLayout)
-    implementation(Libraries.Design.Insetter)
+    implementation(libs.design.material.components)
+    implementation(libs.design.flexbox.layout)
+    implementation(libs.design.insetter)
 
     // Tools
-    implementation(Libraries.Tools.Retrofit)
-    implementation(Libraries.Tools.RetrofitMoshi)
-    implementation(Libraries.Tools.OkHttpLogging)
-    implementation(Libraries.Tools.Zxing)
-    implementation(Libraries.Tools.Moshi)
-
-    // Kotlin
-    implementation(Libraries.Kotlin.Kotlin)
-    implementation(Libraries.Kotlin.Coroutines)
-
-    // Compilers
-    ksp(Libraries.Compilers.Hilt)
-    ksp(Libraries.Compilers.Moshi)
-
-    // Other
-    coreLibraryDesugaring(Libraries.Other.Desugaring)
+    implementation(libs.tools.retrofit)
+    implementation(libs.tools.retrofit.serialization)
+    implementation(libs.tools.okhttp.logging)
+    implementation(libs.tools.zxing)
+    implementation(libs.kotlinx.serialization)
 
 }
