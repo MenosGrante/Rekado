@@ -90,7 +90,7 @@ dependencies {
     implementation(Libraries.Tools.Retrofit)
     implementation(Libraries.Tools.RetrofitMoshi)
     implementation(Libraries.Tools.OkHttpLogging)
-//    implementation(Libraries.Tools.Zxing)
+    implementation(Libraries.Tools.Zxing)
     implementation(Libraries.Tools.Moshi)
 
     // Kotlin

@@ -1,6 +1,0 @@
-- Added: Support for Android 12L.
-- Removed: All closed-source code for F-Droid submission.
-- Removed: "In-app updater" due to future F-Droid submission.
-- Updated: Design to follow Material You.
-- Added: Support for Dynamic Colors theming for Android 12 and newer.
-- Removed: ReiNX from bundled payloads.
