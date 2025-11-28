@@ -65,6 +65,10 @@ gradlePlugin {
             id = libs.plugins.rekado.android.feature.get().pluginId
             implementationClass = "AndroidFeatureConventionPlugin"
         }
+        register("jvmLibrary") {
+            id = libs.plugins.rekado.jvm.library.get().pluginId
+            implementationClass = "JvmLibraryConventionPlugin"
+        }
         register("hilt") {
             id = libs.plugins.rekado.hilt.get().pluginId
             implementationClass = "HiltConventionPlugin"

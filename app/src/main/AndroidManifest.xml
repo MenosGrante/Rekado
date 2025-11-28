@@ -18,7 +18,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".screens.navigation_activity.NavigationActivity"
+            android:name=".compose.NavigationActivity"
             android:exported="true"
             android:launchMode="singleTop">
             <intent-filter>

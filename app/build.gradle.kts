@@ -54,7 +54,12 @@ android {
 
 dependencies {
 
+    // Core
+    implementation(projects.core.ui)
+    implementation(projects.core.data)
+
     // AndroidX
+    implementation(libs.androidx.splashscreen)
     implementation(libs.androidx.core)
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.browser)
@@ -66,6 +71,15 @@ dependencies {
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
     implementation(libs.androidx.swiperefreshlayout)
+
+    // Compose
+    implementation(libs.androidx.activity.compose)
+//    implementation(libs.compose.ui.tooling)
+//    implementation(libs.compose.ui.tooling.preview)
+//    implementation(libs.compose.material3)
+//    implementation(libs.compose.material.icons)
+//    implementation(libs.compose.activity)
+//    implementation(libs.compose.navigation)
 
 
     // Design

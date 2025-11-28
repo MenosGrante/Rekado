@@ -1,5 +1,38 @@
 @file:Suppress("UnstableApiUsage")
 
+include(":core:model")
+
+
+include(":core:datastore")
+
+
+include(":feature:serialchecker")
+
+
+include(":feature:instructions")
+
+
+include(":feature:settings")
+
+
+include(":feature:tools")
+
+
+include(":feature:payloads")
+
+
+include(":core:data")
+
+
+include(":core:common")
+
+
+include(":core:ui")
+
+
+include(":core:navigation")
+
+
 pluginManagement {
     repositories {
         google()
