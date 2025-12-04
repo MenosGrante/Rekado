@@ -2,6 +2,7 @@ package com.pavelrekun.rekado.core.ui.theme
 
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.MaterialExpressiveTheme
+import androidx.compose.material3.MotionScheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
@@ -88,8 +89,8 @@ val DefaultDark = darkColorScheme(
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 fun RekadoTheme(
-    useDarkTheme: Boolean,
-    useDynamicColors: Boolean,
+    useDarkTheme: Boolean = false,
+    useDynamicColors: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val context = LocalContext.current
@@ -111,6 +112,7 @@ fun RekadoTheme(
     MaterialExpressiveTheme(
         colorScheme = colors,
         content = content,
+        motionScheme = MotionScheme.expressive(),
         typography = RekadoTypography
     )
 }

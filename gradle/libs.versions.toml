@@ -16,6 +16,7 @@ kotlin = "2.2.21"
 kotlinKsp = "2.3.3"
 kotlinCoroutines = "1.10.2"
 kotlinSerialization = "1.9.0"
+kotlinxCollections = "0.3.8"
 
 androidxAppcompat = "1.7.1"
 androidxCore = "1.17.0"
@@ -77,6 +78,7 @@ androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", vers
 
 kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinCoroutines" }
 kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinSerialization" }
+kotlinx-collections = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinxCollections" }
 
 compose-bom = { group = "androidx.compose", name = "compose-bom-alpha", version.ref = "composeBom" }
 compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "composeFoundation" }
@@ -99,6 +101,7 @@ tools-hilt-android-testing = { group = "com.google.dagger", name = "hilt-android
 tools-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "toolsHilt" }
 tools-hilt-core = { group = "com.google.dagger", name = "hilt-core", version.ref = "toolsHilt" }
 tools-hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "toolsHiltExt" }
+tools-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "toolsHiltExt" }
 tools-desugar = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "toolsDesugar" }
 tools-zxing = { group = "com.journeyapps", name = "zxing-android-embedded", version.ref = "toolsZxing" }
 tools-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "toolsRetrofit" }

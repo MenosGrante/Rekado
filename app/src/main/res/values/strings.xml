@@ -47,18 +47,6 @@
     <string name="tools_serial_checker_description">Check if your Nintendo Switch is vulnerable using your unit\'s serial number</string>
     <!-- endregion -->
 
-    <!-- region: Instructions -->
-    <string name="instructions_category_cable">Cable</string>
-    <string name="instructions_category_cable_description">First, you need to find a cable to connect your device to the Nintendo Switch. For proper work, this should be a cable that is designed for data transmission, not just for charging.\n\nIt is advisable to use an A-to-C cable and a USB OTG adapter.</string>
-    <string name="instructions_category_payload">Payload</string>
-    <string name="instructions_category_payload_description">You can add your payload from the device’s memory (click the \"+\" button), download it via a direct link (click the button with the \"cloud\" icon) on the \"Payloads\" screen or simply move it to the Rekado folder (/sdcard/Android/data/com.pavelrekun.rekado/files/).\n\nYou can also use one of the bundled payloads - %1$s.</string>
-    <string name="instructions_category_rcm" translatable="false">RCM</string>
-    <string name="instructions_category_rcm_help">Help</string>
-    <string name="instructions_category_rcm_description">Enter your Nintendo Switch into RCM mode in any convenient way. \n\nYour Nintendo Switch will power on by itself when plugged in, be sure to hold \"VOLUME +\".</string>
-    <string name="instructions_category_final">Final</string>
-    <string name="instructions_category_final_description">Connect the device to the Nintendo Switch and allow permission for the USB access, if necessary. Wait unit payloads chooser dialog will be opened and select which one you want to load.</string>
-    <!-- endregion -->
-
     <!-- region: Donate -->
     <string name="donate_description">I have created and am supporting this and my other apps in my free time. If you would like to support me, you can donate via PayPal to help support me and my projects.</string>
     <string name="donate_button_paypal">Support on \"PayPal\"</string>

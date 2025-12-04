@@ -6,8 +6,6 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -19,13 +17,17 @@ import com.pavelrekun.rekado.compose.NavigationUiState.Loading
 import com.pavelrekun.rekado.compose.extensions.darkScrim
 import com.pavelrekun.rekado.compose.extensions.isSystemInDarkTheme
 import com.pavelrekun.rekado.compose.extensions.lightScrim
+import com.pavelrekun.rekado.compose.ui.RekadoApp
+import com.pavelrekun.rekado.compose.ui.rememberAppState
 import com.pavelrekun.rekado.core.ui.theme.RekadoTheme
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class NavigationActivity : ComponentActivity() {
 
     private val viewModel: NavigationViewModel by viewModels()
@@ -86,8 +88,13 @@ class NavigationActivity : ComponentActivity() {
         splashScreen.setKeepOnScreenCondition { viewModel.uiState.value.shouldKeepSplashScreen() }
 
         setContent {
-            RekadoTheme(useDarkTheme = false, useDynamicColors = false) {
-                Text(text = "Rekado", style = MaterialTheme.typography.headlineLarge)
+            val appState = rememberAppState()
+
+            RekadoTheme(
+                useDarkTheme = themeSettings.darkTheme,
+                useDynamicColors = themeSettings.disableDynamicTheming
+            ) {
+                RekadoApp(appState = appState)
             }
         }
     }

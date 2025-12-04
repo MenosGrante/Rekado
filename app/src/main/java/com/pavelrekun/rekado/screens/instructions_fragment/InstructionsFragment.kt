@@ -25,7 +25,7 @@ class InstructionsFragment : BaseFragment(R.layout.fragment_instructions) {
     }
 
     private fun initStrings() {
-        binding.instructionsPayloadDescription.text = getString(R.string.instructions_category_payload_description, getString(R.string.helper_bundled_payloads))
+//        binding.instructionsPayloadDescription.text = getString(R.string.instructions_category_payload_description, getString(R.string.helper_bundled_payloads))
     }
 
 }

@@ -57,6 +57,14 @@ dependencies {
     // Core
     implementation(projects.core.ui)
     implementation(projects.core.data)
+    implementation(projects.core.navigation)
+
+    // Features
+    implementation(projects.feature.instructions)
+    implementation(projects.feature.payloads)
+    implementation(projects.feature.logs)
+    implementation(projects.feature.serialchecker)
+    implementation(projects.feature.settings)
 
     // AndroidX
     implementation(libs.androidx.splashscreen)

@@ -13,13 +13,16 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
 
 
             dependencies {
+                "implementation"(project(":core:common"))
                 "implementation"(project(":core:ui"))
+                "implementation"(project(":core:navigation"))
 
                 "implementation"(libs.findLibrary("androidx.navigation.compose").get())
                 "implementation"(libs.findLibrary("androidx.lifecycle.compose").get())
                 "implementation"(libs.findLibrary("androidx.lifecycle.viewmodel.compose").get())
                 "implementation"(libs.findLibrary("androidx.navigation.compose").get())
                 "implementation"(libs.findLibrary("kotlinx.serialization").get())
+                "implementation"(libs.findLibrary("tools.hilt.navigation.compose").get())
             }
         }
     }

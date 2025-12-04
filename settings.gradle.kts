@@ -21,6 +21,9 @@ include(":feature:tools")
 include(":feature:payloads")
 
 
+include(":feature:logs")
+
+
 include(":core:data")
 
 

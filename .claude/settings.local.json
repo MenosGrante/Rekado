@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(./gradlew :app:compileDebugKotlin:*)",
+      "Bash(./gradlew:*)",
+      "WebSearch",
+      "Bash(xargs:*)",
+      "WebFetch(domain:m3.material.io)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
