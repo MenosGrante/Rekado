@@ -32,7 +32,7 @@ androidxConstraintLayout = "2.2.1"
 androidxSwipeRefreshLayout = "1.1.0"
 androidxSplashscreen = "1.2.0"
 
-composeBom = "2025.11.01"
+composeBom = "2025.12.00"
 composeFoundation = "1.9.5"
 composeMaterial = "1.4.0"
 

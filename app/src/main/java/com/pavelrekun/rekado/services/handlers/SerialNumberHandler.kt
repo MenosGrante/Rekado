@@ -1,21 +1,18 @@
 package com.pavelrekun.rekado.services.handlers
 
-import com.pavelrekun.rekado.R
-import java.util.*
-
 class SerialNumberHandler {
 
     private var number: Long = 0
 
-    fun defineConsoleStatus(serialNumber: String): Int {
-        return when (defineConsoleStatusInternal(serialNumber.uppercase(Locale.ROOT))) {
-            STATUS_NOT_PATCHED -> R.string.serial_checker_status_not_patched
-            STATUS_PATCHED -> R.string.serial_checker_status_patched
-            STATUS_POSSIBLY_PATCHED -> R.string.serial_checker_status_possibly_patched
-            STATUS_ERROR -> R.string.serial_checker_status_error
-            else -> R.string.serial_checker_status_error
-        }
-    }
+//    fun defineConsoleStatus(serialNumber: String): Int {
+//        return when (defineConsoleStatusInternal(serialNumber.uppercase(Locale.ROOT))) {
+//            STATUS_NOT_PATCHED -> R.string.serial_checker_status_not_patched
+//            STATUS_PATCHED -> R.string.serial_checker_status_patched
+//            STATUS_POSSIBLY_PATCHED -> R.string.serial_checker_status_possibly_patched
+//            STATUS_ERROR -> R.string.serial_checker_status_not_patched
+//            else -> R.string.serial_checker_status_not_patched
+//        }
+//    }
 
     private fun defineConsoleStatusInternal(serialNumber: String): Int {
         number = serialNumber.takeLastWhile { !it.isLetter() }.toLong()

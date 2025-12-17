@@ -97,29 +97,29 @@
     <string name="dialog_button_negative_cancel">Cancel</string>
     <!-- endregion -->
 
-    <!-- region: Serial Checker -->
-    <string name="serial_checker_category_checker">Checker</string>
-    <string name="serial_checker_category_information">Information</string>
-    <string name="serial_checker_checker_serial_number">Serial number</string>
-    <string name="serial_checker_checker_button">Check</string>
-    <string name="serial_checker_information_xaw1"><![CDATA["<b>Serials beginning with XAW1</b><br />XAW10000000000 - XAW10074000000: Not patched<br />XAW10075000000 - XAW10120000000: Possibly patched<br />XAW10120000000 and higher: Patched<br /><br />]]></string>
-    <string name="serial_checker_information_xaw4"><![CDATA["<b>Serials beginning with XAW4</b><br />XAW40000000000 - XAW40011000000: Not patched<br />XAW40011000000 - XAW40012000000: Possibly patched<br />XAW40012000000 and higher: Patched<br /><br />]]></string>
-    <string name="serial_checker_information_xaw7"><![CDATA["<b>Serials beginning with XAW7</b><br />XAW70000000000 - XAW70017800000: Not patched<br />XAW70017800000 - XAW70030000000: Possibly patched<br />XAW70030000000 and higher: Patched<br /><br />]]></string>
-    <string name="serial_checker_information_xaj1"><![CDATA["<b>Serials beginning with XAJ1</b><br />XAJ10000000000 - XAJ10020000000: Not patched<br />XAJ10020000000 - XAJ10030000000: Possibly patched<br />XAJ10030000000 and higher: Patched<br /><br />]]></string>
-    <string name="serial_checker_information_xaj4"><![CDATA["<b>Serials beginning with XAJ4</b><br />XAJ40000000000 - XAJ40046000000: Not patched<br />XAJ40046000000 - XAJ40060000000: Possibly patched<br />XAJ40060000000 and higher: Patched<br /><br />]]></string>
-    <string name="serial_checker_information_xaj7"><![CDATA["<b>Serials beginning with XAJ7</b><br />XAJ70000000000 - XAJ70040000000: Not patched<br />XAJ70040000000 - XAJ70050000000: Possibly patched<br />XAJ70050000000 and higher: Patched<br /><br />]]></string>
-    <string name="serial_checker_information_xaw9"><![CDATA["<b>Serials beginning with XAW9</b><br />Refurbished units directly from Nintendo, no information, but very possible all of them are patched.<br /><br />]]></string>
-    <string name="serial_checker_information_xak"><![CDATA["<b>Serials beginning with XAK</b><br />No information is available, since those are only sold in Korea.]]></string>
-    <string name="serial_checker_scan_barcode">Scan barcode</string>
-    <string name="serial_checker_help">Help</string>
-    <string name="serial_checker_status_not_patched">Not patched</string>
-    <string name="serial_checker_status_patched">Patched</string>
-    <string name="serial_checker_status_possibly_patched">Possibly patched</string>
-    <string name="serial_checker_status_error">Can\'t check this serial number!</string>
-    <string name="serial_checker_status_empty">Serial number can\'t be empty!</string>
-    <string name="serial_checker_status_too_long">Maximum length of the serial number is 14 characters!</string>
-    <string name="serial_checker_status_scan_failed">Failed to scan barcode!</string>
-    <!-- endregion -->
+<!--    &lt;!&ndash; region: Serial Checker &ndash;&gt;-->
+<!--    <string name="serial_checker_category_checker">Checker</string>-->
+<!--    <string name="serial_checker_category_information">Information</string>-->
+<!--    <string name="serial_checker_checker_serial_number">Serial number</string>-->
+<!--    <string name="serial_checker_checker_button">Check</string>-->
+<!--    <string name="serial_checker_information_xaw1"><![CDATA["<b>Serials beginning with XAW1</b><br />XAW10000000000 - XAW10074000000: Not patched<br />XAW10075000000 - XAW10120000000: Possibly patched<br />XAW10120000000 and higher: Patched<br /><br />]]></string>-->
+<!--    <string name="serial_checker_information_xaw4"><![CDATA["<b>Serials beginning with XAW4</b><br />XAW40000000000 - XAW40011000000: Not patched<br />XAW40011000000 - XAW40012000000: Possibly patched<br />XAW40012000000 and higher: Patched<br /><br />]]></string>-->
+<!--    <string name="serial_checker_information_xaw7"><![CDATA["<b>Serials beginning with XAW7</b><br />XAW70000000000 - XAW70017800000: Not patched<br />XAW70017800000 - XAW70030000000: Possibly patched<br />XAW70030000000 and higher: Patched<br /><br />]]></string>-->
+<!--    <string name="serial_checker_information_xaj1"><![CDATA["<b>Serials beginning with XAJ1</b><br />XAJ10000000000 - XAJ10020000000: Not patched<br />XAJ10020000000 - XAJ10030000000: Possibly patched<br />XAJ10030000000 and higher: Patched<br /><br />]]></string>-->
+<!--    <string name="serial_checker_information_xaj4"><![CDATA["<b>Serials beginning with XAJ4</b><br />XAJ40000000000 - XAJ40046000000: Not patched<br />XAJ40046000000 - XAJ40060000000: Possibly patched<br />XAJ40060000000 and higher: Patched<br /><br />]]></string>-->
+<!--    <string name="serial_checker_information_xaj7"><![CDATA["<b>Serials beginning with XAJ7</b><br />XAJ70000000000 - XAJ70040000000: Not patched<br />XAJ70040000000 - XAJ70050000000: Possibly patched<br />XAJ70050000000 and higher: Patched<br /><br />]]></string>-->
+<!--    <string name="serial_checker_information_xaw9"><![CDATA["<b>Serials beginning with XAW9</b><br />Refurbished units directly from Nintendo, no information, but very possible all of them are patched.<br /><br />]]></string>-->
+<!--    <string name="serial_checker_information_xak"><![CDATA["<b>Serials beginning with XAK</b><br />No information is available, since those are only sold in Korea.]]></string>-->
+<!--    <string name="serial_checker_scan_barcode">Scan barcode</string>-->
+<!--    <string name="serial_checker_help">Help</string>-->
+<!--    <string name="serial_checker_status_not_patched">Not patched</string>-->
+<!--    <string name="serial_checker_status_patched">Patched</string>-->
+<!--    <string name="serial_checker_status_possibly_patched">Possibly patched</string>-->
+<!--    <string name="serial_checker_status_error">Can\'t check this serial number!</string>-->
+<!--    <string name="serial_checker_status_empty">Serial number can\'t be empty!</string>-->
+<!--    <string name="serial_checker_status_too_long">Maximum length of the serial number is 14 characters!</string>-->
+<!--    <string name="serial_checker_status_scan_failed">Failed to scan barcode!</string>-->
+<!--    &lt;!&ndash; endregion &ndash;&gt;-->
 
     <!-- region: Helper -->
     <string name="helper_bundled_payloads" translatable="false">Fusee &amp; Hekate</string>

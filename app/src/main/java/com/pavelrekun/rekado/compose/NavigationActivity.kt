@@ -91,7 +91,7 @@ class NavigationActivity : ComponentActivity() {
             val appState = rememberAppState()
 
             RekadoTheme(
-                useDarkTheme = themeSettings.darkTheme,
+                useDarkTheme = false,
                 useDynamicColors = themeSettings.disableDynamicTheming
             ) {
                 RekadoApp(appState = appState)

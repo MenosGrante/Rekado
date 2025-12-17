@@ -6,7 +6,13 @@
       "Bash(./gradlew:*)",
       "WebSearch",
       "Bash(xargs:*)",
-      "WebFetch(domain:m3.material.io)"
+      "WebFetch(domain:m3.material.io)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:suchmememanyskill.github.io)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:android-developers.googleblog.com)",
+      "Bash(grep:*)"
     ],
     "deny": [],
     "ask": []

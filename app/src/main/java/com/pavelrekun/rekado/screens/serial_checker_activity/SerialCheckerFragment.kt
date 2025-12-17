@@ -2,15 +2,13 @@ package com.pavelrekun.rekado.screens.serial_checker_activity
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.core.text.HtmlCompat
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
-import com.pavelrekun.rekado.R
 import com.pavelrekun.rekado.base.BaseFragment
+import com.pavelrekun.rekado.core.ui.R
 import com.pavelrekun.rekado.databinding.FragmentSerialCheckerBinding
 import com.pavelrekun.rekado.services.constants.Links
-import com.pavelrekun.rekado.services.extensions.getString
 import com.pavelrekun.rekado.services.extensions.isEmpty
 import com.pavelrekun.rekado.services.extensions.viewBinding
 import com.pavelrekun.rekado.services.handlers.SerialNumberHandler
@@ -20,7 +18,7 @@ import dev.chrisbanes.insetter.applyInsetter
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
+class SerialCheckerFragment : BaseFragment(com.pavelrekun.rekado.R.layout.fragment_serial_checker) {
 
     @Inject
     lateinit var serialNumberHandler: SerialNumberHandler
@@ -32,7 +30,7 @@ class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
             binding.serialCheckerField.setText(result.contents)
             binding.serialCheckerField.requestFocus()
         } else {
-            Toast.makeText(activity, R.string.serial_checker_status_scan_failed, Toast.LENGTH_SHORT).show()
+//            Toast.makeText(activity, R.string.serial_checker_status_scan_failed, Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -50,16 +48,16 @@ class SerialCheckerFragment : BaseFragment(R.layout.fragment_serial_checker) {
             if (binding.serialCheckerField.length() <= 14) {
                 if (!binding.serialCheckerField.isEmpty()) {
                     try {
-                        val text = serialNumberHandler.defineConsoleStatus(binding.serialCheckerField.getString())
-                        Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()
+//                        val text = serialNumberHandler.defineConsoleStatus(binding.serialCheckerField.getString())
+//                        Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()
                     } catch (e: Exception) {
-                        Toast.makeText(activity, R.string.serial_checker_status_error, Toast.LENGTH_SHORT).show()
+//                        Toast.makeText(activity, ..string.serial_checker_status_error, Toast.LENGTH_SHORT).show()
                     }
                 } else {
-                    Toast.makeText(activity, R.string.serial_checker_status_empty, Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(activity, R.string.serial_checker_status_empty, Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(activity, R.string.serial_checker_status_too_long, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(activity, R.string.serial_checker_status_too_long, Toast.LENGTH_SHORT).show()
             }
         }
 

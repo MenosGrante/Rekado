@@ -17,6 +17,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.semantics
@@ -28,6 +29,7 @@ import com.pavelrekun.rekado.core.navigation.routes.TopLevelDestination
 import com.pavelrekun.rekado.core.ui.components.BottomBarItem
 import com.pavelrekun.rekado.core.ui.components.RekadoBottomBar
 import com.pavelrekun.rekado.core.ui.components.RekadoTopBar
+import com.pavelrekun.rekado.core.ui.composition.LocalSnackbarHostState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -37,63 +39,65 @@ internal fun RekadoApp(
 ) {
     val snackbarHostState = remember { SnackbarHostState() }
 
-    Scaffold(
-        modifier = modifier.semantics {
-            testTagsAsResourceId = true
-        },
-        containerColor = MaterialTheme.colorScheme.background,
-        contentColor = MaterialTheme.colorScheme.onBackground,
-        contentWindowInsets = WindowInsets(0, 0, 0, 0),
-        snackbarHost = {
-            SnackbarHost(
-                snackbarHostState,
-                modifier = Modifier.windowInsetsPadding(
-                    WindowInsets.safeDrawing.exclude(
-                        WindowInsets.ime,
+    CompositionLocalProvider(LocalSnackbarHostState provides snackbarHostState) {
+        Scaffold(
+            modifier = modifier.semantics {
+                testTagsAsResourceId = true
+            },
+            containerColor = MaterialTheme.colorScheme.background,
+            contentColor = MaterialTheme.colorScheme.onBackground,
+            contentWindowInsets = WindowInsets(0, 0, 0, 0),
+            snackbarHost = {
+                SnackbarHost(
+                    snackbarHostState,
+                    modifier = Modifier.windowInsetsPadding(
+                        WindowInsets.safeDrawing.exclude(
+                            WindowInsets.ime,
+                        ),
                     ),
-                ),
-            )
-        },
-        topBar = {
-            RekadoTopBar(
-                isOnTopLevelRoute = appState.isOnTopLevelRoute,
-                currentRouteTitleId = appState.currentRoute.title,
-                goBack = appState.navigator::goBack,
-                onSerialCheckerClick = { appState.navigator.navigate(SerialChecker) },
-                onDonateClick = {},
-                onSettingsClick = { appState.navigator.navigate(Settings) },
-                onAboutClick = { appState.navigator.navigate(AboutRekado) }
-            )
-        },
-        bottomBar = {
-            if (appState.isOnTopLevelRoute) {
-                RekadoBottomBar(
-                    items = TopLevelDestination.entries.map { destination ->
-                        BottomBarItem(
-                            iconId = destination.iconId,
-                            titleId = destination.titleId,
-                            isSelected = appState.navigationState.topLevelRoute == destination.route,
-                            onClick = { appState.navigator.navigate(destination.route) }
-                        )
-                    }
+                )
+            },
+            topBar = {
+                RekadoTopBar(
+                    isOnTopLevelRoute = appState.isOnTopLevelRoute,
+                    currentRouteTitleId = appState.currentRoute.title,
+                    goBack = appState.navigator::goBack,
+                    onSerialCheckerClick = { appState.navigator.navigate(SerialChecker) },
+                    onDonateClick = {},
+                    onSettingsClick = { appState.navigator.navigate(Settings) },
+                    onAboutClick = { appState.navigator.navigate(AboutRekado) }
+                )
+            },
+            bottomBar = {
+                if (appState.isOnTopLevelRoute) {
+                    RekadoBottomBar(
+                        items = TopLevelDestination.entries.map { destination ->
+                            BottomBarItem(
+                                iconId = destination.iconId,
+                                titleId = destination.titleId,
+                                isSelected = appState.navigationState.topLevelRoute == destination.route,
+                                onClick = { appState.navigator.navigate(destination.route) }
+                            )
+                        }
+                    )
+                }
+            }
+        ) { padding ->
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(padding)
+                    .consumeWindowInsets(padding)
+                    .windowInsetsPadding(
+                        WindowInsets.safeDrawing.only(
+                            WindowInsetsSides.Horizontal,
+                        ),
+                    ),
+            ) {
+                RekadoNavDisplay(
+                    appState = appState
                 )
             }
-        }
-    ) { padding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .consumeWindowInsets(padding)
-                .windowInsetsPadding(
-                    WindowInsets.safeDrawing.only(
-                        WindowInsetsSides.Horizontal,
-                    ),
-                ),
-        ) {
-            RekadoNavDisplay(
-                appState = appState
-            )
         }
     }
 }

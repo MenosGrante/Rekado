@@ -11,6 +11,7 @@ android {
 
     defaultConfig {
         applicationId = libs.versions.namespace.get()
+        applicationIdSuffix = ".dev"
         versionCode = libs.versions.versionCode.get().toInt()
         versionName = libs.versions.versionName.get()
     }

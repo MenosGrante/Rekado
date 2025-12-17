@@ -1,4 +1,4 @@
-package com.pavlorekun.rekado.feature.instructions
+package com.pavlorekun.rekado.feature.instructions.data
 
 import androidx.annotation.StringRes
 import com.pavelrekun.rekado.core.ui.R

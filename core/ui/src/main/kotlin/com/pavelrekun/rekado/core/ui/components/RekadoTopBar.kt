@@ -39,7 +39,7 @@ fun RekadoTopBar(
         title = {
             Text(
                 text = stringResource(currentRouteTitleId),
-                style = MaterialTheme.typography.headlineSmall
+                style = MaterialTheme.typography.headlineMedium
             )
         },
         navigationIcon = {

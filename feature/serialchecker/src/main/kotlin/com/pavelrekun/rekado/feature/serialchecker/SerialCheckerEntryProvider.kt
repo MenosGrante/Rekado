@@ -7,6 +7,6 @@ import com.pavelrekun.rekado.core.navigation.routes.SerialChecker
 
 fun EntryProviderScope<NavKey>.serialCheckerEntry(navigator: Navigator) {
     entry<SerialChecker> {
-        SerialCheckerScreen()
+        SerialCheckerScreen(navigator = navigator)
     }
 }

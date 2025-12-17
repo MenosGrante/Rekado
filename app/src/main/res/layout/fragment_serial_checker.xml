@@ -127,7 +127,7 @@
                         android:layout_weight="0"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:clickable="true"
-                        android:contentDescription="@string/serial_checker_help"
+                        android:contentDescription="@string/navigation_about"
                         android:focusable="true"
                         android:padding="16dp"
                         android:src="@drawable/ic_information_help" />

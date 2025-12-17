@@ -52,14 +52,14 @@ internal val RekadoTypography = Typography(
     ),
     headlineMedium = TextStyle(
         fontFamily = googleSansFlexFont(weight = 900),
-        fontSize = 28.sp,
-        lineHeight = 36.sp,
+        fontSize = 24.sp,
+        lineHeight = 32.sp,
         letterSpacing = 0.sp
     ),
     headlineSmall = TextStyle(
-        fontFamily = googleSansFlexFont(weight = 900),
-        fontSize = 24.sp,
-        lineHeight = 32.sp,
+        fontFamily = googleSansFlexFont(weight = 700),
+        fontSize = 20.sp,
+        lineHeight = 28.sp,
         letterSpacing = 0.sp
     ),
     titleLarge = TextStyle(

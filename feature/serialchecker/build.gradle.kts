@@ -6,3 +6,8 @@ plugins {
 android {
     namespace = "com.pavelrekun.rekado.feature.serialchecker"
 }
+
+dependencies {
+    implementation(projects.core.common)
+    implementation(libs.tools.zxing)
+}
